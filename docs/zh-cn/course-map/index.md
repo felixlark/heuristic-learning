@@ -7,12 +7,13 @@ description: Heuristic Learning 仓库的读者路径、研究路径、教师路
 
 本页是 HL 仓库的导航总图。读者不需要按侧栏从上到下读完；可以根据自己的角色选择路径，但每条路径最终都要回到同一个验证闭环：来源、案例、示例、报告、测试和课程页面互相对齐。
 
-## 四条路径
+## 五条路径
 
 | 角色 | 先读 | 再做 | 验收 |
 | --- | --- | --- | --- |
 | 学生 | [课程大纲](/zh-cn/syllabus/)、[学习路线](/zh-cn/stage-1/)、[学习单元矩阵](/zh-cn/appendix/learning-units) | [Lab 1](/zh-cn/slides/lab-1/)、[练习集](/zh-cn/appendix/exercises) B/C 题 | `npm run verify` + 实验记录 |
-| 研究者 | [文献阅读指南](/zh-cn/appendix/reading-guide)、[研究框架](/zh-cn/theory/research-framework)、[研究命题](/zh-cn/theory/research-propositions)、[实验协议](/zh-cn/appendix/benchmark-protocol)、[评估指标矩阵](/zh-cn/appendix/evaluation-metrics) | [研究课题](/zh-cn/appendix/research-projects)、[来源登记](/zh-cn/appendix/source-registry) | case card + runnable example |
+| AI 研究者 | [文献阅读指南](/zh-cn/appendix/reading-guide)、[研究框架](/zh-cn/theory/research-framework)、[研究命题](/zh-cn/theory/research-propositions)、[实验协议](/zh-cn/appendix/benchmark-protocol)、[评估指标矩阵](/zh-cn/appendix/evaluation-metrics) | [研究课题](/zh-cn/appendix/research-projects)、[来源登记](/zh-cn/appendix/source-registry) | case card + runnable example + 反驳路径 |
+| 工程师 | [可运行示例](/zh-cn/examples/)、[代码导览](/zh-cn/appendix/code-tour)、[本地运行与排错](/zh-cn/appendix/local-setup)、[排错决策树](/zh-cn/appendix/troubleshooting-tree) | 修改一个 `examples/*/policies.py` 或 replay 策略，并保留旧 probe | `npm run examples:test` + `npm run verify` |
 | 教师/助教 | [教师指南](/zh-cn/appendix/instructor-guide)、[课程 Rubric](/zh-cn/appendix/rubric)、[教学仓库对标](/zh-cn/appendix/course-patterns) | 选择 A/B/C/D 题，安排讲义和 Lab | Rubric 评分 + `npm run verify` |
 | 编码智能体 | `llms.txt`、`/course-manifest.json` | 读 `experiments/*/latest.json` 的 `candidate_update` | 结构检查 + 完整验证 |
 

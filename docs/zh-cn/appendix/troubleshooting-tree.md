@@ -18,7 +18,7 @@ description: Heuristic Learning 仓库从安装、示例、报告、来源、课
 | 报告与 benchmark | report、benchmark、ablation 或 artifact gap 失败 | `npm run benchmark:summary:check`、`npm run ablation:plan:check`、`npm run artifact:gap:check` | 重新生成 report，同步 benchmark/消融/保真度边界 | `npm run examples:feedback` |
 | 来源与命题 | source、X、case 或 claims 检查失败 | `npm run source:registry:check`、`npm run x:sources:check`、`npm run claims:registry:check` | 降级来源状态，补 case card，把未发表结论写成 hypothesis | `npm run cases:check` |
 | 课程结构与公开路由 | manifest、structure、routes 或 build 失败 | `npm run course:manifest:check`、`npm run course:structure:check`、`npm run docs:routes:check` | 同步 sidebar、manifest、route check、structure checker | `npm run docs:routes:check` |
-| 发布与视觉验收 | `release:readiness:check` 阻塞 | `npm run visual:verification:check`、`npm run release:readiness:check` | 恢复 Browser/IAB mobile 验收，或让 Official Chrome plugin 同时支持 viewport 和 public JSON/TXT 直开；排查 `ERR_BLOCKED_BY_CLIENT` 后更新 visual log | `npm run release:readiness:check` |
+| 发布与视觉验收 | `release:readiness:check` 阻塞 | `npm run visual:verification:check`、`npm run release:readiness:check` | 用官方 Browser/IAB 复验页面；JSON/TXT 直达用 `npm run docs:routes:check`，浏览器只验收 [机器可读入口](/zh-cn/appendix/public-entrypoints) 索引页；更新 visual log | `npm run release:readiness:check` |
 
 ## 处理顺序
 

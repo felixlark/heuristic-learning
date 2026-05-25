@@ -13,12 +13,21 @@
 
 ## 快速开始
 
+线上入口：[https://longbiaochen.github.io/heuristic-learning/](https://longbiaochen.github.io/heuristic-learning/)
+
 ```bash
 npm install
 npm run dev
 ```
 
 打开本地 VitePress 地址后，从 `学习路线` 开始阅读。
+
+按角色进入：
+
+- 学生：先读 [课程大纲](docs/zh-cn/syllabus/index.md)，再跑 `npm run examples:gridworld`。
+- AI 研究者：先读 [研究框架](docs/zh-cn/theory/research-framework.md) 和 [研究命题](docs/zh-cn/theory/research-propositions.md)，再看 [实验协议](docs/zh-cn/appendix/benchmark-protocol.md)。
+- 工程师：先看 [可运行示例](docs/zh-cn/examples/index.md) 和 [代码导览](docs/zh-cn/appendix/code-tour.md)，再用 `npm run examples:test` 保护回归。
+
 本地环境、验证顺序和常见失败处理见 [本地运行与排错](docs/zh-cn/appendix/local-setup.md)。
 失败面到诊断命令、修复动作和复验命令的机器可读路径见 [排错决策树](docs/zh-cn/appendix/troubleshooting-tree.md)。
 X、公开 artifact、飞书线索和研究假设如何变成 case card 见 [来源到案例 Playbook](docs/zh-cn/appendix/source-to-case-playbook.md)。
@@ -38,12 +47,12 @@ X、公开 artifact、飞书线索和研究假设如何变成 case card 见 [来
 ## 三步跑通
 
 ```bash
-npm run verify
 npm run examples:gridworld
 npm run examples:gridworld:feedback
+npm run verify
 ```
 
-`verify` 用来确认仓库完整；`examples:gridworld` 用来观察最小环境；`examples:gridworld:feedback` 用来看到一次 HL 反馈报告如何写给下一轮智能体。
+`examples:gridworld` 用来观察最小环境；`examples:gridworld:feedback` 用来看到一次 HL 反馈报告如何写给下一轮智能体；`verify` 用来确认仓库完整。
 
 ## 实验矩阵
 
@@ -172,7 +181,7 @@ npm run verify
 
 GitHub Actions 中的 `Verify course repository` workflow 会在 PR 和 `main` push 上运行同一条命令；Pages 部署也会先跑 `npm run verify`，再构建发布站点。
 阶段性版本和发布检查见 [CHANGELOG.md](CHANGELOG.md)、[发布清单](docs/zh-cn/appendix/release-checklist.md) 与 [视觉与浏览器验收](docs/zh-cn/appendix/visual-verification.md)。
-公开发布前还应单独运行 `npm run release:readiness:check`；它会在官方 Browser/IAB 视觉验收记录尚未完成时失败，避免把本地绿色构建误写成发布完成。
+公开发布前还应单独运行 `npm run release:readiness:check`；它会检查官方 Browser/IAB 视觉验收记录，避免把本地绿色构建误写成发布完成。
 
 ## 授课与组会
 
@@ -200,4 +209,4 @@ X/FieldTheory 线索的缓存状态和来源层级见 [X 线索案例](docs/zh-c
 
 ## 当前状态
 
-这是 v0.1 教学/研究仓库骨架：理论页、案例索引、六个最小可运行示例、benchmark 摘要、来源矩阵、学习单元、授课包、研究项目矩阵和验证脚本已经就位。后续重点是补齐更高保真环境、继续从 Jiayi 的 X 案例抽取实验卡片，并扩展真实环境复现实验。
+这是 v0.1 教学/研究仓库：理论页、案例索引、六个最小可运行示例、benchmark 摘要、来源矩阵、学习单元、授课包、研究项目矩阵、验证脚本、Browser/IAB 视觉验收和 GitHub Pages 部署已经就位。后续重点是补齐更高保真环境、继续从 Jiayi 的 X 案例抽取实验卡片，并扩展真实环境复现实验。

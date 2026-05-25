@@ -163,18 +163,18 @@
         "npm run visual:verification:check",
         "npm run release:readiness:check"
       ],
-        "likely_causes": [
-          "官方 Browser/IAB backend 未注册到当前 Codex 线程",
-          "Official Chrome plugin 可读 HTML 页面但没有暴露移动端 viewport capability",
-          "当前 Chrome profile 或客户端策略对本地 public 静态文本资源返回 net::ERR_BLOCKED_BY_CLIENT",
-          "本地 HTTP 200 被误当成视觉验收"
-        ],
-        "fix_actions": [
-          "先恢复官方 Browser/IAB backend，再跑 mobile 课程地图验收",
-          "若继续使用 Official Chrome plugin，先确认它暴露 viewport capability 并能直接打开 public JSON/TXT 路由",
-          "检查 Chrome profile 的扩展或客户端拦截规则，解除本地 127.0.0.1 public 静态资源拦截",
-          "把每条验收结果写入 visual-acceptance-log.json，只有真实浏览器验收完成后才把状态改为 passed"
-        ],
+      "likely_causes": [
+        "新增页面后没有重新跑官方 Browser/IAB 验收",
+        "visual-acceptance-log.json 仍保留 not-run 或 blocked 状态",
+        "把 JSON/TXT 直达路由当作视觉页面验收，导致客户端拦截被误判为内容失败",
+        "本地 HTTP 200 被误当成视觉验收"
+      ],
+      "fix_actions": [
+        "用官方 Browser/IAB 复验首页、移动端课程地图、示例页、讲义页、机器可读入口索引页和完成度审计页",
+        "JSON/TXT 入口用 npm run docs:routes:check 验证直达 200；浏览器只验收 /zh-cn/appendix/public-entrypoints 索引页可读",
+        "把每条验收结果写入 visual-acceptance-log.json，只有真实浏览器验收完成后才把状态改为 passed",
+        "重新运行 npm run visual:verification:check 和 npm run release:readiness:check"
+      ],
       "verification_commands": [
         "npm run visual:verification:check",
         "npm run release:readiness:check"

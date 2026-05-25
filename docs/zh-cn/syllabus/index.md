@@ -5,7 +5,7 @@ description: Heuristic Learning 课程章节、案例、命令和验证产物总
 
 # 课程大纲
 
-本页把 HL 仓库整理成一张学习与验证地图。读者可以按章节学习，研究者可以按案例扩展，编码智能体可以按命令验证。
+本页把 HL 仓库整理成一张学习与验证地图。学生可以按章节学习，AI 研究者可以按案例扩展，工程师可以按示例和测试改代码，编码智能体可以按命令验证。
 
 ## 总体结构
 
@@ -56,6 +56,14 @@ npm run course:structure:check
 4. 尽量把案例压缩成 `examples/*` 里的最小可运行环境。
 5. 用 `npm run verify` 证明代码、反馈报告和文档可以一起构建。
 
+### 工程师路径
+
+1. 从 [可运行示例](/zh-cn/examples/) 选一个小环境，不先读完整附录。
+2. 跑对应命令，例如 `npm run examples:breakout-replay`。
+3. 打开 [代码导览](/zh-cn/appendix/code-tour)，只改一个策略更新点。
+4. 运行 `npm run examples:test` 和对应 feedback 命令，确认旧 probe 没有退化。
+5. 最后再跑 `npm run verify`，把代码、报告和文档一起验收。
+
 ### 编码智能体路径
 
 1. 读取 `llms.txt`。
@@ -72,7 +80,7 @@ npm run course:structure:check
 | 实验 | 6 个纯 Python 最小环境 | 增加真实 MuJoCo 高保真验证 |
 | 案例 | Ant、Breakout、VizDoom、机器人足球、交通模拟、X 线索 | 继续补 Jiayi 原帖 thread 和后续应用卡片 |
 | 课程 | 第 1 讲、第 2 讲、第 3 讲、Lab 1、Lab 2、教师指南、课程进度表、练习集、研究课题、实验协议与 Rubric | 继续拆成 4-5 讲课程 |
-| 验证 | tests、feedback report、report schema、VitePress build | 补 Browser/IAB 视觉验收 |
+| 验证 | tests、feedback report、report schema、VitePress build、Browser/IAB 视觉验收、GitHub Pages 部署 | 后续维护 GitHub Actions 与 Pages 真实路由 |
 
 更具体的版本路线见 [研究路线图](/zh-cn/appendix/research-roadmap)。任何新增章节如果不能落到来源、实验或验证产物，就还不应该进入主线课程。
 

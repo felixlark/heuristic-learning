@@ -123,7 +123,7 @@
         "npm run speaker:notes:check",
         "npm run teaching:pack:check"
       ],
-      "writing_prompt": "说明学生、研究者、教师和编码智能体如何从同一套 registry 进入课程。",
+      "writing_prompt": "说明学生、AI 研究者、工程师、教师和编码智能体如何从同一套 registry 进入课程。",
       "boundary": "课程化复用只说明结构与验证方法，不把 EasyVibe 内容照搬到 HL。"
     }
   ]

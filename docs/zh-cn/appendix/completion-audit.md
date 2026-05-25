@@ -169,8 +169,8 @@ HTTP 200 只能证明路由可达。正式公开发布仍需要 GitHub Pages 或
 4. 关键 registry 与对应 schema 都能从 dev server 访问。
 5. 来源登记没有把 X/飞书线索写成已复现事实。
 6. `SECURITY.md` 仍然约束凭证、飞书原文、X cookie/API token 和私有日志。
-7. `visual-verification.json` 仍把未跑过的官方 Browser/IAB 验收标记为 required-before-release，`visual-acceptance-log.json` 对未完成路径只能标记为 not-run 或 blocked，并写明原因。
-8. `npm run release:readiness:check` 只有在官方 Browser/IAB 或记录允许的官方浏览器验收路径完成后才能通过；如果仍有 blocked 项，不能声明公开发布就绪。
+7. `visual-verification.json` 仍把发布前必须复验的官方 Browser/IAB 路径标记为 required-before-release；若未来有未完成路径，`visual-acceptance-log.json` 只能标记为 not-run 或 blocked，并写明原因。
+8. `npm run release:readiness:check` 只有在官方 Browser/IAB 或记录允许的官方浏览器验收路径完成后才能通过；如果未来出现 blocked 项，不能声明公开发布就绪。
 9. 如果要公开发布，GitHub Actions 和 Pages 真实路由需要在目标平台重新验收。
 
 本页的作用是防止“测试绿了所以完成”的误判。HL 仓库的完成度必须同时由理论、案例、示例、讲义、来源、机器可读入口和构建验证共同支撑。
