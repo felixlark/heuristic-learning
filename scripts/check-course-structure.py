@@ -37,7 +37,6 @@ PAGES = [
     "docs/zh-cn/appendix/glossary.md",
     "docs/zh-cn/appendix/references.md",
     "docs/zh-cn/appendix/reading-guide.md",
-    "docs/zh-cn/appendix/course-patterns.md",
     "docs/zh-cn/appendix/case-registry.md",
     "docs/zh-cn/appendix/code-tour.md",
     "docs/zh-cn/appendix/learning-units.md",
@@ -172,7 +171,6 @@ def check_package_scripts() -> None:
         "contribution:contract:check",
         "reproducibility:check",
         "troubleshooting:tree:check",
-        "patterns:check",
         "concept:graph:check",
         "learning:units:check",
         "learning:outcomes:check",
@@ -266,8 +264,7 @@ def check_llm_pointers() -> None:
         "docs/zh-cn/appendix/glossary.md",
         "docs/zh-cn/appendix/references.md",
         "docs/zh-cn/appendix/reading-guide.md",
-        "docs/zh-cn/appendix/course-patterns.md",
-        "docs/zh-cn/appendix/case-registry.md",
+            "docs/zh-cn/appendix/case-registry.md",
         "docs/zh-cn/appendix/learning-units.md",
         "docs/zh-cn/appendix/learning-outcomes.md",
         "docs/zh-cn/appendix/checkpoints.md",
@@ -333,9 +330,6 @@ def check_llm_pointers() -> None:
         "scripts/check-reproducibility.py",
         "docs/public/reproducibility-checklist.json",
         "docs/public/reproducibility-checklist.schema.json",
-        "scripts/check-course-patterns.py",
-        "docs/public/course-patterns.json",
-        "docs/public/course-patterns.schema.json",
         "scripts/check-learning-units.py",
         "docs/public/learning-units.json",
         "docs/public/learning-units.schema.json",
@@ -421,7 +415,6 @@ def check_ci_workflows() -> None:
         "npm run slides:check",
         "npm run speaker:notes:check",
         "npm run rubric:check",
-        "npm run patterns:check",
         "npm run learning:units:check",
         "npm run teaching:pack:check",
         "npm run course:manifest:check",
@@ -677,7 +670,6 @@ def check_course_schedule() -> None:
         "exercise-registry.json",
         "contribution-contract.json",
         "reproducibility-checklist.json",
-        "course-patterns.json",
         "case-registry.json",
         "concept-graph.json",
         "learning-units.json",
@@ -717,10 +709,6 @@ def check_reading_guide() -> None:
         "Learning Beyond Gradients",
         "Trinkle23897/learning-beyond-gradients",
         "Jiayi Weng X 原帖",
-        "EasyVibe",
-        "d2l-zh",
-        "llm.c",
-        "easy-rl",
         "Deep Learning",
         "Reinforcement Learning",
         "/claims-registry.json",
@@ -741,65 +729,6 @@ def check_reading_guide() -> None:
             f"reading guide not linked: {required}",
         )
 
-
-def check_course_patterns() -> None:
-    page = read_text("docs/zh-cn/appendix/course-patterns.md")
-    registry = json.loads(read_text("docs/public/course-patterns.json"))
-    schema = json.loads(read_text("docs/public/course-patterns.schema.json"))
-    appendix = read_text("docs/zh-cn/appendix/index.md")
-    references = read_text("docs/zh-cn/appendix/references.md")
-    syllabus = read_text("docs/zh-cn/syllabus/index.md")
-    audit = read_text("docs/zh-cn/appendix/completion-audit.md")
-    verify = read_text("scripts/verify.sh")
-
-    for required in [
-        "EasyVibe",
-        "d2l-zh",
-        "llm.c",
-        "easy-rl",
-        "/course-patterns.json",
-        "/course-patterns.schema.json",
-        "npm run patterns:check",
-        "npm run verify",
-        "课程先于营销",
-        "理论必须落地",
-        "示例必须能跑",
-        "机器可续写",
-    ]:
-        require(required in page, f"course patterns page missing {required}")
-
-    require(registry.get("$schema") == "/course-patterns.schema.json", "course patterns registry schema pointer mismatch")
-    require(registry.get("schema_version") == 1, "course patterns registry schema_version must be 1")
-    require(
-        schema.get("title") == "Heuristic Learning Course Patterns Registry",
-        "course patterns schema title mismatch",
-    )
-    pattern_ids = {
-        pattern.get("id")
-        for pattern in registry.get("patterns", [])
-        if isinstance(pattern, dict) and isinstance(pattern.get("id"), str)
-    }
-    require(
-        pattern_ids
-        == {
-            "easy-vibe-course-chassis",
-            "d2l-theory-code-exercises",
-            "llm-c-readable-research-code",
-            "easy-rl-shared-vocabulary",
-        },
-        "course patterns registry ids mismatch",
-    )
-
-    for required in [
-        "course-patterns",
-        "教学仓库对标",
-        "course-patterns.json",
-        "npm run patterns:check",
-    ]:
-        require(
-            required in appendix or required in references or required in syllabus or required in audit or required in verify,
-            f"course patterns not linked: {required}",
-        )
 
 
 def check_case_registry() -> None:
@@ -1087,7 +1016,7 @@ def check_paper_blueprint() -> None:
         "方法：学习闭环",
         "实验与结果",
         "讨论、局限与威胁",
-        "课程化与复用",
+        "教学使用与复现材料",
     ]:
         require(required in page, f"paper blueprint page missing {required}")
 
@@ -1725,8 +1654,6 @@ def check_course_manifest() -> None:
     contribution_contract_schema_path = ROOT / "docs/public/contribution-contract.schema.json"
     reproducibility_path = ROOT / "docs/public/reproducibility-checklist.json"
     reproducibility_schema_path = ROOT / "docs/public/reproducibility-checklist.schema.json"
-    course_patterns_path = ROOT / "docs/public/course-patterns.json"
-    course_patterns_schema_path = ROOT / "docs/public/course-patterns.schema.json"
     learning_units_path = ROOT / "docs/public/learning-units.json"
     learning_units_schema_path = ROOT / "docs/public/learning-units.schema.json"
     learning_outcomes_path = ROOT / "docs/public/learning-outcomes.json"
@@ -1787,8 +1714,6 @@ def check_course_manifest() -> None:
     require(contribution_contract_schema_path.exists(), "missing contribution contract schema")
     require(reproducibility_path.exists(), "missing reproducibility checklist")
     require(reproducibility_schema_path.exists(), "missing reproducibility schema")
-    require(course_patterns_path.exists(), "missing course patterns registry")
-    require(course_patterns_schema_path.exists(), "missing course patterns schema")
     require(learning_units_path.exists(), "missing learning units registry")
     require(learning_units_schema_path.exists(), "missing learning units schema")
     require(learning_outcomes_path.exists(), "missing learning outcomes registry")
@@ -1849,8 +1774,6 @@ def check_course_manifest() -> None:
     contribution_contract_schema = json.loads(contribution_contract_schema_path.read_text(encoding="utf-8"))
     reproducibility = json.loads(reproducibility_path.read_text(encoding="utf-8"))
     reproducibility_schema = json.loads(reproducibility_schema_path.read_text(encoding="utf-8"))
-    course_patterns = json.loads(course_patterns_path.read_text(encoding="utf-8"))
-    course_patterns_schema = json.loads(course_patterns_schema_path.read_text(encoding="utf-8"))
     learning_units = json.loads(learning_units_path.read_text(encoding="utf-8"))
     learning_units_schema = json.loads(learning_units_schema_path.read_text(encoding="utf-8"))
     learning_outcomes = json.loads(learning_outcomes_path.read_text(encoding="utf-8"))
@@ -1972,12 +1895,6 @@ def check_course_manifest() -> None:
         reproducibility_schema.get("title") == "Heuristic Learning Reproducibility Checklist",
         "reproducibility checklist schema title mismatch",
     )
-    require(course_patterns.get("$schema") == "/course-patterns.schema.json", "course patterns schema pointer mismatch")
-    require(course_patterns.get("schema_version") == 1, "course patterns schema_version must be 1")
-    require(
-        course_patterns_schema.get("title") == "Heuristic Learning Course Patterns Registry",
-        "course patterns schema title mismatch",
-    )
     require(learning_units.get("$schema") == "/learning-units.schema.json", "learning units schema pointer mismatch")
     require(learning_units.get("schema_version") == 1, "learning units schema_version must be 1")
     require(
@@ -2095,7 +2012,6 @@ def check_course_manifest() -> None:
             "exercise-registry",
             "contribution-contract",
             "reproducibility-checklist",
-            "course-patterns",
             "learning-units",
             "learning-outcomes",
             "checkpoint-registry",
@@ -2150,8 +2066,7 @@ def check_course_manifest() -> None:
         "docs/zh-cn/appendix/glossary.md",
         "docs/zh-cn/appendix/references.md",
         "docs/zh-cn/appendix/reading-guide.md",
-        "docs/zh-cn/appendix/course-patterns.md",
-        "docs/zh-cn/appendix/case-registry.md",
+            "docs/zh-cn/appendix/case-registry.md",
         "docs/zh-cn/appendix/code-tour.md",
         "docs/zh-cn/appendix/learning-units.md",
         "docs/zh-cn/appendix/learning-outcomes.md",
@@ -2343,24 +2258,6 @@ def check_course_manifest() -> None:
             "x-signal",
         },
         "case registry ids mismatch",
-    )
-
-    patterns = course_patterns.get("patterns")
-    require(isinstance(patterns, list), "course patterns registry patterns must be a list")
-    pattern_ids = {
-        pattern.get("id")
-        for pattern in patterns
-        if isinstance(pattern, dict) and isinstance(pattern.get("id"), str)
-    }
-    require(
-        pattern_ids
-        == {
-            "easy-vibe-course-chassis",
-            "d2l-theory-code-exercises",
-            "llm-c-readable-research-code",
-            "easy-rl-shared-vocabulary",
-        },
-        "course patterns registry ids mismatch",
     )
 
     units = learning_units.get("units")
@@ -2557,7 +2454,6 @@ def main() -> None:
     check_citation_metadata()
     check_course_schedule()
     check_reading_guide()
-    check_course_patterns()
     check_case_registry()
     check_exercise_registry()
     check_contribution_contract()

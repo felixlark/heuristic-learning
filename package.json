@@ -34,7 +34,6 @@
     "contribution:contract:check": "python3 scripts/check-contribution-contract.py",
     "reproducibility:check": "python3 scripts/check-reproducibility.py",
     "troubleshooting:tree:check": "python3 scripts/check-troubleshooting-tree.py",
-    "patterns:check": "python3 scripts/check-course-patterns.py",
     "concept:graph:check": "python3 scripts/check-concept-graph.py",
     "learning:units:check": "python3 scripts/check-learning-units.py",
     "learning:outcomes:check": "python3 scripts/check-learning-outcomes.py",

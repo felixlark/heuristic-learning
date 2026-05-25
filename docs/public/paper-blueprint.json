@@ -24,20 +24,20 @@
     {
       "id": "problem-and-related-work",
       "title": "问题定义与相关工作",
-      "purpose": "把 HL 放在 RL/DL、教学仓库和 Jiayi Weng 公开来源之间，说明为什么需要新框架。",
+      "purpose": "把 HL 放在 Jiayi Weng 公开来源、RL/DL、软件测试和编码智能体边界之间，说明为什么需要新框架。",
       "claim_ids": ["hl-rl-dl-division-of-labor", "source-status-is-course-structure"],
       "metric_ids": ["source-boundary"],
       "example_ids": [],
       "evidence": [
         "docs/zh-cn/appendix/references.md",
-        "docs/zh-cn/appendix/course-patterns.md",
+        "docs/zh-cn/appendix/reading-guide.md",
         "docs/zh-cn/appendix/source-registry.md"
       ],
       "verification_commands": [
-        "npm run patterns:check",
+        "npm run claims:registry:check",
         "npm run source:registry:check"
       ],
-      "writing_prompt": "解释 EasyVibe、d2l、llm.c、easy-rl 对本仓库组织方式的启发，以及 HL 与 RL/DL 的分工。",
+      "writing_prompt": "解释 HL 与 RL/DL 的分工，以及软件测试和编码智能体为什么让软件结构成为可研究的更新对象。",
       "boundary": "相关工作只比较组织方式和问题边界，不声称 HL 已取代 RL 或 DL。"
     },
     {
@@ -108,8 +108,8 @@
     },
     {
       "id": "course-and-reuse",
-      "title": "课程化与复用",
-      "purpose": "说明仓库如何复用 EasyVibe 式文档结构，同时保留 HL 的研究与动手闭环。",
+      "title": "教学使用与复现材料",
+      "purpose": "说明学生、AI 研究者和工程师如何从同一套证据链进入 HL 的学习、复现和扩展。",
       "claim_ids": ["source-status-is-course-structure", "feedback-report-as-agent-input"],
       "metric_ids": ["update-cost", "source-boundary"],
       "example_ids": ["gridworld"],
@@ -124,7 +124,7 @@
         "npm run teaching:pack:check"
       ],
       "writing_prompt": "说明学生、AI 研究者、工程师、教师和编码智能体如何从同一套 registry 进入课程。",
-      "boundary": "课程化复用只说明结构与验证方法，不把 EasyVibe 内容照搬到 HL。"
+      "boundary": "教学使用只说明读者如何学习、复现和扩展，不描述仓库制作过程。"
     }
   ]
 }

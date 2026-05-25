@@ -14,11 +14,11 @@ description: Heuristic Learning 研究写作的章节、证据、命题、指标
 | 章节 | 写作目的 | 主要证据 | 验证命令 |
 | --- | --- | --- | --- |
 | 摘要与定位 | 说明 HL 的研究对象、证据形态和课程边界 | [HL 基础概念](/zh-cn/stage-2/)、[从 RL/DL 到 HL](/zh-cn/stage-3/)、[文献阅读指南](/zh-cn/appendix/reading-guide) | `npm run claims:registry:check`、`npm run source:registry:check` |
-| 问题定义与相关工作 | 连接 Jiayi 来源、RL/DL 和教学仓库组织方式 | [参考文献与仓库](/zh-cn/appendix/references)、[教学仓库对标](/zh-cn/appendix/course-patterns)、[来源登记](/zh-cn/appendix/source-registry) | `npm run patterns:check`、`npm run source:registry:check` |
+| 问题定义与相关工作 | 连接 Jiayi 来源、RL/DL、软件测试和编码智能体边界 | [来源与背景阅读](/zh-cn/appendix/references)、[来源登记](/zh-cn/appendix/source-registry)、[文献阅读指南](/zh-cn/appendix/reading-guide) | `npm run source:registry:check`、`npm run claims:registry:check` |
 | 方法：学习闭环 | 定义 signal、probe、baseline、patch、report 和 regression | [学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework)、`/example-registry.json` | `npm run examples:registry:check`、`npm run metrics:check` |
 | 实验与结果 | 用六个示例说明 baseline failure、heuristic outcome 和后续变量对照 | [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)、[消融计划](/zh-cn/appendix/ablation-plan)、`/benchmark-summary.json`、`/ablation-plan.json`、`experiments/*/latest.json` | `npm run examples:feedback`、`npm run examples:reports:check`、`npm run benchmark:summary:check`、`npm run ablation:plan:check` |
 | 讨论、局限与威胁 | 说明来源、复现、高保真环境和视觉验收边界 | [引用与署名](/zh-cn/appendix/citation)、[可复现性检查](/zh-cn/appendix/reproducibility)、[视觉验收](/zh-cn/appendix/visual-verification) | `npm run reproducibility:check`、`npm run visual:verification:check`、`npm run x:sources:check` |
-| 课程化与复用 | 说明仓库如何作为 EasyVibe 式课程与研究入口 | [学习单元](/zh-cn/appendix/learning-units)、[讲者备注](/zh-cn/appendix/speaker-notes)、[授课包](/zh-cn/appendix/teaching-pack) | `npm run learning:units:check`、`npm run speaker:notes:check`、`npm run teaching:pack:check` |
+| 教学使用与复现材料 | 说明学生、研究者和工程师如何从同一套证据链进入 | [学习单元](/zh-cn/appendix/learning-units)、[讲者备注](/zh-cn/appendix/speaker-notes)、[授课包](/zh-cn/appendix/teaching-pack) | `npm run learning:units:check`、`npm run speaker:notes:check`、`npm run teaching:pack:check` |
 
 ## 写作纪律
 
@@ -26,7 +26,7 @@ description: Heuristic Learning 研究写作的章节、证据、命题、指标
 2. 涉及研究主张时，先看 `/claims-registry.json` 和 [研究命题](/zh-cn/theory/research-propositions)。
 3. 涉及实验结果时，先跑 `npm run examples:feedback` 和 `npm run benchmark:summary:check`。
 4. 涉及局限时，必须保留来源状态、轻量 replay 和 Browser/IAB 验收边界。
-5. 涉及课程复用时，只复用 EasyVibe 式结构，不照搬主题内容。
+5. 涉及教学使用时，只写读者如何学习、复现和扩展，不写仓库制作过程。
 
 ## 从蓝图到报告
 
@@ -38,7 +38,7 @@ Problem:
 Method:
 Experiments:
 Threats:
-Course reuse:
+Teaching use:
 ```
 
 每一段都要能在 `/paper-blueprint.json` 里找到对应章节，并能用该章节的 `verification_commands` 复查。

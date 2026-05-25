@@ -99,12 +99,6 @@
       "route": "/zh-cn/appendix/reading-guide"
     },
     {
-      "id": "course-patterns",
-      "title": "教学仓库对标矩阵",
-      "path": "docs/zh-cn/appendix/course-patterns.md",
-      "route": "/zh-cn/appendix/course-patterns"
-    },
-    {
       "id": "case-registry",
       "title": "案例矩阵",
       "path": "docs/zh-cn/appendix/case-registry.md",
@@ -609,22 +603,6 @@
       "route": "/reproducibility-checklist.schema.json",
       "type": "schema",
       "check_script": "npm run reproducibility:check"
-    },
-    {
-      "id": "course-patterns",
-      "title": "Course Patterns Registry",
-      "path": "docs/public/course-patterns.json",
-      "route": "/course-patterns.json",
-      "type": "registry",
-      "check_script": "npm run patterns:check"
-    },
-    {
-      "id": "course-patterns-schema",
-      "title": "Course Patterns Schema",
-      "path": "docs/public/course-patterns.schema.json",
-      "route": "/course-patterns.schema.json",
-      "type": "schema",
-      "check_script": "npm run patterns:check"
     },
     {
       "id": "learning-units",

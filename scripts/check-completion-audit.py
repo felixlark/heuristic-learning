@@ -68,7 +68,9 @@ def check_registry(registry: dict[str, Any]) -> None:
         "registry",
     )
     require(registry.get("schema_version") == 1, "registry schema_version must be 1")
-    require("EasyVibe" in registry.get("objective", ""), "objective must preserve EasyVibe target")
+    objective = registry.get("objective", "")
+    for reader in ["AI researchers", "engineers", "students"]:
+        require(reader in objective, f"objective must name reader path: {reader}")
 
     page = (ROOT / "docs/zh-cn/appendix/completion-audit.md").read_text(encoding="utf-8")
     manifest = load_json(ROOT / "docs/public/course-manifest.json")

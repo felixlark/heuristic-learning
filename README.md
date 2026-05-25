@@ -2,14 +2,14 @@
 
 直觉学习（Heuristic Learning, HL）中文研究与动手课程。
 
-这个仓库把 Jiayi Weng 在 [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/) 中提出的 Heuristic Learning 思路，整理成一个面向研究者、学生和工程实践者的课程型 GitHub 仓库。仓库形态参考 DataWhale EasyVibe、`d2l-zh` 与 Karpathy `llm.c`：既有理论地图，也有可以本地运行的最小示例。
+这个仓库把 Jiayi Weng 在 [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/) 中提出的 Heuristic Learning 思路，整理成一个面向研究者、学生和工程实践者的课程型 GitHub 仓库：既有理论地图，也有可以本地运行的最小示例。
 
 ## 目标
 
 - 用中文建立 HL 的基础概念、术语和研究问题。
 - 把 Atari、MuJoCo、VizDoom、机器人足球等案例整理成可学习的案例库。
 - 提供不依赖重型框架的 runnable examples，让读者先跑通状态、动作、反馈、代码更新的闭环。
-- 保留 EasyVibe 式的 VitePress 文档体验，便于后续扩展为课程、幻灯片和实验。
+- 形成清晰的学习路线、章节、案例、附录、讲义和 Lab 入口，便于后续扩展为课程与组会材料。
 
 ## 快速开始
 
@@ -159,7 +159,7 @@ npm run verify
 - 检查 `/case-registry.json` 所描述的案例页、来源状态、绑定示例、failure mode、学习成果和验证命令。
 - 检查 `/source-to-case-playbook.json` 所描述的 X、公开 artifact、飞书线索和研究假设进入 case card 的路径。
 - 检查来源登记、`/x-sources.json` 的 X/FieldTheory 缓存状态和“已复现”条目的 runnable example 落点。
-- 检查研究命题、讲义 registry、讲义结构、评分 Rubric、学习单元、授课包、完成度审计和教学仓库对标矩阵。
+- 检查研究命题、讲义 registry、讲义结构、评分 Rubric、学习单元、授课包和完成度审计。
 - 检查 `/speaker-notes.json` 所描述的讲者备注、demo 节点、讨论题、常见误解和 exit ticket。
 - 检查 `/learning-outcomes.json` 所描述的能力目标到学习单元、练习、Rubric、证据和验证命令的映射。
 - 检查 `/checkpoint-registry.json` 所描述的阶段自测问题、证据、命令、通过条件和常见失败。
@@ -200,10 +200,6 @@ X/FieldTheory 线索的缓存状态和来源层级见 [X 线索案例](docs/zh-c
 
 - Jiayi Weng, [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/)
 - [`Trinkle23897/learning-beyond-gradients`](https://github.com/Trinkle23897/learning-beyond-gradients)
-- [`datawhalechina/easy-vibe`](https://github.com/datawhalechina/easy-vibe)
-- [`karpathy/llm.c`](https://github.com/karpathy/llm.c)
-- [`d2l-ai/d2l-zh`](https://github.com/d2l-ai/d2l-zh)
-- [`datawhalechina/easy-rl`](https://github.com/datawhalechina/easy-rl)
 
 引用本课程仓库时使用根目录的 [CITATION.cff](CITATION.cff)，并按 [引用与署名](docs/zh-cn/appendix/citation.md) 区分原始来源、课程材料和轻量 replay。许可证见 [LICENSE](LICENSE)，当前为 `CC-BY-NC-SA-4.0`。
 

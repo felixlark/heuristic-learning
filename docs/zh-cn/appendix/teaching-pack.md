@@ -102,7 +102,7 @@ Demo：
 ```bash
 npm run source:registry:check
 npm run claims:registry:check
-npm run patterns:check
+npm run paper:blueprint:check
 ```
 
 交付物：一页 `templates/claim-review.md` 风格的 claim review，说明一个命题的证据、缺口、反驳路径和下一步 probe。

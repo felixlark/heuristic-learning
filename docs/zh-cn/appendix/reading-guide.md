@@ -1,6 +1,6 @@
 ---
 title: 文献阅读指南
-description: Heuristic Learning 课程的一手来源、教学仓库和背景概念阅读顺序
+description: Heuristic Learning 课程的一手来源和背景概念阅读顺序
 ---
 
 # 文献阅读指南
@@ -12,7 +12,7 @@ description: Heuristic Learning 课程的一手来源、教学仓库和背景概
 | 原则 | 说明 |
 | --- | --- |
 | 先一手来源 | 优先读 Jiayi Weng 的文章、公开代码 artifact 和 X 原帖 |
-| 再课程参考 | EasyVibe、d2l-zh、llm.c、easy-rl 只用于组织方式和教学形态参考 |
+| 再背景对照 | RL、DL、软件测试和编码智能体只用于界定问题边界 |
 | 不把线索写成结论 | X/飞书材料进入主线前必须有 case card、来源状态和可验证落点 |
 | 每个主张都要落地 | 读完一条主张后，必须能指到命题、示例、报告或路线图任务 |
 
@@ -67,14 +67,14 @@ npm run examples:reports:check
 npm run examples:registry:check
 ```
 
-## 第四轮：参考教学仓库结构
+## 第四轮：从案例到研究问题
 
-| 参考仓库 | 本仓库借鉴 | 不应误用 |
+| 研究动作 | 目标 | 不应误用 |
 | --- | --- | --- |
-| EasyVibe | VitePress 课程结构、中文章节、实践导向 | 不照搬内容和文案 |
-| d2l-zh | 理论、代码、练习同步推进 | 不把 HL 写成成熟教科书体系 |
-| llm.c | 小而可读、可运行、可验证的研究代码 | 不追求重型框架覆盖 |
-| easy-rl | RL 概念课程化表达 | 不把 HL 简化为 RL 的规则版 |
+| 抽取 failure mode | 把案例压缩成可观察失败 | 不把平均分提升当成唯一证据 |
+| 设计 probe | 让失败可回放、可测试 | 不把不可复现线索写成结论 |
+| 写 feedback report | 指导下一轮策略或测试修改 | 不只写运行日志 |
+| 定义反驳路径 | 说明什么结果会推翻当前命题 | 不把研究假设写成事实 |
 
 对应仓库结构：
 

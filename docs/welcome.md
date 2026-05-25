@@ -17,9 +17,9 @@ hero:
       link: /zh-cn/examples/
 features:
   - title: 像课程一样组织
-    details: 参考 EasyVibe，把入门、理论、案例、实验、参考资料分成清晰路径。
+    details: 把入门、理论、案例、实验、参考资料分成清晰路径。
   - title: 像研究仓库一样可追溯
     details: 每个概念都连接到公开来源、实验记录或可验证的代码。
-  - title: 像 llm.c 一样动手
+  - title: 从最小示例动手
     details: 从小代码开始，让读者能运行、改规则、看反馈，而不是只读概念。
 ---

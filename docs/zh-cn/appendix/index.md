@@ -10,7 +10,7 @@ description: HL 仓库资料来源、维护规范与未来路线
 | 层级 | 来源 | 用途 |
 | --- | --- | --- |
 | 一手公开源 | Jiayi 文章、GitHub artifact、X 原帖 | 定义概念与案例 |
-| 教学仓库参考 | EasyVibe、d2l-zh、easy-rl、llm.c | 组织课程结构与示例标准 |
+| 背景概念 | RL、DL、软件测试、编码智能体 | 界定 HL 的问题边界 |
 | 内部资料 | 飞书消息、任务、文档 | 补充应用方向和真实需求 |
 | 本仓库实验 | `examples/`、测试、运行记录 | 形成可验证学习材料 |
 | 本仓库理论 | [研究框架](/zh-cn/theory/research-framework) | 固化问题定义、度量与实验范式 |
@@ -32,9 +32,8 @@ description: HL 仓库资料来源、维护规范与未来路线
 - [本地运行与排错](/zh-cn/appendix/local-setup)
 - [排错决策树](/zh-cn/appendix/troubleshooting-tree)
 - [术语表](/zh-cn/appendix/glossary)
-- [参考文献与参考仓库](/zh-cn/appendix/references)
+- [来源与背景阅读](/zh-cn/appendix/references)
 - [文献阅读指南](/zh-cn/appendix/reading-guide)
-- [教学仓库对标矩阵](/zh-cn/appendix/course-patterns)
 - [案例矩阵](/zh-cn/appendix/case-registry)
 - [代码导览](/zh-cn/appendix/code-tour)
 - [学习单元矩阵](/zh-cn/appendix/learning-units)
@@ -100,8 +99,6 @@ description: HL 仓库资料来源、维护规范与未来路线
 - [`/exercise-registry.schema.json`](/exercise-registry.schema.json)：约束练习矩阵字段，供 `npm run exercises:check` 验证。
 - [`/contribution-contract.json`](/contribution-contract.json)：列出贡献类型、证据字段、必备路径、验证命令和禁止材料。
 - [`/contribution-contract.schema.json`](/contribution-contract.schema.json)：约束贡献契约字段，供 `npm run contribution:contract:check` 验证。
-- [`/course-patterns.json`](/course-patterns.json)：列出本仓库从 EasyVibe、d2l-zh、llm.c、easy-rl 借鉴的组织模式、证据和边界。
-- [`/course-patterns.schema.json`](/course-patterns.schema.json)：约束对标矩阵字段，供 `npm run patterns:check` 验证。
 - [`/learning-units.json`](/learning-units.json)：列出每个课程单元的阅读、示例、命令、交付物和验收条件。
 - [`/learning-units.schema.json`](/learning-units.schema.json)：约束学习单元矩阵字段，供 `npm run learning:units:check` 验证。
 - [`/learning-outcomes.json`](/learning-outcomes.json)：列出学习成果到学习单元、练习题、Rubric、证据和验证命令的映射。

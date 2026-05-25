@@ -22,7 +22,7 @@ export default defineConfig({
       'meta',
       {
         property: 'og:description',
-        content: '直觉学习中文研究与动手课程，复用 EasyVibe 的课程化文档体验。'
+        content: '直觉学习中文研究与动手课程，面向研究者、工程师和学生。'
       }
     ],
     ['meta', { property: 'og:url', content: siteUrl }],
@@ -109,7 +109,6 @@ export default defineConfig({
             { text: '术语表', link: '/zh-cn/appendix/glossary' },
             { text: '参考文献与仓库', link: '/zh-cn/appendix/references' },
             { text: '文献阅读指南', link: '/zh-cn/appendix/reading-guide' },
-            { text: '教学仓库对标', link: '/zh-cn/appendix/course-patterns' },
             { text: '案例矩阵', link: '/zh-cn/appendix/case-registry' },
             { text: '代码导览', link: '/zh-cn/appendix/code-tour' },
             { text: '学习单元矩阵', link: '/zh-cn/appendix/learning-units' },
@@ -159,7 +158,7 @@ export default defineConfig({
       text: '在 GitHub 上编辑此页'
     },
     footer: {
-      message: 'Built with the EasyVibe VitePress course chassis.',
+      message: 'Heuristic Learning research and hands-on course.',
       copyright: 'CC-BY-NC-SA-4.0'
     }
   }

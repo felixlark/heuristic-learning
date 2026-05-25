@@ -69,7 +69,7 @@
       "demo_commands": [
         "npm run source:registry:check",
         "npm run claims:registry:check",
-        "npm run patterns:check"
+        "npm run paper:blueprint:check"
       ],
       "deliverable": "claim review",
       "acceptance": [

@@ -32,9 +32,8 @@ Core pages:
 - `/zh-cn/appendix/troubleshooting-tree`: failure-surface diagnosis, fix actions, and recheck commands
 - `/zh-cn/appendix/source-to-case-playbook`: source-to-case workflows for X, public artifact, internal Feishu, and research hypothesis signals
 - `/zh-cn/appendix/glossary`: HL terms and working definitions
-- `/zh-cn/appendix/references`: public sources and teaching repository references
-- `/zh-cn/appendix/reading-guide`: research-oriented reading order across Jiayi Weng sources, teaching repos, RL/DL context, and runnable examples
-- `/zh-cn/appendix/course-patterns`: EasyVibe/d2l/llm.c/easy-rl repository pattern comparison and HL structure rules
+- `/zh-cn/appendix/references`: public sources and background references
+- `/zh-cn/appendix/reading-guide`: research-oriented reading order across Jiayi Weng sources, RL/DL context, and runnable examples
 - `/zh-cn/appendix/case-registry`: case-to-source/example/outcome/command mapping
 - `/zh-cn/appendix/learning-units`: chapter-level read-run-modify-reflect learning units
 - `/zh-cn/appendix/learning-outcomes`: learning outcomes mapped to units, exercises, rubric modules, evidence, and commands
@@ -92,8 +91,6 @@ Core pages:
 - `/exercise-registry.schema.json`: JSON Schema for the exercise registry
 - `/contribution-contract.json`: machine-readable contribution types, evidence fields, required paths, commands, and forbidden materials
 - `/contribution-contract.schema.json`: JSON Schema for the contribution contract
-- `/course-patterns.json`: machine-readable borrowed course/research repository patterns, evidence, verification commands, and boundaries
-- `/course-patterns.schema.json`: JSON Schema for the course patterns registry
 - `/learning-units.json`: machine-readable chapter units, readings, examples, commands, deliverables, and acceptance checks
 - `/learning-units.schema.json`: JSON Schema for the learning units registry
 - `/learning-outcomes.json`: machine-readable learning outcomes, exercises, rubric modules, evidence, assessment, and verification commands
@@ -158,7 +155,6 @@ Runnable code:
 - `scripts/check-slide-deck.py`
 - `scripts/check-speaker-notes.py`
 - `scripts/check-rubric.py`
-- `scripts/check-course-patterns.py`
 - `scripts/check-learning-units.py`
 - `scripts/check-learning-outcomes.py`
 - `scripts/check-checkpoints.py`
@@ -181,5 +177,3 @@ Primary references:
 - https://trinkle23897.github.io/learning-beyond-gradients/
 - https://github.com/Trinkle23897/learning-beyond-gradients
 - https://github.com/datawhalechina/easy-vibe
-- https://github.com/karpathy/llm.c
-- https://github.com/d2l-ai/d2l-zh

@@ -39,7 +39,7 @@ Heuristic Learning Contributors. Heuristic Learning: A Chinese Research and Hand
 | 本课程结构、中文讲义、练习和实验协议 | 引用本仓库 `CITATION.cff` |
 | 轻量 replay 示例 | 引用本仓库示例目录和报告路径，同时说明它是教学复现 |
 | 内部飞书线索 | 不公开引用敏感来源，只引用本仓库中脱敏后的最小环境 |
-| DataWhale/EasyVibe 等教学仓库 | 只作为课程组织参考，不作为 HL 结论证据 |
+| 背景概念材料 | 只作为问题边界参考，不作为 HL 结论证据 |
 
 敏感来源和凭证处理见根目录 `SECURITY.md`。引用页只说明署名边界，不允许替代安全披露流程。
 

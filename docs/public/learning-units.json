@@ -95,7 +95,7 @@
       "readings": [
         "docs/zh-cn/theory/research-framework.md",
         "docs/zh-cn/theory/research-propositions.md",
-        "docs/zh-cn/appendix/course-patterns.md"
+        "docs/zh-cn/appendix/paper-blueprint.md"
       ],
       "examples": [
         "gridworld",
@@ -107,7 +107,7 @@
       ],
       "commands": [
         "npm run claims:registry:check",
-        "npm run patterns:check"
+        "npm run paper:blueprint:check"
       ],
       "deliverable": "命题-证据-反驳路径说明",
       "acceptance": [

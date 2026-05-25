@@ -73,10 +73,6 @@ echo "==> Checking troubleshooting tree"
 npm run troubleshooting:tree:check
 
 echo
-echo "==> Checking course patterns"
-npm run patterns:check
-
-echo
 echo "==> Checking concept graph"
 npm run concept:graph:check
 

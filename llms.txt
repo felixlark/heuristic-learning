@@ -31,9 +31,8 @@ Use these entry points:
 - `docs/zh-cn/appendix/troubleshooting-tree.md` for failure-surface diagnosis, fix actions, and recheck commands.
 - `docs/zh-cn/appendix/source-to-case-playbook.md` for converting X, public artifact, internal Feishu, and research hypothesis signals into bounded case cards.
 - `docs/zh-cn/appendix/glossary.md` for HL terms and working definitions.
-- `docs/zh-cn/appendix/references.md` for public sources and teaching repository references.
-- `docs/zh-cn/appendix/reading-guide.md` for a research-oriented reading order across Jiayi Weng sources, teaching repos, RL/DL context, and runnable examples.
-- `docs/zh-cn/appendix/course-patterns.md` for the EasyVibe/d2l/llm.c/easy-rl repository pattern comparison and HL structure rules.
+- `docs/zh-cn/appendix/references.md` for public sources and background references.
+- `docs/zh-cn/appendix/reading-guide.md` for a research-oriented reading order across Jiayi Weng sources, RL/DL context, and runnable examples.
 - `docs/zh-cn/appendix/case-registry.md` for case-to-source/example/outcome/command mapping.
 - `docs/zh-cn/appendix/learning-units.md` for chapter-level read-run-modify-reflect learning units.
 - `docs/zh-cn/appendix/learning-outcomes.md` for learning outcomes mapped to units, exercises, rubric modules, evidence, and commands.
@@ -92,8 +91,6 @@ Use these entry points:
 - `docs/public/exercise-registry.schema.json` for the exercise registry JSON Schema.
 - `docs/public/contribution-contract.json` for machine-readable contribution types, evidence fields, required paths, commands, and forbidden materials.
 - `docs/public/contribution-contract.schema.json` for the contribution contract JSON Schema.
-- `docs/public/course-patterns.json` for machine-readable borrowed course/research repository patterns, evidence, verification commands, and boundaries.
-- `docs/public/course-patterns.schema.json` for the course patterns registry JSON Schema.
 - `docs/public/learning-units.json` for machine-readable chapter units, readings, examples, commands, deliverables, and acceptance checks.
 - `docs/public/learning-units.schema.json` for the learning units registry JSON Schema.
 - `docs/public/learning-outcomes.json` for machine-readable learning outcomes, exercises, rubric modules, evidence, assessment, and verification commands.
@@ -146,7 +143,6 @@ Use these entry points:
 - `scripts/check-rubric.py` for rubric weight, score-level, evidence, and route checks.
 - `scripts/check-exercise-registry.py` for exercise input, example, command, learning-unit, and rubric alignment checks.
 - `scripts/check-contribution-contract.py` for contribution type, evidence field, path, command, and forbidden-material checks.
-- `scripts/check-course-patterns.py` for EasyVibe/d2l/llm.c/easy-rl pattern registry checks.
 - `scripts/check-learning-units.py` for chapter-level read-run-modify-reflect unit checks.
 - `scripts/check-learning-outcomes.py` for outcome-to-unit/exercise/rubric/evidence checks.
 - `scripts/check-checkpoints.py` for checkpoint-to-unit/outcome/evidence checks.

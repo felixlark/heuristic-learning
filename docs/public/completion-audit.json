@@ -1,7 +1,7 @@
 {
   "$schema": "/completion-audit.schema.json",
   "schema_version": 1,
-  "objective": "Build a verifiable EasyVibe-inspired Heuristic Learning teaching and research repository with theory content, runnable examples, and validated docs/code structure.",
+  "objective": "Build a verifiable Heuristic Learning teaching and research repository for AI researchers, engineers, and students, with theory content, runnable examples, and validated docs/code structure.",
   "requirements": [
     {
       "id": "chinese-course-entry",
@@ -112,8 +112,7 @@
         "npm run learning:outcomes:check",
         "npm run teaching:pack:check",
         "npm run research:projects:check",
-        "npm run research:logbook:check",
-        "npm run patterns:check"
+        "npm run research:logbook:check"
       ]
     },
     {
@@ -231,7 +230,6 @@
     "npm run contribution:contract:check",
     "npm run reproducibility:check",
     "npm run troubleshooting:tree:check",
-    "npm run patterns:check",
     "npm run concept:graph:check",
     "npm run learning:units:check",
     "npm run learning:outcomes:check",

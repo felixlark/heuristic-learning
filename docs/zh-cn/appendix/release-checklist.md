@@ -59,7 +59,7 @@ npm run exercises:check
 npm run contribution:contract:check
 npm run reproducibility:check
 npm run troubleshooting:tree:check
-npm run patterns:check
+npm run paper:blueprint:check
 npm run concept:graph:check
 npm run learning:units:check
 npm run learning:outcomes:check

@@ -65,7 +65,7 @@ case signal -> minimal environment -> baseline failure -> heuristic patch
 | 回归验证 | `tests/test_*.py` |
 | 教学解释 | `docs/zh-cn/examples/` 与 `docs/zh-cn/cases/` |
 
-这也是本仓库复用 EasyVibe 课程结构的原因：章节、案例、实验和附录必须互相指向，而不是各写各的。
+因此，章节、案例、实验和附录必须互相指向，而不是各写各的。
 
 统一验证命令是：
 
@@ -95,4 +95,4 @@ HL 不排斥 RL 或 DL。更合理的边界是：
 
 这些假设目前还不是论文结论。本仓库的任务是把它们转成可运行实验与可讨论的课程材料。
 
-可执行项目见 [研究课题](/zh-cn/appendix/research-projects)，实验设计和报告约束见 [实验协议](/zh-cn/appendix/benchmark-protocol)。研究评估维度见 [评估指标矩阵](/zh-cn/appendix/evaluation-metrics) 和 `/evaluation-metrics.json`，更新后运行 `npm run metrics:check`。术语边界见 [术语表](/zh-cn/appendix/glossary)，公开来源和课程结构参考见 [参考文献与参考仓库](/zh-cn/appendix/references)。
+可执行项目见 [研究课题](/zh-cn/appendix/research-projects)，实验设计和报告约束见 [实验协议](/zh-cn/appendix/benchmark-protocol)。研究评估维度见 [评估指标矩阵](/zh-cn/appendix/evaluation-metrics) 和 `/evaluation-metrics.json`，更新后运行 `npm run metrics:check`。术语边界见 [术语表](/zh-cn/appendix/glossary)，公开来源和背景阅读见 [来源与背景阅读](/zh-cn/appendix/references)。
