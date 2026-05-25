@@ -26,7 +26,7 @@ description: Heuristic Learning 研究写作的章节、证据、命题、指标
 2. 涉及研究主张时，先看 `/claims-registry.json` 和 [研究命题](/zh-cn/theory/research-propositions)。
 3. 涉及实验结果时，先跑 `npm run examples:feedback` 和 `npm run benchmark:summary:check`。
 4. 涉及局限时，必须保留来源状态、轻量 replay 和 Browser/IAB 验收边界。
-5. 涉及教学使用时，只写读者如何学习、复现和扩展，不写仓库制作过程。
+5. 涉及教学使用时，只写读者如何学习、复现和扩展；不把未验证来源写成研究结论。
 
 ## 从蓝图到报告
 

@@ -5,7 +5,7 @@ description: Heuristic Learning 课程使用的一手来源和背景材料
 
 # 来源与背景阅读
 
-本页记录课程当前使用的公开来源和背景材料。它不是完整文献综述；来源是否已经进入课程主线，以 [来源登记](/zh-cn/appendix/source-registry) 为准。
+本页记录课程当前使用的公开来源和背景材料。它不是完整文献综述；每条来源能支持的结论强度，以 [来源登记](/zh-cn/appendix/source-registry) 为准。
 引用本课程仓库、原始来源和轻量 replay 时，请先阅读 [引用与署名](/zh-cn/appendix/citation)。
 如果你要按研究路径系统阅读这些材料，先走 [文献阅读指南](/zh-cn/appendix/reading-guide)，再把阅读产物落到来源登记、命题矩阵或 runnable example。
 

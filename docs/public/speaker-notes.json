@@ -32,11 +32,11 @@
       "material_id": "lecture-2",
       "title": "第 2 讲讲者备注",
       "slide_path": "docs/zh-cn/slides/lecture-2/index.md",
-      "opening_question": "一个 X 来源、GitHub artifact 或脱敏应用需求怎样进入课程主线而不过度声明？",
+      "opening_question": "一个 X 来源、GitHub artifact 或脱敏应用需求怎样转成可验证实验而不过度声明？",
       "demo_checkpoints": [
         "用 X 来源案例说明 source status 与 claim strength 的关系。",
         "展示 VizDoom 或 Breakout replay 如何从 artifact 压缩成最小 probe。",
-        "让学生把 signal 写成 case card，而不是直接写成结论。"
+        "让学生把 source boundary 写成 case card，而不是直接写成结论。"
       ],
       "discussion_prompts": [
         "什么证据足以把待采集线索升级为已复现案例？",
@@ -46,7 +46,7 @@
         "把二手转述写成一手来源。",
         "把公开 artifact 的轻量 replay 等同于完整环境复现。"
       ],
-      "exit_ticket": "提交一张含 Signal、Probe、Baseline、Patch、Report、Regression 的 case card 草稿。",
+      "exit_ticket": "提交一张含 Source boundary、Probe、Baseline、Heuristic patch、Feedback report、Regression gate 的 case card 草稿。",
       "verification_commands": [
         "npm run source:registry:check",
         "npm run cases:check",

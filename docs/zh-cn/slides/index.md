@@ -15,7 +15,7 @@ description: Heuristic Learning 课程幻灯片目录
 
 机器可读讲义矩阵见 [`/teaching-registry.json`](/teaching-registry.json)，字段约束见 [`/teaching-registry.schema.json`](/teaching-registry.schema.json)。`npm run teaching:registry:check` 会检查每讲/每个 lab 的路径、阅读材料、命令和验收产物是否仍然有效。
 
-讲义结构矩阵见 [`/slide-deck.json`](/slide-deck.json)，字段约束见 [`/slide-deck.schema.json`](/slide-deck.schema.json)。`npm run slides:check` 会检查每讲/每个 lab 的必备标题、示例绑定、课堂命令和交付模板，避免幻灯片退化成散乱笔记。
+学习材料索引见 [`/slide-deck.json`](/slide-deck.json)，字段约束见 [`/slide-deck.schema.json`](/slide-deck.schema.json)。`npm run slides:check` 会检查每讲/每个 lab 的核心小节、示例绑定、练习命令和交付模板是否仍然有效。
 
 讲者备注见 [讲者备注](/zh-cn/appendix/speaker-notes)，机器入口为 [`/speaker-notes.json`](/speaker-notes.json)，字段约束见 [`/speaker-notes.schema.json`](/speaker-notes.schema.json)。`npm run speaker:notes:check` 会检查开场问题、demo 节点、讨论题、常见误解和 exit ticket 是否仍绑定现有讲义。
 
