@@ -41,7 +41,7 @@ def check_schema(schema: dict[str, Any]) -> None:
 
 def command_known(command: str, scripts: dict[str, Any]) -> bool:
     if not command.startswith("npm run "):
-        return command == "ft status" or command.startswith("ft show ") or command.startswith("ft search ")
+        return False
     script = command.removeprefix("npm run ").split()[0]
     return script in scripts
 
@@ -117,7 +117,7 @@ def check_registry(registry: dict[str, Any]) -> None:
         "npm run source:case:check",
         "templates/case-card.md",
         "templates/reproduction-note.md",
-        "referenced-not-cached",
+        "待直接复核",
     ]:
         require(required in page, f"source-to-case page missing {required}")
 

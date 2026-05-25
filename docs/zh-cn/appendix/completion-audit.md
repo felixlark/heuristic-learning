@@ -20,7 +20,7 @@ description: Heuristic Learning 仓库目标、证据、验证命令和剩余边
 | 课程材料 | 3 讲 + 2 Lab、讲者备注、教师指南、课程进度表、授课包、概念图谱、学习成果矩阵、研究课题、研究日志、练习集、Rubric | `npm run teaching:registry:check`、`npm run slides:check`、`npm run speaker:notes:check`、`npm run rubric:check`、`npm run exercises:check`、`npm run concept:graph:check`、`npm run learning:outcomes:check`、`npm run teaching:pack:check`、`npm run research:projects:check`、`npm run research:logbook:check` |
 | 机器可读入口 | `/course-manifest.json` 统一登记核心页面、示例、public resources 和 CI gate；`/troubleshooting-tree.json` 把失败面映射到诊断、修复和复验；各 registry/schema 由对应检查脚本约束 | `npm run course:manifest:check`、`npm run troubleshooting:tree:check`、registry checks |
 | 贡献与发布治理 | CONTRIBUTING、PR/issue templates、contribution contract、[贡献与研究协议](/zh-cn/appendix/contribution-protocol)、release checklist、CHANGELOG、LICENSE、CITATION | `npm run contribution:contract:check`、`npm run course:structure:check` |
-| 来源和安全边界 | 来源登记、X 线索矩阵、引用页、`SECURITY.md`、敏感来源规则 | `npm run source:registry:check`、`npm run x:sources:check`、结构检查 |
+| 来源和安全边界 | 来源登记、X 来源矩阵、引用页、`SECURITY.md`、敏感来源规则 | `npm run source:registry:check`、`npm run x:sources:check`、结构检查 |
 | 文档构建 | VitePress site、sitemap、public JSON routes | `npm run verify` |
 | 浏览器视觉验收 | [视觉与浏览器验收](/zh-cn/appendix/visual-verification)、`/visual-verification.json`、`/visual-verification.schema.json`、`/visual-acceptance-log.json` | `npm run visual:verification:check`、`npm run docs:routes:check`、`npm run release:readiness:check` |
 | 可复现性 | [可复现性检查清单](/zh-cn/appendix/reproducibility)、`/reproducibility-checklist.json`、`/reproducibility-checklist.schema.json` | `npm run reproducibility:check`、`npm run verify` |
@@ -139,7 +139,7 @@ npm run docs:routes:check
 | `/heuristic-learning/completion-audit.json` | 完成度审计 registry |
 | `/heuristic-learning/visual-verification.json` | 视觉验收 registry |
 | `/heuristic-learning/visual-acceptance-log.json` | 视觉验收记录 |
-| `/heuristic-learning/x-sources.json` | X 线索 registry |
+| `/heuristic-learning/x-sources.json` | X 来源 registry |
 | `/heuristic-learning/source-to-case-playbook.json` | 来源到案例 playbook |
 | `/heuristic-learning/experiment-report.schema.json` | 实验报告 schema |
 
@@ -150,8 +150,8 @@ HTTP 200 只能证明路由可达。正式公开发布仍需要 GitHub Pages 或
 | 主题 | 当前状态 | 不应过度声明 |
 | --- | --- | --- |
 | Jiayi Weng 原始思想 | 以 `learning-beyond-gradients` 文章和公开 artifact 为最高信号来源 | 不写成已有正式论文结论 |
-| X/FieldTheory 信号 | 作为 source signal 和待结构化案例；`/x-sources.json` 区分 cached、referenced-not-cached、to-collect | 未通过 `ft` 或公开 URL 复核前不写成已复现 |
-| 飞书线索 | 只允许脱敏后变成最小环境或内部线索 | 不公开飞书原文、会议纪要或私有链接 |
+| X 来源信号 | 作为 source signal 和待结构化案例；`/x-sources.json` 区分 已复核摘要、待直接复核、待采集 | 未通过 `ft` 或公开 URL 复核前不写成已复现 |
+| 脱敏应用问题 | 只允许脱敏后变成最小环境或脱敏应用问题 | 不公开私有原文、会议纪要或私有链接 |
 | 轻量 replay | 可作为教学复现和 failure probe | 不等同于真实 MuJoCo/Atari/VizDoom 高保真复现 |
 | 本地 HTTP 预检 | 可证明 dev server 路由可达 | 不等同于 GitHub Pages 发布验收 |
 | Browser/IAB 视觉验收 | 由 [视觉与浏览器验收](/zh-cn/appendix/visual-verification) 定义官方浏览器路径 | 未跑官方 Browser/IAB 前不能声明视觉验收通过 |
@@ -164,8 +164,8 @@ HTTP 200 只能证明路由可达。正式公开发布仍需要 GitHub Pages 或
 2. `docs/.vitepress/dist`、`docs/.vitepress/cache` 和 `__pycache__` 没有残留。
 3. README、syllabus、course-map、examples、slides、appendix 入口互相可达。
 4. 关键 registry 与对应 schema 都能从 dev server 访问。
-5. 来源登记没有把 X/飞书线索写成已复现事实。
-6. `SECURITY.md` 仍然约束凭证、飞书原文、X cookie/API token 和私有日志。
+5. 来源登记没有把 X/脱敏应用问题写成已复现事实。
+6. `SECURITY.md` 仍然约束凭证、私有原文、X cookie/API token 和私有日志。
 7. `visual-verification.json` 仍把发布前必须复验的官方 Browser/IAB 路径标记为 required-before-release；若未来有未完成路径，`visual-acceptance-log.json` 只能标记为 not-run 或 blocked，并写明原因。
 8. `npm run release:readiness:check` 只有在官方 Browser/IAB 或记录允许的官方浏览器验收路径完成后才能通过；如果未来出现 blocked 项，不能声明公开发布就绪。
 9. 如果要公开发布，GitHub Actions 和 Pages 真实路由需要在目标平台重新验收。

@@ -45,7 +45,7 @@
       "expected_observation": "baseline 报告 blocked_shot，heuristic 报告 goal。",
       "edit_target": "examples/robot-soccer/policies.py",
       "test_path": "tests/test_robot_soccer.py",
-      "boundary": "公开代码只保留脱敏 failure pattern，不包含飞书原文或真实机器人系统。"
+      "boundary": "公开代码只保留脱敏 failure pattern，不包含私有原文或真实机器人系统。"
     },
     {
       "id": "vizdoom-code-tour",

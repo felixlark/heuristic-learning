@@ -91,10 +91,10 @@ npm run examples:reports:check
 
 | 环节 | 内容 | 材料 |
 | --- | --- | --- |
-| 读前 | 阅读 Jiayi 文章和本仓库阅读指南 | [文献阅读指南](/zh-cn/appendix/reading-guide) |
+| 读前 | 阅读 Jiayi 文章和课程阅读指南 | [文献阅读指南](/zh-cn/appendix/reading-guide) |
 | 讨论 1 | 命题是否能被示例支撑 | [研究命题](/zh-cn/theory/research-propositions) |
 | 讨论 2 | 现有 replay 的边界 | [研究路线图](/zh-cn/appendix/research-roadmap) |
-| 讨论 3 | 如何从 X/飞书线索变成 case card | [来源登记](/zh-cn/appendix/source-registry) |
+| 讨论 3 | 如何从 X/脱敏应用问题变成 case card | [来源登记](/zh-cn/appendix/source-registry) |
 | 收尾 | 形成一个可反驳实验设计 | [研究课题](/zh-cn/appendix/research-projects) |
 
 Demo：

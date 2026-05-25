@@ -58,8 +58,8 @@
           "enum": [
             "public-essay",
             "public-code-artifact",
-            "x-or-fieldtheory-signal",
-            "internal-signal",
+            "x-source",
+            "sanitized-application",
             "cross-example-analysis"
           ]
         },

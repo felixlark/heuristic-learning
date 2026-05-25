@@ -33,7 +33,7 @@
     {
       "id": "signal",
       "term": "Signal",
-      "definition": "值得学习的来源信号，可以来自 X、公开 artifact、飞书、日志或回放。",
+      "definition": "值得学习的来源信号，可以来自 X、公开 artifact、私有来源、日志或回放。",
       "claim_ids": [
         "source-status-is-course-structure"
       ],

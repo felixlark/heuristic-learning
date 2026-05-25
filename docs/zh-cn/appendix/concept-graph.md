@@ -44,7 +44,7 @@ description: Heuristic Learning 术语、研究命题、示例、讲义和验证
 2. 根据概念定位 `pages`、`example_ids` 和 `commands`。
 3. 修改任何概念相关页面后，运行 `npm run concept:graph:check` 和 `npm run verify`。
 
-## 维护规则
+## 学习规则
 
 - 新术语进入主线前，必须能连到至少一个命题、一个示例、一个讲义材料和一条验证命令。
 - 如果概念没有 runnable example，只能停留在研究路线图或来源登记，不进入本图谱的核心概念表。

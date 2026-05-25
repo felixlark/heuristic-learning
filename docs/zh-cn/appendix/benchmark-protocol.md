@@ -13,7 +13,7 @@ description: Heuristic Learning 示例、案例和课程项目的实验设计协
 
 一个 HL 实验单元至少包含：
 
-| 部分 | 要求 | 仓库落点 |
+| 部分 | 要求 | 学习落点 |
 | --- | --- | --- |
 | case signal | 来源、任务和失败线索 | [来源登记](/zh-cn/appendix/source-registry)、案例页 |
 | environment 或 replay | 可复现状态转移或固定轨迹 | `examples/*/env.py`、`examples/*/replay_env.py` |

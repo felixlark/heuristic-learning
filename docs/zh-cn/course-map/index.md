@@ -1,13 +1,13 @@
 ---
 title: 课程地图
-description: Heuristic Learning 仓库的读者路径、研究路径、教师路径和验证路径
+description: Heuristic Learning 的读者路径、研究路径、教师路径和验证路径
 ---
 
 # 课程地图
 
-本页是 HL 仓库的导航总图。读者不需要按侧栏从上到下读完；可以根据自己的角色选择路径，但每条路径最终都要回到同一个验证闭环：来源、案例、示例、报告、测试和课程页面互相对齐。
+本页是 HL 的导航总图。读者不需要按侧栏从上到下读完；可以根据自己的角色选择路径，但每条路径最终都要回到同一个验证闭环：来源、案例、示例、报告和测试互相对齐。
 
-## 五条路径
+## 四条路径
 
 | 角色 | 先读 | 再做 | 验收 |
 | --- | --- | --- | --- |
@@ -15,7 +15,6 @@ description: Heuristic Learning 仓库的读者路径、研究路径、教师路
 | AI 研究者 | [文献阅读指南](/zh-cn/appendix/reading-guide)、[研究框架](/zh-cn/theory/research-framework)、[研究命题](/zh-cn/theory/research-propositions)、[实验协议](/zh-cn/appendix/benchmark-protocol)、[评估指标矩阵](/zh-cn/appendix/evaluation-metrics) | [研究课题](/zh-cn/appendix/research-projects)、[来源登记](/zh-cn/appendix/source-registry) | case card + runnable example + 反驳路径 |
 | 工程师 | [可运行示例](/zh-cn/examples/)、[代码导览](/zh-cn/appendix/code-tour)、[本地运行与排错](/zh-cn/appendix/local-setup)、[排错决策树](/zh-cn/appendix/troubleshooting-tree) | 修改一个 `examples/*/policies.py` 或 replay 策略，并保留旧 probe | `npm run examples:test` + `npm run verify` |
 | 教师/助教 | [教师指南](/zh-cn/appendix/instructor-guide)、[课程 Rubric](/zh-cn/appendix/rubric)、[课程进度表](/zh-cn/appendix/course-schedule) | 选择 A/B/C/D 题，安排讲义和 Lab | Rubric 评分 + `npm run verify` |
-| 编码智能体 | `llms.txt`、`/course-manifest.json` | 读 `experiments/*/latest.json` 的 `candidate_update` | 结构检查 + 完整验证 |
 
 ## 概念到实验
 
@@ -31,7 +30,7 @@ flowchart TD
   H --> C
 ```
 
-这张图说明本仓库的核心约束：理论页必须能落到示例或案例，示例必须能生成报告，报告必须能指导下一轮维护，维护必须被测试和课程材料约束。
+这张图说明课程的核心约束：理论页必须能落到示例或案例，示例必须能生成报告，报告必须能指导下一轮维护，维护必须被测试和课程材料约束。
 
 ## 示例到作业
 
@@ -68,9 +67,9 @@ npm run verify
 
 局部排错可以使用 [本地运行与排错](/zh-cn/appendix/local-setup)，但最终验收不能绕过 `npm run verify`。
 
-## 机器入口
+## 数据入口
 
-面向编码智能体和外部工具的入口：
+面向研究复查、教学组织和自动化检查的入口：
 
 - [`/course-manifest.json`](/course-manifest.json)：核心页面、示例、public resources 和 CI gate。
 - [`/course-manifest.schema.json`](/course-manifest.schema.json)：manifest 字段约束。
@@ -85,8 +84,8 @@ npm run verify
 - [`/contribution-contract.json`](/contribution-contract.json)：贡献类型、证据字段、必备路径、验证命令和禁止材料。
 - [`/reproducibility-checklist.json`](/reproducibility-checklist.json)：环境、示例、命题、教学、贡献和站点复现检查。
 - [`/experiment-report.schema.json`](/experiment-report.schema.json)：实验报告字段约束。
-- [`/llms.txt`](/llms.txt)：读写仓库时的高信号入口。
+- [`/llms.txt`](/llms.txt)：面向自动化阅读的高信号入口。
 
 阶段性完成判断见 [完成度审计](/zh-cn/appendix/completion-audit)，不要只用单个测试或本地 HTTP 200 代替完整证据链。
 
-这些入口让仓库不仅能给人读，也能被下一轮智能体稳定接续。
+这些入口让读者可以从网页、命令和结构化数据三种方式复查同一套课程证据。

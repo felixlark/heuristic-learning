@@ -116,8 +116,8 @@ def check_registry(registry: dict[str, Any]) -> None:
             in {
                 "public-essay",
                 "public-code-artifact",
-                "x-or-fieldtheory-signal",
-                "internal-signal",
+                "x-source",
+                "sanitized-application",
                 "cross-example-analysis",
             },
             f"{context}: invalid source_type",
@@ -169,8 +169,8 @@ def check_registry(registry: dict[str, Any]) -> None:
         == {
             "public-essay",
             "public-code-artifact",
-            "x-or-fieldtheory-signal",
-            "internal-signal",
+            "x-source",
+            "sanitized-application",
             "cross-example-analysis",
         },
         "research logbook must cover all source types",
@@ -197,7 +197,7 @@ def check_registry(registry: dict[str, Any]) -> None:
         "/research-logbook.json",
         "/research-logbook.schema.json",
         "npm run research:logbook:check",
-        "referenced-not-cached",
+        "待直接复核",
         "templates/claim-review.md",
         "templates/anti-forgetting-checklist.md",
     ]:

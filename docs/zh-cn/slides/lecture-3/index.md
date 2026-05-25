@@ -15,7 +15,7 @@ description: 直觉学习课程第 3 讲讲义
 
 先分类再修复，可以避免把所有问题都写成更长的条件分支。
 
-| 失败类型 | 本仓库 probe | 常见错误更新 |
+| 失败类型 | 课程 probe | 常见错误更新 |
 | --- | --- | --- |
 | 局部贪心 | `local_greedy_trap` | 只加一个格子的黑名单 |
 | 动作前提缺失 | `blocked_shot` | 继续强化射门偏好 |
@@ -30,7 +30,7 @@ description: 直觉学习课程第 3 讲讲义
 
 一次 patch 要进入课程主线，至少要留下三类证据：
 
-| 证据 | 目的 | 本仓库位置 |
+| 证据 | 目的 | 课程位置 |
 | --- | --- | --- |
 | Failure probe | 证明旧策略稳定失败 | `tests/test_*.py` |
 | Feedback report | 记录为什么失败、改了什么 | `experiments/*/latest.json` |

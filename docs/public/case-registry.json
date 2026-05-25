@@ -68,19 +68,19 @@
       "case_page": "docs/zh-cn/cases/robot-soccer/index.md",
       "source_status": "已复现为最小环境",
       "source_kind": "internal-signal",
-      "source_refs": [
-        "飞书消息，2026-05-17",
+    "source_refs": [
+        "脱敏应用需求，2026-05-17",
         "docs/zh-cn/appendix/source-registry.md"
       ],
       "example_id": "robot-soccer",
       "failure_mode": "blocked_shot",
       "learning_outcome_ids": ["lo-3", "lo-4", "lo-5"],
-      "course_use": "内部应用案例，用于讲解视觉规则库、blocked-lane probe 和动作前提。",
+      "course_use": "脱敏应用案例，用于讲解视觉规则库、blocked-lane probe 和动作前提。",
       "verification_commands": [
         "npm run examples:robot-soccer:feedback",
         "npm run examples:test"
       ],
-      "boundary": "公开仓库只保留脱敏最小环境，不公开飞书原文或真实机器人日志。"
+      "boundary": "公开材料只保留脱敏最小环境，不公开私有原文或真实机器人日志。"
     },
     {
       "id": "traffic-simulation",
@@ -88,8 +88,8 @@
       "case_page": "docs/zh-cn/cases/traffic-simulation/index.md",
       "source_status": "已复现为最小环境",
       "source_kind": "internal-signal",
-      "source_refs": [
-        "飞书任务消息，2026-05-13",
+    "source_refs": [
+        "脱敏应用需求，2026-05-13",
         "docs/zh-cn/appendix/source-registry.md"
       ],
       "example_id": "traffic-grid",
@@ -104,7 +104,7 @@
     },
     {
       "id": "x-signal",
-      "title": "X and FieldTheory Signals",
+      "title": "X Public Discussion",
       "case_page": "docs/zh-cn/cases/x-signal/index.md",
       "source_status": "已结构化",
       "source_kind": "x-signal",
@@ -120,7 +120,7 @@
         "npm run x:sources:check",
         "npm run source:registry:check"
       ],
-      "boundary": "未通过 ft、X API 或公开 URL 复核的内容不能写成已复现事实。"
+      "boundary": "未通过公开 URL 或一手材料复核的内容不能写成已复现事实。"
     }
   ]
 }

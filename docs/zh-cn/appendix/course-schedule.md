@@ -50,7 +50,7 @@ npm run verify
 
 | 检查项 | 最低要求 |
 | --- | --- |
-| 来源 | 有公开 URL、内部线索说明或仓库 artifact 路径 |
+| 来源 | 有公开 URL、脱敏应用问题说明或仓库 artifact 路径 |
 | Failure mode | 能命名一个失败模式，而不是只说效果不好 |
 | Baseline | 有自然但不充分的策略 |
 | Patch | 能指出更新对象：阈值、检测器、控制律、测试或文档结构 |
@@ -80,7 +80,7 @@ npm run verify
 - Week 0 不讲新概念，只处理环境、命令和仓库结构。
 - 每周最多讲一个主要 failure mode，保证学生有时间读代码。
 - 不接受只有成功截图的作业；必须有 baseline failure。
-- X/飞书材料只能作为来源线索进入课程，公开提交必须按 `SECURITY.md` 脱敏。
+- X/脱敏应用问题只能作为来源线索进入课程，公开提交必须按 `SECURITY.md` 脱敏。
 - 期末展示优先看证据链，其次才看实现复杂度。
 
 更短的一次性工作坊可以直接使用 [教师指南](/zh-cn/appendix/instructor-guide)；更严格的评分细则见 [课程 Rubric](/zh-cn/appendix/rubric)。

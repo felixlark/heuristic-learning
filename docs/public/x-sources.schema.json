@@ -4,36 +4,28 @@
   "title": "Heuristic Learning X Sources Registry",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "tooling", "sources", "extraction_cards"],
+  "required": ["schema_version", "source_policy", "sources", "extraction_cards"],
   "properties": {
     "schema_version": {
       "type": "integer",
       "const": 1
     },
-    "tooling": {
+    "source_policy": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["tool", "command", "cache_path", "last_checked", "status_command"],
+      "required": ["last_reviewed", "reader_rule", "boundary"],
       "properties": {
-        "tool": {
-          "type": "string",
-          "const": "fieldtheory-cli"
-        },
-        "command": {
-          "type": "string",
-          "const": "ft"
-        },
-        "cache_path": {
-          "type": "string",
-          "minLength": 1
-        },
-        "last_checked": {
+        "last_reviewed": {
           "type": "string",
           "pattern": "^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
         },
-        "status_command": {
+        "reader_rule": {
           "type": "string",
-          "const": "ft status"
+          "minLength": 1
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1
         }
       }
     },
@@ -62,8 +54,7 @@
         "author",
         "date",
         "source_level",
-        "cache_status",
-        "ft_commands",
+        "evidence_status",
         "claims_to_extract",
         "repo_targets",
         "verification_status",
@@ -90,17 +81,9 @@
           "type": "string",
           "enum": ["primary-url-referenced", "secondary-summary", "secondary-lead"]
         },
-        "cache_status": {
+        "evidence_status": {
           "type": "string",
-          "enum": ["cached", "referenced-not-cached", "to-collect"]
-        },
-        "ft_commands": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string",
-            "pattern": "^ft .+"
-          }
+          "enum": ["reviewed-secondary-summary", "known-url-needs-direct-review", "待采集"]
         },
         "claims_to_extract": {
           "type": "array",
@@ -122,7 +105,7 @@
           "type": "string",
           "enum": [
             "usable-as-secondary-source",
-            "needs-direct-cache-or-api-read",
+            "needs-direct-primary-review",
             "not-yet-usable-as-evidence"
           ]
         },

@@ -5,11 +5,11 @@
   "workflows": [
     {
       "id": "x-thread-to-case-card",
-      "signal_type": "X / FieldTheory thread",
+      "signal_type": "X / public discussion",
       "source_checks": [
-        "Run ft status and record cache freshness.",
-        "Run ft show or ft search for the exact status id before extracting claims.",
-        "Separate primary author posts, secondary summaries, quoted posts, and inferred commentary."
+        "Confirm whether the material is a primary post, secondary summary, quoted post, or inferred commentary.",
+        "Use a stable public URL before extracting claims.",
+        "Separate directly reviewed claims from claims that still need primary-source review."
       ],
       "required_artifacts": [
         "docs/public/x-sources.json",
@@ -18,7 +18,7 @@
         "templates/reproduction-note.md",
         "docs/zh-cn/appendix/source-registry.md"
       ],
-      "status_gate": "cached or referenced-not-cached sources can become structured case cards; to-collect sources stay in the roadmap.",
+      "status_gate": "reviewed secondary summaries and known primary URLs can become structured case cards; uncollected leads stay in the roadmap.",
       "verification_commands": [
         "npm run x:sources:check",
         "npm run source:registry:check",
@@ -31,7 +31,7 @@
         "docs/zh-cn/appendix/exercises.md"
       ],
       "forbidden_claims": [
-        "Do not quote a referenced-not-cached primary post as if it was directly read.",
+        "Do not quote a primary post as directly read until it has been reviewed.",
         "Do not treat secondary numeric scores as reproduced benchmark results.",
         "Do not store X cookies, API tokens, or private browser state in the repository."
       ]
@@ -71,7 +71,7 @@
     },
     {
       "id": "internal-signal-to-minimal-env",
-      "signal_type": "Internal Feishu or private operational signal",
+      "signal_type": "Sanitized operational problem",
       "source_checks": [
         "Record only a sanitized source label, date, and problem shape.",
         "Translate the private task into an abstract environment and failure mode.",
@@ -84,7 +84,7 @@
         "templates/experiment-record.md",
         "templates/reproduction-note.md"
       ],
-      "status_gate": "Internal signals can become minimal environments after sanitization; they cannot publish raw source text.",
+      "status_gate": "Sanitized operational problems can become minimal environments; raw private source text is never published.",
       "verification_commands": [
         "npm run source:registry:check",
         "npm run examples:test",
@@ -97,16 +97,16 @@
         "docs/zh-cn/appendix/citation.md"
       ],
       "forbidden_claims": [
-        "Do not publish Feishu raw content, meeting transcripts, or private links.",
+        "Do not publish raw private content, meeting transcripts, or private links.",
         "Do not imply a sanitized toy environment is a production deployment.",
         "Do not include private logs or screenshots."
       ]
     },
     {
       "id": "hypothesis-to-research-project",
-      "signal_type": "Research hypothesis or uncached lead",
+      "signal_type": "Research hypothesis or uncollected lead",
       "source_checks": [
-        "Mark the source as to-collect, located, or working hypothesis.",
+        "Mark the source as 待采集, located, or working hypothesis.",
         "Write the falsification path before writing the conclusion.",
         "Bind the hypothesis to a future example, metric, or artifact gap."
       ],

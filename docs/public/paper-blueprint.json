@@ -89,7 +89,7 @@
     {
       "id": "discussion-and-threats",
       "title": "讨论、局限与威胁",
-      "purpose": "明确来源、复现、高保真环境、X/飞书线索和视觉验收的剩余边界。",
+      "purpose": "明确来源、复现、高保真环境、X/脱敏应用问题和视觉验收的剩余边界。",
       "claim_ids": ["source-status-is-course-structure"],
       "metric_ids": ["source-boundary", "update-cost", "regression-risk"],
       "example_ids": ["vizdoom-replay", "breakout-replay", "ant-gait-replay"],

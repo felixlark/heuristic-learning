@@ -5,7 +5,7 @@ description: Heuristic Learning 案例到来源、示例、学习成果和验证
 
 # 案例矩阵
 
-本页把案例库从叙述页面推进成可检查的研究矩阵。它回答四个问题：
+本页把案例库整理成可检查的研究矩阵。它回答四个问题：
 
 - 这个案例来自什么来源？
 - 是否已经落到 runnable example？
@@ -23,7 +23,7 @@ description: Heuristic Learning 案例到来源、示例、学习成果和验证
 | VizDoom Medikit Staging | 已复现为轻量 replay | `vizdoom-replay` | 感知阈值、medikit staging、轻量 replay | `npm run examples:vizdoom-replay:feedback` |
 | Robot Soccer | 已复现为最小环境 | `robot-soccer` | 视觉规则库、blocked-lane probe、动作前提 | `npm run examples:robot-soccer:feedback` |
 | Traffic Simulation | 已复现为最小环境 | `traffic-grid` | downstream capacity、系统安全约束、仿真 replay | `npm run examples:traffic-grid:feedback` |
-| X and FieldTheory Signals | 已结构化 | 无直接示例 | 一手原帖、二手转述、公开 artifact 和研究假设分层 | `npm run x:sources:check` |
+| X Public Discussion | 已结构化 | 无直接示例 | 一手原帖、二手转述、公开 artifact 和研究假设分层 | `npm run x:sources:check` |
 
 ## 使用方式
 
@@ -56,15 +56,15 @@ npm run verify
 
 ## 边界
 
-- 案例矩阵不是来源原文库；公开仓库不保存飞书原文、X cookie、私有日志或未脱敏截图。
+- 案例矩阵不是来源原文库；公开材料不保存私有原文、X cookie、私有日志或未脱敏截图。
 - `已复现为轻量 replay` 只能说明课程 probe 已经保留核心 failure mode，不能等同于真实环境高保真复现。
-- 没有 runnable example 的 X 线索仍可进入案例矩阵，但只能作为来源抽取训练材料。
+- 没有 runnable example 的 X 来源仍可进入案例矩阵，但只能作为来源抽取训练材料。
 
 当前案例边界：
 
 - 当前是轻量 replay，不等同于真实 MuJoCo Ant 高保真复现。
 - 当前不包含 Atari 环境、RAM 解码、视觉分割或真实视频渲染。
 - 当前移除了 EnvPool/OpenCV，只保留可讲授的检测字段和时机策略。
-- 公开仓库只保留脱敏最小环境，不公开飞书原文或真实机器人日志。
+- 公开材料只保留脱敏最小环境，不公开私有原文或真实机器人日志。
 - 当前不是东湖真实仿真接口，只是脱敏后的容量约束最小环境。
-- 未通过 ft、X API 或公开 URL 复核的内容不能写成已复现事实。
+- 未通过公开 URL 或一手材料复核的内容不能写成已复现事实。

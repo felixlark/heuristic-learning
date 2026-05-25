@@ -46,7 +46,7 @@
     },
     {
       "id": "x-signal",
-      "title": "X 线索案例",
+      "title": "X 来源案例",
       "path": "docs/zh-cn/cases/x-signal/index.md",
       "route": "/zh-cn/cases/x-signal/"
     },

@@ -117,17 +117,17 @@ Use these entry points:
 - `docs/public/visual-acceptance-log.schema.json` for the visual acceptance log JSON Schema.
 - `docs/public/reproducibility-checklist.json` for machine-readable reproducibility evidence, commands, pass conditions, and known boundaries.
 - `docs/public/reproducibility-checklist.schema.json` for the reproducibility checklist JSON Schema.
-- `docs/public/x-sources.json` for machine-readable X/FieldTheory source levels, cache status, extraction targets, and boundaries.
+- `docs/public/x-sources.json` for machine-readable X source levels, evidence status, extraction targets, and boundaries.
 - `docs/public/x-sources.schema.json` for the X sources registry JSON Schema.
 - `docs/public/source-to-case-playbook.json` for machine-readable source-to-case workflows, artifact gates, verification commands, and forbidden claims.
 - `docs/public/source-to-case-playbook.schema.json` for the source-to-case playbook JSON Schema.
 - `docs/public/experiment-report.schema.json` for common experiment report fields.
-- `docs/zh-cn/cases/x-signal/index.md` for X/FieldTheory source cases.
+- `docs/zh-cn/cases/x-signal/index.md` for X source cases.
 - `docs/zh-cn/cases/traffic-simulation/index.md` for the Feishu-derived traffic simulation case card.
 - `scripts/check-course-structure.py` for course/docs/examples alignment checks.
-- `scripts/check-source-registry.py` for source status and X/FieldTheory evidence checks.
+- `scripts/check-source-registry.py` for source status and X source evidence checks.
 - `scripts/check-case-registry.py` for case-to-source/example/outcome checks.
-- `scripts/check-x-sources.py` for X/FieldTheory source-level and cache-status checks.
+- `scripts/check-x-sources.py` for X source-level and evidence-status checks.
 - `scripts/check-source-to-case-playbook.py` for source-to-case workflow, artifact, command, and course landing checks.
 - `scripts/check-course-manifest.py` for machine-readable manifest and schema checks.
 - `scripts/check-example-registry.py` for runnable example registry checks.

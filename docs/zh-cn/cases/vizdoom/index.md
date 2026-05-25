@@ -7,9 +7,9 @@ description: 用 VizDoom 理解回放驱动的 Heuristic Learning
 
 VizDoom 是 `learning-beyond-gradients` 公开仓库中的重要 artifact。它适合用来解释 HL 中的回放反馈：系统不只是拿到一个分数，还能通过视频或轨迹看到失败发生在哪里。
 
-## 本仓库可运行版本
+## 课程可运行版本
 
-本仓库先实现一个轻量 replay 版：
+课程先实现一个轻量 replay 版：
 
 ```bash
 npm run examples:vizdoom-replay

@@ -30,8 +30,8 @@ description: Heuristic Learning public registries, schemas, and LLM entrypoints
 | [`/teaching-registry.json`](/teaching-registry.json) | 讲义、课堂命令和交付物 |
 | [`/research-projects.json`](/research-projects.json) | 项目制学习与后续研究课题 |
 | [`/research-logbook.json`](/research-logbook.json) | 阅读、示例、命题和下一步实验记录 |
-| [`/source-to-case-playbook.json`](/source-to-case-playbook.json) | X、公开 artifact、飞书线索和研究假设进入 case card 的路径 |
-| [`/x-sources.json`](/x-sources.json) | X / FieldTheory 线索、来源层级和抽取卡 |
+| [`/source-to-case-playbook.json`](/source-to-case-playbook.json) | X、公开 artifact、脱敏应用问题和研究假设进入 case card 的路径 |
+| [`/x-sources.json`](/x-sources.json) | X 来源、来源层级和抽取卡 |
 
 ## 发布边界
 

@@ -5,7 +5,7 @@ description: Heuristic Learning 的最小动手实验
 
 # 可运行示例
 
-当前 v0.1 提供六个纯 Python 示例，目标是让读者先跑通 HL 的最小闭环，再看到来自 MuJoCo、Atari、机器人足球、VizDoom 与交通模拟线索的规则维护问题。这里的 `VizDoom Replay`、`Breakout Replay` 和 `Ant Gait Replay` 都是轻量 replay：它们保留失败 probe、策略更新对象和测试路径，不把课程入门门槛绑定到真实 MuJoCo、Atari 或 VizDoom 环境。
+当前 v0.1 提供六个纯 Python 示例，目标是让读者先跑通 HL 的最小闭环，再看到 MuJoCo、Atari、机器人足球、VizDoom 与交通模拟中的规则维护问题。这里的 `VizDoom Replay`、`Breakout Replay` 和 `Ant Gait Replay` 都是轻量 replay：它们保留失败 probe、策略更新对象和测试路径，不把课程入门门槛绑定到真实 MuJoCo、Atari 或 VizDoom 环境。
 
 每个示例目录都包含一个 `README.md`，其中固定列出 learning target、运行命令、反馈报告路径和测试路径。读者可以从本页按课程顺序学习，也可以直接从 GitHub 的 `examples/*/README.md` 进入单个实验。
 
@@ -59,7 +59,7 @@ npm run verify
 - 本轮反馈指出了哪些维护约束。
 - 下一次智能体更新应该改哪个文件、跑哪条验证命令。
 
-课程里故意把它设计成 JSON，而不是自然语言日志，因为编码智能体需要能稳定读取它。
+JSON 报告让实验结果可以被学生、研究者和自动化检查脚本稳定复查。
 
 ## 建议练习
 
@@ -90,7 +90,7 @@ npm run examples:robot-soccer:feedback
 
 这个示例来自机器人足球案例：baseline 拿到球后看到球门距离近，就直接射门；heuristic policy 会先检查射门通道是否被对手挡住，如果挡住就先换到安全路线。
 
-它展示了 HL 的一个核心教学点：**平均表现不是唯一反馈**。一个明确的 blocked-lane probe 能把“规则为什么需要维护”暴露出来，并给编码智能体下一轮修改留下证据。
+它展示了 HL 的一个核心教学点：**平均表现不是唯一反馈**。一个明确的 blocked-lane probe 能把“规则为什么需要维护”暴露出来，并给下一轮修改留下证据。
 
 ## VizDoom Replay Medikit Staging
 
@@ -138,7 +138,7 @@ npm run examples:traffic-grid
 npm run examples:traffic-grid:feedback
 ```
 
-这个示例来自飞书“东湖交通模拟器”应用线索。课程版不直接假设真实路网，而是抽出一个最小交通网格：主路和支路都想放行，但下游路段已经接近容量上限。
+这个示例把交通控制问题压缩成一个最小网格：主路和支路都想放行，但下游路段已经接近容量上限。
 
 baseline policy 只看上游队列大小，所以会优先放行主路并造成 `spillback`。heuristic policy 把下游容量作为硬约束，先等待或分流，再恢复放行，最终达到 `stable_flow`。
 

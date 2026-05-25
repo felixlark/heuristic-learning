@@ -1,9 +1,9 @@
 ---
-title: 资料与维护规范
-description: HL 仓库资料来源、维护规范与未来路线
+title: 资料与学习资源
+description: HL 课程资料来源、学习规范与研究路线
 ---
 
-# 资料与维护规范
+# 资料与学习资源
 
 ## 资料分层
 
@@ -11,23 +11,23 @@ description: HL 仓库资料来源、维护规范与未来路线
 | --- | --- | --- |
 | 一手公开源 | Jiayi 文章、GitHub artifact、X 原帖 | 定义概念与案例 |
 | 背景概念 | RL、DL、软件测试、编码智能体 | 界定 HL 的问题边界 |
-| 内部资料 | 飞书消息、任务、文档 | 补充应用方向和真实需求 |
-| 本仓库实验 | `examples/`、测试、运行记录 | 形成可验证学习材料 |
-| 本仓库理论 | [研究框架](/zh-cn/theory/research-framework) | 固化问题定义、度量与实验范式 |
+| 脱敏应用问题 | 私有来源抽象后的任务形态 | 补充应用方向和真实需求 |
+| 课程实验 | `examples/`、测试、运行记录 | 形成可验证学习材料 |
+| 理论框架 | [研究框架](/zh-cn/theory/research-framework) | 固化问题定义、度量与实验范式 |
 
-## 维护原则
+## 学习原则
 
 - 先保留可运行最小闭环，再扩展复杂案例。
 - 每个概念页都要链接到案例或示例。
 - 每个示例都要有一条最短运行命令和至少一个测试。
-- 不把未验证的 X/飞书结论写成事实，只写成“线索”或“案例待验证”。
+- 不把未验证的 X 来源或脱敏应用问题写成事实，只写成“待复核来源”或“案例待验证”。
 - 任何新规则都要配回归测试，防止 HL 自己发生工程型遗忘。
 
-## 后续路线
+## 研究路线
 
-后续路线已经收束到 [研究路线图](/zh-cn/appendix/research-roadmap)。新增任务必须能落到来源、案例、示例、报告、测试或课程页。
+后续研究问题见 [研究路线图](/zh-cn/appendix/research-roadmap)。新增任务应能落到来源、案例、示例、报告、测试或课程页。
 
-## 贡献入口
+## 附录入口
 
 - [本地运行与排错](/zh-cn/appendix/local-setup)
 - [排错决策树](/zh-cn/appendix/troubleshooting-tree)
@@ -67,9 +67,9 @@ description: HL 仓库资料来源、维护规范与未来路线
 - `templates/experiment-record.md`
 - `templates/reproduction-note.md`
 
-## 机器可读入口
+## 数据入口
 
-- [`/course-manifest.json`](/course-manifest.json)：列出核心页面、六个可运行示例、实验报告和 CI 验证入口，供编码智能体或外部工具读取。
+- [`/course-manifest.json`](/course-manifest.json)：列出核心页面、六个可运行示例、实验报告和验证入口。
 - [`/course-manifest.schema.json`](/course-manifest.schema.json)：约束 manifest 字段、示例条目和 CI 入口的 JSON Schema。
 - [`/example-registry.json`](/example-registry.json)：列出每个 runnable example 的命令、failure mode、报告、测试、更新目标和课程链接。
 - [`/example-registry.schema.json`](/example-registry.schema.json)：约束示例矩阵字段，供 `npm run examples:registry:check` 验证。
@@ -123,7 +123,7 @@ description: HL 仓库资料来源、维护规范与未来路线
 - [`/visual-verification.schema.json`](/visual-verification.schema.json)：约束视觉验收字段，供 `npm run visual:verification:check` 验证。
 - [`/reproducibility-checklist.json`](/reproducibility-checklist.json)：列出环境、示例、命题、教学、贡献和站点复现检查。
 - [`/reproducibility-checklist.schema.json`](/reproducibility-checklist.schema.json)：约束可复现性清单字段，供 `npm run reproducibility:check` 验证。
-- [`/x-sources.json`](/x-sources.json)：列出 X/FieldTheory 线索的缓存状态、来源层级、抽取主张、仓库落点和边界。
-- [`/x-sources.schema.json`](/x-sources.schema.json)：约束 X 线索矩阵字段，供 `npm run x:sources:check` 验证。
-- [`/source-to-case-playbook.json`](/source-to-case-playbook.json)：列出 X、公开 artifact、飞书线索和研究假设转成 case card 的路径。
+- [`/x-sources.json`](/x-sources.json)：列出 X 来源的证据状态、来源层级、抽取主张、学习落点和边界。
+- [`/x-sources.schema.json`](/x-sources.schema.json)：约束 X 来源矩阵字段，供 `npm run x:sources:check` 验证。
+- [`/source-to-case-playbook.json`](/source-to-case-playbook.json)：列出 X、公开 artifact、脱敏应用问题和研究假设转成 case card 的路径。
 - [`/source-to-case-playbook.schema.json`](/source-to-case-playbook.schema.json)：约束来源到案例 playbook 字段，供 `npm run source:case:check` 验证。

@@ -27,7 +27,7 @@
       "title": "第 2 讲：从案例信号到可验证实验",
       "path": "docs/zh-cn/slides/lecture-2/index.md",
       "route": "/zh-cn/slides/lecture-2/",
-      "core_question": "一个 X、公开 artifact 或飞书线索如何进入 HL 主线课程？",
+      "core_question": "一个 X、公开 artifact 或脱敏应用问题如何进入 HL 主线课程？",
       "reading": [
         "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/appendix/source-registry.md",

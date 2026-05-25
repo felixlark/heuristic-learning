@@ -101,7 +101,7 @@
       "id": "source-boundary",
       "title": "来源边界",
       "research_question": "一个案例的来源状态是否足以支撑它在课程中的声明强度？",
-      "definition": "把公开文章、GitHub artifact、X 线索和飞书线索分层登记，未复核材料只作为研究线索。",
+      "definition": "把公开文章、GitHub artifact、X 来源和脱敏应用问题分层登记，未复核材料只作为研究线索。",
       "example_ids": ["vizdoom-replay", "breakout-replay", "x-signal"],
       "claim_ids": ["software-structure-learning", "source-status-is-course-structure"],
       "evidence": [
@@ -114,8 +114,8 @@
         "npm run cases:check",
         "npm run x:sources:check"
       ],
-      "failure_mode": "把待采集或 referenced-not-cached 的线索写成已经复现的实验事实。",
-      "course_use": "用于来源登记、引用页和 X/FieldTheory 案例整理。"
+      "failure_mode": "把待采集或 待直接复核 的线索写成已经复现的实验事实。",
+      "course_use": "用于来源登记、引用页和 X 来源案例整理。"
     }
   ]
 }

@@ -15,7 +15,7 @@ description: Heuristic Learning 仓库的安装、运行、验证和常见问题
 | npm | 安装依赖和运行脚本 | 使用 `npm install` 或 CI 的 `npm ci` |
 | Python | 运行示例、测试和检查脚本 | 3.10+，CI 使用 3.12 |
 
-本仓库的主线示例刻意保持纯 Python，不依赖 MuJoCo、Atari、VizDoom、OpenCV 或 EnvPool。真实环境接入是后续高保真验证，不是入门前提。
+课程的主线示例刻意保持纯 Python，不依赖 MuJoCo、Atari、VizDoom、OpenCV 或 EnvPool。真实环境接入是后续高保真验证，不是入门前提。
 
 ## 第一次运行
 

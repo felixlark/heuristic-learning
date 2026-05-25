@@ -79,9 +79,9 @@ Capstone 从一个来源线索开始，最终进入课程仓库。
 
 | 题目 | 输入 | 输出 |
 | --- | --- | --- |
-| D1. X case card | Jiayi 或社区 X 线索；先按 [来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook) 区分 `cached`、`referenced-not-cached`、`to-collect` | 来源登记条目 + case card + 验证状态 |
+| D1. X case card | Jiayi 或社区 X 来源；先按 [来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook) 区分 “已复核摘要”“待直接复核”“待采集” | 来源登记条目 + case card + 验证状态 |
 | D2. 公开 artifact replay | `learning-beyond-gradients` 未复现 artifact | 轻量 replay + feedback report + test |
-| D3. 内部线索最小环境 | 飞书任务或消息线索 | 不泄露敏感信息的 minimal example |
+| D3. 脱敏应用问题最小环境 | 脱敏应用问题 | 不泄露敏感信息的 minimal example |
 | D4. 反遗忘扩展 | 现有示例的新 failure mode | 新 probe + 测试 + report 边界说明 |
 | D5. 课程讲义扩展 | 一个已验证案例 | lecture 或 lab 页面 + demo 命令 |
 

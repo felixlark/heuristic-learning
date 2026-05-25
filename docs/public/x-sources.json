@@ -1,12 +1,10 @@
 {
   "$schema": "/x-sources.schema.json",
   "schema_version": 1,
-  "tooling": {
-    "tool": "fieldtheory-cli",
-    "command": "ft",
-    "cache_path": "/Users/longbiao/.ft-bookmarks/bookmarks.jsonl",
-    "last_checked": "2026-05-25",
-    "status_command": "ft status"
+  "source_policy": {
+    "last_reviewed": "2026-05-25",
+    "reader_rule": "Public X material is used only after separating primary posts, secondary summaries, and uncollected leads.",
+    "boundary": "Tooling, browser state, cookies, API tokens, and private collection logs are not part of the public course material."
   },
   "sources": [
     {
@@ -15,11 +13,7 @@
       "author": "@0xLogicrw",
       "date": "2026-05-08",
       "source_level": "secondary-summary",
-      "cache_status": "cached",
-      "ft_commands": [
-        "ft search \"Jiayi Weng\" --limit 10",
-        "ft show 2052701677615218717"
-      ],
+      "evidence_status": "reviewed-secondary-summary",
       "claims_to_extract": [
         "Breakout strategy code improved through repeated code edits rather than neural-network retraining.",
         "The cited Jiayi post frames Heuristic Learning as maintaining software artifacts such as predictors, detectors, logs, tests, and rules.",
@@ -40,13 +34,9 @@
       "author": "@Trinkle23897",
       "date": "2026-05-08",
       "source_level": "primary-url-referenced",
-      "cache_status": "referenced-not-cached",
-      "ft_commands": [
-        "ft show 2052596837547495549",
-        "ft search \"2052596837547495549\" --limit 20"
-      ],
+      "evidence_status": "known-url-needs-direct-review",
       "claims_to_extract": [
-        "Primary post URL referenced by the cached @0xLogicrw summary.",
+        "Primary post URL referenced by the to-review @0xLogicrw summary.",
         "Needs direct retrieval before quoting or expanding claims beyond what public article and artifact code support."
       ],
       "repo_targets": [
@@ -54,8 +44,8 @@
         "docs/zh-cn/appendix/source-registry.md",
         "docs/zh-cn/appendix/research-roadmap.md"
       ],
-      "verification_status": "needs-direct-cache-or-api-read",
-      "boundary": "The URL is known, but the post is not present in the current local FieldTheory bookmark cache."
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "The URL is known, but the post should be directly reviewed before quoting or expanding its claims."
     },
     {
       "id": "logicrw-fluid-control-lead-2026-05-19",
@@ -63,11 +53,7 @@
       "author": "@0xLogicrw",
       "date": "2026-05-19",
       "source_level": "secondary-lead",
-      "cache_status": "to-collect",
-      "ft_commands": [
-        "ft search \"fluid\" --limit 20",
-        "ft search \"2056695371984982195\" --limit 20"
-      ],
+      "evidence_status": "to-collect",
       "claims_to_extract": [
         "Possible downstream application of Heuristic Learning to fluid-control or simulation control.",
         "Needs the cited original post and any public code before becoming a case card."
@@ -77,7 +63,7 @@
         "docs/zh-cn/appendix/research-roadmap.md"
       ],
       "verification_status": "not-yet-usable-as-evidence",
-      "boundary": "Keep as a collection target until ft sync/API or public web retrieval finds the referenced original material."
+      "boundary": "Keep as a collection target until the referenced original material or public code is available."
     }
   ],
   "extraction_cards": [

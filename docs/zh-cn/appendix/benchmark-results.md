@@ -56,5 +56,5 @@ npm run verify
 
 - GridWorld 是教学最小环境，不代表真实游戏或机器人任务。
 - Breakout、VizDoom、Ant 是轻量 replay，用来隔离策略对象和 failure mode，不等同于完整高保真复现。
-- Robot Soccer 和 Traffic Grid 来自内部线索抽象，不公开飞书原文。
+- Robot Soccer 和 Traffic Grid 来自脱敏应用问题抽象，不公开私有原文。
 - 如果未来接入真实环境，本页应保留轻量 replay 行，并新增高保真验证行，而不是覆盖已有教学结果。

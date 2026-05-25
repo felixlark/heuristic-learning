@@ -31,7 +31,7 @@ description: Heuristic Learning 仓库从安装、示例、报告、来源、课
 ## 不要做的事
 
 - 不要因为 `docs:routes:check` 通过就声明视觉验收通过。
-- 不要把 X/飞书线索的来源状态从 `待采集` 直接提升为 `已复现`。
+- 不要把 X/脱敏应用问题的来源状态从 `待采集` 直接提升为 `已复现`。
 - 不要同时改环境、策略、报告和测试；先按 [代码导览](/zh-cn/appendix/code-tour) 缩小编辑面。
 - 不要提交 `docs/.vitepress/dist`、`docs/.vitepress/cache` 或 `__pycache__`。
 

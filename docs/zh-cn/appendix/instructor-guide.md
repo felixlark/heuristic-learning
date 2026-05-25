@@ -78,7 +78,7 @@ npm run examples:vizdoom-replay
 npm run examples:breakout-replay:feedback
 ```
 
-验收重点：学生能把公开 artifact、X 线索或飞书线索分成“已复现”“教学最小化”“待验证线索”，并避免把未验证材料写成事实。
+验收重点：学生能把公开 artifact、X 来源或脱敏应用问题分成“已复现”“教学最小化”“待验证线索”，并避免把未验证材料写成事实。
 
 ### 第 3 讲：失败类型与反遗忘
 
@@ -130,10 +130,10 @@ npm run verify
 | --- | --- |
 | 示例测试失败 | 先跑对应 `npm run examples:*`，确认是策略输出变了还是测试假设过窄 |
 | 报告检查失败 | 检查 `baseline`、`heuristic`、`feedback`、`candidate_update` 字段是否完整 |
-| 来源登记失败 | 检查状态词、X/FieldTheory 证据和 reproduced 条目的 example 路径 |
+| 来源登记失败 | 检查状态词、X 来源证据和 reproduced 条目的 example 路径 |
 | manifest 失败 | 检查 `docs/public/course-manifest.json` 是否列出新增核心页或示例 |
 | VitePress 构建失败 | 先看 dead link、frontmatter 和站内 route，不要直接删除链接 |
 
 ## 教学边界
 
-HL 目前更适合作为研究假设与工程学习框架来讲授。Jiayi Weng 的文章和公开 artifact 是高信号来源，但仓库中的 X/飞书案例仍然需要按来源状态分层处理。课堂上应鼓励学生提出可验证反例，而不是把 heuristics 讲成优于梯度学习的通用替代品。
+HL 目前更适合作为研究假设与工程学习框架来讲授。Jiayi Weng 的文章和公开 artifact 是高信号来源，但仓库中的 X/私有来源案例仍然需要按来源状态分层处理。课堂上应鼓励学生提出可验证反例，而不是把 heuristics 讲成优于梯度学习的通用替代品。

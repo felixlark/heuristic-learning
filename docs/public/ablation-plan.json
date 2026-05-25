@@ -84,7 +84,7 @@
         "npm run examples:test"
       ],
       "research_use": "用于讨论工程系统中安全约束如何成为 HL 更新对象。",
-      "boundary": "当前不是真实东湖交通仿真，只是从飞书线索抽取的最小环境。"
+      "boundary": "当前不是真实东湖交通仿真，只是从脱敏应用问题抽取的最小环境。"
     },
     {
       "id": "breakout-reflection-prediction",

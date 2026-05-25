@@ -57,7 +57,7 @@
     {
       "id": "lo-3",
       "title": "把来源转成案例证据",
-      "competency": "能把公开 artifact、X 线索或内部线索整理成来源状态、case card 和验证计划。",
+      "competency": "能把公开 artifact、X 来源或脱敏应用问题整理成来源状态、case card 和验证计划。",
       "learning_unit_ids": [
         "u2-public-artifacts",
         "u3-control-and-systems"

@@ -24,7 +24,7 @@ description: Heuristic Learning 课程幻灯片目录
 | 讲义 | 主题 | 配套材料 |
 | --- | --- | --- |
 | [第 1 讲：Learning Beyond Gradients](/zh-cn/slides/lecture-1/) | 为什么要研究 HL | [HL 基础概念](/zh-cn/stage-2/) 与 [GridWorld 示例](/zh-cn/examples/) |
-| [第 2 讲：从案例信号到可验证实验](/zh-cn/slides/lecture-2/) | 如何把 X、公开 artifact 和飞书线索转成 HL 实验 | [学习闭环](/zh-cn/theory/learning-loop)、[来源登记](/zh-cn/appendix/source-registry) |
+| [第 2 讲：从案例信号到可验证实验](/zh-cn/slides/lecture-2/) | 如何把 X、公开 artifact 和脱敏应用问题转成 HL 实验 | [学习闭环](/zh-cn/theory/learning-loop)、[来源登记](/zh-cn/appendix/source-registry) |
 | [第 3 讲：失败类型与反遗忘](/zh-cn/slides/lecture-3/) | 如何防止 heuristic patch 破坏旧经验 | [研究框架](/zh-cn/theory/research-framework)、[课程 Rubric](/zh-cn/appendix/rubric) |
 | [Lab 1：跑通 Heuristic Learning 闭环](/zh-cn/slides/lab-1/) | 运行、观察、修改并验证六个最小系统 | [可运行示例](/zh-cn/examples/) 与 `npm run verify` |
 | [Lab 2：反遗忘审查](/zh-cn/slides/lab-2/) | 用测试、报告和 Rubric 审查一次 HL 更新 | [第 3 讲](/zh-cn/slides/lecture-3/) 与 [实验报告](/zh-cn/examples/) |

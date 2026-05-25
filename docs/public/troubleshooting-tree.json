@@ -103,8 +103,8 @@
         "npm run claims:registry:check"
       ],
       "likely_causes": [
-        "X/FieldTheory 线索被写成已复现事实",
-        "飞书线索缺少脱敏边界",
+        "X 来源被写成已复现事实",
+        "脱敏应用问题缺少脱敏边界",
         "研究命题没有证据页、示例或可反驳路径"
       ],
       "fix_actions": [

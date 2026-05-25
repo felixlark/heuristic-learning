@@ -20,7 +20,7 @@ Core pages:
 - `/zh-cn/examples/`: runnable examples
 - `/zh-cn/cases/`: case library
 - `/zh-cn/cases/ant-gait/`: MuJoCo Ant gait replay case
-- `/zh-cn/cases/x-signal/`: X and FieldTheory source cases
+- `/zh-cn/cases/x-signal/`: X and X source cases
 - `/zh-cn/cases/traffic-simulation/`: Feishu-derived traffic simulation case
 - `/zh-cn/slides/`: lecture material
 - `/zh-cn/slides/lecture-2/`: source-to-experiment lecture
@@ -117,7 +117,7 @@ Core pages:
 - `/visual-acceptance-log.schema.json`: JSON Schema for the visual acceptance log
 - `/reproducibility-checklist.json`: machine-readable reproducibility evidence, commands, pass conditions, and known boundaries
 - `/reproducibility-checklist.schema.json`: JSON Schema for the reproducibility checklist
-- `/x-sources.json`: machine-readable X/FieldTheory source levels, cache status, extraction targets, and boundaries
+- `/x-sources.json`: machine-readable X source levels, evidence status, extraction targets, and boundaries
 - `/x-sources.schema.json`: JSON Schema for the X sources registry
 - `/source-to-case-playbook.json`: machine-readable source-to-case workflows, artifact gates, verification commands, and forbidden claims
 - `/source-to-case-playbook.schema.json`: JSON Schema for the source-to-case playbook

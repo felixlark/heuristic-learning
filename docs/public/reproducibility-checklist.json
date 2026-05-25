@@ -55,7 +55,7 @@
         "npm run x:sources:check"
       ],
       "pass_condition": "每条命题都有证据页、示例、验证命令和可反驳说明。",
-      "known_boundary": "Jiayi Weng 的 HL 思想当前不能写成正式论文结论；X/飞书线索未复核前不能写成已复现事实。"
+      "known_boundary": "Jiayi Weng 的 HL 思想当前不能写成正式论文结论；X/脱敏应用问题未复核前不能写成已复现事实。"
     },
     {
       "id": "teaching-artifacts",
@@ -95,7 +95,7 @@
         "npm run verify"
       ],
       "pass_condition": "贡献类型、证据字段、必备路径、验证命令和禁止材料都被同步检查。",
-      "known_boundary": "不允许把 API key、飞书原文、X cookie/API token 或私有日志写入公开仓库。"
+      "known_boundary": "不允许把 API key、私有原文、X cookie/API token 或私有日志写入公开仓库。"
     },
     {
       "id": "site-and-machine-entrypoints",

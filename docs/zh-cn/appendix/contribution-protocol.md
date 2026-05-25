@@ -5,7 +5,7 @@ description: Heuristic Learning 仓库的案例、实验和章节贡献标准
 
 # 贡献与研究协议
 
-HL 还处在思想沉淀期，因此本仓库的贡献标准不是“多写内容”，而是“让每条内容可追溯、可运行或可验证”。
+HL 还处在思想沉淀期，因此课程的贡献标准不是“多写内容”，而是“让每条内容可追溯、可运行或可验证”。
 
 具体评分与验收标准见 [课程评分与验收 Rubric](/zh-cn/appendix/rubric)。本页定义贡献门槛，Rubric 用于判断一份作业或 PR 是否达到课程标准。
 实验设计细则见 [实验协议](/zh-cn/appendix/benchmark-protocol)，新增主线实验必须符合其中的 baseline、probe、report 和 regression gate 要求。
@@ -19,7 +19,7 @@ GitHub 贡献入口见根目录 `CONTRIBUTING.md`，PR 会使用 `.github/pull_r
 理论章节必须包含：
 
 - 一个清晰问题。
-- 一个来自公开源、飞书线索或本仓库实验的动机。
+- 一个来自公开源、脱敏应用问题或课程实验的动机。
 - 一个最小定义或对照表。
 - 至少一个指向案例或 runnable example 的链接。
 - 一个对应的 [来源登记](/zh-cn/appendix/source-registry) 状态。
@@ -65,13 +65,13 @@ GitHub 贡献入口见根目录 `CONTRIBUTING.md`，PR 会使用 `.github/pull_r
 
 ## 新增复现记录
 
-复现记录用于把公开 artifact、X/FieldTheory 线索或脱敏内部线索转成研究仓库可以审查的证据。它不等同于“已经完全复现真实环境”，而是把当前能验证的范围、不能验证的缺口和下一步实验分开。
+复现记录用于把公开 artifact、X 来源或脱敏应用问题转成研究仓库可以审查的证据。它不等同于“已经完全复现真实环境”，而是把当前能验证的范围、不能验证的缺口和下一步实验分开。
 
 使用 `templates/reproduction-note.md` 时必须填写：
 
 | 字段 | 要求 |
 | --- | --- |
-| 来源状态 | cached、referenced-not-cached、to-collect、已定位或已复现，不能越级声明 |
+| 来源状态 | 已复核摘要、待直接复核、待采集、已定位或已复现，不能越级声明 |
 | 复现范围 | 当前是文章理解、代码 artifact 阅读、轻量 replay、固定 probe 还是高保真环境 |
 | 缺失保真度 | 真实环境、视觉检测、物理接触、随机种子、控制接口或数据来源中的具体缺口 |
 | 反驳路径 | 什么结果会推翻当前 heuristic 解释 |
@@ -100,7 +100,7 @@ GitHub Actions 的 `Verify course repository` workflow 和 Pages 部署也会运
 
 ## 禁止事项
 
-- 不把未验证的 X/飞书线索写成确定事实。
+- 不把未验证的 X/脱敏应用问题写成确定事实。
 - 不提交只有叙述、没有来源或实验入口的“研究结论”。
 - 不新增无法在本地验证的示例作为主线课程内容。
 - 不跳过来源登记直接把案例写进主线章节。

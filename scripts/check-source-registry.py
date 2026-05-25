@@ -27,8 +27,8 @@ REPRODUCED_EXAMPLES = {
 REQUIRED_X_EVIDENCE = [
     "https://x.com/Trinkle23897/status/2052596837547495549",
     "https://x.com/0xLogicrw/status/2052701677615218717",
-    "ft sync",
-    "ft show",
+    "待复核一手来源",
+    "X 来源矩阵",
 ]
 
 
@@ -75,10 +75,10 @@ def check_registry() -> None:
         require((ROOT / example).is_dir(), f"reproduced example directory missing: {example}")
 
     for evidence in REQUIRED_X_EVIDENCE:
-        require(evidence in text, f"source registry missing X/FieldTheory evidence: {evidence}")
+        require(evidence in text, f"source registry missing X source evidence: {evidence}")
 
-    require("不能直接写成公开事实" in text, "source registry must warn about internal-source limits")
-    require("不把 X 线索写进主线结论" in text, "source registry must guard unverified X claims")
+    require("不公开原始消息" in text, "source registry must warn about private-source limits")
+    require("待复核一手来源" in text, "source registry must guard unverified X claims")
 
     print(f"checked {len(rows)} source rows and {len(reproduced_rows)} reproduced rows")
 

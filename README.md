@@ -30,8 +30,8 @@ npm run dev
 
 本地环境、验证顺序和常见失败处理见 [本地运行与排错](docs/zh-cn/appendix/local-setup.md)。
 失败面到诊断命令、修复动作和复验命令的机器可读路径见 [排错决策树](docs/zh-cn/appendix/troubleshooting-tree.md)。
-X、公开 artifact、飞书线索和研究假设如何变成 case card 见 [来源到案例 Playbook](docs/zh-cn/appendix/source-to-case-playbook.md)。
-把公开 artifact、X/FieldTheory 线索或脱敏内部线索升级为案例前，先用 [`templates/reproduction-note.md`](templates/reproduction-note.md) 记录来源状态、复现范围、缺失保真度、反驳路径和下一步实验。
+X、公开 artifact、脱敏应用问题和研究假设如何变成 case card 见 [来源到案例 Playbook](docs/zh-cn/appendix/source-to-case-playbook.md)。
+把公开 artifact、X 来源或脱敏应用问题升级为案例前，先用 [`templates/reproduction-note.md`](templates/reproduction-note.md) 记录来源状态、复现范围、缺失保真度、反驳路径和下一步实验。
 不同角色的推荐路径见 [课程地图](docs/zh-cn/course-map/index.md)。
 章节级“读、跑、改、复盘”闭环见 [学习单元矩阵](docs/zh-cn/appendix/learning-units.md)。
 六个示例的代码阅读顺序见 [代码导览](docs/zh-cn/appendix/code-tour.md)。
@@ -105,8 +105,8 @@ docs/                         # VitePress 中文课程文档
   zh-cn/stage-2/              # HL 理论框架
   zh-cn/stage-3/              # RL/DL/HL 对照与研究问题
   zh-cn/examples/             # 动手实验说明
-  zh-cn/cases/                # Jiayi/X/飞书案例沉淀
-  zh-cn/appendix/source-to-case-playbook.md # X、artifact、飞书线索和研究假设进入 case card 的路径
+  zh-cn/cases/                # Jiayi/X/脱敏应用案例
+  zh-cn/appendix/source-to-case-playbook.md # X、artifact、脱敏应用问题和研究假设进入 case card 的路径
   zh-cn/appendix/case-registry.md # 案例到来源、示例、学习成果和命令的矩阵
   zh-cn/appendix/code-tour.md # 六个示例的代码阅读顺序、编辑目标和测试路径
   zh-cn/appendix/local-setup.md # 本地运行与排错
@@ -157,8 +157,8 @@ npm run verify
 - 检查 `/artifact-gap-analysis.json` 所描述的轻量 replay、真实 artifact 缺口、下一步实验和验证命令。
 - 检查 `/experiment-report.schema.json` 所描述的实验报告公共字段。
 - 检查 `/case-registry.json` 所描述的案例页、来源状态、绑定示例、failure mode、学习成果和验证命令。
-- 检查 `/source-to-case-playbook.json` 所描述的 X、公开 artifact、飞书线索和研究假设进入 case card 的路径。
-- 检查来源登记、`/x-sources.json` 的 X/FieldTheory 缓存状态和“已复现”条目的 runnable example 落点。
+- 检查 `/source-to-case-playbook.json` 所描述的 X、公开 artifact、脱敏应用问题和研究假设进入 case card 的路径。
+- 检查来源登记、`/x-sources.json` 的 X 来源证据状态和“已复现”条目的 runnable example 落点。
 - 检查研究命题、讲义 registry、讲义结构、评分 Rubric、学习单元、授课包和完成度审计。
 - 检查 `/speaker-notes.json` 所描述的讲者备注、demo 节点、讨论题、常见误解和 exit ticket。
 - 检查 `/learning-outcomes.json` 所描述的能力目标到学习单元、练习、Rubric、证据和验证命令的映射。
@@ -188,13 +188,13 @@ GitHub Actions 中的 `Verify course repository` workflow 会在 PR 和 `main` p
 需要把仓库用于组会、课程实验或助教验收时，先读 [教师指南](docs/zh-cn/appendix/instructor-guide.md)。它给出 90 分钟导读、2 小时工作坊、3 讲 + 2 Lab 的组织方式，以及课堂 demo 命令、作业设计和常见故障处理。可直接执行的课堂包见 [授课包](docs/zh-cn/appendix/teaching-pack.md)。4-6 周 mini course 使用 [课程进度表](docs/zh-cn/appendix/course-schedule.md) 安排每周阅读、命令和验收产物。作业题库见 [练习集](docs/zh-cn/appendix/exercises.md)；项目制学习入口见 [研究课题](docs/zh-cn/appendix/research-projects.md)，其中把六个 runnable examples 对应到入门项目、公开 artifact 项目和 capstone 交付物；阅读到实验的记录入口见 [研究日志](docs/zh-cn/appendix/research-logbook.md)；实验设计细则见 [实验协议](docs/zh-cn/appendix/benchmark-protocol.md)。
 
 如果要把 HL 当作研究方向讨论，先读 [研究命题](docs/zh-cn/theory/research-propositions.md)：它把当前思想拆成命题、证据状态和可反驳路径，避免把未发表论文的观点写成既成结论。
-X/FieldTheory 线索的缓存状态和来源层级见 [X 线索案例](docs/zh-cn/cases/x-signal/index.md) 与 [`/x-sources.json`](docs/public/x-sources.json)。
+X 来源的证据状态和来源层级见 [X 来源案例](docs/zh-cn/cases/x-signal/index.md) 与 [`/x-sources.json`](docs/public/x-sources.json)。
 
 ## 贡献方式
 
 新增理论、案例、实验或讲义前，先读 [CONTRIBUTING.md](CONTRIBUTING.md)。主线贡献必须能说明来源状态、baseline failure、heuristic update、反馈报告、测试路径和 `npm run verify` 结果；PR 模板也会要求填写这些证据。
 
-不要把 API key、飞书原文、X/Twitter cookie、私有日志或未脱敏截图写进 issue、PR、文档或实验报告。公开协作前先按 [SECURITY.md](SECURITY.md) 做脱敏和最小化。
+不要把 API key、私有原文、X/Twitter cookie、私有日志或未脱敏截图写进 issue、PR、文档或实验报告。公开协作前先按 [SECURITY.md](SECURITY.md) 做脱敏和最小化。
 
 ## 参考源
 

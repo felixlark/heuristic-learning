@@ -84,7 +84,7 @@
             "npm run x:sources:check"
           ],
           "acceptance": [
-            "不公开飞书原文或 X cookie/API token",
+            "不公开私有原文或 X cookie/API token",
             "不把未复核线索写成已复现"
           ]
         },
@@ -406,7 +406,7 @@
         {
           "id": "D1",
           "title": "X case card",
-          "prompt": "把 Jiayi 或社区 X 线索整理成来源登记条目、case card 和验证状态。",
+          "prompt": "把 Jiayi 或社区 X 来源整理成来源登记条目、case card 和验证状态。",
           "input_paths": [
             "docs/zh-cn/cases/x-signal/index.md",
             "docs/public/x-sources.json",
@@ -418,7 +418,7 @@
             "npm run x:sources:check"
           ],
           "acceptance": [
-            "保留 cached、referenced-not-cached 或 to-collect 状态",
+            "保留 已复核摘要、待直接复核或待采集 状态",
             "不泄露 cookie、token 或私有日志"
           ]
         },
@@ -442,8 +442,8 @@
         },
         {
           "id": "D3",
-          "title": "内部线索最小环境",
-          "prompt": "把飞书任务或消息线索转成不泄露敏感信息的 minimal example。",
+          "title": "脱敏应用问题最小环境",
+          "prompt": "把脱敏应用问题转成不泄露敏感信息的 minimal example。",
           "input_paths": [
             "docs/zh-cn/cases/traffic-simulation/index.md",
             "SECURITY.md"
@@ -457,8 +457,8 @@
             "npm run verify"
           ],
           "acceptance": [
-            "不公开飞书原文、会议纪要或私有链接",
-            "内部线索被抽象为可运行 failure mode"
+            "不公开私有原文、会议纪要或私有链接",
+            "脱敏应用问题被抽象为可运行 failure mode"
           ]
         },
         {

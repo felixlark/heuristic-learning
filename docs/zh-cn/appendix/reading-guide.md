@@ -5,7 +5,7 @@ description: Heuristic Learning 课程的一手来源和背景概念阅读顺序
 
 # 文献阅读指南
 
-本页给研究者和学生一条可执行的阅读路径：先读一手来源，再看公开 artifact，最后把背景概念落到本仓库的命题、示例和验证命令。它不是完整文献综述；所有来源状态仍以 [来源登记](/zh-cn/appendix/source-registry) 为准。
+本页给研究者和学生一条可执行的阅读路径：先读一手来源，再看公开 artifact，最后把背景概念落到课程的命题、示例和验证命令。它不是完整文献综述；所有来源状态仍以 [来源登记](/zh-cn/appendix/source-registry) 为准。
 
 ## 阅读原则
 
@@ -13,16 +13,16 @@ description: Heuristic Learning 课程的一手来源和背景概念阅读顺序
 | --- | --- |
 | 先一手来源 | 优先读 Jiayi Weng 的文章、公开代码 artifact 和 X 原帖 |
 | 再背景对照 | RL、DL、软件测试和编码智能体只用于界定问题边界 |
-| 不把线索写成结论 | X/飞书材料进入主线前必须有 case card、来源状态和可验证落点 |
+| 不把线索写成结论 | X/脱敏应用问题进入主线前必须有 case card、来源状态和可验证落点 |
 | 每个主张都要落地 | 读完一条主张后，必须能指到命题、示例、报告或路线图任务 |
 
 ## 第一轮：建立 HL 语境
 
-| 材料 | 读法 | 本仓库落点 |
+| 材料 | 读法 | 学习落点 |
 | --- | --- | --- |
 | `Learning Beyond Gradients` | 先抓住“更新对象不是权重，而是可维护系统结构”的主张 | [HL 基础概念](/zh-cn/stage-2/)、[研究命题](/zh-cn/theory/research-propositions) |
 | `Trinkle23897/learning-beyond-gradients` | 不急着复现全部环境，先定位哪些 artifact 能被压缩成 replay/probe | [来源登记](/zh-cn/appendix/source-registry)、[案例库](/zh-cn/cases/) |
-| Jiayi Weng X 原帖 | 只当作一手信号，不直接当作已复现实验 | [X 线索案例](/zh-cn/cases/x-signal/) |
+| Jiayi Weng X 原帖 | 只当作一手信号，不直接当作已复现实验 | [X 来源案例](/zh-cn/cases/x-signal/) |
 
 读完后运行：
 
@@ -33,7 +33,7 @@ npm run source:registry:check
 
 ## 第二轮：对照 RL/DL
 
-| 背景 | 读法 | 本仓库问题 |
+| 背景 | 读法 | 课程问题 |
 | --- | --- | --- |
 | Deep Learning | 把它当作“参数更新”和“表征学习”的对照，而不是 HL 的反面 | 哪些任务仍应由模型做感知？ |
 | Reinforcement Learning | 把 state/action/reward/policy 作为共享语言 | 哪些 failure mode 适合 replay 和测试，而不是继续采样？ |
@@ -103,7 +103,7 @@ npm run examples:registry:check
 - 还没有完整论文综述，因为 HL 本身还处于思想形成期。
 - 如果需要写论文或技术报告，使用 `/paper-blueprint.json` 和 `npm run paper:blueprint:check` 约束章节、证据和边界。
 - 轻量 replay 不能替代真实 MuJoCo、Atari、VizDoom 环境复现。
-- X/FieldTheory 线索需要继续采集和脱敏结构化。
+- X 来源需要继续采集和脱敏结构化。
 - RL/DL 背景仍以课程对照为主，后续可以补更严格的对照实验。
 
 新增参考或阅读产物后，至少运行：

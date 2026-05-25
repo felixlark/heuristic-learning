@@ -32,7 +32,7 @@ description: Heuristic Learning 公开页面在官方 Browser/IAB 或 Chrome 插
 
 ## 记录模板
 
-视觉验收完成后，在发布记录或 PR 描述中保留以下字段；不要把凭证、Cookie、飞书私有链接或 X token 写入仓库。
+视觉验收完成后，在发布记录或 PR 描述中保留以下字段；不要把凭证、Cookie、私有链接或 X token 写入仓库。
 
 | 字段 | 说明 |
 | --- | --- |

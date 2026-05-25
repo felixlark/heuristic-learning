@@ -1,17 +1,17 @@
 ---
 title: 术语表
-description: Heuristic Learning 课程术语、边界和本仓库落点
+description: Heuristic Learning 课程术语、边界和学习落点
 ---
 
 # 术语表
 
-本页用于统一课程、案例和实验中的术语。HL 还不是稳定学科名词体系，所以这里的定义采用“课程工作定义”：每个术语都要能落到本仓库的示例、报告或验证命令。
+本页用于统一课程、案例和实验中的术语。HL 还不是稳定学科名词体系，所以这里的定义采用“课程工作定义”：每个术语都要能落到课程的示例、报告或验证命令。
 
-| 术语 | 工作定义 | 本仓库落点 |
+| 术语 | 工作定义 | 学习落点 |
 | --- | --- | --- |
 | Heuristic Learning | 由编码智能体消费反馈并维护软件结构的学习过程 | [学习闭环](/zh-cn/theory/learning-loop) |
 | Heuristic System | 由策略代码、状态表示、反馈通道、测试、实验记录和维护记忆组成的系统 | [研究框架](/zh-cn/theory/research-framework) |
-| Signal | 值得学习的来源信号，可以来自 X、公开 artifact、飞书、日志或回放 | [来源登记](/zh-cn/appendix/source-registry) |
+| Signal | 值得学习的来源信号，可以来自 X、公开 artifact、私有来源、日志或回放 | [来源登记](/zh-cn/appendix/source-registry) |
 | Probe | 能稳定暴露失败的最小场景 | `tests/test_*.py` |
 | Baseline | 自然但不充分的简单策略，用来固定“系统学会了什么” | `experiments/*/latest.json` |
 | Heuristic patch | 对策略、检测器、阈值、控制参数或安全约束的可审查更新 | `examples/*/policies.py` |

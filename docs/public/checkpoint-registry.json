@@ -42,7 +42,7 @@
       "title": "公开来源自测",
       "learning_unit_id": "u2-public-artifacts",
       "learning_outcome_ids": ["lo-3"],
-      "prompt": "选择一个公开 artifact 或 X 线索，说明来源状态、案例落点和不能过度声明的边界。",
+      "prompt": "选择一个公开 artifact 或 X 来源，说明来源状态、案例落点和不能过度声明的边界。",
       "evidence": [
         "docs/zh-cn/appendix/source-registry.md",
         "docs/zh-cn/appendix/case-registry.md",
@@ -54,7 +54,7 @@
         "npm run x:sources:check"
       ],
       "pass_condition": "能区分一手原帖、二手转述、公开 artifact、轻量 replay 和待采集线索。",
-      "common_failure": "把 referenced-not-cached 或 to-collect 的 X 线索写成已复现事实。"
+      "common_failure": "把 待直接复核 或 待采集 的 X 来源写成已复现事实。"
     },
     {
       "id": "cp-3",

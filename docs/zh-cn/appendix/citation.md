@@ -5,7 +5,7 @@ description: Heuristic Learning 仓库、原始来源和课程材料的引用规
 
 # 引用与署名
 
-本仓库是一个课程化研究仓库，不是 Jiayi Weng 原始文章或 `learning-beyond-gradients` artifact 的替代版本。使用本仓库时，需要区分三类引用：原始思想来源、课程仓库、以及具体实验或案例页。
+课程是一个课程化研究仓库，不是 Jiayi Weng 原始文章或 `learning-beyond-gradients` artifact 的替代版本。使用课程时，需要区分三类引用：原始思想来源、课程仓库、以及具体实验或案例页。
 
 ## 推荐引用
 
@@ -23,22 +23,22 @@ Heuristic Learning Contributors. Heuristic Learning: A Chinese Research and Hand
 
 ## 原始来源必须单独引用
 
-本仓库的 HL 概念和多个案例来自 Jiayi Weng 的公开文章与 artifact。引用相关思想或原始实现时，应优先引用：
+课程的 HL 概念和多个案例来自 Jiayi Weng 的公开文章与 artifact。引用相关思想或原始实现时，应优先引用：
 
 - [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/)
 - [`Trinkle23897/learning-beyond-gradients`](https://github.com/Trinkle23897/learning-beyond-gradients)
 - 对应 X 原帖或公开讨论链接，状态见 [来源登记](/zh-cn/appendix/source-registry)
 
-本仓库中的 replay 和最小环境是教学压缩版。它们可以说明课程实验如何组织，但不能替代真实 Atari、VizDoom、MuJoCo 或机器人环境中的原始结果。
+课程中的 replay 和最小环境是教学压缩版。它们可以说明课程实验如何组织，但不能替代真实 Atari、VizDoom、MuJoCo 或机器人环境中的原始结果。
 
 ## 署名边界
 
 | 内容 | 引用方式 |
 | --- | --- |
 | HL 概念、Jiayi 原始案例 | 引用 Jiayi 公开文章、仓库或 X 原帖 |
-| 本课程结构、中文讲义、练习和实验协议 | 引用本仓库 `CITATION.cff` |
-| 轻量 replay 示例 | 引用本仓库示例目录和报告路径，同时说明它是教学复现 |
-| 内部飞书线索 | 不公开引用敏感来源，只引用本仓库中脱敏后的最小环境 |
+| 本课程结构、中文讲义、练习和实验协议 | 引用课程 `CITATION.cff` |
+| 轻量 replay 示例 | 引用课程示例目录和报告路径，同时说明它是教学复现 |
+| 内部脱敏应用问题 | 不公开引用敏感来源，只引用课程中脱敏后的最小环境 |
 | 背景概念材料 | 只作为问题边界参考，不作为 HL 结论证据 |
 
 敏感来源和凭证处理见根目录 `SECURITY.md`。引用页只说明署名边界，不允许替代安全披露流程。

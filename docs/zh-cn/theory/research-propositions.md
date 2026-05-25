@@ -79,7 +79,7 @@ HL 不主张替代 RL/DL。更可操作的命题是：
 | 已知失败固化 | HL | 日志、回放、测试和规则能把经验沉淀为可维护结构 |
 | 工程反遗忘 | HL | 显式回归测试和来源登记能约束后续智能体更新 |
 
-本仓库的轻量示例只验证第三、第四层。第一、第二层需要后续接入真实环境或模型实验。
+课程的轻量示例只验证第三、第四层。第一、第二层需要后续接入真实环境或模型实验。
 
 可运行检验：
 
@@ -90,7 +90,7 @@ npm run verify
 
 ## 命题 5：来源状态必须进入课程结构
 
-没有论文时，来源治理本身就是研究质量的一部分。HL 课程应区分公开来源、内部线索、轻量复现、完整复现和研究假设。
+没有论文时，来源治理本身就是研究质量的一部分。HL 课程应区分公开来源、脱敏应用问题、轻量复现、完整复现和研究假设。
 
 对应文件：
 
@@ -116,7 +116,7 @@ npm run course:structure:check
 1. 在真实 VizDoom、Atari 或 MuJoCo 环境里复测轻量 replay 的边界。
 2. 让编码智能体根据 `experiments/*/latest.json` 自动提出 patch，再由测试决定是否接受。
 3. 比较纯 prompt 经验、结构化 feedback report 和传统单元测试在反遗忘上的差异。
-4. 把 X/FieldTheory 信号转成脱敏 case card，并要求每个 case card 至少落到一个 probe 或研究待办。
+4. 把 X 来源信号转成脱敏 case card，并要求每个 case card 至少落到一个 probe 或研究待办。
 
 这些任务对应 [研究路线图](/zh-cn/appendix/research-roadmap) 和 [研究课题](/zh-cn/appendix/research-projects)。当前页面只是命题地图，不替代实证结论。
 

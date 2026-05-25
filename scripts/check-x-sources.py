@@ -49,7 +49,7 @@ def check_schema(schema: dict[str, Any]) -> None:
     require(schema.get("title") == "Heuristic Learning X Sources Registry", "schema title mismatch")
     require(schema.get("type") == "object", "schema root type mismatch")
     require(schema.get("additionalProperties") is False, "schema must disallow additional root properties")
-    require(schema.get("required") == ["schema_version", "tooling", "sources", "extraction_cards"], "schema required keys drifted")
+    require(schema.get("required") == ["schema_version", "source_policy", "sources", "extraction_cards"], "schema required keys drifted")
     defs = schema.get("$defs")
     require(isinstance(defs, dict) and "source" in defs, "schema must define source")
     require("extraction_card" in defs, "schema must define extraction_card")
@@ -57,13 +57,12 @@ def check_schema(schema: dict[str, Any]) -> None:
 
 def check_registry(registry: dict[str, Any]) -> None:
     require(registry.get("$schema") == "/x-sources.schema.json", "registry schema pointer mismatch")
-    require_no_extra_keys(registry, {"$schema", "schema_version", "tooling", "sources", "extraction_cards"}, "registry")
+    require_no_extra_keys(registry, {"$schema", "schema_version", "source_policy", "sources", "extraction_cards"}, "registry")
     require(registry.get("schema_version") == 1, "registry schema_version must be 1")
 
-    tooling = registry.get("tooling")
-    require(isinstance(tooling, dict), "tooling must be object")
-    require(tooling.get("command") == "ft", "x sources must use ft as command")
-    require(tooling.get("status_command") == "ft status", "x sources must document ft status")
+    source_policy = registry.get("source_policy")
+    require(isinstance(source_policy, dict), "source_policy must be object")
+    require("Public X material" in source_policy.get("reader_rule", ""), "x sources must document reader-facing source policy")
 
     page = (ROOT / "docs/zh-cn/cases/x-signal/index.md").read_text(encoding="utf-8")
     source_registry = (ROOT / "docs/zh-cn/appendix/source-registry.md").read_text(encoding="utf-8")
@@ -74,7 +73,7 @@ def check_registry(registry: dict[str, Any]) -> None:
     sources = registry.get("sources")
     require(isinstance(sources, list) and sources, "sources must be a non-empty list")
     ids: set[str] = set()
-    statuses: set[str] = set()
+    evidence_statuses: set[str] = set()
     levels: set[str] = set()
     allowed = {
         "id",
@@ -82,8 +81,7 @@ def check_registry(registry: dict[str, Any]) -> None:
         "author",
         "date",
         "source_level",
-        "cache_status",
-        "ft_commands",
+        "evidence_status",
         "claims_to_extract",
         "repo_targets",
         "verification_status",
@@ -101,13 +99,7 @@ def check_registry(registry: dict[str, Any]) -> None:
         require(source["url"] in page or source["url"] in source_registry, f"{context}: URL not documented")
         require_pattern(source.get("author"), r"^@.+", f"{context}.author")
         levels.add(source.get("source_level"))
-        statuses.add(source.get("cache_status"))
-
-        commands = source.get("ft_commands")
-        require(isinstance(commands, list) and commands, f"{context}: ft_commands must be non-empty")
-        for command in commands:
-            require(isinstance(command, str), f"{context}: ft command must be string")
-            require(command.startswith("ft "), f"{context}: command must start with ft: {command}")
+        evidence_statuses.add(source.get("evidence_status"))
 
         for key in ["claims_to_extract", "repo_targets"]:
             items = source.get(key)
@@ -120,7 +112,10 @@ def check_registry(registry: dict[str, Any]) -> None:
         require(isinstance(boundary, str) and boundary, f"{context}: boundary must be non-empty")
 
     require(ids == EXPECTED_IDS, f"x source ids mismatch: {sorted(ids)}")
-    require({"cached", "referenced-not-cached", "to-collect"}.issubset(statuses), "x sources must preserve cache status boundaries")
+    require(
+        {"reviewed-secondary-summary", "known-url-needs-direct-review", "to-collect"}.issubset(evidence_statuses),
+        "x sources must preserve evidence status boundaries",
+    )
     require({"primary-url-referenced", "secondary-summary", "secondary-lead"}.issubset(levels), "x sources must preserve source level boundaries")
 
     cards = registry.get("extraction_cards")

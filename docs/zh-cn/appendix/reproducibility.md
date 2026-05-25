@@ -15,7 +15,7 @@ description: Heuristic Learning 仓库的环境、示例、命题、教学产物
 | --- | --- | --- | --- |
 | 环境与安装 | clean checkout 到统一验证 | `npm run verify` | 本地 HTTP 预检不等于发布验收 |
 | 可运行示例 | 六个 examples、reports、tests | `npm run examples:feedback` | 轻量 replay 不等于高保真环境 |
-| 命题与来源 | claims、source、X 线索、引用边界 | `npm run claims:registry:check` | 未复核线索不能写成已复现 |
+| 命题与来源 | claims、source、X 来源、引用边界 | `npm run claims:registry:check` | 未复核线索不能写成已复现 |
 | 教学产物 | lecture、lab、exercise、rubric、teaching pack | `npm run exercises:check` | 结构通过不代替教师评审 |
 | 贡献与发布 | contribution contract、PR、release、安全 | `npm run contribution:contract:check` | 禁止公开凭证和私有原文 |
 | 站点与机器入口 | manifest、JSON route、llms、VitePress | `npm run docs:routes:check` | route 200 不等于视觉验收 |

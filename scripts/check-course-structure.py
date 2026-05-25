@@ -750,7 +750,7 @@ def check_case_registry() -> None:
         "VizDoom",
         "Robot Soccer",
         "Traffic Simulation",
-        "X and FieldTheory Signals",
+        "X Public Discussion",
     ]:
         require(required in page, f"case registry page missing {required}")
 
@@ -1428,8 +1428,8 @@ def check_x_sources() -> None:
     require(registry.get("$schema") == "/x-sources.schema.json", "x sources registry schema pointer mismatch")
     require(registry.get("schema_version") == 1, "x sources registry schema_version must be 1")
     require(schema.get("title") == "Heuristic Learning X Sources Registry", "x sources schema title mismatch")
-    tooling = registry.get("tooling")
-    require(isinstance(tooling, dict) and tooling.get("command") == "ft", "x sources must document ft tooling")
+    source_policy = registry.get("source_policy")
+    require(isinstance(source_policy, dict), "x sources must document reader-facing source policy")
     sources = registry.get("sources")
     require(isinstance(sources, list), "x sources registry sources must be a list")
     source_ids = {
@@ -1450,9 +1450,9 @@ def check_x_sources() -> None:
         "/x-sources.json",
         "/x-sources.schema.json",
         "npm run x:sources:check",
-        "referenced-not-cached",
-        "to-collect",
-        "ft show 2052596837547495549",
+        "待直接复核",
+        "待采集",
+        "2052596837547495549",
     ]:
         require(
             required in x_case
@@ -1498,11 +1498,10 @@ def check_source_to_case_playbook() -> None:
         "/source-to-case-playbook.schema.json",
         "npm run source:case:check",
         "templates/case-card.md",
-        "ft show",
-        "referenced-not-cached",
-        "X / FieldTheory thread",
+        "待直接复核",
+        "X / public discussion",
         "Public code artifact",
-        "Internal Feishu signal",
+        "Sanitized operational problem",
         "Research hypothesis",
     ]:
         require(

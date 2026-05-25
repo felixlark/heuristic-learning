@@ -64,9 +64,9 @@
     {
       "id": "x-signal-case-reading",
       "status": "needs-source-refresh",
-      "source_type": "x-or-fieldtheory-signal",
+      "source_type": "x-source",
       "source_ref": "docs/public/x-sources.json",
-      "reading_goal": "把 Jiayi Weng 相关 X 线索拆成来源状态、可课程化问题和禁止声明。",
+      "reading_goal": "把 Jiayi Weng 相关 X 来源拆成来源状态、可课程化问题和禁止声明。",
       "bound_examples": [
         "breakout-replay",
         "ant-gait-replay"
@@ -88,15 +88,15 @@
         "docs/zh-cn/appendix/source-to-case-playbook.md",
         "templates/case-card.md"
       ],
-      "next_action": "通过 ft 或受支持的 X API 刷新一手帖缓存后，再把分数类表述升级或降级。",
-      "boundary": "referenced-not-cached 的原帖不能写成已直接读取的一手证据。"
+      "next_action": "直接复核一手原帖后，再把分数类表述升级或降级。",
+      "boundary": "待直接复核的原帖不能写成已直接读取的一手证据。"
     },
     {
       "id": "robot-soccer-signal-reading",
       "status": "seeded",
-      "source_type": "internal-signal",
+      "source_type": "sanitized-application",
       "source_ref": "docs/zh-cn/cases/robot-soccer/index.md",
-      "reading_goal": "把内部机器人足球方向转成脱敏、可运行、可测试的 blocked-lane 教学案例。",
+      "reading_goal": "把机器人足球方向转成脱敏、可运行、可测试的 blocked-lane 教学案例。",
       "bound_examples": [
         "robot-soccer"
       ],
@@ -118,14 +118,14 @@
         "templates/experiment-record.md"
       ],
       "next_action": "扩展一个安全通道场景，检查 lane rule 是否过度保守。",
-      "boundary": "只保留脱敏任务形态，不公开飞书原文、私有链接或会议内容。"
+      "boundary": "只保留脱敏任务形态，不公开私有原文、私有链接或会议内容。"
     },
     {
       "id": "cross-example-report-reading",
       "status": "active",
       "source_type": "cross-example-analysis",
       "source_ref": "experiments/",
-      "reading_goal": "比较六个 latest.json 是否足以让下一轮编码智能体定位 failure mode 和 update target。",
+      "reading_goal": "比较六个 latest.json 是否足以定位 failure mode 和 update target。",
       "bound_examples": [
         "gridworld",
         "robot-soccer",
@@ -153,7 +153,7 @@
         "templates/anti-forgetting-checklist.md"
       ],
       "next_action": "为每个报告补一个人工可读的 edit hint，并检查是否降低改动定位成本。",
-      "boundary": "报告结构只能证明本仓库轻量任务的维护性，不能外推到所有 RL 环境。"
+      "boundary": "报告结构只能证明课程轻量任务的维护性，不能外推到所有 RL 环境。"
     }
   ]
 }
