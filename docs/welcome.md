@@ -5,9 +5,6 @@ hero:
   name: 'Heuristic Learning'
   text: '直觉学习：Learning Beyond Gradients'
   tagline: '一个把论文前思想、工程案例和可运行实验连起来的中文课程仓库。'
-  image:
-    src: /hl-logo.svg
-    alt: Heuristic Learning
   actions:
     - theme: brand
       text: 进入课程

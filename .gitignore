@@ -9,6 +9,7 @@ docs/.vitepress/.temp/
 .vitepress/cache/
 .temp/
 temp/
+artifacts/
 
 .env
 .env.*

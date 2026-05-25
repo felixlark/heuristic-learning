@@ -313,6 +313,15 @@ body:has(.VPHome) .reading-progress {
 }
 
 /* Hero Section Refinements */
+.VPHomeHero .container {
+  justify-content: center;
+}
+
+.VPHomeHero .main {
+  max-width: 960px;
+  text-align: center;
+}
+
 .VPHomeHero .name,
 .VPHomeHero .name.clip {
   position: relative;
@@ -334,6 +343,10 @@ body:has(.VPHome) .reading-progress {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 22px rgba(59, 130, 246, 0.26));
   animation: ev-hero-name-flow 8s ease-in-out infinite alternate;
+}
+
+.VPHomeHero .actions {
+  justify-content: center;
 }
 
 @keyframes ev-hero-name-flow {

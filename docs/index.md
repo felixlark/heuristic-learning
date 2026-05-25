@@ -4,9 +4,6 @@ hero:
   name: 'Heuristic Learning'
   text: '直觉学习中文研究与动手课程'
   tagline: '面向 AI 研究者、工程师和学生：从代码规则、环境反馈到可维护的学习系统。'
-  image:
-    src: /hl-logo.svg
-    alt: Heuristic Learning
   actions:
     - theme: brand
       text: 学生路径
