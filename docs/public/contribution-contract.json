@@ -1,0 +1,192 @@
+{
+  "$schema": "/contribution-contract.schema.json",
+  "schema_version": 1,
+  "contribution_types": [
+    {
+      "id": "theory-page",
+      "title": "Theory page",
+      "description": "新增或修改理论章节时，必须保留来源、研究问题和案例落点。",
+      "evidence_fields": [
+        "source link",
+        "research question",
+        "case/example link",
+        "source-registry status"
+      ],
+      "required_paths": [
+        "docs/zh-cn/theory/",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/public/claims-registry.json"
+      ],
+      "verification_commands": [
+        "npm run claims:registry:check",
+        "npm run course:structure:check"
+      ]
+    },
+    {
+      "id": "case-card",
+      "title": "Case card",
+      "description": "新增案例必须说明环境、状态、动作、反馈、更新对象、验证和来源状态。",
+      "evidence_fields": [
+        "source status",
+        "feedback surface",
+        "verification plan",
+        "case-card template"
+      ],
+      "required_paths": [
+        "templates/case-card.md",
+        "docs/zh-cn/cases/",
+        "docs/zh-cn/appendix/source-registry.md"
+      ],
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run x:sources:check"
+      ]
+    },
+    {
+      "id": "runnable-example",
+      "title": "Runnable example",
+      "description": "新增主线示例必须有运行脚本、反馈脚本、报告、测试和课程落点。",
+      "evidence_fields": [
+        "run command",
+        "feedback command",
+        "report path",
+        "test path",
+        "failure mode"
+      ],
+      "required_paths": [
+        "examples/",
+        "tests/",
+        "experiments/",
+        "docs/public/example-registry.json",
+        "docs/public/course-manifest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run examples:registry:check",
+        "npm run benchmark:summary:check",
+        "npm run verify"
+      ]
+    },
+    {
+      "id": "experiment-record",
+      "title": "Experiment record",
+      "description": "实验记录必须把命令、环境、结果、反馈和下一轮候选更新固化为可复查证据。",
+      "evidence_fields": [
+        "run command",
+        "source status",
+        "result summary",
+        "feedback",
+        "candidate update"
+      ],
+      "required_paths": [
+        "templates/experiment-record.md",
+        "experiments/",
+        "docs/public/benchmark-summary.json",
+        "docs/public/evaluation-metrics.json"
+      ],
+      "verification_commands": [
+        "npm run examples:reports:check",
+        "npm run benchmark:summary:check",
+        "npm run metrics:check"
+      ]
+    },
+    {
+      "id": "claim-review",
+      "title": "Claim review",
+      "description": "研究命题评审必须标注证据状态、反驳路径和验证命令。",
+      "evidence_fields": [
+        "claim id",
+        "evidence pages",
+        "falsification path",
+        "verification command"
+      ],
+      "required_paths": [
+        "templates/claim-review.md",
+        "docs/public/claims-registry.json",
+        "docs/zh-cn/theory/research-propositions.md"
+      ],
+      "verification_commands": [
+        "npm run claims:registry:check",
+        "npm run verify"
+      ]
+    },
+    {
+      "id": "reproduction-note",
+      "title": "Reproduction note",
+      "description": "复现记录必须把来源状态、复现范围、缺失保真度、反驳路径和下一步实验分开。",
+      "evidence_fields": [
+        "source status",
+        "reproduction scope",
+        "missing fidelity",
+        "falsification path",
+        "next experiment"
+      ],
+      "required_paths": [
+        "templates/reproduction-note.md",
+        "docs/zh-cn/appendix/research-logbook.md",
+        "docs/public/artifact-gap-analysis.json",
+        "docs/public/source-to-case-playbook.json"
+      ],
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run artifact:gap:check",
+        "npm run research:logbook:check",
+        "npm run source:case:check"
+      ]
+    },
+    {
+      "id": "anti-forgetting-review",
+      "title": "Anti-forgetting review",
+      "description": "修改 heuristic patch 时，必须说明旧行为、风险更新和回归保护。",
+      "evidence_fields": [
+        "old behavior",
+        "risky update",
+        "regression guard",
+        "verification command"
+      ],
+      "required_paths": [
+        "templates/anti-forgetting-checklist.md",
+        "tests/",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ],
+      "verification_commands": [
+        "npm run examples:test",
+        "npm run examples:feedback"
+      ]
+    },
+    {
+      "id": "course-material",
+      "title": "Lab or lecture",
+      "description": "新增讲义或实验页必须绑定核心问题、运行命令、评审任务和课程落点。",
+      "evidence_fields": [
+        "core question",
+        "runnable command",
+        "review task",
+        "course link"
+      ],
+      "required_paths": [
+        "docs/zh-cn/slides/",
+        "docs/public/teaching-registry.json",
+        "docs/public/slide-deck.json"
+      ],
+      "verification_commands": [
+        "npm run teaching:registry:check",
+        "npm run slides:check",
+        "npm run course:manifest:check"
+      ]
+    }
+  ],
+  "required_commands": [
+    "npm run verify",
+    "npm run contribution:contract:check",
+    "npm run course:structure:check"
+  ],
+  "forbidden_materials": [
+    "API keys",
+    "Feishu raw content",
+    "X cookies/API tokens",
+    "private logs",
+    "unverified X/Feishu signals presented as reproduced facts"
+  ]
+}

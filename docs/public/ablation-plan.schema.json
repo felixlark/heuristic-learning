@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heuristic Learning Ablation Plan Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "ablations"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "ablations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/ablation"
+      }
+    }
+  },
+  "$defs": {
+    "ablation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "example_id",
+        "metric_ids",
+        "variable_under_test",
+        "baseline_condition",
+        "heuristic_condition",
+        "expected_invariant",
+        "evidence",
+        "verification_commands",
+        "research_use",
+        "boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "metric_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        },
+        "variable_under_test": {
+          "type": "string",
+          "minLength": 1
+        },
+        "baseline_condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "heuristic_condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_invariant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "verification_commands": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^npm run .+"
+          }
+        },
+        "research_use": {
+          "type": "string",
+          "minLength": 1
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

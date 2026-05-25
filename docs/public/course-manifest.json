@@ -1,0 +1,875 @@
+{
+  "$schema": "/course-manifest.schema.json",
+  "schema_version": 1,
+  "course": {
+    "name": "Heuristic Learning",
+    "language": "zh-CN",
+    "verification_command": "npm run verify",
+    "structure_check_command": "npm run course:structure:check"
+  },
+  "core_pages": [
+    {
+      "id": "syllabus",
+      "title": "课程大纲",
+      "path": "docs/zh-cn/syllabus/index.md",
+      "route": "/zh-cn/syllabus/"
+    },
+    {
+      "id": "course-map",
+      "title": "课程地图",
+      "path": "docs/zh-cn/course-map/index.md",
+      "route": "/zh-cn/course-map/"
+    },
+    {
+      "id": "learning-loop",
+      "title": "学习闭环",
+      "path": "docs/zh-cn/theory/learning-loop.md",
+      "route": "/zh-cn/theory/learning-loop"
+    },
+    {
+      "id": "research-framework",
+      "title": "研究框架",
+      "path": "docs/zh-cn/theory/research-framework.md",
+      "route": "/zh-cn/theory/research-framework"
+    },
+    {
+      "id": "research-propositions",
+      "title": "研究命题",
+      "path": "docs/zh-cn/theory/research-propositions.md",
+      "route": "/zh-cn/theory/research-propositions"
+    },
+    {
+      "id": "examples",
+      "title": "可运行示例",
+      "path": "docs/zh-cn/examples/index.md",
+      "route": "/zh-cn/examples/"
+    },
+    {
+      "id": "x-signal",
+      "title": "X 线索案例",
+      "path": "docs/zh-cn/cases/x-signal/index.md",
+      "route": "/zh-cn/cases/x-signal/"
+    },
+    {
+      "id": "source-registry",
+      "title": "来源登记",
+      "path": "docs/zh-cn/appendix/source-registry.md",
+      "route": "/zh-cn/appendix/source-registry"
+    },
+    {
+      "id": "source-to-case-playbook",
+      "title": "来源到案例 Playbook",
+      "path": "docs/zh-cn/appendix/source-to-case-playbook.md",
+      "route": "/zh-cn/appendix/source-to-case-playbook"
+    },
+    {
+      "id": "release-checklist",
+      "title": "发布清单",
+      "path": "docs/zh-cn/appendix/release-checklist.md",
+      "route": "/zh-cn/appendix/release-checklist"
+    },
+    {
+      "id": "local-setup",
+      "title": "本地运行与排错",
+      "path": "docs/zh-cn/appendix/local-setup.md",
+      "route": "/zh-cn/appendix/local-setup"
+    },
+    {
+      "id": "troubleshooting-tree",
+      "title": "排错决策树",
+      "path": "docs/zh-cn/appendix/troubleshooting-tree.md",
+      "route": "/zh-cn/appendix/troubleshooting-tree"
+    },
+    {
+      "id": "glossary",
+      "title": "术语表",
+      "path": "docs/zh-cn/appendix/glossary.md",
+      "route": "/zh-cn/appendix/glossary"
+    },
+    {
+      "id": "references",
+      "title": "参考文献与参考仓库",
+      "path": "docs/zh-cn/appendix/references.md",
+      "route": "/zh-cn/appendix/references"
+    },
+    {
+      "id": "reading-guide",
+      "title": "文献阅读指南",
+      "path": "docs/zh-cn/appendix/reading-guide.md",
+      "route": "/zh-cn/appendix/reading-guide"
+    },
+    {
+      "id": "course-patterns",
+      "title": "教学仓库对标矩阵",
+      "path": "docs/zh-cn/appendix/course-patterns.md",
+      "route": "/zh-cn/appendix/course-patterns"
+    },
+    {
+      "id": "case-registry",
+      "title": "案例矩阵",
+      "path": "docs/zh-cn/appendix/case-registry.md",
+      "route": "/zh-cn/appendix/case-registry"
+    },
+    {
+      "id": "code-tour",
+      "title": "代码导览",
+      "path": "docs/zh-cn/appendix/code-tour.md",
+      "route": "/zh-cn/appendix/code-tour"
+    },
+    {
+      "id": "learning-units",
+      "title": "学习单元矩阵",
+      "path": "docs/zh-cn/appendix/learning-units.md",
+      "route": "/zh-cn/appendix/learning-units"
+    },
+    {
+      "id": "learning-outcomes",
+      "title": "学习成果矩阵",
+      "path": "docs/zh-cn/appendix/learning-outcomes.md",
+      "route": "/zh-cn/appendix/learning-outcomes"
+    },
+    {
+      "id": "checkpoints",
+      "title": "阶段检查点",
+      "path": "docs/zh-cn/appendix/checkpoints.md",
+      "route": "/zh-cn/appendix/checkpoints"
+    },
+    {
+      "id": "evaluation-metrics",
+      "title": "评估指标矩阵",
+      "path": "docs/zh-cn/appendix/evaluation-metrics.md",
+      "route": "/zh-cn/appendix/evaluation-metrics"
+    },
+    {
+      "id": "paper-blueprint",
+      "title": "论文蓝图",
+      "path": "docs/zh-cn/appendix/paper-blueprint.md",
+      "route": "/zh-cn/appendix/paper-blueprint"
+    },
+    {
+      "id": "speaker-notes",
+      "title": "讲者备注",
+      "path": "docs/zh-cn/appendix/speaker-notes.md",
+      "route": "/zh-cn/appendix/speaker-notes"
+    },
+    {
+      "id": "concept-graph",
+      "title": "概念图谱",
+      "path": "docs/zh-cn/appendix/concept-graph.md",
+      "route": "/zh-cn/appendix/concept-graph"
+    },
+    {
+      "id": "teaching-pack",
+      "title": "授课包",
+      "path": "docs/zh-cn/appendix/teaching-pack.md",
+      "route": "/zh-cn/appendix/teaching-pack"
+    },
+    {
+      "id": "citation",
+      "title": "引用与署名",
+      "path": "docs/zh-cn/appendix/citation.md",
+      "route": "/zh-cn/appendix/citation"
+    },
+    {
+      "id": "contribution-protocol",
+      "title": "贡献与研究协议",
+      "path": "docs/zh-cn/appendix/contribution-protocol.md",
+      "route": "/zh-cn/appendix/contribution-protocol"
+    },
+    {
+      "id": "rubric",
+      "title": "课程评分与验收 Rubric",
+      "path": "docs/zh-cn/appendix/rubric.md",
+      "route": "/zh-cn/appendix/rubric"
+    },
+    {
+      "id": "instructor-guide",
+      "title": "教师指南",
+      "path": "docs/zh-cn/appendix/instructor-guide.md",
+      "route": "/zh-cn/appendix/instructor-guide"
+    },
+    {
+      "id": "course-schedule",
+      "title": "课程进度表",
+      "path": "docs/zh-cn/appendix/course-schedule.md",
+      "route": "/zh-cn/appendix/course-schedule"
+    },
+    {
+      "id": "completion-audit",
+      "title": "完成度审计",
+      "path": "docs/zh-cn/appendix/completion-audit.md",
+      "route": "/zh-cn/appendix/completion-audit"
+    },
+    {
+      "id": "public-entrypoints",
+      "title": "机器可读入口",
+      "path": "docs/zh-cn/appendix/public-entrypoints.md",
+      "route": "/zh-cn/appendix/public-entrypoints"
+    },
+    {
+      "id": "visual-verification",
+      "title": "视觉与浏览器验收",
+      "path": "docs/zh-cn/appendix/visual-verification.md",
+      "route": "/zh-cn/appendix/visual-verification"
+    },
+    {
+      "id": "reproducibility",
+      "title": "可复现性检查清单",
+      "path": "docs/zh-cn/appendix/reproducibility.md",
+      "route": "/zh-cn/appendix/reproducibility"
+    },
+    {
+      "id": "exercises",
+      "title": "练习集",
+      "path": "docs/zh-cn/appendix/exercises.md",
+      "route": "/zh-cn/appendix/exercises"
+    },
+    {
+      "id": "research-projects",
+      "title": "研究课题",
+      "path": "docs/zh-cn/appendix/research-projects.md",
+      "route": "/zh-cn/appendix/research-projects"
+    },
+    {
+      "id": "research-logbook",
+      "title": "研究日志",
+      "path": "docs/zh-cn/appendix/research-logbook.md",
+      "route": "/zh-cn/appendix/research-logbook"
+    },
+    {
+      "id": "ablation-plan",
+      "title": "消融计划",
+      "path": "docs/zh-cn/appendix/ablation-plan.md",
+      "route": "/zh-cn/appendix/ablation-plan"
+    },
+    {
+      "id": "artifact-gap-analysis",
+      "title": "Artifact 差距分析",
+      "path": "docs/zh-cn/appendix/artifact-gap-analysis.md",
+      "route": "/zh-cn/appendix/artifact-gap-analysis"
+    },
+    {
+      "id": "benchmark-protocol",
+      "title": "实验协议",
+      "path": "docs/zh-cn/appendix/benchmark-protocol.md",
+      "route": "/zh-cn/appendix/benchmark-protocol"
+    },
+    {
+      "id": "benchmark-results",
+      "title": "Benchmark 结果摘要",
+      "path": "docs/zh-cn/appendix/benchmark-results.md",
+      "route": "/zh-cn/appendix/benchmark-results"
+    },
+    {
+      "id": "research-roadmap",
+      "title": "研究路线图",
+      "path": "docs/zh-cn/appendix/research-roadmap.md",
+      "route": "/zh-cn/appendix/research-roadmap"
+    },
+    {
+      "id": "lecture-3",
+      "title": "第 3 讲：失败类型与反遗忘",
+      "path": "docs/zh-cn/slides/lecture-3/index.md",
+      "route": "/zh-cn/slides/lecture-3/"
+    },
+    {
+      "id": "lab-2",
+      "title": "Lab 2：反遗忘审查",
+      "path": "docs/zh-cn/slides/lab-2/index.md",
+      "route": "/zh-cn/slides/lab-2/"
+    }
+  ],
+  "examples": [
+    {
+      "id": "gridworld",
+      "title": "GridWorld",
+      "source_status": "teaching-minimal",
+      "failure_mode": "local_greedy_trap",
+      "example_dir": "examples/heuristic-gridworld",
+      "run_script": "examples:gridworld",
+      "feedback_script": "examples:gridworld:feedback",
+      "report": "experiments/gridworld/latest.json",
+      "test": "tests/test_gridworld.py",
+      "readme": "examples/heuristic-gridworld/README.md"
+    },
+    {
+      "id": "ant-gait-replay",
+      "title": "Ant Gait Replay",
+      "source_status": "reproduced-lightweight-artifact",
+      "failure_mode": "yaw_drift",
+      "example_dir": "examples/ant-gait-replay",
+      "run_script": "examples:ant-gait-replay",
+      "feedback_script": "examples:ant-gait-replay:feedback",
+      "report": "experiments/ant-gait-replay/latest.json",
+      "test": "tests/test_ant_gait_replay.py",
+      "readme": "examples/ant-gait-replay/README.md"
+    },
+    {
+      "id": "breakout-replay",
+      "title": "Breakout Replay",
+      "source_status": "reproduced-lightweight-artifact",
+      "failure_mode": "missed_after_wall_reflection",
+      "example_dir": "examples/breakout-replay",
+      "run_script": "examples:breakout-replay",
+      "feedback_script": "examples:breakout-replay:feedback",
+      "report": "experiments/breakout-replay/latest.json",
+      "test": "tests/test_breakout_replay.py",
+      "readme": "examples/breakout-replay/README.md"
+    },
+    {
+      "id": "robot-soccer",
+      "title": "Robot Soccer",
+      "source_status": "reproduced-minimal-internal-signal",
+      "failure_mode": "blocked_shot",
+      "example_dir": "examples/robot-soccer",
+      "run_script": "examples:robot-soccer",
+      "feedback_script": "examples:robot-soccer:feedback",
+      "report": "experiments/robot-soccer/latest.json",
+      "test": "tests/test_robot_soccer.py",
+      "readme": "examples/robot-soccer/README.md"
+    },
+    {
+      "id": "vizdoom-replay",
+      "title": "VizDoom Replay",
+      "source_status": "reproduced-lightweight-artifact",
+      "failure_mode": "wasted_pickup",
+      "example_dir": "examples/vizdoom-replay",
+      "run_script": "examples:vizdoom-replay",
+      "feedback_script": "examples:vizdoom-replay:feedback",
+      "report": "experiments/vizdoom-replay/latest.json",
+      "test": "tests/test_vizdoom_replay.py",
+      "readme": "examples/vizdoom-replay/README.md"
+    },
+    {
+      "id": "traffic-grid",
+      "title": "Traffic Grid",
+      "source_status": "reproduced-minimal-internal-signal",
+      "failure_mode": "spillback",
+      "example_dir": "examples/traffic-grid",
+      "run_script": "examples:traffic-grid",
+      "feedback_script": "examples:traffic-grid:feedback",
+      "report": "experiments/traffic-grid/latest.json",
+      "test": "tests/test_traffic_grid.py",
+      "readme": "examples/traffic-grid/README.md"
+    }
+  ],
+  "public_resources": [
+    {
+      "id": "course-manifest",
+      "title": "Course Manifest",
+      "path": "docs/public/course-manifest.json",
+      "route": "/course-manifest.json",
+      "type": "registry",
+      "check_script": "npm run course:manifest:check"
+    },
+    {
+      "id": "course-manifest-schema",
+      "title": "Course Manifest Schema",
+      "path": "docs/public/course-manifest.schema.json",
+      "route": "/course-manifest.schema.json",
+      "type": "schema",
+      "check_script": "npm run course:manifest:check"
+    },
+    {
+      "id": "example-registry",
+      "title": "Example Registry",
+      "path": "docs/public/example-registry.json",
+      "route": "/example-registry.json",
+      "type": "registry",
+      "check_script": "npm run examples:registry:check"
+    },
+    {
+      "id": "example-registry-schema",
+      "title": "Example Registry Schema",
+      "path": "docs/public/example-registry.schema.json",
+      "route": "/example-registry.schema.json",
+      "type": "schema",
+      "check_script": "npm run examples:registry:check"
+    },
+    {
+      "id": "code-tour",
+      "title": "Code Tour Registry",
+      "path": "docs/public/code-tour.json",
+      "route": "/code-tour.json",
+      "type": "registry",
+      "check_script": "npm run code:tour:check"
+    },
+    {
+      "id": "code-tour-schema",
+      "title": "Code Tour Schema",
+      "path": "docs/public/code-tour.schema.json",
+      "route": "/code-tour.schema.json",
+      "type": "schema",
+      "check_script": "npm run code:tour:check"
+    },
+    {
+      "id": "benchmark-summary",
+      "title": "Benchmark Summary",
+      "path": "docs/public/benchmark-summary.json",
+      "route": "/benchmark-summary.json",
+      "type": "registry",
+      "check_script": "npm run benchmark:summary:check"
+    },
+    {
+      "id": "benchmark-summary-schema",
+      "title": "Benchmark Summary Schema",
+      "path": "docs/public/benchmark-summary.schema.json",
+      "route": "/benchmark-summary.schema.json",
+      "type": "schema",
+      "check_script": "npm run benchmark:summary:check"
+    },
+    {
+      "id": "ablation-plan",
+      "title": "Ablation Plan Registry",
+      "path": "docs/public/ablation-plan.json",
+      "route": "/ablation-plan.json",
+      "type": "registry",
+      "check_script": "npm run ablation:plan:check"
+    },
+    {
+      "id": "ablation-plan-schema",
+      "title": "Ablation Plan Schema",
+      "path": "docs/public/ablation-plan.schema.json",
+      "route": "/ablation-plan.schema.json",
+      "type": "schema",
+      "check_script": "npm run ablation:plan:check"
+    },
+    {
+      "id": "artifact-gap-analysis",
+      "title": "Artifact Gap Analysis Registry",
+      "path": "docs/public/artifact-gap-analysis.json",
+      "route": "/artifact-gap-analysis.json",
+      "type": "registry",
+      "check_script": "npm run artifact:gap:check"
+    },
+    {
+      "id": "artifact-gap-analysis-schema",
+      "title": "Artifact Gap Analysis Schema",
+      "path": "docs/public/artifact-gap-analysis.schema.json",
+      "route": "/artifact-gap-analysis.schema.json",
+      "type": "schema",
+      "check_script": "npm run artifact:gap:check"
+    },
+    {
+      "id": "troubleshooting-tree",
+      "title": "Troubleshooting Tree Registry",
+      "path": "docs/public/troubleshooting-tree.json",
+      "route": "/troubleshooting-tree.json",
+      "type": "registry",
+      "check_script": "npm run troubleshooting:tree:check"
+    },
+    {
+      "id": "troubleshooting-tree-schema",
+      "title": "Troubleshooting Tree Schema",
+      "path": "docs/public/troubleshooting-tree.schema.json",
+      "route": "/troubleshooting-tree.schema.json",
+      "type": "schema",
+      "check_script": "npm run troubleshooting:tree:check"
+    },
+    {
+      "id": "claims-registry",
+      "title": "Claims Registry",
+      "path": "docs/public/claims-registry.json",
+      "route": "/claims-registry.json",
+      "type": "registry",
+      "check_script": "npm run claims:registry:check"
+    },
+    {
+      "id": "claims-registry-schema",
+      "title": "Claims Registry Schema",
+      "path": "docs/public/claims-registry.schema.json",
+      "route": "/claims-registry.schema.json",
+      "type": "schema",
+      "check_script": "npm run claims:registry:check"
+    },
+    {
+      "id": "case-registry",
+      "title": "Case Registry",
+      "path": "docs/public/case-registry.json",
+      "route": "/case-registry.json",
+      "type": "registry",
+      "check_script": "npm run cases:check"
+    },
+    {
+      "id": "case-registry-schema",
+      "title": "Case Registry Schema",
+      "path": "docs/public/case-registry.schema.json",
+      "route": "/case-registry.schema.json",
+      "type": "schema",
+      "check_script": "npm run cases:check"
+    },
+    {
+      "id": "teaching-registry",
+      "title": "Teaching Registry",
+      "path": "docs/public/teaching-registry.json",
+      "route": "/teaching-registry.json",
+      "type": "registry",
+      "check_script": "npm run teaching:registry:check"
+    },
+    {
+      "id": "teaching-registry-schema",
+      "title": "Teaching Registry Schema",
+      "path": "docs/public/teaching-registry.schema.json",
+      "route": "/teaching-registry.schema.json",
+      "type": "schema",
+      "check_script": "npm run teaching:registry:check"
+    },
+    {
+      "id": "slide-deck",
+      "title": "Slide Deck Registry",
+      "path": "docs/public/slide-deck.json",
+      "route": "/slide-deck.json",
+      "type": "registry",
+      "check_script": "npm run slides:check"
+    },
+    {
+      "id": "slide-deck-schema",
+      "title": "Slide Deck Schema",
+      "path": "docs/public/slide-deck.schema.json",
+      "route": "/slide-deck.schema.json",
+      "type": "schema",
+      "check_script": "npm run slides:check"
+    },
+    {
+      "id": "speaker-notes",
+      "title": "Speaker Notes Registry",
+      "path": "docs/public/speaker-notes.json",
+      "route": "/speaker-notes.json",
+      "type": "registry",
+      "check_script": "npm run speaker:notes:check"
+    },
+    {
+      "id": "speaker-notes-schema",
+      "title": "Speaker Notes Schema",
+      "path": "docs/public/speaker-notes.schema.json",
+      "route": "/speaker-notes.schema.json",
+      "type": "schema",
+      "check_script": "npm run speaker:notes:check"
+    },
+    {
+      "id": "rubric",
+      "title": "Rubric Registry",
+      "path": "docs/public/rubric.json",
+      "route": "/rubric.json",
+      "type": "registry",
+      "check_script": "npm run rubric:check"
+    },
+    {
+      "id": "rubric-schema",
+      "title": "Rubric Schema",
+      "path": "docs/public/rubric.schema.json",
+      "route": "/rubric.schema.json",
+      "type": "schema",
+      "check_script": "npm run rubric:check"
+    },
+    {
+      "id": "exercise-registry",
+      "title": "Exercise Registry",
+      "path": "docs/public/exercise-registry.json",
+      "route": "/exercise-registry.json",
+      "type": "registry",
+      "check_script": "npm run exercises:check"
+    },
+    {
+      "id": "exercise-registry-schema",
+      "title": "Exercise Registry Schema",
+      "path": "docs/public/exercise-registry.schema.json",
+      "route": "/exercise-registry.schema.json",
+      "type": "schema",
+      "check_script": "npm run exercises:check"
+    },
+    {
+      "id": "contribution-contract",
+      "title": "Contribution Contract",
+      "path": "docs/public/contribution-contract.json",
+      "route": "/contribution-contract.json",
+      "type": "registry",
+      "check_script": "npm run contribution:contract:check"
+    },
+    {
+      "id": "contribution-contract-schema",
+      "title": "Contribution Contract Schema",
+      "path": "docs/public/contribution-contract.schema.json",
+      "route": "/contribution-contract.schema.json",
+      "type": "schema",
+      "check_script": "npm run contribution:contract:check"
+    },
+    {
+      "id": "reproducibility-checklist",
+      "title": "Reproducibility Checklist",
+      "path": "docs/public/reproducibility-checklist.json",
+      "route": "/reproducibility-checklist.json",
+      "type": "registry",
+      "check_script": "npm run reproducibility:check"
+    },
+    {
+      "id": "reproducibility-checklist-schema",
+      "title": "Reproducibility Checklist Schema",
+      "path": "docs/public/reproducibility-checklist.schema.json",
+      "route": "/reproducibility-checklist.schema.json",
+      "type": "schema",
+      "check_script": "npm run reproducibility:check"
+    },
+    {
+      "id": "course-patterns",
+      "title": "Course Patterns Registry",
+      "path": "docs/public/course-patterns.json",
+      "route": "/course-patterns.json",
+      "type": "registry",
+      "check_script": "npm run patterns:check"
+    },
+    {
+      "id": "course-patterns-schema",
+      "title": "Course Patterns Schema",
+      "path": "docs/public/course-patterns.schema.json",
+      "route": "/course-patterns.schema.json",
+      "type": "schema",
+      "check_script": "npm run patterns:check"
+    },
+    {
+      "id": "learning-units",
+      "title": "Learning Units Registry",
+      "path": "docs/public/learning-units.json",
+      "route": "/learning-units.json",
+      "type": "registry",
+      "check_script": "npm run learning:units:check"
+    },
+    {
+      "id": "learning-units-schema",
+      "title": "Learning Units Schema",
+      "path": "docs/public/learning-units.schema.json",
+      "route": "/learning-units.schema.json",
+      "type": "schema",
+      "check_script": "npm run learning:units:check"
+    },
+    {
+      "id": "learning-outcomes",
+      "title": "Learning Outcomes Registry",
+      "path": "docs/public/learning-outcomes.json",
+      "route": "/learning-outcomes.json",
+      "type": "registry",
+      "check_script": "npm run learning:outcomes:check"
+    },
+    {
+      "id": "learning-outcomes-schema",
+      "title": "Learning Outcomes Schema",
+      "path": "docs/public/learning-outcomes.schema.json",
+      "route": "/learning-outcomes.schema.json",
+      "type": "schema",
+      "check_script": "npm run learning:outcomes:check"
+    },
+    {
+      "id": "checkpoint-registry",
+      "title": "Checkpoint Registry",
+      "path": "docs/public/checkpoint-registry.json",
+      "route": "/checkpoint-registry.json",
+      "type": "registry",
+      "check_script": "npm run checkpoints:check"
+    },
+    {
+      "id": "checkpoint-registry-schema",
+      "title": "Checkpoint Registry Schema",
+      "path": "docs/public/checkpoint-registry.schema.json",
+      "route": "/checkpoint-registry.schema.json",
+      "type": "schema",
+      "check_script": "npm run checkpoints:check"
+    },
+    {
+      "id": "evaluation-metrics",
+      "title": "Evaluation Metrics Registry",
+      "path": "docs/public/evaluation-metrics.json",
+      "route": "/evaluation-metrics.json",
+      "type": "registry",
+      "check_script": "npm run metrics:check"
+    },
+    {
+      "id": "evaluation-metrics-schema",
+      "title": "Evaluation Metrics Schema",
+      "path": "docs/public/evaluation-metrics.schema.json",
+      "route": "/evaluation-metrics.schema.json",
+      "type": "schema",
+      "check_script": "npm run metrics:check"
+    },
+    {
+      "id": "paper-blueprint",
+      "title": "Paper Blueprint Registry",
+      "path": "docs/public/paper-blueprint.json",
+      "route": "/paper-blueprint.json",
+      "type": "registry",
+      "check_script": "npm run paper:blueprint:check"
+    },
+    {
+      "id": "paper-blueprint-schema",
+      "title": "Paper Blueprint Schema",
+      "path": "docs/public/paper-blueprint.schema.json",
+      "route": "/paper-blueprint.schema.json",
+      "type": "schema",
+      "check_script": "npm run paper:blueprint:check"
+    },
+    {
+      "id": "concept-graph",
+      "title": "Concept Graph Registry",
+      "path": "docs/public/concept-graph.json",
+      "route": "/concept-graph.json",
+      "type": "registry",
+      "check_script": "npm run concept:graph:check"
+    },
+    {
+      "id": "concept-graph-schema",
+      "title": "Concept Graph Schema",
+      "path": "docs/public/concept-graph.schema.json",
+      "route": "/concept-graph.schema.json",
+      "type": "schema",
+      "check_script": "npm run concept:graph:check"
+    },
+    {
+      "id": "teaching-pack",
+      "title": "Teaching Pack Registry",
+      "path": "docs/public/teaching-pack.json",
+      "route": "/teaching-pack.json",
+      "type": "registry",
+      "check_script": "npm run teaching:pack:check"
+    },
+    {
+      "id": "teaching-pack-schema",
+      "title": "Teaching Pack Schema",
+      "path": "docs/public/teaching-pack.schema.json",
+      "route": "/teaching-pack.schema.json",
+      "type": "schema",
+      "check_script": "npm run teaching:pack:check"
+    },
+    {
+      "id": "research-projects",
+      "title": "Research Projects Registry",
+      "path": "docs/public/research-projects.json",
+      "route": "/research-projects.json",
+      "type": "registry",
+      "check_script": "npm run research:projects:check"
+    },
+    {
+      "id": "research-projects-schema",
+      "title": "Research Projects Schema",
+      "path": "docs/public/research-projects.schema.json",
+      "route": "/research-projects.schema.json",
+      "type": "schema",
+      "check_script": "npm run research:projects:check"
+    },
+    {
+      "id": "research-logbook",
+      "title": "Research Logbook",
+      "path": "docs/public/research-logbook.json",
+      "route": "/research-logbook.json",
+      "type": "registry",
+      "check_script": "npm run research:logbook:check"
+    },
+    {
+      "id": "research-logbook-schema",
+      "title": "Research Logbook Schema",
+      "path": "docs/public/research-logbook.schema.json",
+      "route": "/research-logbook.schema.json",
+      "type": "schema",
+      "check_script": "npm run research:logbook:check"
+    },
+    {
+      "id": "completion-audit",
+      "title": "Completion Audit Registry",
+      "path": "docs/public/completion-audit.json",
+      "route": "/completion-audit.json",
+      "type": "registry",
+      "check_script": "npm run completion:audit:check"
+    },
+    {
+      "id": "completion-audit-schema",
+      "title": "Completion Audit Schema",
+      "path": "docs/public/completion-audit.schema.json",
+      "route": "/completion-audit.schema.json",
+      "type": "schema",
+      "check_script": "npm run completion:audit:check"
+    },
+    {
+      "id": "visual-verification",
+      "title": "Visual Verification Registry",
+      "path": "docs/public/visual-verification.json",
+      "route": "/visual-verification.json",
+      "type": "registry",
+      "check_script": "npm run visual:verification:check"
+    },
+    {
+      "id": "visual-verification-schema",
+      "title": "Visual Verification Schema",
+      "path": "docs/public/visual-verification.schema.json",
+      "route": "/visual-verification.schema.json",
+      "type": "schema",
+      "check_script": "npm run visual:verification:check"
+    },
+    {
+      "id": "visual-acceptance-log",
+      "title": "Visual Acceptance Log",
+      "path": "docs/public/visual-acceptance-log.json",
+      "route": "/visual-acceptance-log.json",
+      "type": "registry",
+      "check_script": "npm run visual:verification:check"
+    },
+    {
+      "id": "visual-acceptance-log-schema",
+      "title": "Visual Acceptance Log Schema",
+      "path": "docs/public/visual-acceptance-log.schema.json",
+      "route": "/visual-acceptance-log.schema.json",
+      "type": "schema",
+      "check_script": "npm run visual:verification:check"
+    },
+    {
+      "id": "x-sources",
+      "title": "X Sources Registry",
+      "path": "docs/public/x-sources.json",
+      "route": "/x-sources.json",
+      "type": "registry",
+      "check_script": "npm run x:sources:check"
+    },
+    {
+      "id": "x-sources-schema",
+      "title": "X Sources Schema",
+      "path": "docs/public/x-sources.schema.json",
+      "route": "/x-sources.schema.json",
+      "type": "schema",
+      "check_script": "npm run x:sources:check"
+    },
+    {
+      "id": "source-to-case-playbook",
+      "title": "Source-to-Case Playbook Registry",
+      "path": "docs/public/source-to-case-playbook.json",
+      "route": "/source-to-case-playbook.json",
+      "type": "registry",
+      "check_script": "npm run source:case:check"
+    },
+    {
+      "id": "source-to-case-playbook-schema",
+      "title": "Source-to-Case Playbook Schema",
+      "path": "docs/public/source-to-case-playbook.schema.json",
+      "route": "/source-to-case-playbook.schema.json",
+      "type": "schema",
+      "check_script": "npm run source:case:check"
+    },
+    {
+      "id": "experiment-report-schema",
+      "title": "Experiment Report Schema",
+      "path": "docs/public/experiment-report.schema.json",
+      "route": "/experiment-report.schema.json",
+      "type": "schema",
+      "check_script": "npm run examples:reports:check"
+    },
+    {
+      "id": "llms",
+      "title": "LLM Entrypoint",
+      "path": "docs/public/llms.txt",
+      "route": "/llms.txt",
+      "type": "llm-entrypoint",
+      "check_script": "npm run course:structure:check"
+    }
+  ],
+  "ci": {
+    "verify_workflow": ".github/workflows/verify.yml",
+    "deploy_workflow": ".github/workflows/deploy.yml",
+    "required_command": "npm run verify"
+  }
+}

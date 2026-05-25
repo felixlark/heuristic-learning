@@ -1,0 +1,216 @@
+{
+  "case": "robot_soccer_blocked_lane",
+  "environment": {
+    "width": 7,
+    "height": 5,
+    "start": {
+      "robot": [
+        0,
+        2
+      ],
+      "ball": [
+        2,
+        2
+      ],
+      "opponent": [
+        4,
+        2
+      ],
+      "goal_x": 6,
+      "has_ball": false
+    }
+  },
+  "policies": [
+    {
+      "policy": "baseline",
+      "reason": "blocked_shot",
+      "reward": -12,
+      "steps": 3,
+      "trace": [
+        {
+          "robot": [
+            0,
+            2
+          ],
+          "ball": [
+            2,
+            2
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": false
+        },
+        {
+          "robot": [
+            1,
+            2
+          ],
+          "ball": [
+            2,
+            2
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": false
+        },
+        {
+          "robot": [
+            2,
+            2
+          ],
+          "ball": [
+            2,
+            2
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": true
+        },
+        {
+          "robot": [
+            2,
+            2
+          ],
+          "ball": [
+            2,
+            2
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": true
+        }
+      ]
+    },
+    {
+      "policy": "heuristic",
+      "reason": "goal",
+      "reward": 15,
+      "steps": 6,
+      "trace": [
+        {
+          "robot": [
+            0,
+            2
+          ],
+          "ball": [
+            2,
+            2
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": false
+        },
+        {
+          "robot": [
+            1,
+            2
+          ],
+          "ball": [
+            2,
+            2
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": false
+        },
+        {
+          "robot": [
+            2,
+            2
+          ],
+          "ball": [
+            2,
+            2
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": true
+        },
+        {
+          "robot": [
+            2,
+            1
+          ],
+          "ball": [
+            2,
+            1
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": true
+        },
+        {
+          "robot": [
+            2,
+            1
+          ],
+          "ball": [
+            3,
+            1
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": true
+        },
+        {
+          "robot": [
+            3,
+            1
+          ],
+          "ball": [
+            4,
+            1
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": true
+        },
+        {
+          "robot": [
+            3,
+            1
+          ],
+          "ball": [
+            4,
+            1
+          ],
+          "opponent": [
+            4,
+            2
+          ],
+          "has_ball": true
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    "The baseline shoots as soon as it owns the ball and the goal is nearby.",
+    "The blocked-lane failure is isolated by placing the opponent on the direct shot lane.",
+    "The heuristic policy must reposition before shooting when the lane is blocked."
+  ],
+  "candidate_update": {
+    "target": "examples/robot-soccer/policies.py",
+    "rule": "Check the shot lane before shooting; preserve the blocked-lane regression test.",
+    "verification": "python3 -m unittest discover -s tests"
+  }
+}

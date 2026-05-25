@@ -1,0 +1,188 @@
+{
+  "$schema": "/troubleshooting-tree.schema.json",
+  "schema_version": 1,
+  "scope": "course-repository-failure-diagnosis",
+  "nodes": [
+    {
+      "id": "install-or-runtime",
+      "failure_surface": "安装或运行环境",
+      "symptom": "npm install、npm run dev 或 npm run build 在进入课程检查前失败。",
+      "diagnostic_commands": [
+        "node --version",
+        "npm --version",
+        "npm run lint"
+      ],
+      "likely_causes": [
+        "Node.js 版本低于 18",
+        "依赖未安装或 lockfile 与 npm 版本不一致",
+        "VitePress cache 中有旧构建状态"
+      ],
+      "fix_actions": [
+        "切换到 Node.js 18+ 后重新安装依赖",
+        "删除 docs/.vitepress/cache 后重跑构建",
+        "先确认 npm run lint 能独立通过"
+      ],
+      "verification_commands": [
+        "npm run lint",
+        "npm run build"
+      ],
+      "related_pages": [
+        "docs/zh-cn/appendix/local-setup.md",
+        "docs/zh-cn/appendix/reproducibility.md"
+      ]
+    },
+    {
+      "id": "example-behavior",
+      "failure_surface": "示例行为",
+      "symptom": "examples:test 或某个 examples:*:feedback 失败。",
+      "diagnostic_commands": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run code:tour:check"
+      ],
+      "likely_causes": [
+        "policy 行为改变但测试未同步",
+        "feedback report 没有重新生成",
+        "读者跳过了 env/policy/run/feedback/test 的阅读顺序"
+      ],
+      "fix_actions": [
+        "先按代码导览读对应示例",
+        "只修改 tour 中的 edit_target",
+        "重新生成对应 experiments/*/latest.json"
+      ],
+      "verification_commands": [
+        "npm run code:tour:check",
+        "npm run examples:test",
+        "npm run examples:reports:check"
+      ],
+      "related_pages": [
+        "docs/zh-cn/appendix/code-tour.md",
+        "docs/zh-cn/examples/index.md"
+      ]
+    },
+    {
+      "id": "report-or-benchmark",
+      "failure_surface": "报告与 benchmark",
+      "symptom": "examples:reports:check、benchmark:summary:check、ablation:plan:check 或 artifact:gap:check 失败。",
+      "diagnostic_commands": [
+        "npm run examples:reports:check",
+        "npm run benchmark:summary:check",
+        "npm run ablation:plan:check",
+        "npm run artifact:gap:check"
+      ],
+      "likely_causes": [
+        "baseline failure、heuristic outcome 或 report 路径漂移",
+        "消融变量没有同步到示例和评估指标",
+        "轻量 replay 与真实 artifact 边界被写得过强"
+      ],
+      "fix_actions": [
+        "先重新跑对应 feedback 命令",
+        "更新 benchmark summary 或 ablation plan",
+        "把真实环境缺口写入 artifact gap analysis"
+      ],
+      "verification_commands": [
+        "npm run examples:feedback",
+        "npm run benchmark:summary:check",
+        "npm run ablation:plan:check",
+        "npm run artifact:gap:check"
+      ],
+      "related_pages": [
+        "docs/zh-cn/appendix/benchmark-results.md",
+        "docs/zh-cn/appendix/ablation-plan.md",
+        "docs/zh-cn/appendix/artifact-gap-analysis.md"
+      ]
+    },
+    {
+      "id": "source-or-claim",
+      "failure_surface": "来源与命题",
+      "symptom": "source:registry:check、x:sources:check、cases:check 或 claims:registry:check 失败。",
+      "diagnostic_commands": [
+        "npm run source:registry:check",
+        "npm run x:sources:check",
+        "npm run cases:check",
+        "npm run claims:registry:check"
+      ],
+      "likely_causes": [
+        "X/FieldTheory 线索被写成已复现事实",
+        "飞书线索缺少脱敏边界",
+        "研究命题没有证据页、示例或可反驳路径"
+      ],
+      "fix_actions": [
+        "把来源状态降级为已定位或待采集",
+        "补案例矩阵或 X source extraction card",
+        "把未发表结论改写为 research hypothesis"
+      ],
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run x:sources:check",
+        "npm run cases:check",
+        "npm run claims:registry:check"
+      ],
+      "related_pages": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/case-registry.md",
+        "docs/zh-cn/theory/research-propositions.md"
+      ]
+    },
+    {
+      "id": "course-or-public-routes",
+      "failure_surface": "课程结构与公开路由",
+      "symptom": "course:manifest:check、course:structure:check、docs:routes:check 或 build 失败。",
+      "diagnostic_commands": [
+        "npm run course:manifest:check",
+        "npm run course:structure:check",
+        "npm run docs:routes:check",
+        "npm run build"
+      ],
+      "likely_causes": [
+        "新增页面没有进入 manifest、sidebar 或路由检查",
+        "public JSON/schema 没有 check_script",
+        "VitePress 链接或 frontmatter 不完整"
+      ],
+      "fix_actions": [
+        "同步 docs/.vitepress/config.mjs",
+        "同步 docs/public/course-manifest.json",
+        "同步 scripts/check-routes.sh 与 scripts/check-course-structure.py"
+      ],
+      "verification_commands": [
+        "npm run course:manifest:check",
+        "npm run course:structure:check",
+        "npm run docs:routes:check"
+      ],
+      "related_pages": [
+        "docs/zh-cn/appendix/completion-audit.md",
+        "docs/zh-cn/appendix/release-checklist.md"
+      ]
+    },
+    {
+      "id": "release-visual-acceptance",
+      "failure_surface": "发布与视觉验收",
+      "symptom": "release:readiness:check 返回 Browser/IAB visual acceptance is not complete。",
+      "diagnostic_commands": [
+        "npm run verify",
+        "npm run visual:verification:check",
+        "npm run release:readiness:check"
+      ],
+        "likely_causes": [
+          "官方 Browser/IAB backend 未注册到当前 Codex 线程",
+          "Official Chrome plugin 可读 HTML 页面但没有暴露移动端 viewport capability",
+          "当前 Chrome profile 或客户端策略对本地 public 静态文本资源返回 net::ERR_BLOCKED_BY_CLIENT",
+          "本地 HTTP 200 被误当成视觉验收"
+        ],
+        "fix_actions": [
+          "先恢复官方 Browser/IAB backend，再跑 mobile 课程地图验收",
+          "若继续使用 Official Chrome plugin，先确认它暴露 viewport capability 并能直接打开 public JSON/TXT 路由",
+          "检查 Chrome profile 的扩展或客户端拦截规则，解除本地 127.0.0.1 public 静态资源拦截",
+          "把每条验收结果写入 visual-acceptance-log.json，只有真实浏览器验收完成后才把状态改为 passed"
+        ],
+      "verification_commands": [
+        "npm run visual:verification:check",
+        "npm run release:readiness:check"
+      ],
+      "related_pages": [
+        "docs/zh-cn/appendix/visual-verification.md",
+        "docs/zh-cn/appendix/release-checklist.md"
+      ]
+    }
+  ]
+}

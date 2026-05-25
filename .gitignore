@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.py[cod]
+
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/.temp/
+.vitepress/cache/
+.temp/
+temp/
+
+.env
+.env.*
+!.env.example

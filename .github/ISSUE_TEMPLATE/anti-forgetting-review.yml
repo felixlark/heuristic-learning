@@ -1,0 +1,41 @@
+name: Anti-forgetting review
+description: Check that a heuristic update preserves old probes and behavior.
+title: "[anti-forgetting] "
+labels:
+  - anti-forgetting
+body:
+  - type: textarea
+    id: update
+    attributes:
+      label: Update under review
+      description: Example, failure mode, patch target, and intended fix.
+    validations:
+      required: true
+  - type: textarea
+    id: old_behavior
+    attributes:
+      label: Old behavior to preserve
+      description: Existing probe, test, report field, or course behavior that must not regress.
+    validations:
+      required: true
+  - type: textarea
+    id: risky_update
+    attributes:
+      label: Risky update
+      description: A tempting change that might pass the new probe but forget old experience.
+    validations:
+      required: true
+  - type: textarea
+    id: regression_guard
+    attributes:
+      label: Regression guard
+      description: Test file, report field, and expected failure if the update forgets.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      placeholder: "npm run examples:test\nnpm run examples:feedback"
+    validations:
+      required: true

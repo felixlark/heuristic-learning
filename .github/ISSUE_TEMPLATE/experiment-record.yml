@@ -1,0 +1,55 @@
+name: Experiment record
+description: Record a bounded run result, report interpretation, or candidate update.
+title: "[experiment] "
+labels:
+  - experiment
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Run command
+      description: Command that produced the result.
+      placeholder: "npm run examples:gridworld or npm run examples:feedback"
+    validations:
+      required: true
+  - type: dropdown
+    id: source_status
+    attributes:
+      label: Source status
+      options:
+        - teaching-minimal
+        - reproduced-lightweight-artifact
+        - reproduced-minimal-internal-signal
+        - cached
+        - referenced-not-cached
+        - to-collect
+    validations:
+      required: true
+  - type: textarea
+    id: result_summary
+    attributes:
+      label: Result summary
+      description: Baseline outcome, heuristic outcome, and the failure mode or probe.
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: What this run teaches the next coding agent, student, or researcher.
+    validations:
+      required: true
+  - type: textarea
+    id: candidate_update
+    attributes:
+      label: Candidate update
+      description: Target file, rule, test, or report field to update next.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      placeholder: "npm run examples:reports:check\nnpm run benchmark:summary:check\nnpm run metrics:check"
+    validations:
+      required: true

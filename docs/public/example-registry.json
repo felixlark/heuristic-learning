@@ -1,0 +1,108 @@
+{
+  "$schema": "/example-registry.schema.json",
+  "schema_version": 1,
+  "examples": [
+    {
+      "id": "gridworld",
+      "title": "GridWorld",
+      "failure_mode": "local_greedy_trap",
+      "source_status": "teaching-minimal",
+      "example_dir": "examples/heuristic-gridworld",
+      "run_script": "examples:gridworld",
+      "feedback_script": "examples:gridworld:feedback",
+      "report": "experiments/gridworld/latest.json",
+      "test": "tests/test_gridworld.py",
+      "policy_target": "examples/heuristic-gridworld/policies.py",
+      "course_links": [
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/slides/lab-1/index.md",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ]
+    },
+    {
+      "id": "robot-soccer",
+      "title": "Robot Soccer",
+      "failure_mode": "blocked_shot",
+      "source_status": "reproduced-minimal-internal-signal",
+      "example_dir": "examples/robot-soccer",
+      "run_script": "examples:robot-soccer",
+      "feedback_script": "examples:robot-soccer:feedback",
+      "report": "experiments/robot-soccer/latest.json",
+      "test": "tests/test_robot_soccer.py",
+      "policy_target": "examples/robot-soccer/policies.py",
+      "course_links": [
+        "docs/zh-cn/cases/robot-soccer/index.md",
+        "docs/zh-cn/slides/lab-1/index.md",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ]
+    },
+    {
+      "id": "vizdoom-replay",
+      "title": "VizDoom Replay",
+      "failure_mode": "wasted_pickup",
+      "source_status": "reproduced-lightweight-artifact",
+      "example_dir": "examples/vizdoom-replay",
+      "run_script": "examples:vizdoom-replay",
+      "feedback_script": "examples:vizdoom-replay:feedback",
+      "report": "experiments/vizdoom-replay/latest.json",
+      "test": "tests/test_vizdoom_replay.py",
+      "policy_target": "examples/vizdoom-replay/vizdoom_policies.py",
+      "course_links": [
+        "docs/zh-cn/cases/vizdoom/index.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ]
+    },
+    {
+      "id": "traffic-grid",
+      "title": "Traffic Grid",
+      "failure_mode": "spillback",
+      "source_status": "reproduced-minimal-internal-signal",
+      "example_dir": "examples/traffic-grid",
+      "run_script": "examples:traffic-grid",
+      "feedback_script": "examples:traffic-grid:feedback",
+      "report": "experiments/traffic-grid/latest.json",
+      "test": "tests/test_traffic_grid.py",
+      "policy_target": "examples/traffic-grid/policies.py",
+      "course_links": [
+        "docs/zh-cn/cases/traffic-simulation/index.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ]
+    },
+    {
+      "id": "breakout-replay",
+      "title": "Breakout Replay",
+      "failure_mode": "missed_after_wall_reflection",
+      "source_status": "reproduced-lightweight-artifact",
+      "example_dir": "examples/breakout-replay",
+      "run_script": "examples:breakout-replay",
+      "feedback_script": "examples:breakout-replay:feedback",
+      "report": "experiments/breakout-replay/latest.json",
+      "test": "tests/test_breakout_replay.py",
+      "policy_target": "examples/breakout-replay/policies.py",
+      "course_links": [
+        "docs/zh-cn/cases/breakout/index.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ]
+    },
+    {
+      "id": "ant-gait-replay",
+      "title": "Ant Gait Replay",
+      "failure_mode": "yaw_drift",
+      "source_status": "reproduced-lightweight-artifact",
+      "example_dir": "examples/ant-gait-replay",
+      "run_script": "examples:ant-gait-replay",
+      "feedback_script": "examples:ant-gait-replay:feedback",
+      "report": "experiments/ant-gait-replay/latest.json",
+      "test": "tests/test_ant_gait_replay.py",
+      "policy_target": "examples/ant-gait-replay/policies.py",
+      "course_links": [
+        "docs/zh-cn/cases/ant-gait/index.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ]
+    }
+  ]
+}

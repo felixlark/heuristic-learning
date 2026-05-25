@@ -1,0 +1,132 @@
+{
+  "$schema": "/ablation-plan.schema.json",
+  "schema_version": 1,
+  "ablations": [
+    {
+      "id": "gridworld-trap-avoidance",
+      "title": "GridWorld 陷阱规避消融",
+      "example_id": "gridworld",
+      "metric_ids": ["failure-isolation", "regression-risk"],
+      "variable_under_test": "是否启用 trap avoidance 与 tie-break 规则。",
+      "baseline_condition": "baseline 仍按距离目标最近的动作前进。",
+      "heuristic_condition": "heuristic 在候选动作中排除已知陷阱，并保留可达性。",
+      "expected_invariant": "避开 local_greedy_trap 的同时仍能到达目标。",
+      "evidence": [
+        "examples/heuristic-gridworld/README.md",
+        "tests/test_gridworld.py",
+        "experiments/gridworld/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:gridworld:feedback",
+        "npm run examples:test"
+      ],
+      "research_use": "用于说明最小 HL 闭环如何从单个失败 probe 推出可维护策略规则。",
+      "boundary": "当前不是随机地图泛化实验，只覆盖确定性教学环境。"
+    },
+    {
+      "id": "robot-soccer-shot-lane",
+      "title": "Robot Soccer 射门通道消融",
+      "example_id": "robot-soccer",
+      "metric_ids": ["failure-isolation", "task-outcome"],
+      "variable_under_test": "是否在射门前检查 blocked lane。",
+      "baseline_condition": "baseline 拿到球后直接射门。",
+      "heuristic_condition": "heuristic 先换线或调整位置，再执行射门。",
+      "expected_invariant": "blocked_shot 变成 goal，同时安全通道场景不应被过度延迟。",
+      "evidence": [
+        "examples/robot-soccer/README.md",
+        "tests/test_robot_soccer.py",
+        "experiments/robot-soccer/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:robot-soccer:feedback",
+        "npm run examples:test"
+      ],
+      "research_use": "用于讨论动作前提检查是否比单纯强化动作偏好更适合 HL。",
+      "boundary": "当前没有真实机器人动力学和多智能体噪声。"
+    },
+    {
+      "id": "vizdoom-medikit-threshold",
+      "title": "VizDoom Medikit 阈值消融",
+      "example_id": "vizdoom-replay",
+      "metric_ids": ["task-outcome", "source-boundary"],
+      "variable_under_test": "pickup_health 与 stage_area 阈值是否启用。",
+      "baseline_condition": "baseline 看到 medikit 就前进拾取。",
+      "heuristic_condition": "heuristic 在高血量时 staging，低血量时拾取。",
+      "expected_invariant": "避免 wasted_pickup，同时保留低血量拾取行为。",
+      "evidence": [
+        "examples/vizdoom-replay/README.md",
+        "tests/test_vizdoom_replay.py",
+        "experiments/vizdoom-replay/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:vizdoom-replay:feedback",
+        "npm run examples:reports:check"
+      ],
+      "research_use": "用于说明公开 artifact 中的视觉阈值如何被压缩成轻量 replay。",
+      "boundary": "当前不声明完整 VizDoom 环境复现，只保留 medikit staging 决策。"
+    },
+    {
+      "id": "traffic-downstream-capacity",
+      "title": "Traffic Grid 下游容量消融",
+      "example_id": "traffic-grid",
+      "metric_ids": ["task-outcome", "regression-risk"],
+      "variable_under_test": "是否把 downstream capacity 作为硬约束。",
+      "baseline_condition": "baseline 优先释放最大上游队列。",
+      "heuristic_condition": "heuristic 在释放前检查下游容量，并可 hold/divert。",
+      "expected_invariant": "避免 spillback，同时不把所有流量永久 hold。",
+      "evidence": [
+        "examples/traffic-grid/README.md",
+        "tests/test_traffic_grid.py",
+        "experiments/traffic-grid/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:traffic-grid:feedback",
+        "npm run examples:test"
+      ],
+      "research_use": "用于讨论工程系统中安全约束如何成为 HL 更新对象。",
+      "boundary": "当前不是真实东湖交通仿真，只是从飞书线索抽取的最小环境。"
+    },
+    {
+      "id": "breakout-reflection-prediction",
+      "title": "Breakout 反射预测消融",
+      "example_id": "breakout-replay",
+      "metric_ids": ["failure-isolation", "update-cost"],
+      "variable_under_test": "是否用边界反射预测落点，而不是追当前 x 坐标。",
+      "baseline_condition": "baseline 追踪当前 ball_x。",
+      "heuristic_condition": "heuristic 估计墙面反射后的 intercept_x。",
+      "expected_invariant": "处理 missed_after_wall_reflection，同时保留直线球反应。",
+      "evidence": [
+        "examples/breakout-replay/README.md",
+        "tests/test_breakout_replay.py",
+        "experiments/breakout-replay/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:breakout-replay:feedback",
+        "npm run examples:reports:check"
+      ],
+      "research_use": "用于说明物理预测可以作为可审查 heuristic patch，而不是黑箱策略更新。",
+      "boundary": "当前不包含 Atari 环境、像素检测误差或完整游戏分布。"
+    },
+    {
+      "id": "ant-gait-yaw-feedback",
+      "title": "Ant Gait 偏航反馈消融",
+      "example_id": "ant-gait-replay",
+      "metric_ids": ["task-outcome", "update-cost", "regression-risk"],
+      "variable_under_test": "yaw feedback、cadence 和 stance duty 是否协同启用。",
+      "baseline_condition": "baseline 使用固定开环节律。",
+      "heuristic_condition": "heuristic 根据速度和偏航反馈调整步态参数。",
+      "expected_invariant": "抑制 yaw_drift，同时保持向前推进和稳定 stride。",
+      "evidence": [
+        "examples/ant-gait-replay/README.md",
+        "tests/test_ant_gait_replay.py",
+        "experiments/ant-gait-replay/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:ant-gait-replay:feedback",
+        "npm run examples:test"
+      ],
+      "research_use": "用于讨论连续控制中的可审查控制参数是否能作为 HL 学习对象。",
+      "boundary": "当前不声明 MuJoCo 高保真复现，只保留 yaw stabilization 的轻量 replay。"
+    }
+  ]
+}

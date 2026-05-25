@@ -1,0 +1,90 @@
+{
+  "$schema": "/benchmark-summary.schema.json",
+  "schema_version": 1,
+  "summary": [
+    {
+      "id": "gridworld",
+      "title": "GridWorld",
+      "source_status": "teaching-minimal",
+      "failure_mode": "local_greedy_trap",
+      "baseline_outcome": "local_greedy_trap",
+      "heuristic_outcome": "trap_avoided",
+      "primary_metric": "probe_action",
+      "report": "experiments/gridworld/latest.json",
+      "test": "tests/test_gridworld.py",
+      "policy_target": "examples/heuristic-gridworld/policies.py",
+      "course_page": "docs/zh-cn/examples/index.md",
+      "boundary": "Teaching-minimal probe; not a general navigation benchmark."
+    },
+    {
+      "id": "robot-soccer",
+      "title": "Robot Soccer",
+      "source_status": "reproduced-minimal-internal-signal",
+      "failure_mode": "blocked_shot",
+      "baseline_outcome": "blocked_shot",
+      "heuristic_outcome": "goal",
+      "primary_metric": "reason_and_reward",
+      "report": "experiments/robot-soccer/latest.json",
+      "test": "tests/test_robot_soccer.py",
+      "policy_target": "examples/robot-soccer/policies.py",
+      "course_page": "docs/zh-cn/cases/robot-soccer/index.md",
+      "boundary": "Minimal internal-signal environment; does not expose private Feishu content."
+    },
+    {
+      "id": "vizdoom-replay",
+      "title": "VizDoom Replay",
+      "source_status": "reproduced-lightweight-artifact",
+      "failure_mode": "wasted_pickup",
+      "baseline_outcome": "wasted_pickup",
+      "heuristic_outcome": "valued_pickup",
+      "primary_metric": "reason_and_reward",
+      "report": "experiments/vizdoom-replay/latest.json",
+      "test": "tests/test_vizdoom_replay.py",
+      "policy_target": "examples/vizdoom-replay/vizdoom_policies.py",
+      "course_page": "docs/zh-cn/cases/vizdoom/index.md",
+      "boundary": "Lightweight replay of the medikit-staging decision; not full VizDoom/OpenCV reproduction."
+    },
+    {
+      "id": "traffic-grid",
+      "title": "Traffic Grid",
+      "source_status": "reproduced-minimal-internal-signal",
+      "failure_mode": "spillback",
+      "baseline_outcome": "spillback",
+      "heuristic_outcome": "stable_flow",
+      "primary_metric": "reason_and_reward",
+      "report": "experiments/traffic-grid/latest.json",
+      "test": "tests/test_traffic_grid.py",
+      "policy_target": "examples/traffic-grid/policies.py",
+      "course_page": "docs/zh-cn/cases/traffic-simulation/index.md",
+      "boundary": "Minimal traffic abstraction; not a real East Lake simulator reproduction."
+    },
+    {
+      "id": "breakout-replay",
+      "title": "Breakout Replay",
+      "source_status": "reproduced-lightweight-artifact",
+      "failure_mode": "missed_after_wall_reflection",
+      "baseline_outcome": "missed_after_wall_reflection",
+      "heuristic_outcome": "intercepted",
+      "primary_metric": "reason_and_reward",
+      "report": "experiments/breakout-replay/latest.json",
+      "test": "tests/test_breakout_replay.py",
+      "policy_target": "examples/breakout-replay/policies.py",
+      "course_page": "docs/zh-cn/cases/breakout/index.md",
+      "boundary": "Lightweight wall-reflection replay; not full Atari environment reproduction."
+    },
+    {
+      "id": "ant-gait-replay",
+      "title": "Ant Gait Replay",
+      "source_status": "reproduced-lightweight-artifact",
+      "failure_mode": "yaw_drift",
+      "baseline_outcome": "yaw_drift",
+      "heuristic_outcome": "stable_stride",
+      "primary_metric": "reason_and_reward",
+      "report": "experiments/ant-gait-replay/latest.json",
+      "test": "tests/test_ant_gait_replay.py",
+      "policy_target": "examples/ant-gait-replay/policies.py",
+      "course_page": "docs/zh-cn/cases/ant-gait/index.md",
+      "boundary": "Lightweight gait replay; not full MuJoCo Ant benchmark reproduction."
+    }
+  ]
+}

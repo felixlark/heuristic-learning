@@ -1,0 +1,45 @@
+name: Runnable example
+description: Propose or track a new runnable Heuristic Learning example.
+title: "[example] "
+labels:
+  - example
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source or registry row
+      description: Link to public source, source registry row, or existing case card.
+    validations:
+      required: true
+  - type: textarea
+    id: failure_mode
+    attributes:
+      label: Failure mode
+      description: The stable baseline failure or probe this example should expose.
+      placeholder: "blocked_shot, spillback, yaw_drift, ..."
+    validations:
+      required: true
+  - type: textarea
+    id: heuristic_patch
+    attributes:
+      label: Heuristic patch
+      description: What software structure should be updated?
+      placeholder: "policy rule, detector, threshold, config, test, replay"
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Expected artifacts
+      description: List expected files and reports.
+      placeholder: "examples/<name>/run.py, feedback_loop.py, README.md, tests/test_<name>.py, experiments/<name>/latest.json"
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      description: Commands that must pass before the example is accepted.
+      placeholder: "npm run examples:test\nnpm run examples:feedback\nnpm run verify"
+    validations:
+      required: true

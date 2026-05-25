@@ -1,0 +1,146 @@
+{
+  "$schema": "/learning-units.schema.json",
+  "schema_version": 1,
+  "units": [
+    {
+      "id": "u0-context",
+      "title": "U0 建立语境",
+      "core_question": "HL 为什么值得作为学习对象？",
+      "readings": [
+        "docs/zh-cn/stage-1/index.md",
+        "docs/zh-cn/stage-2/index.md",
+        "docs/zh-cn/appendix/reading-guide.md"
+      ],
+      "examples": [],
+      "commands": [
+        "npm run claims:registry:check"
+      ],
+      "deliverable": "一页概念图或术语解释",
+      "acceptance": [
+        "能区分 Heuristic System 与 Heuristic Learning",
+        "能指出至少一个可反驳命题"
+      ]
+    },
+    {
+      "id": "u1-minimal-loop",
+      "title": "U1 最小闭环",
+      "core_question": "如何从失败 probe 到 feedback report？",
+      "readings": [
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/slides/lab-1/index.md"
+      ],
+      "examples": [
+        "gridworld"
+      ],
+      "commands": [
+        "npm run examples:gridworld:feedback"
+      ],
+      "deliverable": "GridWorld 实验记录",
+      "acceptance": [
+        "能解释 local_greedy_trap",
+        "能指出 candidate_update.target 和验证命令"
+      ]
+    },
+    {
+      "id": "u2-public-artifacts",
+      "title": "U2 公开 artifact",
+      "core_question": "如何把 Jiayi artifact 压缩成轻量 replay？",
+      "readings": [
+        "docs/zh-cn/cases/index.md",
+        "docs/zh-cn/cases/vizdoom/index.md",
+        "docs/zh-cn/cases/breakout/index.md"
+      ],
+      "examples": [
+        "vizdoom-replay",
+        "breakout-replay"
+      ],
+      "commands": [
+        "npm run examples:vizdoom-replay:feedback",
+        "npm run examples:breakout-replay:feedback"
+      ],
+      "deliverable": "一张 case card",
+      "acceptance": [
+        "能区分原始 artifact、轻量 replay 和研究假设",
+        "不把未验证 X 信号写成已复现事实"
+      ]
+    },
+    {
+      "id": "u3-control-and-systems",
+      "title": "U3 控制与系统约束",
+      "core_question": "连续控制和工程系统里 HL 更新什么？",
+      "readings": [
+        "docs/zh-cn/cases/ant-gait/index.md",
+        "docs/zh-cn/cases/traffic-simulation/index.md",
+        "docs/zh-cn/appendix/benchmark-protocol.md"
+      ],
+      "examples": [
+        "ant-gait-replay",
+        "traffic-grid"
+      ],
+      "commands": [
+        "npm run examples:ant-gait-replay:feedback",
+        "npm run examples:traffic-grid:feedback"
+      ],
+      "deliverable": "failure mode 对照表",
+      "acceptance": [
+        "能说明 yaw_drift 和 spillback 的更新对象",
+        "能指出轻量 replay 与真实环境复现的边界"
+      ]
+    },
+    {
+      "id": "u4-research-claims",
+      "title": "U4 研究命题",
+      "core_question": "当前证据支持哪些命题，边界在哪里？",
+      "readings": [
+        "docs/zh-cn/theory/research-framework.md",
+        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/appendix/course-patterns.md"
+      ],
+      "examples": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "commands": [
+        "npm run claims:registry:check",
+        "npm run patterns:check"
+      ],
+      "deliverable": "命题-证据-反驳路径说明",
+      "acceptance": [
+        "每个命题都能落到证据页或示例",
+        "能指出至少一个当前无法证明的边界"
+      ]
+    },
+    {
+      "id": "u5-anti-forgetting-project",
+      "title": "U5 反遗忘项目",
+      "core_question": "一次 HL 更新如何通过课程验收？",
+      "readings": [
+        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/appendix/exercises.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "examples": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "commands": [
+        "npm run examples:test",
+        "npm run verify"
+      ],
+      "deliverable": "anti-forgetting checklist 与 Rubric 自评",
+      "acceptance": [
+        "能说明新增规则的回归风险",
+        "能提交 verify 结果和实验记录"
+      ]
+    }
+  ]
+}

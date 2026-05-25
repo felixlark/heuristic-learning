@@ -1,0 +1,213 @@
+{
+  "case": "breakout_wall_reflection_intercept",
+  "source": {
+    "repo": "Trinkle23897/learning-beyond-gradients",
+    "artifact": "atari/breakout/heuristic_breakout.py",
+    "note": "The course replay keeps the velocity + side-wall reflection idea and removes Atari/NumPy dependencies."
+  },
+  "environment": {
+    "field_left": 8.0,
+    "field_right": 151.0,
+    "paddle_y": 189.5,
+    "start": {
+      "ball_x": 148.0,
+      "ball_y": 141.5,
+      "velocity_x": 8.0,
+      "velocity_y": 6.0,
+      "paddle_x": 110.0,
+      "intercept_x": 90.0
+    }
+  },
+  "policies": [
+    {
+      "policy": "baseline",
+      "reason": "missed_after_wall_reflection",
+      "reward": -1.07,
+      "steps": 8,
+      "actions": [
+        "right",
+        "right",
+        "stay",
+        "stay",
+        "left",
+        "left",
+        "stay",
+        "left"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "ball_x": 148.0,
+          "ball_y": 141.5,
+          "velocity_x": 8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 110.0
+        },
+        {
+          "step": 1,
+          "ball_x": 146.0,
+          "ball_y": 147.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 122.0
+        },
+        {
+          "step": 2,
+          "ball_x": 138.0,
+          "ball_y": 153.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 134.0
+        },
+        {
+          "step": 3,
+          "ball_x": 130.0,
+          "ball_y": 159.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 134.0
+        },
+        {
+          "step": 4,
+          "ball_x": 122.0,
+          "ball_y": 165.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 134.0
+        },
+        {
+          "step": 5,
+          "ball_x": 114.0,
+          "ball_y": 171.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 122.0
+        },
+        {
+          "step": 6,
+          "ball_x": 106.0,
+          "ball_y": 177.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 110.0
+        },
+        {
+          "step": 7,
+          "ball_x": 98.0,
+          "ball_y": 183.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 110.0
+        },
+        {
+          "step": 8,
+          "ball_x": 90.0,
+          "ball_y": 189.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 98.0
+        }
+      ]
+    },
+    {
+      "policy": "heuristic",
+      "reason": "intercepted",
+      "reward": 0.93,
+      "steps": 8,
+      "actions": [
+        "left",
+        "left",
+        "stay",
+        "stay",
+        "stay",
+        "stay",
+        "stay",
+        "stay"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "ball_x": 148.0,
+          "ball_y": 141.5,
+          "velocity_x": 8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 110.0
+        },
+        {
+          "step": 1,
+          "ball_x": 146.0,
+          "ball_y": 147.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 98.0
+        },
+        {
+          "step": 2,
+          "ball_x": 138.0,
+          "ball_y": 153.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 86.0
+        },
+        {
+          "step": 3,
+          "ball_x": 130.0,
+          "ball_y": 159.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 86.0
+        },
+        {
+          "step": 4,
+          "ball_x": 122.0,
+          "ball_y": 165.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 86.0
+        },
+        {
+          "step": 5,
+          "ball_x": 114.0,
+          "ball_y": 171.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 86.0
+        },
+        {
+          "step": 6,
+          "ball_x": 106.0,
+          "ball_y": 177.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 86.0
+        },
+        {
+          "step": 7,
+          "ball_x": 98.0,
+          "ball_y": 183.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 86.0
+        },
+        {
+          "step": 8,
+          "ball_x": 90.0,
+          "ball_y": 189.5,
+          "velocity_x": -8.0,
+          "velocity_y": 6.0,
+          "paddle_x": 86.0
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    "The baseline chases the current ball x and misses after a side-wall reflection.",
+    "The heuristic system estimates the landing point by reflecting the trajectory inside the field.",
+    "The update target is the intercept predictor, not a neural-network weight."
+  ],
+  "candidate_update": {
+    "target": "examples/breakout-replay/policies.py",
+    "rule": "Preserve side-wall reflection prediction before changing paddle control rules.",
+    "verification": "python3 -m unittest discover -s tests"
+  }
+}

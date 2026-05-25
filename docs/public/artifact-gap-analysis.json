@@ -1,0 +1,127 @@
+{
+  "$schema": "/artifact-gap-analysis.schema.json",
+  "schema_version": 1,
+  "scope": "lightweight-replay-to-source-artifact-gap",
+  "artifacts": [
+    {
+      "id": "ant-gait-artifact-gap",
+      "title": "Ant Gait artifact gap",
+      "source_status": "reproduced-lightweight-artifact",
+      "source_reference": "mujoco/ant/heuristic_ant.py",
+      "example_id": "ant-gait-replay",
+      "current_replay": "examples/ant-gait-replay isolates yaw_drift with CPG cadence, stance duty and yaw feedback in pure Python.",
+      "missing_fidelity": [
+        "MuJoCo contact dynamics",
+        "Full actuator command vector",
+        "Randomized terrain and perturbation sweeps"
+      ],
+      "next_experiment": "Add an optional high-fidelity Ant runner that reuses the same yaw_drift probe and reports whether the lightweight invariants survive contact dynamics.",
+      "verification_commands": [
+        "npm run examples:ant-gait-replay:feedback",
+        "npm run examples:test",
+        "npm run ablation:plan:check"
+      ],
+      "boundary": "The current replay teaches the controller idea; it is not a MuJoCo reproduction."
+    },
+    {
+      "id": "breakout-artifact-gap",
+      "title": "Breakout artifact gap",
+      "source_status": "reproduced-lightweight-artifact",
+      "source_reference": "atari/breakout/heuristic_breakout.py",
+      "example_id": "breakout-replay",
+      "current_replay": "examples/breakout-replay isolates missed_after_wall_reflection with a deterministic side-wall intercept model.",
+      "missing_fidelity": [
+        "Atari emulator state",
+        "Pixel or RAM extraction",
+        "Paddle collision and score dynamics"
+      ],
+      "next_experiment": "Add a RAM/vision field mapping table and keep missed_after_wall_reflection as the invariant probe before any emulator run.",
+      "verification_commands": [
+        "npm run examples:breakout-replay:feedback",
+        "npm run examples:reports:check",
+        "npm run ablation:plan:check"
+      ],
+      "boundary": "The current replay validates the reflection heuristic only, not full Atari Breakout performance."
+    },
+    {
+      "id": "vizdoom-artifact-gap",
+      "title": "VizDoom artifact gap",
+      "source_status": "reproduced-lightweight-artifact",
+      "source_reference": "vizdoom/heuristic_vizdoom_d1_cv.py",
+      "example_id": "vizdoom-replay",
+      "current_replay": "examples/vizdoom-replay isolates wasted_pickup and valued_pickup with health, area and offset fields.",
+      "missing_fidelity": [
+        "VizDoom engine loop",
+        "OpenCV object detection",
+        "Frame timing and enemy pressure"
+      ],
+      "next_experiment": "Map replay fields to real detector outputs, then run the same pickup threshold ablation on fixed recorded frames.",
+      "verification_commands": [
+        "npm run examples:vizdoom-replay:feedback",
+        "npm run examples:reports:check",
+        "npm run ablation:plan:check"
+      ],
+      "boundary": "The current replay is a detector-output abstraction, not an OpenCV or VizDoom reproduction."
+    },
+    {
+      "id": "robot-soccer-artifact-gap",
+      "title": "Robot Soccer internal gap",
+      "source_status": "reproduced-minimal-internal-signal",
+      "source_reference": "Feishu message signal: robot soccer strategy learning",
+      "example_id": "robot-soccer",
+      "current_replay": "examples/robot-soccer isolates blocked_shot with a minimal grid, ball ownership and opponent lane check.",
+      "missing_fidelity": [
+        "Real vision uncertainty",
+        "Motion constraints and latency",
+        "Opponent policy variation"
+      ],
+      "next_experiment": "Create a sanitized fixed replay with perception noise and preserve blocked_shot as the regression probe.",
+      "verification_commands": [
+        "npm run examples:robot-soccer:feedback",
+        "npm run examples:test",
+        "npm run cases:check"
+      ],
+      "boundary": "The public course keeps only the sanitized failure pattern; it must not expose Feishu raw content."
+    },
+    {
+      "id": "traffic-grid-artifact-gap",
+      "title": "Traffic Grid internal gap",
+      "source_status": "reproduced-minimal-internal-signal",
+      "source_reference": "Feishu task signal: East Lake traffic simulator direction",
+      "example_id": "traffic-grid",
+      "current_replay": "examples/traffic-grid isolates spillback with downstream capacity and queue release decisions.",
+      "missing_fidelity": [
+        "Real network topology",
+        "Signal phase timing",
+        "Demand distribution and route choice"
+      ],
+      "next_experiment": "Define a sanitized fixed traffic scenario and test whether downstream capacity remains the hard safety invariant.",
+      "verification_commands": [
+        "npm run examples:traffic-grid:feedback",
+        "npm run examples:test",
+        "npm run cases:check"
+      ],
+      "boundary": "The public course captures the control invariant, not the internal simulator or private task record."
+    },
+    {
+      "id": "gridworld-teaching-gap",
+      "title": "GridWorld teaching gap",
+      "source_status": "teaching-minimal",
+      "source_reference": "Repository-local minimal environment",
+      "example_id": "gridworld",
+      "current_replay": "examples/heuristic-gridworld isolates local_greedy_trap with a pure Python grid and trap-aware action selection.",
+      "missing_fidelity": [
+        "External benchmark source",
+        "Stochastic transitions",
+        "Generalization across generated maps"
+      ],
+      "next_experiment": "Use generated maps to test whether trap avoidance remains readable without becoming a hidden planner.",
+      "verification_commands": [
+        "npm run examples:gridworld:feedback",
+        "npm run examples:test",
+        "npm run ablation:plan:check"
+      ],
+      "boundary": "GridWorld is a pedagogical anchor; it should not be cited as evidence for real-world HL performance."
+    }
+  ]
+}

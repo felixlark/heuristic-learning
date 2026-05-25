@@ -1,0 +1,101 @@
+{
+  "$schema": "/teaching-registry.schema.json",
+  "schema_version": 1,
+  "materials": [
+    {
+      "id": "lecture-1",
+      "type": "lecture",
+      "title": "第 1 讲：Learning Beyond Gradients",
+      "path": "docs/zh-cn/slides/lecture-1/index.md",
+      "route": "/zh-cn/slides/lecture-1/",
+      "core_question": "软件系统能否通过编码智能体维护规则、测试和反馈记录而持续变强？",
+      "reading": [
+        "docs/zh-cn/stage-1/index.md",
+        "docs/zh-cn/stage-2/index.md",
+        "docs/zh-cn/examples/index.md"
+      ],
+      "commands": [
+        "npm run examples:gridworld",
+        "npm run examples:gridworld:feedback",
+        "npm run examples:test"
+      ],
+      "deliverable": "GridWorld 实验记录和 baseline failure 解释"
+    },
+    {
+      "id": "lecture-2",
+      "type": "lecture",
+      "title": "第 2 讲：从案例信号到可验证实验",
+      "path": "docs/zh-cn/slides/lecture-2/index.md",
+      "route": "/zh-cn/slides/lecture-2/",
+      "core_question": "一个 X、公开 artifact 或飞书线索如何进入 HL 主线课程？",
+      "reading": [
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/citation.md"
+      ],
+      "commands": [
+        "npm run examples:vizdoom-replay",
+        "npm run examples:breakout-replay:feedback",
+        "npm run examples:reports:check"
+      ],
+      "deliverable": "一张 case card 或来源状态说明"
+    },
+    {
+      "id": "lecture-3",
+      "type": "lecture",
+      "title": "第 3 讲：失败类型与反遗忘",
+      "path": "docs/zh-cn/slides/lecture-3/index.md",
+      "route": "/zh-cn/slides/lecture-3/",
+      "core_question": "一次 heuristic patch 如何证明没有破坏旧经验？",
+      "reading": [
+        "docs/zh-cn/theory/research-framework.md",
+        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "commands": [
+        "npm run examples:ant-gait-replay:feedback",
+        "npm run examples:traffic-grid:feedback",
+        "npm run verify"
+      ],
+      "deliverable": "failure taxonomy 和反遗忘检查记录"
+    },
+    {
+      "id": "lab-1",
+      "type": "lab",
+      "title": "Lab 1：跑通 Heuristic Learning 闭环",
+      "path": "docs/zh-cn/slides/lab-1/index.md",
+      "route": "/zh-cn/slides/lab-1/",
+      "core_question": "读者能否运行、观察、修改并验证一个 HL 最小系统？",
+      "reading": [
+        "docs/zh-cn/slides/lecture-1/index.md",
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "commands": [
+        "npm run verify",
+        "npm run examples:feedback",
+        "npm run examples:reports:check"
+      ],
+      "deliverable": "一份 experiment record 和 verify 结果"
+    },
+    {
+      "id": "lab-2",
+      "type": "lab",
+      "title": "Lab 2：反遗忘审查",
+      "path": "docs/zh-cn/slides/lab-2/index.md",
+      "route": "/zh-cn/slides/lab-2/",
+      "core_question": "读者能否识别一次 HL 更新可能造成的工程型遗忘？",
+      "reading": [
+        "docs/zh-cn/slides/lecture-3/index.md",
+        "docs/zh-cn/theory/research-framework.md",
+        "docs/zh-cn/appendix/research-roadmap.md"
+      ],
+      "commands": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run verify"
+      ],
+      "deliverable": "一份 anti-forgetting checklist 和 Rubric 自评分"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://longbiaochen.github.io/heuristic-learning/course-manifest.schema.json",
+  "title": "Heuristic Learning Course Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "course",
+    "core_pages",
+    "examples",
+    "public_resources",
+    "ci"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "course": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "language",
+        "verification_command",
+        "structure_check_command"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "type": "string",
+          "const": "zh-CN"
+        },
+        "verification_command": {
+          "type": "string",
+          "const": "npm run verify"
+        },
+        "structure_check_command": {
+          "type": "string",
+          "const": "npm run course:structure:check"
+        }
+      }
+    },
+    "core_pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/page"
+      }
+    },
+    "examples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/example"
+      }
+    },
+    "public_resources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/public_resource"
+      }
+    },
+    "ci": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verify_workflow", "deploy_workflow", "required_command"],
+      "properties": {
+        "verify_workflow": {
+          "type": "string",
+          "const": ".github/workflows/verify.yml"
+        },
+        "deploy_workflow": {
+          "type": "string",
+          "const": ".github/workflows/deploy.yml"
+        },
+        "required_command": {
+          "type": "string",
+          "const": "npm run verify"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "path", "route"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^docs/zh-cn/.+\\.md$"
+        },
+        "route": {
+          "type": "string",
+          "pattern": "^/zh-cn/.+"
+        }
+      }
+    },
+    "example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "source_status",
+        "failure_mode",
+        "example_dir",
+        "run_script",
+        "feedback_script",
+        "report",
+        "test",
+        "readme"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "teaching-minimal",
+            "reproduced-lightweight-artifact",
+            "reproduced-minimal-internal-signal"
+          ]
+        },
+        "failure_mode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example_dir": {
+          "type": "string",
+          "pattern": "^examples/.+"
+        },
+        "run_script": {
+          "type": "string",
+          "pattern": "^examples:[a-z0-9-]+$"
+        },
+        "feedback_script": {
+          "type": "string",
+          "pattern": "^examples:[a-z0-9-]+:feedback$"
+        },
+        "report": {
+          "type": "string",
+          "pattern": "^experiments/.+/latest\\.json$"
+        },
+        "test": {
+          "type": "string",
+          "pattern": "^tests/test_.+\\.py$"
+        },
+        "readme": {
+          "type": "string",
+          "pattern": "^examples/.+/README\\.md$"
+        }
+      }
+    },
+    "public_resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "path",
+        "route",
+        "type",
+        "check_script"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^docs/public/.+"
+        },
+        "route": {
+          "type": "string",
+          "pattern": "^/.+"
+        },
+        "type": {
+          "enum": [
+            "registry",
+            "schema",
+            "llm-entrypoint"
+          ]
+        },
+        "check_script": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

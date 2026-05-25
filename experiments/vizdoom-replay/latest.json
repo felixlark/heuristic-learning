@@ -1,0 +1,96 @@
+{
+  "case": "vizdoom_d1_medikit_staging",
+  "source": {
+    "repo": "Trinkle23897/learning-beyond-gradients",
+    "artifact": "vizdoom/heuristic_vizdoom_d1_cv.py",
+    "note": "The course example keeps the medikit staging decision but removes EnvPool/OpenCV dependencies."
+  },
+  "thresholds": {
+    "pickup_health": 68.0,
+    "stage_area": 180.0
+  },
+  "policies": [
+    {
+      "policy": "baseline",
+      "reason": "wasted_pickup",
+      "reward": -1.0,
+      "steps": 1,
+      "trace": [
+        {
+          "step": 0,
+          "health": 92.0,
+          "medikit_visible": true,
+          "medikit_area": 220.0,
+          "medikit_offset": 0.0
+        },
+        {
+          "step": 1,
+          "health": 92.0,
+          "medikit_visible": true,
+          "medikit_area": 220.0,
+          "medikit_offset": 0.0
+        }
+      ]
+    },
+    {
+      "policy": "heuristic",
+      "reason": "valued_pickup",
+      "reward": 0.92,
+      "steps": 5,
+      "trace": [
+        {
+          "step": 0,
+          "health": 92.0,
+          "medikit_visible": true,
+          "medikit_area": 220.0,
+          "medikit_offset": 0.0
+        },
+        {
+          "step": 1,
+          "health": 86.0,
+          "medikit_visible": true,
+          "medikit_area": 224.0,
+          "medikit_offset": 0.0
+        },
+        {
+          "step": 2,
+          "health": 80.0,
+          "medikit_visible": true,
+          "medikit_area": 228.0,
+          "medikit_offset": 0.0
+        },
+        {
+          "step": 3,
+          "health": 74.0,
+          "medikit_visible": true,
+          "medikit_area": 232.0,
+          "medikit_offset": 0.0
+        },
+        {
+          "step": 4,
+          "health": 68.0,
+          "medikit_visible": true,
+          "medikit_area": 236.0,
+          "medikit_offset": 0.0
+        },
+        {
+          "step": 5,
+          "health": 68.0,
+          "medikit_visible": true,
+          "medikit_area": 236.0,
+          "medikit_offset": 0.0
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    "The baseline consumes the medikit immediately and wastes pickup value.",
+    "The heuristic system stages near the medikit while health is high.",
+    "The update target is the policy threshold, not a neural-network parameter."
+  ],
+  "candidate_update": {
+    "target": "examples/vizdoom-replay/vizdoom_policies.py",
+    "rule": "Keep medikit staging tied to health and visible area; preserve replay regression tests.",
+    "verification": "python3 -m unittest discover -s tests"
+  }
+}

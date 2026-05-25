@@ -1,0 +1,168 @@
+{
+  "environment": {
+    "width": 5,
+    "height": 5,
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      4,
+      4
+    ],
+    "traps": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "max_steps": 30
+  },
+  "policies": [
+    {
+      "policy": "baseline",
+      "episodes": 20,
+      "successes": 20,
+      "failures": 0,
+      "reasons": {
+        "goal": 20
+      },
+      "sample_path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "sample_reward": 13
+    },
+    {
+      "policy": "heuristic",
+      "episodes": 20,
+      "successes": 20,
+      "failures": 0,
+      "reasons": {
+        "goal": 20
+      },
+      "sample_path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "sample_reward": 13
+    }
+  ],
+  "probes": [
+    {
+      "name": "local_greedy_trap",
+      "start": [
+        1,
+        1
+      ],
+      "goal": [
+        3,
+        1
+      ],
+      "traps": [
+        [
+          2,
+          1
+        ]
+      ],
+      "baseline_action": "right",
+      "heuristic_action": "down",
+      "baseline_next": [
+        2,
+        1
+      ],
+      "heuristic_next": [
+        1,
+        2
+      ],
+      "lesson": "The heuristic policy rejects the shortest action when it enters a known trap."
+    }
+  ],
+  "feedback": [
+    "Baseline and heuristic policies are evaluated on the same environment.",
+    "The local_greedy_trap probe isolates a failure mode that average reward can hide.",
+    "A policy update is accepted only if it keeps goal success and avoids known traps.",
+    "Future agent edits should add tests before changing policy rules."
+  ],
+  "candidate_update": {
+    "target": "examples/heuristic-gridworld/policies.py",
+    "rule": "Keep trap avoidance explicit and regression-tested before adding path-shortening rules.",
+    "verification": "python3 -m unittest discover -s tests"
+  }
+}

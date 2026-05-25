@@ -1,0 +1,514 @@
+{
+  "$schema": "/exercise-registry.schema.json",
+  "schema_version": 1,
+  "exercise_sets": [
+    {
+      "id": "concept-exercises",
+      "title": "A. 概念题",
+      "difficulty": "concept",
+      "learning_unit_ids": [
+        "u0-context",
+        "u4-research-claims"
+      ],
+      "rubric_module_ids": [
+        "source-and-problem",
+        "regression-and-course-expression"
+      ],
+      "exercises": [
+        {
+          "id": "A1",
+          "title": "定义 HL",
+          "prompt": "说明反馈来源、更新对象和验证方式。",
+          "input_paths": [
+            "docs/zh-cn/stage-2/index.md",
+            "docs/zh-cn/theory/learning-loop.md"
+          ],
+          "example_ids": [],
+          "deliverable": "3-5 行解释",
+          "verification_commands": [
+            "npm run claims:registry:check"
+          ],
+          "acceptance": [
+            "引用至少一个课程页",
+            "区分 Heuristic System 与 Heuristic Learning"
+          ]
+        },
+        {
+          "id": "A2",
+          "title": "对比 RL/DL/HL",
+          "prompt": "指出 HL 不替代 RL/DL，而是更新不同对象。",
+          "input_paths": [
+            "docs/zh-cn/stage-3/index.md",
+            "docs/zh-cn/theory/research-propositions.md"
+          ],
+          "example_ids": [],
+          "deliverable": "一张对照表",
+          "verification_commands": [
+            "npm run claims:registry:check"
+          ],
+          "acceptance": [
+            "说明 RL/DL/HL 的更新对象",
+            "不把 HL 写成万能替代方案"
+          ]
+        },
+        {
+          "id": "A3",
+          "title": "判断是否属于 HL",
+          "prompt": "用四个最小条件判断一个案例是否可以进入 HL 主线。",
+          "input_paths": [
+            "docs/zh-cn/theory/research-framework.md",
+            "docs/zh-cn/appendix/source-registry.md"
+          ],
+          "example_ids": [],
+          "deliverable": "案例判断记录",
+          "verification_commands": [
+            "npm run source:registry:check"
+          ],
+          "acceptance": [
+            "写明来源状态",
+            "指出 baseline failure、feedback、update target 和 verification"
+          ]
+        },
+        {
+          "id": "A4",
+          "title": "来源状态分级",
+          "prompt": "区分已复现、已结构化、已定位、待采集。",
+          "input_paths": [
+            "docs/zh-cn/appendix/source-registry.md",
+            "docs/public/x-sources.json"
+          ],
+          "example_ids": [],
+          "deliverable": "来源状态说明",
+          "verification_commands": [
+            "npm run source:registry:check",
+            "npm run x:sources:check"
+          ],
+          "acceptance": [
+            "不公开飞书原文或 X cookie/API token",
+            "不把未复核线索写成已复现"
+          ]
+        },
+        {
+          "id": "A5",
+          "title": "为什么需要反遗忘",
+          "prompt": "给出一个修复当前失败但破坏旧经验的例子。",
+          "input_paths": [
+            "docs/zh-cn/slides/lecture-3/index.md",
+            "docs/zh-cn/slides/lab-2/index.md"
+          ],
+          "example_ids": [],
+          "deliverable": "反遗忘风险说明",
+          "verification_commands": [
+            "npm run rubric:check"
+          ],
+          "acceptance": [
+            "指出旧 probe 如何被破坏",
+            "写明阻止坏更新的测试或 replay"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "code-exercises",
+      "title": "B. 代码题",
+      "difficulty": "code",
+      "learning_unit_ids": [
+        "u1-minimal-loop",
+        "u2-public-artifacts",
+        "u3-control-and-systems"
+      ],
+      "rubric_module_ids": [
+        "probe-and-baseline",
+        "heuristic-patch",
+        "feedback-report"
+      ],
+      "exercises": [
+        {
+          "id": "B1",
+          "title": "GridWorld 新陷阱",
+          "prompt": "增加一个不破坏最短安全路径的陷阱或测试。",
+          "input_paths": [
+            "examples/heuristic-gridworld/README.md",
+            "tests/test_gridworld.py"
+          ],
+          "example_ids": [
+            "gridworld"
+          ],
+          "deliverable": "一个小 patch 或测试",
+          "verification_commands": [
+            "npm run examples:test"
+          ],
+          "acceptance": [
+            "local_greedy_trap 仍然通过",
+            "README 或实验记录说明新增边界"
+          ]
+        },
+        {
+          "id": "B2",
+          "title": "Robot Soccer 安全路线",
+          "prompt": "调整 blocked-lane 后的换线策略。",
+          "input_paths": [
+            "examples/robot-soccer/README.md",
+            "tests/test_robot_soccer.py"
+          ],
+          "example_ids": [
+            "robot-soccer"
+          ],
+          "deliverable": "策略 patch 与 feedback report",
+          "verification_commands": [
+            "npm run examples:robot-soccer:feedback"
+          ],
+          "acceptance": [
+            "blocked_shot 不再发生",
+            "candidate_update.target 仍指向策略文件"
+          ]
+        },
+        {
+          "id": "B3",
+          "title": "VizDoom 阈值边界",
+          "prompt": "解释并测试 pickup_health 或 stage_area 的边界。",
+          "input_paths": [
+            "examples/vizdoom-replay/README.md",
+            "tests/test_vizdoom_replay.py"
+          ],
+          "example_ids": [
+            "vizdoom-replay"
+          ],
+          "deliverable": "阈值边界说明与 replay 检查",
+          "verification_commands": [
+            "npm run examples:vizdoom-replay:feedback"
+          ],
+          "acceptance": [
+            "wasted_pickup failure mode 仍可解释",
+            "轻量 replay 边界被写清楚"
+          ]
+        },
+        {
+          "id": "B4",
+          "title": "Breakout 反射截点",
+          "prompt": "添加一个侧墙反射变体测试。",
+          "input_paths": [
+            "examples/breakout-replay/README.md",
+            "tests/test_breakout_replay.py"
+          ],
+          "example_ids": [
+            "breakout-replay"
+          ],
+          "deliverable": "新 replay probe 或测试",
+          "verification_commands": [
+            "npm run examples:breakout-replay:feedback"
+          ],
+          "acceptance": [
+            "missed_after_wall_reflection 仍被覆盖",
+            "策略说明包含 side-wall reflection"
+          ]
+        },
+        {
+          "id": "B5",
+          "title": "Ant yaw 反馈",
+          "prompt": "调整 yaw feedback 后保持 stable_stride。",
+          "input_paths": [
+            "examples/ant-gait-replay/README.md",
+            "tests/test_ant_gait_replay.py"
+          ],
+          "example_ids": [
+            "ant-gait-replay"
+          ],
+          "deliverable": "控制参数 patch 与风险说明",
+          "verification_commands": [
+            "npm run examples:ant-gait-replay:feedback"
+          ],
+          "acceptance": [
+            "yaw_drift 仍被 baseline 触发",
+            "heuristic outcome 仍为 stable_stride"
+          ]
+        },
+        {
+          "id": "B6",
+          "title": "Traffic Grid 容量保护",
+          "prompt": "增加一个下游容量临界 probe。",
+          "input_paths": [
+            "examples/traffic-grid/README.md",
+            "tests/test_traffic_grid.py"
+          ],
+          "example_ids": [
+            "traffic-grid"
+          ],
+          "deliverable": "容量 probe 与反馈报告",
+          "verification_commands": [
+            "npm run examples:traffic-grid:feedback"
+          ],
+          "acceptance": [
+            "spillback failure mode 仍被解释",
+            "下游容量约束先于最大队列释放"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "experiment-exercises",
+      "title": "C. 实验题",
+      "difficulty": "experiment",
+      "learning_unit_ids": [
+        "u1-minimal-loop",
+        "u4-research-claims",
+        "u5-anti-forgetting-project"
+      ],
+      "rubric_module_ids": [
+        "probe-and-baseline",
+        "feedback-report",
+        "regression-and-course-expression"
+      ],
+      "exercises": [
+        {
+          "id": "C1",
+          "title": "Baseline 是否合理",
+          "prompt": "说明 baseline 为什么不是故意写坏。",
+          "input_paths": [
+            "docs/zh-cn/appendix/benchmark-protocol.md",
+            "docs/public/benchmark-summary.json"
+          ],
+          "example_ids": [
+            "gridworld",
+            "robot-soccer",
+            "vizdoom-replay",
+            "traffic-grid",
+            "breakout-replay",
+            "ant-gait-replay"
+          ],
+          "deliverable": "experiment record",
+          "verification_commands": [
+            "npm run verify"
+          ],
+          "acceptance": [
+            "选定示例的 baseline 行为可复现",
+            "说明失败不是人为写坏的单点技巧"
+          ]
+        },
+        {
+          "id": "C2",
+          "title": "Probe 是否稳定",
+          "prompt": "给出测试或 replay 如何稳定触发 failure mode。",
+          "input_paths": [
+            "tests/",
+            "docs/public/example-registry.json"
+          ],
+          "example_ids": [
+            "gridworld",
+            "robot-soccer",
+            "vizdoom-replay",
+            "traffic-grid",
+            "breakout-replay",
+            "ant-gait-replay"
+          ],
+          "deliverable": "probe 稳定性说明",
+          "verification_commands": [
+            "npm run examples:test"
+          ],
+          "acceptance": [
+            "指出对应测试路径",
+            "说明 failure mode 如何被固定输入触发"
+          ]
+        },
+        {
+          "id": "C3",
+          "title": "Report 是否足够给下一轮智能体使用",
+          "prompt": "指出 candidate_update.target/rule/verification。",
+          "input_paths": [
+            "docs/public/experiment-report.schema.json",
+            "experiments/"
+          ],
+          "example_ids": [
+            "gridworld",
+            "robot-soccer",
+            "vizdoom-replay",
+            "traffic-grid",
+            "breakout-replay",
+            "ant-gait-replay"
+          ],
+          "deliverable": "feedback report 评审记录",
+          "verification_commands": [
+            "npm run examples:reports:check"
+          ],
+          "acceptance": [
+            "policies、feedback、candidate_update 三段都被引用",
+            "能说明下一轮智能体该改哪里"
+          ]
+        },
+        {
+          "id": "C4",
+          "title": "反遗忘路径",
+          "prompt": "写一个坏更新，并说明哪个测试会阻止它。",
+          "input_paths": [
+            "templates/anti-forgetting-checklist.md",
+            "docs/zh-cn/slides/lab-2/index.md"
+          ],
+          "example_ids": [
+            "gridworld",
+            "robot-soccer",
+            "vizdoom-replay",
+            "traffic-grid",
+            "breakout-replay",
+            "ant-gait-replay"
+          ],
+          "deliverable": "anti-forgetting checklist",
+          "verification_commands": [
+            "npm run examples:test"
+          ],
+          "acceptance": [
+            "坏更新具体到目标文件或规则",
+            "阻止路径包含测试或 replay"
+          ]
+        },
+        {
+          "id": "C5",
+          "title": "课程表达一致性",
+          "prompt": "检查 README、课程大纲、案例页和 report 是否一致。",
+          "input_paths": [
+            "README.md",
+            "docs/zh-cn/syllabus/index.md",
+            "docs/zh-cn/cases/index.md"
+          ],
+          "example_ids": [
+            "gridworld",
+            "robot-soccer",
+            "vizdoom-replay",
+            "traffic-grid",
+            "breakout-replay",
+            "ant-gait-replay"
+          ],
+          "deliverable": "一致性检查记录",
+          "verification_commands": [
+            "npm run course:structure:check"
+          ],
+          "acceptance": [
+            "示例名、failure mode、命令和报告路径一致",
+            "发现漂移时同步文档和 registry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capstone-exercises",
+      "title": "D. Capstone 题",
+      "difficulty": "capstone",
+      "learning_unit_ids": [
+        "u5-anti-forgetting-project"
+      ],
+      "rubric_module_ids": [
+        "source-and-problem",
+        "probe-and-baseline",
+        "heuristic-patch",
+        "feedback-report",
+        "regression-and-course-expression"
+      ],
+      "exercises": [
+        {
+          "id": "D1",
+          "title": "X case card",
+          "prompt": "把 Jiayi 或社区 X 线索整理成来源登记条目、case card 和验证状态。",
+          "input_paths": [
+            "docs/zh-cn/cases/x-signal/index.md",
+            "docs/public/x-sources.json",
+            "templates/case-card.md"
+          ],
+          "example_ids": [],
+          "deliverable": "来源登记条目 + case card + 验证状态",
+          "verification_commands": [
+            "npm run x:sources:check"
+          ],
+          "acceptance": [
+            "保留 cached、referenced-not-cached 或 to-collect 状态",
+            "不泄露 cookie、token 或私有日志"
+          ]
+        },
+        {
+          "id": "D2",
+          "title": "公开 artifact replay",
+          "prompt": "把 learning-beyond-gradients 未复现 artifact 压缩成轻量 replay。",
+          "input_paths": [
+            "docs/zh-cn/appendix/research-projects.md",
+            "templates/experiment-record.md"
+          ],
+          "example_ids": [],
+          "deliverable": "轻量 replay + feedback report + test",
+          "verification_commands": [
+            "npm run verify"
+          ],
+          "acceptance": [
+            "公开 artifact 与轻量 replay 边界清楚",
+            "新增示例有测试、报告和课程落点"
+          ]
+        },
+        {
+          "id": "D3",
+          "title": "内部线索最小环境",
+          "prompt": "把飞书任务或消息线索转成不泄露敏感信息的 minimal example。",
+          "input_paths": [
+            "docs/zh-cn/cases/traffic-simulation/index.md",
+            "SECURITY.md"
+          ],
+          "example_ids": [
+            "traffic-grid"
+          ],
+          "deliverable": "脱敏 minimal example",
+          "verification_commands": [
+            "npm run source:registry:check",
+            "npm run verify"
+          ],
+          "acceptance": [
+            "不公开飞书原文、会议纪要或私有链接",
+            "内部线索被抽象为可运行 failure mode"
+          ]
+        },
+        {
+          "id": "D4",
+          "title": "反遗忘扩展",
+          "prompt": "为现有示例新增一个 failure mode。",
+          "input_paths": [
+            "templates/anti-forgetting-checklist.md",
+            "docs/public/example-registry.json"
+          ],
+          "example_ids": [
+            "gridworld",
+            "robot-soccer",
+            "vizdoom-replay",
+            "traffic-grid",
+            "breakout-replay",
+            "ant-gait-replay"
+          ],
+          "deliverable": "新 probe + 测试 + report 边界说明",
+          "verification_commands": [
+            "npm run examples:test",
+            "npm run verify"
+          ],
+          "acceptance": [
+            "新增 probe 不破坏旧 probe",
+            "报告说明旧经验如何被保护"
+          ]
+        },
+        {
+          "id": "D5",
+          "title": "课程讲义扩展",
+          "prompt": "把一个已验证案例扩展为 lecture 或 lab 页面。",
+          "input_paths": [
+            "docs/public/teaching-registry.json",
+            "docs/public/slide-deck.json",
+            "docs/zh-cn/slides/index.md"
+          ],
+          "example_ids": [],
+          "deliverable": "lecture 或 lab 页面 + demo 命令",
+          "verification_commands": [
+            "npm run teaching:registry:check",
+            "npm run slides:check",
+            "npm run verify"
+          ],
+          "acceptance": [
+            "讲义包含阅读材料、demo 命令和交付物",
+            "新增入口进入 manifest、slides 和 verify"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://longbiaochen.github.io/heuristic-learning/claims-registry.schema.json",
+  "title": "Heuristic Learning Claims Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "claims"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    }
+  },
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "status",
+        "claim_page",
+        "evidence_pages",
+        "example_ids",
+        "verification_commands",
+        "falsification_note"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "research-hypothesis",
+            "working-hypothesis-with-lightweight-evidence",
+            "implemented-course-invariant"
+          ]
+        },
+        "claim_page": {
+          "type": "string",
+          "pattern": "^docs/zh-cn/.+\\.md$"
+        },
+        "evidence_pages": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^docs/zh-cn/.+\\.md$"
+          }
+        },
+        "example_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        },
+        "verification_commands": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^npm run .+"
+          }
+        },
+        "falsification_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

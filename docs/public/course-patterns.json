@@ -1,0 +1,72 @@
+{
+  "$schema": "/course-patterns.schema.json",
+  "schema_version": 1,
+  "patterns": [
+    {
+      "id": "easy-vibe-course-chassis",
+      "reference": "datawhalechina/easy-vibe",
+      "borrowed_pattern": "VitePress 中文课程结构、章节化学习路线、实践导向入口",
+      "repo_evidence": [
+        "docs/.vitepress/config.mjs",
+        "docs/zh-cn/syllabus/index.md",
+        "docs/zh-cn/stage-1/index.md",
+        "docs/zh-cn/slides/index.md"
+      ],
+      "verification": [
+        "npm run docs:routes:check",
+        "npm run course:structure:check"
+      ],
+      "boundary": "只借鉴课程组织方式，不照搬 EasyVibe 主题内容或文案。"
+    },
+    {
+      "id": "d2l-theory-code-exercises",
+      "reference": "d2l-ai/d2l-zh",
+      "borrowed_pattern": "理论解释、代码入口、练习和课程验收同步推进",
+      "repo_evidence": [
+        "docs/zh-cn/theory/research-framework.md",
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/appendix/exercises.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "verification": [
+        "npm run teaching:registry:check",
+        "npm run course:structure:check"
+      ],
+      "boundary": "HL 还不是成熟教科书体系，未验证主张必须保留为命题或假设。"
+    },
+    {
+      "id": "llm-c-readable-research-code",
+      "reference": "karpathy/llm.c",
+      "borrowed_pattern": "研究代码保持小、直、可读、可运行，并用测试约束行为",
+      "repo_evidence": [
+        "examples/heuristic-gridworld/run.py",
+        "examples/breakout-replay/run.py",
+        "examples/ant-gait-replay/run.py",
+        "tests/test_gridworld.py",
+        "tests/test_breakout_replay.py",
+        "tests/test_ant_gait_replay.py"
+      ],
+      "verification": [
+        "npm run examples:test",
+        "npm run examples:feedback"
+      ],
+      "boundary": "不复刻 C 实现风格；本仓库优先使用无重依赖 Python replay/minimal env。"
+    },
+    {
+      "id": "easy-rl-shared-vocabulary",
+      "reference": "datawhalechina/easy-rl",
+      "borrowed_pattern": "用课程语言解释 state、action、reward、policy、probe 等强化学习对照术语",
+      "repo_evidence": [
+        "docs/zh-cn/stage-3/index.md",
+        "docs/zh-cn/appendix/glossary.md",
+        "docs/zh-cn/appendix/benchmark-protocol.md",
+        "docs/zh-cn/theory/research-propositions.md"
+      ],
+      "verification": [
+        "npm run claims:registry:check",
+        "npm run course:structure:check"
+      ],
+      "boundary": "HL 与 RL/DL 是分工关系，不把 HL 写成 RL 的规则版或替代品。"
+    }
+  ]
+}

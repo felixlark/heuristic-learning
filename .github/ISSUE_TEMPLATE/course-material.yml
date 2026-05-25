@@ -1,0 +1,48 @@
+name: Course material
+description: Propose a theory page, lecture, lab, exercise, or appendix update.
+title: "[course] "
+labels:
+  - course
+body:
+  - type: dropdown
+    id: material_type
+    attributes:
+      label: Material type
+      options:
+        - theory page
+        - case page
+        - lecture
+        - lab
+        - exercise
+        - appendix
+        - tooling docs
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Core question
+      description: What should the reader learn or verify?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence link
+      description: Source, runnable example, feedback report, rubric, or manifest link.
+    validations:
+      required: true
+  - type: textarea
+    id: course_alignment
+    attributes:
+      label: Course alignment
+      description: Which syllabus unit, lab, exercise, or research project should reference this?
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      placeholder: "npm run course:structure:check\nnpm run verify"
+    validations:
+      required: true

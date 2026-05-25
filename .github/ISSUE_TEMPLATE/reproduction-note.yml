@@ -1,0 +1,62 @@
+name: Reproduction note
+description: Track a bounded reproduction note before a source becomes a case, example, or research claim.
+title: "[reproduction] "
+labels:
+  - reproduction
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source or registry row
+      description: Link to the public artifact, X/FieldTheory reference, source registry row, or sanitized internal clue. Do not paste secrets, Feishu raw content, cookies, API tokens, or private logs.
+      placeholder: "https://... or ft show <id> or docs/zh-cn/appendix/source-registry.md row"
+    validations:
+      required: true
+  - type: dropdown
+    id: source_status
+    attributes:
+      label: Source status
+      options:
+        - cached
+        - referenced-not-cached
+        - to-collect
+        - located
+        - structured
+        - reproduced
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction_scope
+    attributes:
+      label: Reproduction scope
+      description: State whether this is article understanding, code artifact reading, lightweight replay, fixed probe, or high-fidelity environment reproduction.
+    validations:
+      required: true
+  - type: textarea
+    id: missing_fidelity
+    attributes:
+      label: Missing fidelity
+      description: List the concrete gap, such as environment runtime, vision detector, physics/contact dynamics, random seeds, control interface, or data source.
+    validations:
+      required: true
+  - type: textarea
+    id: falsification_path
+    attributes:
+      label: Falsification path
+      description: What result would weaken or disprove the current heuristic explanation?
+    validations:
+      required: true
+  - type: textarea
+    id: next_experiment
+    attributes:
+      label: Next experiment
+      description: Name the smallest next runnable probe, case card, metric, or artifact-gap update.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      placeholder: "npm run source:registry:check\nnpm run artifact:gap:check\nnpm run research:logbook:check\nnpm run source:case:check"
+    validations:
+      required: true

@@ -1,0 +1,47 @@
+name: Source signal
+description: Register a public, X/FieldTheory, or internal clue before turning it into course material.
+title: "[source] "
+labels:
+  - source
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Public URL, FieldTheory/X reference, or sanitized internal clue description. Do not paste secrets, Feishu raw content, cookies, or API tokens.
+      placeholder: "https://... or ft show <id>"
+    validations:
+      required: true
+  - type: dropdown
+    id: source_status
+    attributes:
+      label: Source status
+      options:
+        - to_collect
+        - located
+        - structured
+        - reproduced
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim or signal
+      description: State the claim without presenting unverified material as reproduced.
+    validations:
+      required: true
+  - type: textarea
+    id: course_target
+    attributes:
+      label: Course target
+      description: Candidate case page, source registry row, example, or roadmap task.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification path
+      description: What would make this source reproducible or course-ready?
+      placeholder: "case card, replay probe, npm run source:registry:check"
+    validations:
+      required: true

@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://longbiaochen.github.io/heuristic-learning/x-sources.schema.json",
+  "title": "Heuristic Learning X Sources Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "tooling", "sources", "extraction_cards"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "tooling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tool", "command", "cache_path", "last_checked", "status_command"],
+      "properties": {
+        "tool": {
+          "type": "string",
+          "const": "fieldtheory-cli"
+        },
+        "command": {
+          "type": "string",
+          "const": "ft"
+        },
+        "cache_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "last_checked": {
+          "type": "string",
+          "pattern": "^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+        },
+        "status_command": {
+          "type": "string",
+          "const": "ft status"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "extraction_cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/extraction_card"
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "url",
+        "author",
+        "date",
+        "source_level",
+        "cache_status",
+        "ft_commands",
+        "claims_to_extract",
+        "repo_targets",
+        "verification_status",
+        "boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://x\\.com/.+/status/[0-9]+$"
+        },
+        "author": {
+          "type": "string",
+          "pattern": "^@.+"
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+        },
+        "source_level": {
+          "type": "string",
+          "enum": ["primary-url-referenced", "secondary-summary", "secondary-lead"]
+        },
+        "cache_status": {
+          "type": "string",
+          "enum": ["cached", "referenced-not-cached", "to-collect"]
+        },
+        "ft_commands": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^ft .+"
+          }
+        },
+        "claims_to_extract": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "repo_targets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "verification_status": {
+          "type": "string",
+          "enum": [
+            "usable-as-secondary-source",
+            "needs-direct-cache-or-api-read",
+            "not-yet-usable-as-evidence"
+          ]
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "extraction_card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_id",
+        "concept",
+        "course_claim",
+        "evidence_status",
+        "landing_pages",
+        "runnable_example",
+        "verification",
+        "boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "concept": {
+          "type": "string",
+          "minLength": 1
+        },
+        "course_claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_status": {
+          "type": "string",
+          "enum": [
+            "secondary-source-plus-public-artifact",
+            "secondary-source-summary"
+          ]
+        },
+        "landing_pages": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^docs/.+"
+          }
+        },
+        "runnable_example": {
+          "type": ["string", "null"]
+        },
+        "verification": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^npm run .+"
+          }
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

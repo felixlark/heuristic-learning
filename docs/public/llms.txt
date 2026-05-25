@@ -1,0 +1,185 @@
+# Heuristic Learning
+
+Heuristic Learning is a Chinese research/course repository about learning systems whose update target is software structure instead of neural-network weights.
+
+Core pages:
+
+- `CONTRIBUTING.md`: contribution rules and new example checklist
+- `.github/pull_request_template.md`: PR evidence requirements
+- `templates/reproduction-note.md`: source status, reproduction scope, missing fidelity, falsification path, and next experiment notes
+- `templates/experiment-record.md`: run command, source status, result summary, feedback, and candidate update notes
+- `/zh-cn/`: course homepage
+- `/zh-cn/course-map/`: role-based learning, research, teaching, and agent paths
+- `/zh-cn/syllabus/`: course matrix and verification map
+- `/zh-cn/stage-1/`: learning roadmap
+- `/zh-cn/stage-2/`: core concepts
+- `/zh-cn/stage-3/`: RL/DL/HL comparison
+- `/zh-cn/theory/learning-loop`: six-step HL workflow
+- `/zh-cn/theory/research-framework`: research framework
+- `/zh-cn/theory/research-propositions`: propositions, evidence status, and falsification paths
+- `/zh-cn/examples/`: runnable examples
+- `/zh-cn/cases/`: case library
+- `/zh-cn/cases/ant-gait/`: MuJoCo Ant gait replay case
+- `/zh-cn/cases/x-signal/`: X and FieldTheory source cases
+- `/zh-cn/cases/traffic-simulation/`: Feishu-derived traffic simulation case
+- `/zh-cn/slides/`: lecture material
+- `/zh-cn/slides/lecture-2/`: source-to-experiment lecture
+- `/zh-cn/slides/lecture-3/`: failure taxonomy and anti-forgetting lecture
+- `/zh-cn/slides/lab-1/`: first hands-on lab
+- `/zh-cn/slides/lab-2/`: anti-forgetting review lab
+- `/zh-cn/appendix/`: references and maintenance rules
+- `/zh-cn/appendix/local-setup`: local install, verification order, and troubleshooting
+- `/zh-cn/appendix/troubleshooting-tree`: failure-surface diagnosis, fix actions, and recheck commands
+- `/zh-cn/appendix/source-to-case-playbook`: source-to-case workflows for X, public artifact, internal Feishu, and research hypothesis signals
+- `/zh-cn/appendix/glossary`: HL terms and working definitions
+- `/zh-cn/appendix/references`: public sources and teaching repository references
+- `/zh-cn/appendix/reading-guide`: research-oriented reading order across Jiayi Weng sources, teaching repos, RL/DL context, and runnable examples
+- `/zh-cn/appendix/course-patterns`: EasyVibe/d2l/llm.c/easy-rl repository pattern comparison and HL structure rules
+- `/zh-cn/appendix/case-registry`: case-to-source/example/outcome/command mapping
+- `/zh-cn/appendix/learning-units`: chapter-level read-run-modify-reflect learning units
+- `/zh-cn/appendix/learning-outcomes`: learning outcomes mapped to units, exercises, rubric modules, evidence, and commands
+- `/zh-cn/appendix/checkpoints`: unit-level self-check prompts, evidence, pass conditions, and common failures
+- `/zh-cn/appendix/evaluation-metrics`: research metrics, evidence paths, example bindings, and verification commands
+- `/zh-cn/appendix/paper-blueprint`: manuscript/report sections, claims, metrics, evidence paths, verification commands, and boundaries
+- `/zh-cn/appendix/speaker-notes`: lecture/lab opening questions, demo checkpoints, discussion prompts, common confusions, and exit tickets
+- `/zh-cn/appendix/concept-graph`: concept-to-claim/example/material/command mapping
+- `/zh-cn/appendix/teaching-pack`: ready-to-run teaching packs, classroom demos, exit tickets, and acceptance checks
+- `/zh-cn/appendix/citation`: citation, attribution, and source boundary rules
+- `/zh-cn/appendix/source-registry`: source traceability and ingestion status
+- `/zh-cn/appendix/release-checklist`: release validation, changelog, and publishing rules
+- `/zh-cn/appendix/rubric`: course assessment and acceptance criteria
+- `/zh-cn/appendix/instructor-guide`: teaching modes, classroom demos, TA checks, and assignment validation
+- `/zh-cn/appendix/course-schedule`: 4-6 week mini course schedule
+- `/zh-cn/appendix/completion-audit`: objective-to-evidence completion checks
+- `/zh-cn/appendix/public-entrypoints`: public registry, schema, and LLM entrypoint index
+- `/zh-cn/appendix/visual-verification`: official Browser/IAB and Chrome plugin visual acceptance checks
+- `/zh-cn/appendix/reproducibility`: reproducibility checks across environment, examples, claims, teaching artifacts, contributions, and site routes
+- `/zh-cn/appendix/exercises`: concept, code, experiment, and capstone exercises
+- `/zh-cn/appendix/research-projects`: project-based learning tasks, capstone deliverables, and research questions
+- `/zh-cn/appendix/research-logbook`: reading-to-example research records, bound claims, metrics, commands, deliverables, and boundaries
+- `/zh-cn/appendix/ablation-plan`: example-level variables, invariants, evidence paths, and follow-up comparisons
+- `/zh-cn/appendix/artifact-gap-analysis`: lightweight replay to source artifact fidelity gaps
+- `/zh-cn/appendix/benchmark-protocol`: HL experiment design, baseline/probe/report rules, and regression gates
+- `/zh-cn/appendix/benchmark-results`: baseline/heuristic result summaries across the six main examples
+- `/zh-cn/appendix/research-roadmap`: research milestones and version roadmap
+- `/course-manifest.json`: machine-readable course pages, examples, reports, and CI gate
+- `/course-manifest.schema.json`: JSON Schema for the course manifest
+- `/example-registry.json`: machine-readable runnable example commands, reports, tests, update targets, and course links
+- `/example-registry.schema.json`: JSON Schema for the runnable example registry
+- `/code-tour.json`: machine-readable runnable example code reading order, edit targets, commands, and tests
+- `/code-tour.schema.json`: JSON Schema for the code tour registry
+- `/benchmark-summary.json`: machine-readable baseline/heuristic result summaries, reports, tests, and benchmark boundaries
+- `/benchmark-summary.schema.json`: JSON Schema for the benchmark summary
+- `/ablation-plan.json`: machine-readable ablation variables, expected invariants, evidence paths, and verification commands
+- `/ablation-plan.schema.json`: JSON Schema for the ablation plan
+- `/artifact-gap-analysis.json`: machine-readable artifact fidelity gaps, next experiments, and boundaries
+- `/artifact-gap-analysis.schema.json`: JSON Schema for the artifact gap analysis
+- `/troubleshooting-tree.json`: machine-readable failure-surface diagnosis, fix actions, and recheck commands
+- `/troubleshooting-tree.schema.json`: JSON Schema for the troubleshooting tree
+- `/claims-registry.json`: machine-readable research claims, evidence pages, example links, verification commands, and falsification notes
+- `/claims-registry.schema.json`: JSON Schema for the claims registry
+- `/case-registry.json`: machine-readable case pages, source status, example bindings, learning outcomes, and verification commands
+- `/case-registry.schema.json`: JSON Schema for the case registry
+- `/teaching-registry.json`: machine-readable lecture and lab commands, readings, and deliverables
+- `/teaching-registry.schema.json`: JSON Schema for the teaching registry
+- `/slide-deck.json`: machine-readable lecture/lab headings, example bindings, classroom commands, and deliverable templates
+- `/slide-deck.schema.json`: JSON Schema for the slide deck registry
+- `/speaker-notes.json`: machine-readable lecture/lab speaker notes, prompts, common confusions, and exit tickets
+- `/speaker-notes.schema.json`: JSON Schema for the speaker notes registry
+- `/rubric.json`: machine-readable grading modules, weights, score levels, evidence paths, and verification commands
+- `/rubric.schema.json`: JSON Schema for the rubric
+- `/exercise-registry.json`: machine-readable exercises, input materials, example links, deliverables, and verification commands
+- `/exercise-registry.schema.json`: JSON Schema for the exercise registry
+- `/contribution-contract.json`: machine-readable contribution types, evidence fields, required paths, commands, and forbidden materials
+- `/contribution-contract.schema.json`: JSON Schema for the contribution contract
+- `/course-patterns.json`: machine-readable borrowed course/research repository patterns, evidence, verification commands, and boundaries
+- `/course-patterns.schema.json`: JSON Schema for the course patterns registry
+- `/learning-units.json`: machine-readable chapter units, readings, examples, commands, deliverables, and acceptance checks
+- `/learning-units.schema.json`: JSON Schema for the learning units registry
+- `/learning-outcomes.json`: machine-readable learning outcomes, exercises, rubric modules, evidence, assessment, and verification commands
+- `/learning-outcomes.schema.json`: JSON Schema for the learning outcomes registry
+- `/checkpoint-registry.json`: machine-readable learning-unit checkpoints, evidence, commands, pass conditions, and common failures
+- `/checkpoint-registry.schema.json`: JSON Schema for the checkpoint registry
+- `/evaluation-metrics.json`: machine-readable task outcome, failure isolation, update cost, regression risk, and source boundary metrics
+- `/evaluation-metrics.schema.json`: JSON Schema for the evaluation metrics registry
+- `/paper-blueprint.json`: machine-readable manuscript/report sections, claims, metrics, examples, evidence, and boundaries
+- `/paper-blueprint.schema.json`: JSON Schema for the paper blueprint registry
+- `/concept-graph.json`: machine-readable concept mappings to claims, examples, materials, pages, and commands
+- `/concept-graph.schema.json`: JSON Schema for the concept graph registry
+- `/teaching-pack.json`: machine-readable teaching packs, slide/readings, demo commands, deliverables, and acceptance checks
+- `/teaching-pack.schema.json`: JSON Schema for the teaching pack registry
+- `/research-projects.json`: machine-readable research project sources, failure modes, examples, deliverables, and verification commands
+- `/research-projects.schema.json`: JSON Schema for the research projects registry
+- `/research-logbook.json`: machine-readable reading records, bound examples, claims, metrics, commands, deliverables, and boundaries
+- `/research-logbook.schema.json`: JSON Schema for the research logbook
+- `/completion-audit.json`: machine-readable objective requirements, required commands, evidence boundaries, and final checks
+- `/completion-audit.schema.json`: JSON Schema for the completion audit registry
+- `/visual-verification.json`: machine-readable official browser routes, viewports, and acceptance checks
+- `/visual-verification.schema.json`: JSON Schema for the visual verification registry
+- `/visual-acceptance-log.json`: official Browser/IAB visual acceptance results
+- `/visual-acceptance-log.schema.json`: JSON Schema for the visual acceptance log
+- `/reproducibility-checklist.json`: machine-readable reproducibility evidence, commands, pass conditions, and known boundaries
+- `/reproducibility-checklist.schema.json`: JSON Schema for the reproducibility checklist
+- `/x-sources.json`: machine-readable X/FieldTheory source levels, cache status, extraction targets, and boundaries
+- `/x-sources.schema.json`: JSON Schema for the X sources registry
+- `/source-to-case-playbook.json`: machine-readable source-to-case workflows, artifact gates, verification commands, and forbidden claims
+- `/source-to-case-playbook.schema.json`: JSON Schema for the source-to-case playbook
+- `/experiment-report.schema.json`: common experiment report fields
+
+Runnable code:
+
+- `examples/heuristic-gridworld/run.py`
+- `examples/heuristic-gridworld/feedback_loop.py`
+- `examples/robot-soccer/run.py`
+- `examples/robot-soccer/feedback_loop.py`
+- `examples/vizdoom-replay/run.py`
+- `examples/vizdoom-replay/feedback_loop.py`
+- `examples/traffic-grid/run.py`
+- `examples/traffic-grid/feedback_loop.py`
+- `examples/breakout-replay/run.py`
+- `examples/breakout-replay/feedback_loop.py`
+- `examples/ant-gait-replay/run.py`
+- `examples/ant-gait-replay/feedback_loop.py`
+- `examples/*/README.md`
+- `scripts/check-experiment-reports.py`
+- `scripts/check-source-registry.py`
+- `scripts/check-case-registry.py`
+- `scripts/check-x-sources.py`
+- `scripts/check-source-to-case-playbook.py`
+- `scripts/check-course-manifest.py`
+- `scripts/check-example-registry.py`
+- `scripts/check-code-tour.py`
+- `scripts/check-benchmark-summary.py`
+- `scripts/check-ablation-plan.py`
+- `scripts/check-artifact-gap-analysis.py`
+- `scripts/check-troubleshooting-tree.py`
+- `scripts/check-claims-registry.py`
+- `scripts/check-teaching-registry.py`
+- `scripts/check-slide-deck.py`
+- `scripts/check-speaker-notes.py`
+- `scripts/check-rubric.py`
+- `scripts/check-course-patterns.py`
+- `scripts/check-learning-units.py`
+- `scripts/check-learning-outcomes.py`
+- `scripts/check-checkpoints.py`
+- `scripts/check-evaluation-metrics.py`
+- `scripts/check-paper-blueprint.py`
+- `scripts/check-teaching-pack.py`
+- `scripts/check-research-logbook.py`
+- `scripts/check-completion-audit.py`
+- `scripts/check-release-readiness.py`
+- `scripts/check-routes.sh`
+- `scripts/check-course-structure.py`
+- `tests/test_gridworld.py`
+- `tests/test_vizdoom_replay.py`
+- `tests/test_traffic_grid.py`
+- `tests/test_breakout_replay.py`
+- `tests/test_ant_gait_replay.py`
+
+Primary references:
+
+- https://trinkle23897.github.io/learning-beyond-gradients/
+- https://github.com/Trinkle23897/learning-beyond-gradients
+- https://github.com/datawhalechina/easy-vibe
+- https://github.com/karpathy/llm.c
+- https://github.com/d2l-ai/d2l-zh

@@ -1,0 +1,191 @@
+# Heuristic Learning
+
+This repo is a Chinese course/research repository for Heuristic Learning.
+
+Use these entry points:
+
+- `README.md` for repository overview.
+- `CONTRIBUTING.md` for contribution rules and new example checklist.
+- `.github/pull_request_template.md` for PR evidence requirements.
+- `templates/reproduction-note.md` for source status, reproduction scope, missing fidelity, falsification path, and next experiment notes.
+- `templates/experiment-record.md` for run command, source status, result summary, feedback, and candidate update notes.
+- `templates/claim-review.md` for research proposition review deliverables.
+- `templates/anti-forgetting-checklist.md` for update review and regression-risk deliverables.
+- `docs/zh-cn/index.md` for the course homepage.
+- `docs/zh-cn/course-map/index.md` for role-based learning, research, teaching, and agent paths.
+- `docs/zh-cn/syllabus/index.md` for the course matrix and verification map.
+- `docs/zh-cn/stage-1/index.md` for the learning route.
+- `docs/zh-cn/stage-2/index.md` for concepts.
+- `docs/zh-cn/stage-3/index.md` for RL/DL/HL comparison.
+- `docs/zh-cn/theory/learning-loop.md` for the six-step HL workflow.
+- `docs/zh-cn/theory/research-framework.md` for the research framework and measurement model.
+- `docs/zh-cn/theory/research-propositions.md` for current HL propositions, evidence status, and falsification paths.
+- `docs/zh-cn/examples/index.md` for runnable examples.
+- `docs/zh-cn/slides/index.md` for lecture material.
+- `docs/zh-cn/slides/lecture-2/index.md` for the source-to-experiment lecture.
+- `docs/zh-cn/slides/lecture-3/index.md` for the failure taxonomy and anti-forgetting lecture.
+- `docs/zh-cn/slides/lab-1/index.md` for the first hands-on lab.
+- `docs/zh-cn/slides/lab-2/index.md` for the anti-forgetting review lab.
+- `docs/zh-cn/appendix/source-registry.md` for source traceability and ingestion status.
+- `docs/zh-cn/appendix/local-setup.md` for local install, verification order, and troubleshooting.
+- `docs/zh-cn/appendix/troubleshooting-tree.md` for failure-surface diagnosis, fix actions, and recheck commands.
+- `docs/zh-cn/appendix/source-to-case-playbook.md` for converting X, public artifact, internal Feishu, and research hypothesis signals into bounded case cards.
+- `docs/zh-cn/appendix/glossary.md` for HL terms and working definitions.
+- `docs/zh-cn/appendix/references.md` for public sources and teaching repository references.
+- `docs/zh-cn/appendix/reading-guide.md` for a research-oriented reading order across Jiayi Weng sources, teaching repos, RL/DL context, and runnable examples.
+- `docs/zh-cn/appendix/course-patterns.md` for the EasyVibe/d2l/llm.c/easy-rl repository pattern comparison and HL structure rules.
+- `docs/zh-cn/appendix/case-registry.md` for case-to-source/example/outcome/command mapping.
+- `docs/zh-cn/appendix/learning-units.md` for chapter-level read-run-modify-reflect learning units.
+- `docs/zh-cn/appendix/learning-outcomes.md` for learning outcomes mapped to units, exercises, rubric modules, evidence, and commands.
+- `docs/zh-cn/appendix/checkpoints.md` for unit-level self-check prompts, evidence, pass conditions, and common failures.
+- `docs/zh-cn/appendix/evaluation-metrics.md` for research metrics, evidence paths, example bindings, and verification commands.
+- `docs/zh-cn/appendix/paper-blueprint.md` for manuscript/report sections, claims, metrics, evidence paths, verification commands, and boundaries.
+- `docs/zh-cn/appendix/speaker-notes.md` for lecture/lab opening questions, demo checkpoints, discussion prompts, common confusions, and exit tickets.
+- `docs/zh-cn/appendix/concept-graph.md` for concept-to-claim/example/material/command mapping.
+- `docs/zh-cn/appendix/teaching-pack.md` for ready-to-run teaching packs, classroom demos, exit tickets, and acceptance checks.
+- `docs/zh-cn/appendix/citation.md` for citation, attribution, and source boundary rules.
+- `docs/zh-cn/appendix/release-checklist.md` for release validation, changelog, and publishing rules.
+- `docs/zh-cn/appendix/rubric.md` for course assessment and acceptance criteria.
+- `docs/zh-cn/appendix/exercises.md` for assignable concept, code, experiment, and capstone tasks.
+- `docs/zh-cn/appendix/contribution-protocol.md` for contribution standards and research contribution gates.
+- `docs/zh-cn/appendix/instructor-guide.md` for teaching modes, classroom demos, TA checks, and assignment validation.
+- `docs/zh-cn/appendix/course-schedule.md` for the 4-6 week mini course schedule.
+- `docs/zh-cn/appendix/completion-audit.md` for objective-to-evidence completion checks.
+- `docs/zh-cn/appendix/public-entrypoints.md` for public registry, schema, and LLM entrypoint indexing.
+- `docs/zh-cn/appendix/visual-verification.md` for official Browser/IAB and Chrome plugin visual acceptance checks.
+- `docs/zh-cn/appendix/reproducibility.md` for reproducibility checks across environment, examples, claims, teaching artifacts, contributions, and site routes.
+- `docs/zh-cn/appendix/exercises.md` for concept, code, experiment, and capstone exercises.
+- `docs/zh-cn/appendix/research-projects.md` for project-based learning tasks, capstone deliverables, and research questions.
+- `docs/zh-cn/appendix/research-logbook.md` for reading-to-example research records, bound claims, metrics, commands, deliverables, and boundaries.
+- `docs/zh-cn/appendix/ablation-plan.md` for example-level variables, invariants, evidence paths, and follow-up comparisons.
+- `docs/zh-cn/appendix/artifact-gap-analysis.md` for lightweight replay to source artifact fidelity gaps.
+- `docs/zh-cn/appendix/benchmark-protocol.md` for HL experiment design, baseline/probe/report rules, and regression gates.
+- `docs/zh-cn/appendix/benchmark-results.md` for baseline/heuristic result summaries across the six main examples.
+- `docs/zh-cn/appendix/research-roadmap.md` for research milestones and version roadmap.
+- `docs/public/course-manifest.json` for machine-readable course pages, examples, reports, and CI gate.
+- `docs/public/course-manifest.schema.json` for the course manifest JSON Schema.
+- `docs/public/example-registry.json` for machine-readable runnable example commands, reports, tests, update targets, and course links.
+- `docs/public/example-registry.schema.json` for the runnable example registry JSON Schema.
+- `docs/public/code-tour.json` for machine-readable runnable example code reading order, edit targets, commands, and tests.
+- `docs/public/code-tour.schema.json` for the code tour JSON Schema.
+- `docs/public/benchmark-summary.json` for machine-readable baseline/heuristic result summaries, reports, tests, and benchmark boundaries.
+- `docs/public/benchmark-summary.schema.json` for the benchmark summary JSON Schema.
+- `docs/public/ablation-plan.json` for machine-readable ablation variables, expected invariants, evidence paths, and verification commands.
+- `docs/public/ablation-plan.schema.json` for the ablation plan JSON Schema.
+- `docs/public/artifact-gap-analysis.json` for machine-readable artifact fidelity gaps, next experiments, and boundaries.
+- `docs/public/artifact-gap-analysis.schema.json` for the artifact gap analysis JSON Schema.
+- `docs/public/troubleshooting-tree.json` for machine-readable failure-surface diagnosis, fix actions, and recheck commands.
+- `docs/public/troubleshooting-tree.schema.json` for the troubleshooting tree JSON Schema.
+- `docs/public/claims-registry.json` for machine-readable research claims, evidence pages, example links, verification commands, and falsification notes.
+- `docs/public/claims-registry.schema.json` for the claims registry JSON Schema.
+- `docs/public/case-registry.json` for machine-readable case pages, source status, example bindings, learning outcomes, and verification commands.
+- `docs/public/case-registry.schema.json` for the case registry JSON Schema.
+- `docs/public/teaching-registry.json` for machine-readable lecture and lab commands, readings, and deliverables.
+- `docs/public/teaching-registry.schema.json` for the teaching registry JSON Schema.
+- `docs/public/slide-deck.json` for machine-readable lecture/lab headings, example bindings, classroom commands, and deliverable templates.
+- `docs/public/slide-deck.schema.json` for the slide deck JSON Schema.
+- `docs/public/speaker-notes.json` for machine-readable lecture/lab speaker notes, prompts, common confusions, and exit tickets.
+- `docs/public/speaker-notes.schema.json` for the speaker notes JSON Schema.
+- `docs/public/rubric.json` for machine-readable grading modules, weights, score levels, evidence paths, and verification commands.
+- `docs/public/rubric.schema.json` for the rubric JSON Schema.
+- `docs/public/exercise-registry.json` for machine-readable exercises, input materials, example links, deliverables, and verification commands.
+- `docs/public/exercise-registry.schema.json` for the exercise registry JSON Schema.
+- `docs/public/contribution-contract.json` for machine-readable contribution types, evidence fields, required paths, commands, and forbidden materials.
+- `docs/public/contribution-contract.schema.json` for the contribution contract JSON Schema.
+- `docs/public/course-patterns.json` for machine-readable borrowed course/research repository patterns, evidence, verification commands, and boundaries.
+- `docs/public/course-patterns.schema.json` for the course patterns registry JSON Schema.
+- `docs/public/learning-units.json` for machine-readable chapter units, readings, examples, commands, deliverables, and acceptance checks.
+- `docs/public/learning-units.schema.json` for the learning units registry JSON Schema.
+- `docs/public/learning-outcomes.json` for machine-readable learning outcomes, exercises, rubric modules, evidence, assessment, and verification commands.
+- `docs/public/learning-outcomes.schema.json` for the learning outcomes registry JSON Schema.
+- `docs/public/checkpoint-registry.json` for machine-readable learning-unit checkpoints, evidence, commands, pass conditions, and common failures.
+- `docs/public/checkpoint-registry.schema.json` for the checkpoint registry JSON Schema.
+- `docs/public/evaluation-metrics.json` for machine-readable task outcome, failure isolation, update cost, regression risk, and source boundary metrics.
+- `docs/public/evaluation-metrics.schema.json` for the evaluation metrics JSON Schema.
+- `docs/public/paper-blueprint.json` for machine-readable manuscript/report sections, claims, metrics, examples, evidence, and boundaries.
+- `docs/public/paper-blueprint.schema.json` for the paper blueprint JSON Schema.
+- `docs/public/concept-graph.json` for machine-readable concept mappings to claims, examples, materials, pages, and commands.
+- `docs/public/concept-graph.schema.json` for the concept graph JSON Schema.
+- `docs/public/teaching-pack.json` for machine-readable teaching packs, slide/readings, demo commands, deliverables, and acceptance checks.
+- `docs/public/teaching-pack.schema.json` for the teaching pack registry JSON Schema.
+- `docs/public/research-projects.json` for machine-readable research project sources, failure modes, examples, deliverables, and verification commands.
+- `docs/public/research-projects.schema.json` for the research projects JSON Schema.
+- `docs/public/research-logbook.json` for machine-readable reading records, bound examples, claims, metrics, commands, deliverables, and boundaries.
+- `docs/public/research-logbook.schema.json` for the research logbook JSON Schema.
+- `docs/public/completion-audit.json` for machine-readable objective requirements, required commands, evidence boundaries, and final checks.
+- `docs/public/completion-audit.schema.json` for the completion audit JSON Schema.
+- `docs/public/visual-verification.json` for machine-readable official browser routes, viewports, and acceptance checks.
+- `docs/public/visual-verification.schema.json` for the visual verification JSON Schema.
+- `docs/public/visual-acceptance-log.json` for official Browser/IAB visual acceptance results.
+- `docs/public/visual-acceptance-log.schema.json` for the visual acceptance log JSON Schema.
+- `docs/public/reproducibility-checklist.json` for machine-readable reproducibility evidence, commands, pass conditions, and known boundaries.
+- `docs/public/reproducibility-checklist.schema.json` for the reproducibility checklist JSON Schema.
+- `docs/public/x-sources.json` for machine-readable X/FieldTheory source levels, cache status, extraction targets, and boundaries.
+- `docs/public/x-sources.schema.json` for the X sources registry JSON Schema.
+- `docs/public/source-to-case-playbook.json` for machine-readable source-to-case workflows, artifact gates, verification commands, and forbidden claims.
+- `docs/public/source-to-case-playbook.schema.json` for the source-to-case playbook JSON Schema.
+- `docs/public/experiment-report.schema.json` for common experiment report fields.
+- `docs/zh-cn/cases/x-signal/index.md` for X/FieldTheory source cases.
+- `docs/zh-cn/cases/traffic-simulation/index.md` for the Feishu-derived traffic simulation case card.
+- `scripts/check-course-structure.py` for course/docs/examples alignment checks.
+- `scripts/check-source-registry.py` for source status and X/FieldTheory evidence checks.
+- `scripts/check-case-registry.py` for case-to-source/example/outcome checks.
+- `scripts/check-x-sources.py` for X/FieldTheory source-level and cache-status checks.
+- `scripts/check-source-to-case-playbook.py` for source-to-case workflow, artifact, command, and course landing checks.
+- `scripts/check-course-manifest.py` for machine-readable manifest and schema checks.
+- `scripts/check-example-registry.py` for runnable example registry checks.
+- `scripts/check-code-tour.py` for code reading order, edit target, command, and test checks.
+- `scripts/check-benchmark-summary.py` for benchmark summary and experiment report alignment checks.
+- `scripts/check-ablation-plan.py` for ablation variable, invariant, metric, example, and evidence checks.
+- `scripts/check-artifact-gap-analysis.py` for artifact gap, source reference, example, and command checks.
+- `scripts/check-troubleshooting-tree.py` for failure diagnosis, fix action, route, and command checks.
+- `scripts/check-claims-registry.py` for research claim evidence checks.
+- `scripts/check-teaching-registry.py` for lecture and lab registry checks.
+- `scripts/check-slide-deck.py` for lecture/lab structure, example binding, command, and template checks.
+- `scripts/check-speaker-notes.py` for speaker notes, demo checkpoint, discussion prompt, and exit ticket checks.
+- `scripts/check-rubric.py` for rubric weight, score-level, evidence, and route checks.
+- `scripts/check-exercise-registry.py` for exercise input, example, command, learning-unit, and rubric alignment checks.
+- `scripts/check-contribution-contract.py` for contribution type, evidence field, path, command, and forbidden-material checks.
+- `scripts/check-course-patterns.py` for EasyVibe/d2l/llm.c/easy-rl pattern registry checks.
+- `scripts/check-learning-units.py` for chapter-level read-run-modify-reflect unit checks.
+- `scripts/check-learning-outcomes.py` for outcome-to-unit/exercise/rubric/evidence checks.
+- `scripts/check-checkpoints.py` for checkpoint-to-unit/outcome/evidence checks.
+- `scripts/check-evaluation-metrics.py` for metrics-to-example/claim/evidence checks.
+- `scripts/check-paper-blueprint.py` for paper section, claim, metric, example, evidence, and boundary checks.
+- `scripts/check-concept-graph.py` for concept-to-evidence graph checks.
+- `scripts/check-teaching-pack.py` for ready-to-run teaching pack checks.
+- `scripts/check-research-projects.py` for research project source, example, deliverable, and verification checks.
+- `scripts/check-research-logbook.py` for reading-to-example research logbook checks.
+- `scripts/check-completion-audit.py` for completion requirement, command, boundary, and final-check validation.
+- `scripts/check-visual-verification.py` for official browser verification matrix validation.
+- `scripts/check-release-readiness.py` for final release readiness; it intentionally fails until official Browser/IAB evidence is marked passed.
+- `scripts/check-reproducibility.py` for reproducibility evidence, command, boundary, and route checks.
+- `scripts/check-routes.sh` for local VitePress route checks.
+- `examples/heuristic-gridworld/` for the current minimal code example.
+- `examples/robot-soccer/` for the robot soccer blocked-lane example.
+- `examples/vizdoom-replay/` for the VizDoom D1 medikit-staging replay example.
+- `examples/traffic-grid/` for the traffic simulation downstream-spillback example.
+- `examples/breakout-replay/` for the Atari Breakout wall-reflection replay example.
+- `examples/ant-gait-replay/` for the MuJoCo Ant yaw-stabilization gait replay example.
+- `examples/*/README.md` for per-example commands, report paths, tests, and learning targets.
+- `experiments/gridworld/` for generated feedback reports.
+- `experiments/vizdoom-replay/` for generated VizDoom replay feedback reports.
+- `experiments/traffic-grid/` for generated traffic-grid feedback reports.
+- `experiments/breakout-replay/` for generated Breakout replay feedback reports.
+- `experiments/ant-gait-replay/` for generated Ant gait feedback reports.
+
+Run:
+
+```bash
+npm install
+npm run examples:test
+npm run examples:gridworld:feedback
+npm run examples:robot-soccer:feedback
+npm run examples:vizdoom-replay:feedback
+npm run examples:traffic-grid:feedback
+npm run examples:breakout-replay:feedback
+npm run examples:ant-gait-replay:feedback
+npm run examples:reports:check
+npm run verify
+npm run build
+```

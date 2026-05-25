@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://longbiaochen.github.io/heuristic-learning/experiment-report.schema.json",
+  "title": "Heuristic Learning Experiment Report",
+  "type": "object",
+  "required": ["policies", "feedback", "candidate_update"],
+  "properties": {
+    "policies": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["policy"],
+        "properties": {
+          "policy": {
+            "type": "string",
+            "enum": ["baseline", "heuristic"]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "feedback": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "candidate_update": {
+      "type": "object",
+      "required": ["target", "rule", "verification"],
+      "properties": {
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification": {
+          "type": "string",
+          "const": "python3 -m unittest discover -s tests"
+        }
+      }
+    }
+  }
+}

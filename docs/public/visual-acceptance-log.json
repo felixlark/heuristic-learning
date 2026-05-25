@@ -1,0 +1,68 @@
+{
+  "$schema": "/visual-acceptance-log.schema.json",
+  "schema_version": 1,
+  "scope": "official-browser-visual-acceptance-log",
+  "status": "passed",
+  "entries": [
+    {
+      "check_id": "home-course-entry",
+      "date": "2026-05-25",
+      "surface": "in-app browser",
+      "route": "/heuristic-learning/",
+      "viewport": "desktop",
+      "observed_outcome": "Official Browser/IAB opened the page at 1280x720; the body text contained Heuristic Learning, course outline, runnable examples, case library, and slides navigation with non-empty main content.",
+      "remaining_issue": "none",
+      "status": "passed"
+    },
+    {
+      "check_id": "course-map-mobile",
+      "date": "2026-05-25",
+      "surface": "in-app browser",
+      "route": "/heuristic-learning/zh-cn/course-map/",
+      "viewport": "mobile",
+      "observed_outcome": "Official Browser/IAB opened the route with a 390x844 viewport; the page text contained course map, student, researcher, instructor, and coding-agent paths. The hidden off-canvas sidebar remains outside the viewport as expected, while the main learning path text is readable.",
+      "remaining_issue": "none",
+      "status": "passed"
+    },
+    {
+      "check_id": "examples-run-loop",
+      "date": "2026-05-25",
+      "surface": "in-app browser",
+      "route": "/heuristic-learning/zh-cn/examples/",
+      "viewport": "desktop",
+      "observed_outcome": "Official Browser/IAB opened the examples page at 1280x720; the page showed GridWorld, Robot Soccer, VizDoom, Traffic, Breakout, Ant Gait, and the light replay boundary for replay-based examples.",
+      "remaining_issue": "none",
+      "status": "passed"
+    },
+    {
+      "check_id": "slide-deck-scan",
+      "date": "2026-05-25",
+      "surface": "in-app browser",
+      "route": "/heuristic-learning/zh-cn/slides/",
+      "viewport": "desktop",
+      "observed_outcome": "Official Browser/IAB opened the slides page at 1280x720; the page showed the three Chinese lecture entries and two Lab entries with non-empty teaching-material content.",
+      "remaining_issue": "none",
+      "status": "passed"
+    },
+    {
+      "check_id": "public-registry-entrypoints",
+      "date": "2026-05-25",
+      "surface": "Chrome plugin",
+      "route": "/heuristic-learning/zh-cn/appendix/public-entrypoints",
+      "viewport": "desktop",
+      "observed_outcome": "Official Browser/IAB opened the machine-readable entrypoints page at 1280x720; the page links to course-manifest.json, completion-audit.json, visual-verification.json, visual-acceptance-log.json, and llms.txt. Direct JSON/TXT route availability is separately covered by npm run docs:routes:check.",
+      "remaining_issue": "none",
+      "status": "passed"
+    },
+    {
+      "check_id": "completion-audit-page",
+      "date": "2026-05-25",
+      "surface": "in-app browser",
+      "route": "/heuristic-learning/zh-cn/appendix/completion-audit",
+      "viewport": "desktop",
+      "observed_outcome": "Official Browser/IAB opened the completion-audit page at 1280x720; the page showed goal decomposition, required local commands, evidence boundaries, and Browser/IAB visual-acceptance language.",
+      "remaining_issue": "none",
+      "status": "passed"
+    }
+  ]
+}

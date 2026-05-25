@@ -1,0 +1,120 @@
+{
+  "$schema": "/reproducibility-checklist.schema.json",
+  "schema_version": 1,
+  "checklists": [
+    {
+      "id": "environment-and-install",
+      "title": "环境与安装",
+      "scope": "确认仓库可以从 clean checkout 安装依赖并运行统一验证。",
+      "evidence": [
+        "package-lock.json",
+        "package.json",
+        "docs/zh-cn/appendix/local-setup.md",
+        ".github/workflows/verify.yml"
+      ],
+      "commands": [
+        "npm install",
+        "npm run verify"
+      ],
+      "pass_condition": "本地与 CI 都使用 `npm run verify` 作为同一条入口。",
+      "known_boundary": "本地 HTTP 预检不等同于 GitHub Pages 或官方 Browser/IAB 视觉验收。"
+    },
+    {
+      "id": "runnable-examples",
+      "title": "可运行示例",
+      "scope": "确认六个主线示例都有 run、feedback、report 和 test。",
+      "evidence": [
+        "docs/public/example-registry.json",
+        "docs/public/benchmark-summary.json",
+        "examples/",
+        "tests/",
+        "experiments/"
+      ],
+      "commands": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run examples:reports:check",
+        "npm run benchmark:summary:check"
+      ],
+      "pass_condition": "每个示例都能复现 baseline failure、heuristic outcome 和 candidate_update。",
+      "known_boundary": "轻量 replay 只证明课程级 failure probe，不等同于真实 Atari、VizDoom、MuJoCo 或机器人环境复现。"
+    },
+    {
+      "id": "claims-and-sources",
+      "title": "命题与来源",
+      "scope": "确认研究命题、来源状态和引用边界互相一致。",
+      "evidence": [
+        "docs/public/claims-registry.json",
+        "docs/public/x-sources.json",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/citation.md"
+      ],
+      "commands": [
+        "npm run claims:registry:check",
+        "npm run source:registry:check",
+        "npm run x:sources:check"
+      ],
+      "pass_condition": "每条命题都有证据页、示例、验证命令和可反驳说明。",
+      "known_boundary": "Jiayi Weng 的 HL 思想当前不能写成正式论文结论；X/飞书线索未复核前不能写成已复现事实。"
+    },
+    {
+      "id": "teaching-artifacts",
+      "title": "教学产物",
+      "scope": "确认课程、讲义、练习、Rubric 和授课包可以被学生或助教复用。",
+      "evidence": [
+        "docs/public/teaching-registry.json",
+        "docs/public/slide-deck.json",
+        "docs/public/exercise-registry.json",
+        "docs/public/rubric.json",
+        "docs/public/teaching-pack.json"
+      ],
+      "commands": [
+        "npm run teaching:registry:check",
+        "npm run slides:check",
+        "npm run exercises:check",
+        "npm run rubric:check",
+        "npm run teaching:pack:check"
+      ],
+      "pass_condition": "每个教学材料都有阅读材料、命令、交付物或验收项。",
+      "known_boundary": "命令通过只能证明材料结构一致，不能代替教师对学生答案质量的评审。"
+    },
+    {
+      "id": "contribution-and-release",
+      "title": "贡献与发布",
+      "scope": "确认贡献路径、PR 证据、发布清单和安全边界一致。",
+      "evidence": [
+        "docs/public/contribution-contract.json",
+        "CONTRIBUTING.md",
+        ".github/pull_request_template.md",
+        "docs/zh-cn/appendix/release-checklist.md",
+        "SECURITY.md"
+      ],
+      "commands": [
+        "npm run contribution:contract:check",
+        "npm run course:structure:check",
+        "npm run verify"
+      ],
+      "pass_condition": "贡献类型、证据字段、必备路径、验证命令和禁止材料都被同步检查。",
+      "known_boundary": "不允许把 API key、飞书原文、X cookie/API token 或私有日志写入公开仓库。"
+    },
+    {
+      "id": "site-and-machine-entrypoints",
+      "title": "站点与机器入口",
+      "scope": "确认 VitePress 页面、public JSON、schema、llms 入口和路由可达。",
+      "evidence": [
+        "docs/public/course-manifest.json",
+        "docs/public/llms.txt",
+        "llms.txt",
+        "scripts/check-routes.sh",
+        "docs/.vitepress/config.mjs"
+      ],
+      "commands": [
+        "npm run course:manifest:check",
+        "npm run docs:routes:check",
+        "npm run build"
+      ],
+      "pass_condition": "关键页面和 JSON route 可达，VitePress build 通过。",
+      "known_boundary": "route 200 和 build 通过不是最终视觉验收；发布前仍需官方 Browser/IAB 或 Chrome 插件路径。"
+    }
+  ]
+}

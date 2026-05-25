@@ -1,0 +1,117 @@
+{
+  "$schema": "/visual-verification.schema.json",
+  "schema_version": 1,
+  "scope": "official-browser-visual-acceptance",
+  "tooling": {
+    "primary": "Codex Browser plugin / in-app browser",
+    "authenticated": "Official Chrome plugin when profile cookies or authenticated routes are required",
+    "forbidden_substitutes": [
+      "Playwright",
+      "Chrome for Testing",
+      "macOS open",
+      "CDP-only helpers",
+      "Computer Use for Codex in-app browser"
+    ]
+  },
+  "checks": [
+    {
+      "id": "home-course-entry",
+      "title": "首页与课程入口",
+      "route": "/heuristic-learning/",
+      "surface": "in-app browser",
+      "viewport": "desktop",
+      "acceptance": [
+        "页面首屏显示 Heuristic Learning 课程定位",
+        "导航可进入课程大纲、动手实验、案例库和幻灯片",
+        "没有明显文本重叠或空白主内容"
+      ],
+      "precheck": "npm run docs:routes:check",
+      "status": "required-before-release"
+    },
+    {
+      "id": "course-map-mobile",
+      "title": "移动端课程地图",
+      "route": "/heuristic-learning/zh-cn/course-map/",
+      "surface": "in-app browser",
+      "viewport": "mobile",
+      "acceptance": [
+        "角色路径和学习路线可以纵向阅读",
+        "导航抽屉或页面链接可返回核心入口",
+        "长中文标题不溢出容器"
+      ],
+      "precheck": "npm run course:structure:check",
+      "status": "required-before-release"
+    },
+    {
+      "id": "examples-run-loop",
+      "title": "动手实验入口",
+      "route": "/heuristic-learning/zh-cn/examples/",
+      "surface": "in-app browser",
+      "viewport": "desktop",
+      "acceptance": [
+        "六个 runnable examples 都能看到命令、报告和测试路径",
+        "GridWorld、Robot Soccer、VizDoom、Traffic、Breakout、Ant Gait 的链接可读",
+        "页面明确区分轻量 replay 与高保真复现"
+      ],
+      "precheck": "npm run examples:test",
+      "status": "required-before-release"
+    },
+    {
+      "id": "slide-deck-scan",
+      "title": "讲义浏览",
+      "route": "/heuristic-learning/zh-cn/slides/",
+      "surface": "in-app browser",
+      "viewport": "desktop",
+      "acceptance": [
+        "3 讲和 2 个 Lab 入口都可见",
+        "每个讲义入口绑定阅读、课堂命令和交付物",
+        "页面不是营销页，而是可直接授课的材料目录"
+      ],
+      "precheck": "npm run slides:check",
+      "status": "required-before-release"
+    },
+    {
+      "id": "public-registry-entrypoints",
+      "title": "公开 JSON 入口",
+      "route": "/heuristic-learning/zh-cn/appendix/public-entrypoints",
+      "surface": "in-app browser",
+      "viewport": "desktop",
+      "acceptance": [
+        "公开 registry/schema 索引页可以在官方浏览器中打开",
+        "页面链接到 course-manifest.json、completion-audit、visual-verification 和 llms.txt",
+        "JSON/TXT 直达可达性由 docs:routes:check 覆盖，避免把非视觉资源误写成视觉页面",
+        "completion-audit 和 visual-verification 都出现在 public resources"
+      ],
+      "precheck": "npm run course:manifest:check",
+      "status": "required-before-release"
+    },
+    {
+      "id": "completion-audit-page",
+      "title": "完成度审计页",
+      "route": "/heuristic-learning/zh-cn/appendix/completion-audit",
+      "surface": "in-app browser",
+      "viewport": "desktop",
+      "acceptance": [
+        "目标拆解、必跑命令、证据边界和完成前检查都可读",
+        "页面明确说明 HTTP 预检不能替代 Browser/IAB 或 Pages 验收",
+        "视觉验收矩阵链接可达"
+      ],
+      "precheck": "npm run completion:audit:check",
+      "status": "required-before-release"
+    }
+  ],
+  "evidence_log": {
+    "path": "docs/zh-cn/appendix/visual-verification.md",
+    "artifact_path": "docs/public/visual-acceptance-log.json",
+    "artifact_schema": "/visual-acceptance-log.schema.json",
+    "required_fields": [
+      "date",
+      "surface",
+      "route",
+      "viewport",
+      "observed_outcome",
+      "remaining_issue"
+    ],
+    "current_run_status": "passed-2026-05-25-official-browser-iab"
+  }
+}

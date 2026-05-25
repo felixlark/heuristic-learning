@@ -1,0 +1,233 @@
+{
+  "$schema": "/concept-graph.schema.json",
+  "schema_version": 1,
+  "concepts": [
+    {
+      "id": "heuristic-learning",
+      "term": "Heuristic Learning",
+      "definition": "由编码智能体消费反馈并维护软件结构的学习过程。",
+      "claim_ids": [
+        "software-structure-learning",
+        "feedback-report-as-agent-input",
+        "hl-rl-dl-division-of-labor"
+      ],
+      "example_ids": [
+        "gridworld",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "material_ids": [
+        "lecture-1",
+        "lecture-2"
+      ],
+      "pages": [
+        "docs/zh-cn/stage-2/index.md",
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "commands": [
+        "npm run claims:registry:check",
+        "npm run examples:feedback"
+      ]
+    },
+    {
+      "id": "signal",
+      "term": "Signal",
+      "definition": "值得学习的来源信号，可以来自 X、公开 artifact、飞书、日志或回放。",
+      "claim_ids": [
+        "source-status-is-course-structure"
+      ],
+      "example_ids": [
+        "robot-soccer",
+        "traffic-grid",
+        "breakout-replay"
+      ],
+      "material_ids": [
+        "lecture-2"
+      ],
+      "pages": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/appendix/reading-guide.md"
+      ],
+      "commands": [
+        "npm run source:registry:check",
+        "npm run x:sources:check"
+      ]
+    },
+    {
+      "id": "probe",
+      "term": "Probe",
+      "definition": "能稳定暴露失败的最小场景。",
+      "claim_ids": [
+        "failure-modes-over-average-score"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "material_ids": [
+        "lecture-2",
+        "lab-1"
+      ],
+      "pages": [
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/appendix/benchmark-protocol.md",
+        "docs/zh-cn/appendix/research-projects.md"
+      ],
+      "commands": [
+        "npm run examples:registry:check",
+        "npm run examples:test"
+      ]
+    },
+    {
+      "id": "baseline",
+      "term": "Baseline",
+      "definition": "自然但不充分的简单策略，用来固定系统学会了什么。",
+      "claim_ids": [
+        "failure-modes-over-average-score"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "material_ids": [
+        "lecture-2",
+        "lab-1"
+      ],
+      "pages": [
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/appendix/benchmark-results.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "commands": [
+        "npm run benchmark:summary:check",
+        "npm run examples:reports:check"
+      ]
+    },
+    {
+      "id": "heuristic-patch",
+      "term": "Heuristic patch",
+      "definition": "对策略、检测器、阈值、控制参数或安全约束的可审查更新。",
+      "claim_ids": [
+        "software-structure-learning",
+        "hl-rl-dl-division-of-labor"
+      ],
+      "example_ids": [
+        "robot-soccer",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "material_ids": [
+        "lecture-2",
+        "lecture-3",
+        "lab-2"
+      ],
+      "pages": [
+        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/appendix/research-projects.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "commands": [
+        "npm run examples:feedback",
+        "npm run examples:test"
+      ]
+    },
+    {
+      "id": "feedback-report",
+      "term": "Feedback report",
+      "definition": "供下一轮智能体读取的结构化学习记录。",
+      "claim_ids": [
+        "feedback-report-as-agent-input"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "material_ids": [
+        "lecture-1",
+        "lecture-2",
+        "lab-1"
+      ],
+      "pages": [
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/appendix/benchmark-protocol.md"
+      ],
+      "commands": [
+        "npm run examples:feedback",
+        "npm run examples:reports:check"
+      ]
+    },
+    {
+      "id": "regression",
+      "term": "Regression",
+      "definition": "证明新规则没有破坏旧 probe 的验证过程。",
+      "claim_ids": [
+        "failure-modes-over-average-score",
+        "source-status-is-course-structure"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "material_ids": [
+        "lecture-3",
+        "lab-2"
+      ],
+      "pages": [
+        "docs/zh-cn/slides/lecture-3/index.md",
+        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/appendix/completion-audit.md"
+      ],
+      "commands": [
+        "npm run examples:test",
+        "npm run verify"
+      ]
+    },
+    {
+      "id": "source-status",
+      "term": "Source status",
+      "definition": "来源在课程中的可信度和处理阶段。",
+      "claim_ids": [
+        "source-status-is-course-structure"
+      ],
+      "example_ids": [
+        "robot-soccer",
+        "traffic-grid",
+        "vizdoom-replay",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "material_ids": [
+        "lecture-2"
+      ],
+      "pages": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/citation.md",
+        "docs/zh-cn/cases/x-signal/index.md"
+      ],
+      "commands": [
+        "npm run source:registry:check",
+        "npm run x:sources:check"
+      ]
+    }
+  ]
+}

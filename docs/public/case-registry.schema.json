@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heuristic Learning Case Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "cases"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    }
+  },
+  "$defs": {
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "case_page",
+        "source_status",
+        "source_kind",
+        "source_refs",
+        "example_id",
+        "failure_mode",
+        "learning_outcome_ids",
+        "course_use",
+        "verification_commands",
+        "boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "case_page": {
+          "type": "string",
+          "pattern": "^docs/zh-cn/cases/.+/index\\.md$"
+        },
+        "source_status": {
+          "type": "string",
+          "enum": ["已复现为轻量 replay", "已复现为最小环境", "已结构化", "已定位", "待采集"]
+        },
+        "source_kind": {
+          "type": "string",
+          "enum": ["public-artifact", "internal-signal", "x-signal"]
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "example_id": {
+          "type": ["string", "null"]
+        },
+        "failure_mode": {
+          "type": ["string", "null"]
+        },
+        "learning_outcome_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^lo-[0-9]+$"
+          }
+        },
+        "course_use": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification_commands": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^npm run .+"
+          }
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

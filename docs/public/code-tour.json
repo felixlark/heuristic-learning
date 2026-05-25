@@ -1,0 +1,139 @@
+{
+  "$schema": "/code-tour.schema.json",
+  "schema_version": 1,
+  "scope": "runnable-example-code-reading-order",
+  "tours": [
+    {
+      "id": "gridworld-code-tour",
+      "example_id": "gridworld",
+      "title": "GridWorld 代码导览",
+      "reading_order": [
+        "examples/heuristic-gridworld/env.py",
+        "examples/heuristic-gridworld/policies.py",
+        "examples/heuristic-gridworld/run.py",
+        "examples/heuristic-gridworld/feedback_loop.py",
+        "tests/test_gridworld.py"
+      ],
+      "key_question": "为什么 baseline 看起来能到达目标，但 local_greedy_trap probe 仍能暴露维护风险？",
+      "run_commands": [
+        "npm run examples:gridworld",
+        "npm run examples:gridworld:feedback",
+        "npm run examples:test"
+      ],
+      "expected_observation": "feedback report 中同时保留平均 episode 结果和 local_greedy_trap probe。",
+      "edit_target": "examples/heuristic-gridworld/policies.py",
+      "test_path": "tests/test_gridworld.py",
+      "boundary": "这个示例用于理解最小 HL 闭环，不用于证明地图泛化能力。"
+    },
+    {
+      "id": "robot-soccer-code-tour",
+      "example_id": "robot-soccer",
+      "title": "Robot Soccer 代码导览",
+      "reading_order": [
+        "examples/robot-soccer/env.py",
+        "examples/robot-soccer/policies.py",
+        "examples/robot-soccer/run.py",
+        "examples/robot-soccer/feedback_loop.py",
+        "tests/test_robot_soccer.py"
+      ],
+      "key_question": "射门前的 blocked-lane 检查为什么应该是显式规则，而不是只调 reward？",
+      "run_commands": [
+        "npm run examples:robot-soccer",
+        "npm run examples:robot-soccer:feedback",
+        "npm run examples:test"
+      ],
+      "expected_observation": "baseline 报告 blocked_shot，heuristic 报告 goal。",
+      "edit_target": "examples/robot-soccer/policies.py",
+      "test_path": "tests/test_robot_soccer.py",
+      "boundary": "公开代码只保留脱敏 failure pattern，不包含飞书原文或真实机器人系统。"
+    },
+    {
+      "id": "vizdoom-code-tour",
+      "example_id": "vizdoom-replay",
+      "title": "VizDoom Replay 代码导览",
+      "reading_order": [
+        "examples/vizdoom-replay/replay_env.py",
+        "examples/vizdoom-replay/vizdoom_policies.py",
+        "examples/vizdoom-replay/run.py",
+        "examples/vizdoom-replay/feedback_loop.py",
+        "tests/test_vizdoom_replay.py"
+      ],
+      "key_question": "health、area、offset 三个字段如何把视觉检测输出转成可审计的 pickup 策略？",
+      "run_commands": [
+        "npm run examples:vizdoom-replay",
+        "npm run examples:vizdoom-replay:feedback",
+        "npm run examples:reports:check"
+      ],
+      "expected_observation": "baseline 是 wasted_pickup，heuristic 是 valued_pickup。",
+      "edit_target": "examples/vizdoom-replay/vizdoom_policies.py",
+      "test_path": "tests/test_vizdoom_replay.py",
+      "boundary": "这里读的是检测输出抽象，不是 VizDoom/OpenCV 完整复现。"
+    },
+    {
+      "id": "traffic-grid-code-tour",
+      "example_id": "traffic-grid",
+      "title": "Traffic Grid 代码导览",
+      "reading_order": [
+        "examples/traffic-grid/env.py",
+        "examples/traffic-grid/policies.py",
+        "examples/traffic-grid/run.py",
+        "examples/traffic-grid/feedback_loop.py",
+        "tests/test_traffic_grid.py"
+      ],
+      "key_question": "downstream capacity 为什么应该先作为安全不变量，而不是普通 reward 项？",
+      "run_commands": [
+        "npm run examples:traffic-grid",
+        "npm run examples:traffic-grid:feedback",
+        "npm run examples:test"
+      ],
+      "expected_observation": "baseline 触发 spillback，heuristic 保持 stable_flow。",
+      "edit_target": "examples/traffic-grid/policies.py",
+      "test_path": "tests/test_traffic_grid.py",
+      "boundary": "这个示例是脱敏交通抽象，不是东湖真实仿真器。"
+    },
+    {
+      "id": "breakout-code-tour",
+      "example_id": "breakout-replay",
+      "title": "Breakout Replay 代码导览",
+      "reading_order": [
+        "examples/breakout-replay/replay_env.py",
+        "examples/breakout-replay/policies.py",
+        "examples/breakout-replay/run.py",
+        "examples/breakout-replay/feedback_loop.py",
+        "tests/test_breakout_replay.py"
+      ],
+      "key_question": "侧墙反射预测如何把 Atari artifact 中的几何直觉压缩成课程 replay？",
+      "run_commands": [
+        "npm run examples:breakout-replay",
+        "npm run examples:breakout-replay:feedback",
+        "npm run examples:reports:check"
+      ],
+      "expected_observation": "baseline 是 missed_after_wall_reflection，heuristic 是 intercepted。",
+      "edit_target": "examples/breakout-replay/policies.py",
+      "test_path": "tests/test_breakout_replay.py",
+      "boundary": "这里验证几何截点规则，不验证完整 Atari 绩效。"
+    },
+    {
+      "id": "ant-gait-code-tour",
+      "example_id": "ant-gait-replay",
+      "title": "Ant Gait Replay 代码导览",
+      "reading_order": [
+        "examples/ant-gait-replay/replay_env.py",
+        "examples/ant-gait-replay/policies.py",
+        "examples/ant-gait-replay/run.py",
+        "examples/ant-gait-replay/feedback_loop.py",
+        "tests/test_ant_gait_replay.py"
+      ],
+      "key_question": "CPG cadence、stance duty 和 yaw feedback 如何组成可 review 的连续控制 heuristic？",
+      "run_commands": [
+        "npm run examples:ant-gait-replay",
+        "npm run examples:ant-gait-replay:feedback",
+        "npm run examples:test"
+      ],
+      "expected_observation": "baseline 早停为 yaw_drift，heuristic 保持 stable_stride。",
+      "edit_target": "examples/ant-gait-replay/policies.py",
+      "test_path": "tests/test_ant_gait_replay.py",
+      "boundary": "这里读的是控制直觉 replay，不是 MuJoCo 接触动力学复现。"
+    }
+  ]
+}

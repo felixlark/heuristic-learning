@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this course repository, please cite it as below and cite the original sources separately."
+title: "Heuristic Learning: A Chinese Research and Hands-on Course"
+version: "0.1.0"
+date-released: "2026-05-24"
+type: software
+authors:
+  - name: "Heuristic Learning Contributors"
+abstract: "A Chinese research/course repository for Heuristic Learning, with theory notes, source registry, runnable examples, feedback reports, and VitePress course materials."
+repository-code: "https://github.com/longbiaochen/heuristic-learning"
+url: "https://longbiaochen.github.io/heuristic-learning/"
+license: "CC-BY-NC-SA-4.0"
+keywords:
+  - heuristic-learning
+  - learning-beyond-gradients
+  - coding-agents
+  - course
+  - reproducible-examples

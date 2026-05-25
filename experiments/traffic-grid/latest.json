@@ -1,0 +1,137 @@
+{
+  "case": "traffic_grid_downstream_spillback",
+  "source": {
+    "kind": "feishu_task_signal",
+    "note": "Derived from an internal task direction about applying Heuristic Learning to an East Lake traffic simulator."
+  },
+  "environment": {
+    "downstream_capacity": 8,
+    "target_downstream": 5,
+    "start": {
+      "main_queue": 6,
+      "side_queue": 3,
+      "downstream_queue": 7
+    }
+  },
+  "policies": [
+    {
+      "policy": "baseline",
+      "reason": "spillback",
+      "reward": -12,
+      "steps": 1,
+      "actions": [
+        "release_main"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "main_queue": 6,
+          "side_queue": 3,
+          "downstream_queue": 7
+        },
+        {
+          "step": 1,
+          "main_queue": 3,
+          "side_queue": 3,
+          "downstream_queue": 10
+        }
+      ]
+    },
+    {
+      "policy": "heuristic",
+      "reason": "stable_flow",
+      "reward": 11,
+      "steps": 10,
+      "actions": [
+        "hold",
+        "release_main",
+        "hold",
+        "divert_main",
+        "release_main",
+        "hold",
+        "release_side",
+        "hold",
+        "release_side",
+        "hold"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "main_queue": 6,
+          "side_queue": 3,
+          "downstream_queue": 7
+        },
+        {
+          "step": 1,
+          "main_queue": 6,
+          "side_queue": 3,
+          "downstream_queue": 5
+        },
+        {
+          "step": 2,
+          "main_queue": 3,
+          "side_queue": 3,
+          "downstream_queue": 8
+        },
+        {
+          "step": 3,
+          "main_queue": 3,
+          "side_queue": 3,
+          "downstream_queue": 6
+        },
+        {
+          "step": 4,
+          "main_queue": 1,
+          "side_queue": 3,
+          "downstream_queue": 7
+        },
+        {
+          "step": 5,
+          "main_queue": 0,
+          "side_queue": 3,
+          "downstream_queue": 8
+        },
+        {
+          "step": 6,
+          "main_queue": 0,
+          "side_queue": 3,
+          "downstream_queue": 6
+        },
+        {
+          "step": 7,
+          "main_queue": 0,
+          "side_queue": 1,
+          "downstream_queue": 8
+        },
+        {
+          "step": 8,
+          "main_queue": 0,
+          "side_queue": 1,
+          "downstream_queue": 6
+        },
+        {
+          "step": 9,
+          "main_queue": 0,
+          "side_queue": 0,
+          "downstream_queue": 7
+        },
+        {
+          "step": 10,
+          "main_queue": 0,
+          "side_queue": 0,
+          "downstream_queue": 5
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    "The baseline releases the largest upstream queue and causes downstream spillback.",
+    "The heuristic system treats downstream capacity as a hard safety constraint.",
+    "The update target is the signal/diversion rule, plus a replay regression test."
+  ],
+  "candidate_update": {
+    "target": "examples/traffic-grid/policies.py",
+    "rule": "Protect downstream capacity before releasing the largest upstream queue.",
+    "verification": "python3 -m unittest discover -s tests"
+  }
+}

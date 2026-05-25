@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Heuristic Learning Logo</title>
+  <desc id="desc">A loop connecting feedback, code and policy.</desc>
+  <rect width="256" height="256" rx="48" fill="#0f172a"/>
+  <path d="M72 76h70c23 0 42 19 42 42 0 11-4 22-12 30" fill="none" stroke="#60a5fa" stroke-width="16" stroke-linecap="round"/>
+  <path d="M184 180h-70c-23 0-42-19-42-42 0-11 4-22 12-30" fill="none" stroke="#34d399" stroke-width="16" stroke-linecap="round"/>
+  <path d="M166 133l10 24 25-9" fill="none" stroke="#60a5fa" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 123l-10-24-25 9" fill="none" stroke="#34d399" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="128" cy="128" r="22" fill="#f8fafc"/>
+  <path d="M117 130l8 8 16-20" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

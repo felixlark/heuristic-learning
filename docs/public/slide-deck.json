@@ -1,0 +1,148 @@
+{
+  "$schema": "/slide-deck.schema.json",
+  "schema_version": 1,
+  "materials": [
+    {
+      "id": "lecture-1",
+      "path": "docs/zh-cn/slides/lecture-1/index.md",
+      "route": "/zh-cn/slides/lecture-1/",
+      "format": "lecture",
+      "required_headings": [
+        "Slide 1：问题",
+        "Slide 2：HL 的最小定义",
+        "Slide 3：核心闭环",
+        "Slide 4：为什么现在重要",
+        "Slide 5：课堂演示",
+        "Slide 6：课后任务"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "commands": [
+        "npm run examples:gridworld",
+        "npm run examples:gridworld:feedback",
+        "npm run examples:test"
+      ],
+      "deliverable_template": "templates/experiment-record.md"
+    },
+    {
+      "id": "lecture-2",
+      "path": "docs/zh-cn/slides/lecture-2/index.md",
+      "route": "/zh-cn/slides/lecture-2/",
+      "format": "lecture",
+      "required_headings": [
+        "Slide 1：问题",
+        "Slide 2：Signal 不是结论",
+        "Slide 3：Probe 是课程化的关键",
+        "Slide 4：Baseline 必须有教学价值",
+        "Slide 5：Patch 要能被审查",
+        "Slide 6：Report 是学习记忆",
+        "Slide 7：Regression 把经验锁住",
+        "Slide 8：课堂练习"
+      ],
+      "example_ids": [
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "commands": [
+        "npm run examples:feedback",
+        "npm run examples:reports:check"
+      ],
+      "deliverable_template": "templates/case-card.md"
+    },
+    {
+      "id": "lecture-3",
+      "path": "docs/zh-cn/slides/lecture-3/index.md",
+      "route": "/zh-cn/slides/lecture-3/",
+      "format": "lecture",
+      "required_headings": [
+        "Slide 1：问题",
+        "Slide 2：把失败先分类",
+        "Slide 3：Patch 不等于学习",
+        "Slide 4：反遗忘是工程问题",
+        "Slide 5：六个案例的反遗忘检查",
+        "Slide 6：维护成本度量",
+        "Slide 7：课堂练习",
+        "Slide 8：课后任务"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "commands": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run verify"
+      ],
+      "deliverable_template": "templates/anti-forgetting-checklist.md"
+    },
+    {
+      "id": "lab-1",
+      "path": "docs/zh-cn/slides/lab-1/index.md",
+      "route": "/zh-cn/slides/lab-1/",
+      "format": "lab",
+      "required_headings": [
+        "Step 1：观察四类失败",
+        "Step 2：选择一个改造点",
+        "Step 3：写验证",
+        "Step 4：实验记录",
+        "验收标准"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "commands": [
+        "npm run verify",
+        "npm run examples:feedback",
+        "npm run examples:reports:check"
+      ],
+      "deliverable_template": "templates/experiment-record.md"
+    },
+    {
+      "id": "lab-2",
+      "path": "docs/zh-cn/slides/lab-2/index.md",
+      "route": "/zh-cn/slides/lab-2/",
+      "format": "lab",
+      "required_headings": [
+        "Step 1：选择一个失败类型",
+        "Step 2：设计一个坏更新",
+        "Step 3：检查测试覆盖",
+        "Step 4：更新反馈报告",
+        "Step 5：按 Rubric 自评",
+        "验收标准"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "commands": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run examples:reports:check",
+        "npm run verify"
+      ],
+      "deliverable_template": "templates/anti-forgetting-checklist.md"
+    }
+  ]
+}

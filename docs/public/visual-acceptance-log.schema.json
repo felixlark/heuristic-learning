@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heuristic Learning Visual Acceptance Log",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scope",
+    "status",
+    "entries"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "scope": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not-run",
+        "blocked",
+        "passed"
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "check_id",
+        "date",
+        "surface",
+        "route",
+        "viewport",
+        "observed_outcome",
+        "remaining_issue",
+        "status"
+      ],
+      "properties": {
+        "check_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "date": {
+          "type": "string"
+        },
+        "surface": {
+          "type": "string",
+          "enum": [
+            "in-app browser",
+            "Chrome plugin"
+          ]
+        },
+        "route": {
+          "type": "string",
+          "pattern": "^/heuristic-learning/"
+        },
+        "viewport": {
+          "type": "string",
+          "enum": [
+            "desktop",
+            "mobile"
+          ]
+        },
+        "observed_outcome": {
+          "type": "string"
+        },
+        "remaining_issue": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "not-run",
+            "blocked",
+            "passed"
+          ]
+        }
+      }
+    }
+  }
+}

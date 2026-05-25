@@ -1,0 +1,159 @@
+{
+  "$schema": "/research-logbook.schema.json",
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "lbg-core-loop-reading",
+      "status": "active",
+      "source_type": "public-essay",
+      "source_ref": "https://trinkle23897.github.io/learning-beyond-gradients/",
+      "reading_goal": "把 Learning Beyond Gradients 中的核心更新对象抽象为可教学的 HL 学习闭环。",
+      "bound_examples": [
+        "gridworld",
+        "vizdoom-replay"
+      ],
+      "bound_claims": [
+        "software-structure-learning",
+        "hl-rl-dl-division-of-labor"
+      ],
+      "metrics": [
+        "task-outcome",
+        "source-boundary"
+      ],
+      "commands": [
+        "npm run examples:test",
+        "npm run claims:registry:check"
+      ],
+      "deliverables": [
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/theory/research-framework.md",
+        "templates/claim-review.md"
+      ],
+      "next_action": "继续把文章里的任务类型映射到 case registry，而不是直接写成论文结论。",
+      "boundary": "未在真实环境复验前，只能称为课程化抽象和研究假设。"
+    },
+    {
+      "id": "breakout-artifact-reading",
+      "status": "active",
+      "source_type": "public-code-artifact",
+      "source_ref": "https://github.com/Trinkle23897/learning-beyond-gradients/tree/main/atari/breakout",
+      "reading_goal": "把 Breakout artifact 的几何预测思想压缩成学生能读懂和能测试的 replay。",
+      "bound_examples": [
+        "breakout-replay"
+      ],
+      "bound_claims": [
+        "failure-modes-over-average-score",
+        "software-structure-learning"
+      ],
+      "metrics": [
+        "failure-isolation",
+        "regression-risk"
+      ],
+      "commands": [
+        "npm run examples:breakout-replay:feedback",
+        "npm run artifact:gap:check"
+      ],
+      "deliverables": [
+        "docs/zh-cn/cases/breakout/index.md",
+        "experiments/breakout-replay/latest.json",
+        "docs/zh-cn/appendix/artifact-gap-analysis.md"
+      ],
+      "next_action": "补一条 reflection 参数扰动练习，验证 replay 是否保留核心 failure mode。",
+      "boundary": "当前 replay 不是 Atari 高保真复现，不能宣称达到原仓库分数。"
+    },
+    {
+      "id": "x-signal-case-reading",
+      "status": "needs-source-refresh",
+      "source_type": "x-or-fieldtheory-signal",
+      "source_ref": "docs/public/x-sources.json",
+      "reading_goal": "把 Jiayi Weng 相关 X 线索拆成来源状态、可课程化问题和禁止声明。",
+      "bound_examples": [
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "bound_claims": [
+        "source-status-is-course-structure",
+        "hl-rl-dl-division-of-labor"
+      ],
+      "metrics": [
+        "source-boundary",
+        "task-outcome"
+      ],
+      "commands": [
+        "npm run x:sources:check",
+        "npm run source:case:check"
+      ],
+      "deliverables": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/appendix/source-to-case-playbook.md",
+        "templates/case-card.md"
+      ],
+      "next_action": "通过 ft 或受支持的 X API 刷新一手帖缓存后，再把分数类表述升级或降级。",
+      "boundary": "referenced-not-cached 的原帖不能写成已直接读取的一手证据。"
+    },
+    {
+      "id": "robot-soccer-signal-reading",
+      "status": "seeded",
+      "source_type": "internal-signal",
+      "source_ref": "docs/zh-cn/cases/robot-soccer/index.md",
+      "reading_goal": "把内部机器人足球方向转成脱敏、可运行、可测试的 blocked-lane 教学案例。",
+      "bound_examples": [
+        "robot-soccer"
+      ],
+      "bound_claims": [
+        "feedback-report-as-agent-input",
+        "failure-modes-over-average-score"
+      ],
+      "metrics": [
+        "failure-isolation",
+        "update-cost"
+      ],
+      "commands": [
+        "npm run examples:robot-soccer:feedback",
+        "npm run examples:test"
+      ],
+      "deliverables": [
+        "docs/zh-cn/cases/robot-soccer/index.md",
+        "experiments/robot-soccer/latest.json",
+        "templates/experiment-record.md"
+      ],
+      "next_action": "扩展一个安全通道场景，检查 lane rule 是否过度保守。",
+      "boundary": "只保留脱敏任务形态，不公开飞书原文、私有链接或会议内容。"
+    },
+    {
+      "id": "cross-example-report-reading",
+      "status": "active",
+      "source_type": "cross-example-analysis",
+      "source_ref": "experiments/",
+      "reading_goal": "比较六个 latest.json 是否足以让下一轮编码智能体定位 failure mode 和 update target。",
+      "bound_examples": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "bound_claims": [
+        "feedback-report-as-agent-input",
+        "failure-modes-over-average-score"
+      ],
+      "metrics": [
+        "update-cost",
+        "regression-risk"
+      ],
+      "commands": [
+        "npm run examples:reports:check",
+        "npm run benchmark:summary:check",
+        "npm run metrics:check"
+      ],
+      "deliverables": [
+        "docs/zh-cn/appendix/benchmark-results.md",
+        "docs/zh-cn/appendix/evaluation-metrics.md",
+        "templates/anti-forgetting-checklist.md"
+      ],
+      "next_action": "为每个报告补一个人工可读的 edit hint，并检查是否降低改动定位成本。",
+      "boundary": "报告结构只能证明本仓库轻量任务的维护性，不能外推到所有 RL 环境。"
+    }
+  ]
+}

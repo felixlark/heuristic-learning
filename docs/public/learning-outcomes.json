@@ -1,0 +1,150 @@
+{
+  "$schema": "/learning-outcomes.schema.json",
+  "schema_version": 1,
+  "outcomes": [
+    {
+      "id": "lo-1",
+      "title": "解释 HL 问题边界",
+      "competency": "能区分 Heuristic System、Heuristic Learning、RL/DL 分工和研究假设边界。",
+      "learning_unit_ids": [
+        "u0-context",
+        "u4-research-claims"
+      ],
+      "exercise_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "rubric_module_ids": [
+        "source-and-problem"
+      ],
+      "evidence": [
+        "docs/zh-cn/stage-2/index.md",
+        "docs/zh-cn/stage-3/index.md",
+        "docs/zh-cn/theory/research-propositions.md"
+      ],
+      "assessment": "学生能用一个案例说明反馈来源、更新对象、验证方式和未验证边界。",
+      "verification_commands": [
+        "npm run claims:registry:check"
+      ]
+    },
+    {
+      "id": "lo-2",
+      "title": "运行并解释最小闭环",
+      "competency": "能跑通示例、读懂 baseline failure、heuristic outcome 和 feedback report。",
+      "learning_unit_ids": [
+        "u1-minimal-loop"
+      ],
+      "exercise_ids": [
+        "B1",
+        "C3"
+      ],
+      "rubric_module_ids": [
+        "probe-and-baseline",
+        "feedback-report"
+      ],
+      "evidence": [
+        "docs/zh-cn/examples/index.md",
+        "examples/heuristic-gridworld/README.md",
+        "experiments/gridworld/latest.json"
+      ],
+      "assessment": "学生能指出 failure mode、candidate_update.target 和 verification command。",
+      "verification_commands": [
+        "npm run examples:gridworld:feedback",
+        "npm run examples:reports:check"
+      ]
+    },
+    {
+      "id": "lo-3",
+      "title": "把来源转成案例证据",
+      "competency": "能把公开 artifact、X 线索或内部线索整理成来源状态、case card 和验证计划。",
+      "learning_unit_ids": [
+        "u2-public-artifacts",
+        "u3-control-and-systems"
+      ],
+      "exercise_ids": [
+        "A4",
+        "D1",
+        "D3"
+      ],
+      "rubric_module_ids": [
+        "source-and-problem",
+        "regression-and-course-expression"
+      ],
+      "evidence": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/public/x-sources.json",
+        "templates/case-card.md"
+      ],
+      "assessment": "学生能保留来源层级，不把未复核线索写成已复现事实。",
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run x:sources:check"
+      ]
+    },
+    {
+      "id": "lo-4",
+      "title": "设计可维护 heuristic patch",
+      "competency": "能把一次规则更新限定在可审查目标，并用测试或 replay 防止退化。",
+      "learning_unit_ids": [
+        "u3-control-and-systems",
+        "u5-anti-forgetting-project"
+      ],
+      "exercise_ids": [
+        "B2",
+        "B4",
+        "B5",
+        "B6",
+        "C4",
+        "D4"
+      ],
+      "rubric_module_ids": [
+        "heuristic-patch",
+        "regression-and-course-expression"
+      ],
+      "evidence": [
+        "docs/zh-cn/slides/lecture-3/index.md",
+        "docs/zh-cn/slides/lab-2/index.md",
+        "templates/anti-forgetting-checklist.md",
+        "tests/"
+      ],
+      "assessment": "学生能说明旧行为、风险更新、回归保护和必须保留的 probe。",
+      "verification_commands": [
+        "npm run examples:test",
+        "npm run examples:feedback"
+      ]
+    },
+    {
+      "id": "lo-5",
+      "title": "完成研究型课程交付",
+      "competency": "能提交 case card、experiment record、feedback report、测试路径和 verify 结果。",
+      "learning_unit_ids": [
+        "u4-research-claims",
+        "u5-anti-forgetting-project"
+      ],
+      "exercise_ids": [
+        "C1",
+        "C2",
+        "C5",
+        "D2",
+        "D5"
+      ],
+      "rubric_module_ids": [
+        "feedback-report",
+        "regression-and-course-expression"
+      ],
+      "evidence": [
+        "docs/zh-cn/appendix/rubric.md",
+        "docs/zh-cn/appendix/exercises.md",
+        "docs/public/reproducibility-checklist.json",
+        "docs/public/contribution-contract.json"
+      ],
+      "assessment": "学生能用 Rubric 自评，并让仓库级结构、报告、路由和构建一起通过。",
+      "verification_commands": [
+        "npm run exercises:check",
+        "npm run reproducibility:check",
+        "npm run verify"
+      ]
+    }
+  ]
+}

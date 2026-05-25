@@ -1,0 +1,121 @@
+{
+  "$schema": "/evaluation-metrics.schema.json",
+  "schema_version": 1,
+  "metrics": [
+    {
+      "id": "task-outcome",
+      "title": "任务结果",
+      "research_question": "HL 更新是否让原任务从失败状态进入更可接受的行为区间？",
+      "definition": "比较 baseline outcome 与 heuristic outcome，但必须同时保留 failure mode、probe 和边界说明。",
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "claim_ids": ["software-structure-learning", "feedback-report-as-agent-input"],
+      "evidence": [
+        "docs/zh-cn/appendix/benchmark-results.md",
+        "docs/public/benchmark-summary.json",
+        "experiments/gridworld/latest.json"
+      ],
+      "verification_commands": [
+        "npm run benchmark:summary:check",
+        "npm run examples:reports:check"
+      ],
+      "failure_mode": "只汇报分数提升，忽略 baseline failure 是否真的被定位。",
+      "course_use": "用于 Lab 1 和所有示例 README 的结果解释。"
+    },
+    {
+      "id": "failure-isolation",
+      "title": "失败隔离",
+      "research_question": "反馈是否把错误缩小到可更新的 heuristic target，而不是泛泛说策略不好？",
+      "definition": "检查 report 中的 feedback、candidate_update.target 与案例 failure mode 是否一致。",
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "claim_ids": ["software-structure-learning", "failure-modes-over-average-score"],
+      "evidence": [
+        "docs/public/example-registry.json",
+        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/appendix/case-registry.md"
+      ],
+      "verification_commands": [
+        "npm run examples:registry:check",
+        "npm run cases:check"
+      ],
+      "failure_mode": "把一次失败解释成整体能力不足，无法形成可审查的最小更新。",
+      "course_use": "用于案例卡和研究命题讨论，帮助学生区分错误现象与可更新对象。"
+    },
+    {
+      "id": "update-cost",
+      "title": "更新成本",
+      "research_question": "一次 HL patch 需要修改多少知识、代码或控制参数，是否能被学生复现？",
+      "definition": "记录修改面、输入证据、实验命令和复盘模板，避免把不可复现经验写成课程结论。",
+      "example_ids": ["gridworld", "traffic-grid", "ant-gait-replay"],
+      "claim_ids": ["feedback-report-as-agent-input", "hl-rl-dl-division-of-labor"],
+      "evidence": [
+        "templates/experiment-record.md",
+        "templates/anti-forgetting-checklist.md",
+        "docs/zh-cn/appendix/research-projects.md"
+      ],
+      "verification_commands": [
+        "npm run research:projects:check",
+        "npm run checkpoints:check"
+      ],
+      "failure_mode": "只给最终 patch，不记录学生或研究者复跑时需要的证据和命令。",
+      "course_use": "用于研究项目和反遗忘项目验收。"
+    },
+    {
+      "id": "regression-risk",
+      "title": "回归风险",
+      "research_question": "新的 heuristic 是否保护旧经验，还是用当前案例覆盖了既有行为？",
+      "definition": "每个更新都必须绑定测试、报告和回归探针，确保旧 failure mode 不被静默放大。",
+      "example_ids": [
+        "robot-soccer",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "claim_ids": ["failure-modes-over-average-score", "hl-rl-dl-division-of-labor"],
+      "evidence": [
+        "tests/",
+        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/appendix/reproducibility.md"
+      ],
+      "verification_commands": [
+        "npm run examples:test",
+        "npm run verify"
+      ],
+      "failure_mode": "当前 probe 变好但旧测试缺失，导致课程无法判断是否发生遗忘。",
+      "course_use": "用于 Lab 2、Rubric 和贡献审查。"
+    },
+    {
+      "id": "source-boundary",
+      "title": "来源边界",
+      "research_question": "一个案例的来源状态是否足以支撑它在课程中的声明强度？",
+      "definition": "把公开文章、GitHub artifact、X 线索和飞书线索分层登记，未复核材料只作为研究线索。",
+      "example_ids": ["vizdoom-replay", "breakout-replay", "x-signal"],
+      "claim_ids": ["software-structure-learning", "source-status-is-course-structure"],
+      "evidence": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/public/case-registry.json",
+        "docs/public/x-sources.json"
+      ],
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run cases:check",
+        "npm run x:sources:check"
+      ],
+      "failure_mode": "把待采集或 referenced-not-cached 的线索写成已经复现的实验事实。",
+      "course_use": "用于来源登记、引用页和 X/FieldTheory 案例整理。"
+    }
+  ]
+}

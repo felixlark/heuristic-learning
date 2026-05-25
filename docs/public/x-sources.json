@@ -1,0 +1,141 @@
+{
+  "$schema": "/x-sources.schema.json",
+  "schema_version": 1,
+  "tooling": {
+    "tool": "fieldtheory-cli",
+    "command": "ft",
+    "cache_path": "/Users/longbiao/.ft-bookmarks/bookmarks.jsonl",
+    "last_checked": "2026-05-25",
+    "status_command": "ft status"
+  },
+  "sources": [
+    {
+      "id": "logicrw-jiayi-hl-summary-2026-05-08",
+      "url": "https://x.com/0xLogicrw/status/2052701677615218717",
+      "author": "@0xLogicrw",
+      "date": "2026-05-08",
+      "source_level": "secondary-summary",
+      "cache_status": "cached",
+      "ft_commands": [
+        "ft search \"Jiayi Weng\" --limit 10",
+        "ft show 2052701677615218717"
+      ],
+      "claims_to_extract": [
+        "Breakout strategy code improved through repeated code edits rather than neural-network retraining.",
+        "The cited Jiayi post frames Heuristic Learning as maintaining software artifacts such as predictors, detectors, logs, tests, and rules.",
+        "The summary states a boundary: complex perception should be handled by learned perception modules rather than pure if-else code."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/breakout/index.md",
+        "docs/zh-cn/cases/ant-gait/index.md",
+        "docs/zh-cn/stage-3/index.md"
+      ],
+      "verification_status": "usable-as-secondary-source",
+      "boundary": "Use this as a Chinese secondary summary only; do not treat its numeric claims as independently reproduced evidence."
+    },
+    {
+      "id": "jiayi-original-hl-post-2026-05-08",
+      "url": "https://x.com/Trinkle23897/status/2052596837547495549",
+      "author": "@Trinkle23897",
+      "date": "2026-05-08",
+      "source_level": "primary-url-referenced",
+      "cache_status": "referenced-not-cached",
+      "ft_commands": [
+        "ft show 2052596837547495549",
+        "ft search \"2052596837547495549\" --limit 20"
+      ],
+      "claims_to_extract": [
+        "Primary post URL referenced by the cached @0xLogicrw summary.",
+        "Needs direct retrieval before quoting or expanding claims beyond what public article and artifact code support."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/research-roadmap.md"
+      ],
+      "verification_status": "needs-direct-cache-or-api-read",
+      "boundary": "The URL is known, but the post is not present in the current local FieldTheory bookmark cache."
+    },
+    {
+      "id": "logicrw-fluid-control-lead-2026-05-19",
+      "url": "https://x.com/0xLogicrw/status/2056695371984982195",
+      "author": "@0xLogicrw",
+      "date": "2026-05-19",
+      "source_level": "secondary-lead",
+      "cache_status": "to-collect",
+      "ft_commands": [
+        "ft search \"fluid\" --limit 20",
+        "ft search \"2056695371984982195\" --limit 20"
+      ],
+      "claims_to_extract": [
+        "Possible downstream application of Heuristic Learning to fluid-control or simulation control.",
+        "Needs the cited original post and any public code before becoming a case card."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/appendix/research-roadmap.md"
+      ],
+      "verification_status": "not-yet-usable-as-evidence",
+      "boundary": "Keep as a collection target until ft sync/API or public web retrieval finds the referenced original material."
+    }
+  ],
+  "extraction_cards": [
+    {
+      "id": "breakout-code-as-memory",
+      "source_id": "logicrw-jiayi-hl-summary-2026-05-08",
+      "concept": "代码作为经验记忆",
+      "course_claim": "Breakout 案例把学习结果保存在球路预测、卡球检测、回归测试和实验日志中，而不是保存在新训练的神经网络权重中。",
+      "evidence_status": "secondary-source-plus-public-artifact",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/breakout/index.md",
+        "docs/zh-cn/theory/learning-loop.md"
+      ],
+      "runnable_example": "examples/breakout-replay/",
+      "verification": [
+        "npm run examples:breakout-replay",
+        "npm run examples:breakout-replay:feedback",
+        "npm run examples:test"
+      ],
+      "boundary": "387 到 864 的分数来自二手中文转述；课程只把代码更新对象和 replay probe 写成可运行材料。"
+    },
+    {
+      "id": "ant-controller-as-readable-policy",
+      "source_id": "logicrw-jiayi-hl-summary-2026-05-08",
+      "concept": "可读控制器作为策略",
+      "course_claim": "Ant 案例把连续控制问题压缩成 CPG、stance duty、speed adaptation 和 yaw feedback 等可维护控制器组件。",
+      "evidence_status": "secondary-source-plus-public-artifact",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/ant-gait/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": "examples/ant-gait-replay/",
+      "verification": [
+        "npm run examples:ant-gait-replay",
+        "npm run examples:ant-gait-replay:feedback",
+        "npm run examples:test"
+      ],
+      "boundary": "轻量 replay 只复现控制器思想，不声称达到真实 MuJoCo 分数。"
+    },
+    {
+      "id": "hybrid-perception-boundary",
+      "source_id": "logicrw-jiayi-hl-summary-2026-05-08",
+      "concept": "感知与规则的混合边界",
+      "course_claim": "复杂视觉感知不应被硬写成 if-else；更稳妥的 HL 架构应把感知模型、可维护规则、日志审查和周期性数据更新分层。",
+      "evidence_status": "secondary-source-summary",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/stage-3/index.md",
+        "docs/zh-cn/appendix/research-roadmap.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run claims:registry:check"
+      ],
+      "boundary": "该卡只作为研究命题和课程讨论入口；没有对应 runnable example 前不写成实验结论。"
+    }
+  ]
+}

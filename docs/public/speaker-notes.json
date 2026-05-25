@@ -1,0 +1,135 @@
+{
+  "$schema": "/speaker-notes.schema.json",
+  "schema_version": 1,
+  "notes": [
+    {
+      "id": "note-lecture-1",
+      "material_id": "lecture-1",
+      "title": "第 1 讲讲者备注",
+      "slide_path": "docs/zh-cn/slides/lecture-1/index.md",
+      "opening_question": "如果学习对象不是权重，而是策略代码、测试和反馈报告，学习闭环应该如何定义？",
+      "demo_checkpoints": [
+        "先跑 GridWorld，让学生看到 baseline 与 heuristic 的同环境对照。",
+        "打开 feedback report，定位 candidate_update.target 和 verification。",
+        "强调 report 是下一轮编码智能体的输入，不只是实验日志。"
+      ],
+      "discussion_prompts": [
+        "为什么一个显式规则也可能是可学习系统的一部分？",
+        "HL 与手写规则的分界线在哪里？"
+      ],
+      "common_confusions": [
+        "把 HL 等同于 if-else 规则集合。",
+        "只看 reward，不看 failure probe 和回归测试。"
+      ],
+      "exit_ticket": "用 3 句话解释一次 HL 更新需要保留哪些证据。",
+      "verification_commands": [
+        "npm run examples:gridworld:feedback",
+        "npm run examples:test"
+      ]
+    },
+    {
+      "id": "note-lecture-2",
+      "material_id": "lecture-2",
+      "title": "第 2 讲讲者备注",
+      "slide_path": "docs/zh-cn/slides/lecture-2/index.md",
+      "opening_question": "一个 X 线索、GitHub artifact 或飞书需求怎样进入课程主线而不过度声明？",
+      "demo_checkpoints": [
+        "用 X 线索案例说明 source status 与 claim strength 的关系。",
+        "展示 VizDoom 或 Breakout replay 如何从 artifact 压缩成最小 probe。",
+        "让学生把 signal 写成 case card，而不是直接写成结论。"
+      ],
+      "discussion_prompts": [
+        "什么证据足以把待采集线索升级为已复现案例？",
+        "为什么 baseline 必须有教学价值，而不是故意写坏？"
+      ],
+      "common_confusions": [
+        "把二手转述写成一手来源。",
+        "把公开 artifact 的轻量 replay 等同于完整环境复现。"
+      ],
+      "exit_ticket": "提交一张含 Signal、Probe、Baseline、Patch、Report、Regression 的 case card 草稿。",
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run cases:check",
+        "npm run examples:reports:check"
+      ]
+    },
+    {
+      "id": "note-lecture-3",
+      "material_id": "lecture-3",
+      "title": "第 3 讲讲者备注",
+      "slide_path": "docs/zh-cn/slides/lecture-3/index.md",
+      "opening_question": "一次 patch 通过当前 probe 后，为什么仍可能破坏旧经验？",
+      "demo_checkpoints": [
+        "对比 Ant yaw_drift 与 Traffic spillback，说明连续控制和系统约束里的回归风险。",
+        "用 evaluation metrics 解释任务结果、失败隔离、更新成本和回归风险的差异。",
+        "让学生先设计坏更新，再反推需要的测试。"
+      ],
+      "discussion_prompts": [
+        "HL 的遗忘与神经网络灾难性遗忘有什么不同？",
+        "什么时候应该拒绝一个看起来能提升当前结果的 patch？"
+      ],
+      "common_confusions": [
+        "把通过当前测试误认为没有回归风险。",
+        "把维护成本当成文档问题，而不是研究评估指标。"
+      ],
+      "exit_ticket": "写出一个会导致工程型遗忘的坏更新，并给出对应回归测试。",
+      "verification_commands": [
+        "npm run examples:test",
+        "npm run metrics:check",
+        "npm run verify"
+      ]
+    },
+    {
+      "id": "note-lab-1",
+      "material_id": "lab-1",
+      "title": "Lab 1 讲者备注",
+      "slide_path": "docs/zh-cn/slides/lab-1/index.md",
+      "opening_question": "从失败 probe 到 feedback report 的最小闭环如何亲手跑通？",
+      "demo_checkpoints": [
+        "先确认 npm run verify 通过，避免在坏基线上做实验。",
+        "让学生只改一个策略点，并同步观察 tests 与 latest.json。",
+        "收尾时要求每组说清楚 baseline failure、heuristic patch 和剩余风险。"
+      ],
+      "discussion_prompts": [
+        "为什么只改策略文件不足以构成一次课程交付？",
+        "feedback report 中哪一项最能帮助下一轮智能体？"
+      ],
+      "common_confusions": [
+        "同时改多个示例，导致无法解释结果来源。",
+        "改完代码不重新生成 feedback report。"
+      ],
+      "exit_ticket": "提交一份 experiment record，包含改动对象、失败 probe、测试和 verify 结果。",
+      "verification_commands": [
+        "npm run examples:feedback",
+        "npm run examples:reports:check",
+        "npm run verify"
+      ]
+    },
+    {
+      "id": "note-lab-2",
+      "material_id": "lab-2",
+      "title": "Lab 2 讲者备注",
+      "slide_path": "docs/zh-cn/slides/lab-2/index.md",
+      "opening_question": "如何在写 patch 前预测它可能遗忘什么？",
+      "demo_checkpoints": [
+        "选择一个案例，先写旧经验和不能破坏的行为。",
+        "让学生设计坏更新，再映射到测试文件和 report 字段。",
+        "最后用 Rubric 自评，避免只用代码通过来判断交付质量。"
+      ],
+      "discussion_prompts": [
+        "哪些旧行为应该进入测试，哪些只适合写入来源或报告边界？",
+        "如果一个 patch 提升当前结果但增加维护成本，是否应该接受？"
+      ],
+      "common_confusions": [
+        "把反遗忘理解成多跑一次 verify。",
+        "只写风险描述，不给对应测试或 report 字段。"
+      ],
+      "exit_ticket": "提交一份 anti-forgetting checklist 和 Rubric 自评分。",
+      "verification_commands": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run rubric:check"
+      ]
+    }
+  ]
+}

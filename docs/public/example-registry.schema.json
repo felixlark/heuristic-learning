@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://longbiaochen.github.io/heuristic-learning/example-registry.schema.json",
+  "title": "Heuristic Learning Example Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "examples"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "examples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/example"
+      }
+    }
+  },
+  "$defs": {
+    "example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "failure_mode",
+        "source_status",
+        "example_dir",
+        "run_script",
+        "feedback_script",
+        "report",
+        "test",
+        "policy_target",
+        "course_links"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failure_mode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "teaching-minimal",
+            "reproduced-lightweight-artifact",
+            "reproduced-minimal-internal-signal"
+          ]
+        },
+        "example_dir": {
+          "type": "string",
+          "pattern": "^examples/.+"
+        },
+        "run_script": {
+          "type": "string",
+          "pattern": "^examples:[a-z0-9-]+$"
+        },
+        "feedback_script": {
+          "type": "string",
+          "pattern": "^examples:[a-z0-9-]+:feedback$"
+        },
+        "report": {
+          "type": "string",
+          "pattern": "^experiments/.+/latest\\.json$"
+        },
+        "test": {
+          "type": "string",
+          "pattern": "^tests/test_.+\\.py$"
+        },
+        "policy_target": {
+          "type": "string",
+          "pattern": "^examples/.+\\.py$"
+        },
+        "course_links": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^docs/zh-cn/.+\\.md$"
+          }
+        }
+      }
+    }
+  }
+}

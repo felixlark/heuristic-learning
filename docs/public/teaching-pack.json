@@ -1,0 +1,106 @@
+{
+  "$schema": "/teaching-pack.schema.json",
+  "schema_version": 1,
+  "packs": [
+    {
+      "id": "tp0-quick-orientation",
+      "title": "TP0 快速导读",
+      "duration": "90 分钟",
+      "audience": "组会/reading group",
+      "slides": [
+        "docs/zh-cn/slides/lecture-1/index.md"
+      ],
+      "readings": [
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/stage-3/index.md",
+        "docs/zh-cn/appendix/glossary.md"
+      ],
+      "demo_commands": [
+        "npm run examples:gridworld",
+        "npm run examples:gridworld:feedback"
+      ],
+      "deliverable": "exit ticket",
+      "acceptance": [
+        "能说明 HL 的更新对象",
+        "能解释 feedback report 写给谁"
+      ]
+    },
+    {
+      "id": "tp1-hands-on-workshop",
+      "title": "TP1 工作坊",
+      "duration": "2 小时",
+      "audience": "工程训练/课程实验",
+      "slides": [
+        "docs/zh-cn/slides/lab-1/index.md"
+      ],
+      "readings": [
+        "docs/zh-cn/appendix/local-setup.md",
+        "docs/zh-cn/appendix/learning-units.md",
+        "docs/zh-cn/appendix/benchmark-protocol.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "demo_commands": [
+        "npm run verify",
+        "npm run examples:feedback",
+        "npm run examples:reports:check"
+      ],
+      "deliverable": "experiment record",
+      "acceptance": [
+        "能选择一个 failure mode 并生成 report",
+        "能用测试说明旧行为没有退化"
+      ]
+    },
+    {
+      "id": "tp2-research-seminar",
+      "title": "TP2 研究讨论",
+      "duration": "2-3 周",
+      "audience": "研究生专题",
+      "slides": [
+        "docs/zh-cn/slides/lecture-2/index.md",
+        "docs/zh-cn/slides/lecture-3/index.md"
+      ],
+      "readings": [
+        "docs/zh-cn/appendix/reading-guide.md",
+        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/appendix/research-roadmap.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/research-projects.md"
+      ],
+      "demo_commands": [
+        "npm run source:registry:check",
+        "npm run claims:registry:check",
+        "npm run patterns:check"
+      ],
+      "deliverable": "claim review",
+      "acceptance": [
+        "能区分证据、假设和反例",
+        "能提出一个下一步 probe"
+      ]
+    },
+    {
+      "id": "tp3-project-course",
+      "title": "TP3 期末项目",
+      "duration": "4-6 周",
+      "audience": "mini course/capstone",
+      "slides": [
+        "docs/zh-cn/slides/index.md"
+      ],
+      "readings": [
+        "docs/zh-cn/appendix/course-schedule.md",
+        "docs/zh-cn/appendix/learning-units.md",
+        "docs/zh-cn/appendix/contribution-protocol.md",
+        "docs/zh-cn/appendix/completion-audit.md"
+      ],
+      "demo_commands": [
+        "npm run learning:units:check",
+        "npm run teaching:pack:check",
+        "npm run verify"
+      ],
+      "deliverable": "最终项目报告或 PR",
+      "acceptance": [
+        "包含来源状态、baseline failure、heuristic patch、feedback report 和测试",
+        "最终通过 npm run verify"
+      ]
+    }
+  ]
+}

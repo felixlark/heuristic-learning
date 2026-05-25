@@ -1,0 +1,116 @@
+{
+  "$schema": "/checkpoint-registry.schema.json",
+  "schema_version": 1,
+  "checkpoints": [
+    {
+      "id": "cp-0",
+      "title": "建立语境自测",
+      "learning_unit_id": "u0-context",
+      "learning_outcome_ids": ["lo-1"],
+      "prompt": "用一个案例解释 HL、Heuristic System、RL/DL 的分工，并说明哪些结论仍是研究假设。",
+      "evidence": [
+        "docs/zh-cn/stage-2/index.md",
+        "docs/zh-cn/stage-3/index.md",
+        "docs/zh-cn/theory/research-propositions.md"
+      ],
+      "verification_commands": [
+        "npm run claims:registry:check"
+      ],
+      "pass_condition": "回答必须包含反馈来源、更新对象、验证命令和未验证边界。",
+      "common_failure": "把 HL 简化成手写规则，或把未发表思想写成成熟结论。"
+    },
+    {
+      "id": "cp-1",
+      "title": "最小闭环自测",
+      "learning_unit_id": "u1-minimal-loop",
+      "learning_outcome_ids": ["lo-2"],
+      "prompt": "跑通 GridWorld feedback，指出 baseline failure、heuristic outcome 和 candidate_update.target。",
+      "evidence": [
+        "examples/heuristic-gridworld/README.md",
+        "experiments/gridworld/latest.json",
+        "docs/zh-cn/slides/lab-1/index.md"
+      ],
+      "verification_commands": [
+        "npm run examples:gridworld:feedback",
+        "npm run examples:reports:check"
+      ],
+      "pass_condition": "能解释 report 如何成为下一轮编码智能体的输入。",
+      "common_failure": "只看 success rate，不读 probe、feedback 和 candidate update。"
+    },
+    {
+      "id": "cp-2",
+      "title": "公开来源自测",
+      "learning_unit_id": "u2-public-artifacts",
+      "learning_outcome_ids": ["lo-3"],
+      "prompt": "选择一个公开 artifact 或 X 线索，说明来源状态、案例落点和不能过度声明的边界。",
+      "evidence": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/case-registry.md",
+        "docs/public/x-sources.json"
+      ],
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run cases:check",
+        "npm run x:sources:check"
+      ],
+      "pass_condition": "能区分一手原帖、二手转述、公开 artifact、轻量 replay 和待采集线索。",
+      "common_failure": "把 referenced-not-cached 或 to-collect 的 X 线索写成已复现事实。"
+    },
+    {
+      "id": "cp-3",
+      "title": "系统控制自测",
+      "learning_unit_id": "u3-control-and-systems",
+      "learning_outcome_ids": ["lo-3", "lo-4"],
+      "prompt": "对 Robot Soccer 或 Traffic Grid 说明状态、动作前提、安全约束和 regression probe。",
+      "evidence": [
+        "docs/zh-cn/cases/robot-soccer/index.md",
+        "docs/zh-cn/cases/traffic-simulation/index.md",
+        "experiments/traffic-grid/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:robot-soccer:feedback",
+        "npm run examples:traffic-grid:feedback",
+        "npm run examples:test"
+      ],
+      "pass_condition": "能说明 heuristic patch 保护的旧经验，以及为什么不能只追求当前 reward。",
+      "common_failure": "只描述最终成功路径，不保留 blocked_shot 或 spillback 这类失败 probe。"
+    },
+    {
+      "id": "cp-4",
+      "title": "研究命题自测",
+      "learning_unit_id": "u4-research-claims",
+      "learning_outcome_ids": ["lo-1", "lo-5"],
+      "prompt": "选择一个研究命题，写出证据、反例路径、对应案例和下一步实验。",
+      "evidence": [
+        "docs/zh-cn/theory/research-propositions.md",
+        "templates/claim-review.md",
+        "docs/public/claims-registry.json"
+      ],
+      "verification_commands": [
+        "npm run claims:registry:check",
+        "npm run research:projects:check"
+      ],
+      "pass_condition": "能把命题写成可反驳、可实验化的 claim review。",
+      "common_failure": "把观点写成宣传语，没有给出 falsification path。"
+    },
+    {
+      "id": "cp-5",
+      "title": "反遗忘项目自测",
+      "learning_unit_id": "u5-anti-forgetting-project",
+      "learning_outcome_ids": ["lo-4", "lo-5"],
+      "prompt": "提交一次项目或 PR 前，说明旧行为、风险更新、回归保护、Rubric 自评和 verify 结果。",
+      "evidence": [
+        "docs/zh-cn/slides/lab-2/index.md",
+        "templates/anti-forgetting-checklist.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "verification_commands": [
+        "npm run exercises:check",
+        "npm run reproducibility:check",
+        "npm run verify"
+      ],
+      "pass_condition": "交付物能同时被 Rubric、练习集、可复现性清单和总验证约束。",
+      "common_failure": "只提交代码或文字，不提交 feedback report、test path 和 verify 证据。"
+    }
+  ]
+}

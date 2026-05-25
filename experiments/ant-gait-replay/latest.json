@@ -1,0 +1,108 @@
+{
+  "case": "ant_gait_yaw_stabilization",
+  "source": {
+    "repo": "Trinkle23897/learning-beyond-gradients",
+    "artifact": "mujoco/ant/heuristic_ant.py",
+    "note": "The course replay keeps the CPG, speed adaptation, stance duty and yaw feedback ideas without requiring MuJoCo."
+  },
+  "environment": {
+    "target_speed": 5.8,
+    "yaw_limit": 0.72,
+    "initial_yaw_rate": 0.105,
+    "max_steps": 24
+  },
+  "policies": [
+    {
+      "policy": "baseline",
+      "reason": "yaw_drift",
+      "reward": -1.436,
+      "steps": 4,
+      "first_commands": [
+        {
+          "phase_increment": 0.66,
+          "stance_duty": 0.5,
+          "yaw_feedback": 0.0,
+          "drive": 0.92
+        },
+        {
+          "phase_increment": 0.66,
+          "stance_duty": 0.5,
+          "yaw_feedback": 0.0,
+          "drive": 0.92
+        },
+        {
+          "phase_increment": 0.66,
+          "stance_duty": 0.5,
+          "yaw_feedback": 0.0,
+          "drive": 0.92
+        },
+        {
+          "phase_increment": 0.66,
+          "stance_duty": 0.5,
+          "yaw_feedback": 0.0,
+          "drive": 0.92
+        }
+      ],
+      "final_state": {
+        "step": 4,
+        "phase": 2.64,
+        "speed": 5.29,
+        "yaw": 0.79,
+        "yaw_rate": 0.253,
+        "stability": 0.931,
+        "distance": 0.98
+      }
+    },
+    {
+      "policy": "heuristic",
+      "reason": "stable_stride",
+      "reward": 51.003,
+      "steps": 24,
+      "first_commands": [
+        {
+          "phase_increment": 0.6929,
+          "stance_duty": 0.6515,
+          "yaw_feedback": 0.1418,
+          "drive": 1.084
+        },
+        {
+          "phase_increment": 0.6858,
+          "stance_duty": 0.648,
+          "yaw_feedback": 0.2194,
+          "drive": 1.0698
+        },
+        {
+          "phase_increment": 0.679,
+          "stance_duty": 0.6445,
+          "yaw_feedback": 0.2688,
+          "drive": 1.0562
+        },
+        {
+          "phase_increment": 0.6723,
+          "stance_duty": 0.6412,
+          "yaw_feedback": 0.2903,
+          "drive": 1.0429
+        }
+      ],
+      "final_state": {
+        "step": 24,
+        "phase": 15.32167999999999,
+        "speed": 11.411,
+        "yaw": 0.239,
+        "yaw_rate": -0.002,
+        "stability": 0.774,
+        "distance": 9.72
+      }
+    }
+  ],
+  "feedback": [
+    "The baseline fixed rhythm cannot absorb a persistent yaw perturbation.",
+    "The heuristic policy adapts cadence and stance duty while feeding yaw/yaw-rate back into the gait.",
+    "The maintainable update target is the gait controller, not a black-box reward optimizer."
+  ],
+  "candidate_update": {
+    "target": "examples/ant-gait-replay/policies.py",
+    "rule": "Keep yaw feedback and speed-adaptive stance duty coupled when tuning gait parameters.",
+    "verification": "python3 -m unittest discover -s tests"
+  }
+}

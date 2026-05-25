@@ -1,0 +1,130 @@
+{
+  "$schema": "/paper-blueprint.schema.json",
+  "schema_version": 1,
+  "sections": [
+    {
+      "id": "abstract-and-positioning",
+      "title": "摘要与定位",
+      "purpose": "用一段话说明 HL 的研究对象、当前证据形态和课程仓库边界。",
+      "claim_ids": ["software-structure-learning", "hl-rl-dl-division-of-labor"],
+      "metric_ids": [],
+      "example_ids": [],
+      "evidence": [
+        "docs/zh-cn/stage-2/index.md",
+        "docs/zh-cn/stage-3/index.md",
+        "docs/zh-cn/appendix/reading-guide.md"
+      ],
+      "verification_commands": [
+        "npm run claims:registry:check",
+        "npm run source:registry:check"
+      ],
+      "writing_prompt": "写清楚 HL 暂时是研究假设和课程化框架，不是已有成熟论文结论。",
+      "boundary": "不得把未发表思想写成已被同行评审验证的理论。"
+    },
+    {
+      "id": "problem-and-related-work",
+      "title": "问题定义与相关工作",
+      "purpose": "把 HL 放在 RL/DL、教学仓库和 Jiayi Weng 公开来源之间，说明为什么需要新框架。",
+      "claim_ids": ["hl-rl-dl-division-of-labor", "source-status-is-course-structure"],
+      "metric_ids": ["source-boundary"],
+      "example_ids": [],
+      "evidence": [
+        "docs/zh-cn/appendix/references.md",
+        "docs/zh-cn/appendix/course-patterns.md",
+        "docs/zh-cn/appendix/source-registry.md"
+      ],
+      "verification_commands": [
+        "npm run patterns:check",
+        "npm run source:registry:check"
+      ],
+      "writing_prompt": "解释 EasyVibe、d2l、llm.c、easy-rl 对本仓库组织方式的启发，以及 HL 与 RL/DL 的分工。",
+      "boundary": "相关工作只比较组织方式和问题边界，不声称 HL 已取代 RL 或 DL。"
+    },
+    {
+      "id": "method-learning-loop",
+      "title": "方法：学习闭环",
+      "purpose": "定义 signal、probe、baseline、heuristic patch、feedback report 和 regression gate。",
+      "claim_ids": ["feedback-report-as-agent-input", "failure-modes-over-average-score"],
+      "metric_ids": ["failure-isolation", "update-cost", "regression-risk"],
+      "example_ids": ["gridworld", "robot-soccer", "traffic-grid"],
+      "evidence": [
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/theory/research-framework.md",
+        "docs/public/example-registry.json"
+      ],
+      "verification_commands": [
+        "npm run examples:registry:check",
+        "npm run metrics:check"
+      ],
+      "writing_prompt": "把 feedback report 写成方法的一部分，而不是实验后附带日志。",
+      "boundary": "方法描述应以当前可运行示例为证据，不扩展到未实现系统。"
+    },
+    {
+      "id": "experiments-and-results",
+      "title": "实验与结果",
+      "purpose": "用六个轻量 replay 展示 baseline failure、heuristic outcome、报告和测试路径。",
+      "claim_ids": ["failure-modes-over-average-score", "feedback-report-as-agent-input"],
+      "metric_ids": ["task-outcome", "failure-isolation", "regression-risk"],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "evidence": [
+        "docs/zh-cn/appendix/benchmark-results.md",
+        "docs/public/benchmark-summary.json",
+        "experiments/gridworld/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:feedback",
+        "npm run examples:reports:check",
+        "npm run benchmark:summary:check"
+      ],
+      "writing_prompt": "按案例说明 baseline 失败、heuristic 改动、candidate update 和测试，而不是只列分数。",
+      "boundary": "这些实验是教学型轻量 replay，不等同于完整 MuJoCo、Atari 或 VizDoom 复现。"
+    },
+    {
+      "id": "discussion-and-threats",
+      "title": "讨论、局限与威胁",
+      "purpose": "明确来源、复现、高保真环境、X/飞书线索和视觉验收的剩余边界。",
+      "claim_ids": ["source-status-is-course-structure"],
+      "metric_ids": ["source-boundary", "update-cost", "regression-risk"],
+      "example_ids": ["vizdoom-replay", "breakout-replay", "ant-gait-replay"],
+      "evidence": [
+        "docs/zh-cn/appendix/citation.md",
+        "docs/zh-cn/appendix/reproducibility.md",
+        "docs/zh-cn/appendix/visual-verification.md"
+      ],
+      "verification_commands": [
+        "npm run reproducibility:check",
+        "npm run visual:verification:check",
+        "npm run x:sources:check"
+      ],
+      "writing_prompt": "把局限写成可行动的威胁和下一步，而不是弱化结论的免责声明。",
+      "boundary": "未完成 Browser/IAB 或真实环境复现时，不得写成发布验收或高保真复现已通过。"
+    },
+    {
+      "id": "course-and-reuse",
+      "title": "课程化与复用",
+      "purpose": "说明仓库如何复用 EasyVibe 式文档结构，同时保留 HL 的研究与动手闭环。",
+      "claim_ids": ["source-status-is-course-structure", "feedback-report-as-agent-input"],
+      "metric_ids": ["update-cost", "source-boundary"],
+      "example_ids": ["gridworld"],
+      "evidence": [
+        "docs/zh-cn/appendix/learning-units.md",
+        "docs/zh-cn/appendix/speaker-notes.md",
+        "docs/zh-cn/appendix/teaching-pack.md"
+      ],
+      "verification_commands": [
+        "npm run learning:units:check",
+        "npm run speaker:notes:check",
+        "npm run teaching:pack:check"
+      ],
+      "writing_prompt": "说明学生、研究者、教师和编码智能体如何从同一套 registry 进入课程。",
+      "boundary": "课程化复用只说明结构与验证方法，不把 EasyVibe 内容照搬到 HL。"
+    }
+  ]
+}

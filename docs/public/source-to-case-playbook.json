@@ -1,0 +1,139 @@
+{
+  "$schema": "/source-to-case-playbook.schema.json",
+  "schema_version": 1,
+  "scope": "turning-source-signals-into-course-cases",
+  "workflows": [
+    {
+      "id": "x-thread-to-case-card",
+      "signal_type": "X / FieldTheory thread",
+      "source_checks": [
+        "Run ft status and record cache freshness.",
+        "Run ft show or ft search for the exact status id before extracting claims.",
+        "Separate primary author posts, secondary summaries, quoted posts, and inferred commentary."
+      ],
+      "required_artifacts": [
+        "docs/public/x-sources.json",
+        "docs/zh-cn/cases/x-signal/index.md",
+        "templates/case-card.md",
+        "templates/reproduction-note.md",
+        "docs/zh-cn/appendix/source-registry.md"
+      ],
+      "status_gate": "cached or referenced-not-cached sources can become structured case cards; to-collect sources stay in the roadmap.",
+      "verification_commands": [
+        "npm run x:sources:check",
+        "npm run source:registry:check",
+        "npm run cases:check",
+        "npm run research:logbook:check"
+      ],
+      "course_landing": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/slides/lecture-2/index.md",
+        "docs/zh-cn/appendix/exercises.md"
+      ],
+      "forbidden_claims": [
+        "Do not quote a referenced-not-cached primary post as if it was directly read.",
+        "Do not treat secondary numeric scores as reproduced benchmark results.",
+        "Do not store X cookies, API tokens, or private browser state in the repository."
+      ]
+    },
+    {
+      "id": "public-artifact-to-replay",
+      "signal_type": "Public code artifact",
+      "source_checks": [
+        "Identify the exact artifact file or public repository path.",
+        "Extract the failure mode, observable state, action surface, and policy update target.",
+        "State what the lightweight replay removes from the original runtime."
+      ],
+      "required_artifacts": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/public/example-registry.json",
+        "docs/public/artifact-gap-analysis.json",
+        "templates/experiment-record.md",
+        "templates/reproduction-note.md"
+      ],
+      "status_gate": "A public artifact becomes reproduced only after a runnable example, feedback report, and regression test exist.",
+      "verification_commands": [
+        "npm run examples:test",
+        "npm run examples:reports:check",
+        "npm run artifact:gap:check",
+        "npm run research:logbook:check"
+      ],
+      "course_landing": [
+        "docs/zh-cn/cases/index.md",
+        "docs/zh-cn/appendix/benchmark-protocol.md",
+        "docs/zh-cn/appendix/artifact-gap-analysis.md"
+      ],
+      "forbidden_claims": [
+        "Do not claim full Atari, VizDoom, or MuJoCo reproduction from a lightweight replay.",
+        "Do not remove source attribution when simplifying dependencies.",
+        "Do not skip the report and test paths when adding a replay."
+      ]
+    },
+    {
+      "id": "internal-signal-to-minimal-env",
+      "signal_type": "Internal Feishu or private operational signal",
+      "source_checks": [
+        "Record only a sanitized source label, date, and problem shape.",
+        "Translate the private task into an abstract environment and failure mode.",
+        "Confirm that no raw message, meeting note, private link, or personal data enters the repository."
+      ],
+      "required_artifacts": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "SECURITY.md",
+        "templates/case-card.md",
+        "templates/experiment-record.md",
+        "templates/reproduction-note.md"
+      ],
+      "status_gate": "Internal signals can become minimal environments after sanitization; they cannot publish raw source text.",
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run examples:test",
+        "npm run contribution:contract:check",
+        "npm run research:logbook:check"
+      ],
+      "course_landing": [
+        "docs/zh-cn/cases/robot-soccer/index.md",
+        "docs/zh-cn/cases/traffic-simulation/index.md",
+        "docs/zh-cn/appendix/citation.md"
+      ],
+      "forbidden_claims": [
+        "Do not publish Feishu raw content, meeting transcripts, or private links.",
+        "Do not imply a sanitized toy environment is a production deployment.",
+        "Do not include private logs or screenshots."
+      ]
+    },
+    {
+      "id": "hypothesis-to-research-project",
+      "signal_type": "Research hypothesis or uncached lead",
+      "source_checks": [
+        "Mark the source as to-collect, located, or working hypothesis.",
+        "Write the falsification path before writing the conclusion.",
+        "Bind the hypothesis to a future example, metric, or artifact gap."
+      ],
+      "required_artifacts": [
+        "templates/claim-review.md",
+        "templates/reproduction-note.md",
+        "docs/public/claims-registry.json",
+        "docs/public/research-projects.json",
+        "docs/zh-cn/appendix/research-roadmap.md"
+      ],
+      "status_gate": "A hypothesis stays out of reproduced claims until it has an example, metric, and verification command.",
+      "verification_commands": [
+        "npm run claims:registry:check",
+        "npm run research:projects:check",
+        "npm run metrics:check",
+        "npm run research:logbook:check"
+      ],
+      "course_landing": [
+        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/appendix/research-projects.md",
+        "docs/zh-cn/appendix/research-roadmap.md"
+      ],
+      "forbidden_claims": [
+        "Do not turn a hypothesis into a mainline claim without evidence.",
+        "Do not hide missing X/API retrieval behind vague community wording.",
+        "Do not treat a project proposal as an experiment result."
+      ]
+    }
+  ]
+}

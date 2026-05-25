@@ -1,0 +1,294 @@
+{
+  "$schema": "/completion-audit.schema.json",
+  "schema_version": 1,
+  "objective": "Build a verifiable EasyVibe-inspired Heuristic Learning teaching and research repository with theory content, runnable examples, and validated docs/code structure.",
+  "requirements": [
+    {
+      "id": "chinese-course-entry",
+      "title": "中文课程入口",
+      "evidence": [
+        "README.md",
+        "docs/zh-cn/index.md",
+        "docs/zh-cn/course-map/index.md",
+        "docs/zh-cn/syllabus/index.md",
+        "docs/zh-cn/appendix/learning-units.md",
+        "docs/zh-cn/appendix/learning-outcomes.md",
+        "docs/zh-cn/appendix/checkpoints.md"
+      ],
+      "verification": [
+        "npm run course:structure:check",
+        "npm run learning:units:check",
+        "npm run learning:outcomes:check",
+        "npm run checkpoints:check"
+      ]
+    },
+    {
+      "id": "theory-foundation",
+      "title": "理论积累",
+      "evidence": [
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/theory/research-framework.md",
+        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/appendix/reading-guide.md",
+        "docs/zh-cn/appendix/evaluation-metrics.md",
+        "docs/public/evaluation-metrics.json",
+        "docs/zh-cn/appendix/paper-blueprint.md",
+        "docs/public/paper-blueprint.json",
+        "docs/zh-cn/appendix/research-logbook.md",
+        "docs/public/research-logbook.json"
+      ],
+      "verification": [
+        "npm run claims:registry:check",
+        "npm run metrics:check",
+        "npm run paper:blueprint:check",
+        "npm run research:logbook:check",
+        "npm run course:manifest:check"
+      ]
+    },
+    {
+      "id": "runnable-examples",
+      "title": "可运行示例",
+      "evidence": [
+        "examples/",
+        "tests/",
+        "experiments/",
+        "docs/public/code-tour.json",
+        "docs/public/benchmark-summary.json",
+        "docs/public/ablation-plan.json",
+        "docs/public/artifact-gap-analysis.json"
+      ],
+      "verification": [
+        "npm run examples:test",
+        "npm run examples:feedback",
+        "npm run code:tour:check",
+        "npm run benchmark:summary:check",
+        "npm run ablation:plan:check",
+        "npm run artifact:gap:check"
+      ]
+    },
+    {
+      "id": "case-library",
+      "title": "案例库",
+      "evidence": [
+        "docs/zh-cn/cases/index.md",
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/source-to-case-playbook.md",
+        "docs/public/source-to-case-playbook.json",
+        "docs/zh-cn/appendix/case-registry.md",
+        "docs/public/case-registry.json"
+      ],
+      "verification": [
+        "npm run source:registry:check",
+        "npm run cases:check",
+        "npm run x:sources:check",
+        "npm run source:case:check"
+      ]
+    },
+    {
+      "id": "teaching-materials",
+      "title": "课程材料",
+      "evidence": [
+        "docs/zh-cn/slides/index.md",
+        "docs/zh-cn/appendix/speaker-notes.md",
+        "docs/public/speaker-notes.json",
+        "docs/zh-cn/appendix/instructor-guide.md",
+        "docs/zh-cn/appendix/teaching-pack.md",
+        "docs/zh-cn/appendix/concept-graph.md",
+        "docs/zh-cn/appendix/learning-outcomes.md",
+        "docs/zh-cn/appendix/research-projects.md",
+        "docs/zh-cn/appendix/research-logbook.md",
+        "docs/public/research-logbook.json",
+        "docs/zh-cn/appendix/exercises.md",
+        "docs/zh-cn/appendix/rubric.md"
+      ],
+      "verification": [
+        "npm run teaching:registry:check",
+        "npm run slides:check",
+        "npm run speaker:notes:check",
+        "npm run rubric:check",
+        "npm run exercises:check",
+        "npm run concept:graph:check",
+        "npm run learning:outcomes:check",
+        "npm run teaching:pack:check",
+        "npm run research:projects:check",
+        "npm run research:logbook:check",
+        "npm run patterns:check"
+      ]
+    },
+    {
+      "id": "machine-readable-entrypoints",
+      "title": "机器可读入口",
+      "evidence": [
+        "docs/public/course-manifest.json",
+        "docs/public/troubleshooting-tree.json",
+        "docs/public/troubleshooting-tree.schema.json",
+        "docs/public/llms.txt"
+      ],
+      "verification": [
+        "npm run course:manifest:check",
+        "npm run troubleshooting:tree:check",
+        "npm run docs:routes:check"
+      ]
+    },
+    {
+      "id": "contribution-and-release-governance",
+      "title": "贡献与发布治理",
+      "evidence": [
+        "CONTRIBUTING.md",
+        ".github/pull_request_template.md",
+        ".github/ISSUE_TEMPLATE/source-signal.yml",
+        "docs/public/contribution-contract.json",
+        "docs/zh-cn/appendix/contribution-protocol.md",
+        "docs/zh-cn/appendix/release-checklist.md",
+        "CHANGELOG.md",
+        "LICENSE",
+        "CITATION.cff"
+      ],
+      "verification": [
+        "npm run contribution:contract:check",
+        "npm run course:structure:check"
+      ]
+    },
+    {
+      "id": "source-and-security-boundaries",
+      "title": "来源和安全边界",
+      "evidence": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/public/x-sources.json",
+        "docs/zh-cn/appendix/citation.md",
+        "SECURITY.md"
+      ],
+      "verification": [
+        "npm run source:registry:check",
+        "npm run x:sources:check",
+        "npm run course:structure:check"
+      ]
+    },
+    {
+      "id": "documentation-build",
+      "title": "文档构建",
+      "evidence": [
+        "docs/.vitepress/config.mjs",
+        "scripts/check-routes.sh",
+        "scripts/build.mjs"
+      ],
+      "verification": [
+        "npm run docs:routes:check",
+        "npm run verify"
+      ]
+    },
+    {
+      "id": "browser-visual-acceptance",
+      "title": "浏览器视觉验收",
+      "evidence": [
+        "docs/zh-cn/appendix/visual-verification.md",
+        "docs/public/visual-verification.json",
+        "docs/public/visual-verification.schema.json",
+        "docs/public/visual-acceptance-log.json",
+        "docs/public/visual-acceptance-log.schema.json"
+      ],
+      "verification": [
+        "npm run visual:verification:check",
+        "npm run docs:routes:check",
+        "npm run release:readiness:check"
+      ]
+    },
+    {
+      "id": "reproducibility",
+      "title": "可复现性",
+      "evidence": [
+        "docs/zh-cn/appendix/reproducibility.md",
+        "docs/public/reproducibility-checklist.json",
+        "docs/public/reproducibility-checklist.schema.json"
+      ],
+      "verification": [
+        "npm run reproducibility:check",
+        "npm run verify"
+      ]
+    }
+  ],
+  "required_commands": [
+    "npm run lint",
+    "npm run examples:test",
+    "npm run examples:feedback",
+    "npm run examples:reports:check",
+    "npm run examples:registry:check",
+    "npm run code:tour:check",
+    "npm run benchmark:summary:check",
+    "npm run ablation:plan:check",
+    "npm run artifact:gap:check",
+    "npm run source:registry:check",
+    "npm run cases:check",
+    "npm run x:sources:check",
+    "npm run source:case:check",
+    "npm run claims:registry:check",
+    "npm run teaching:registry:check",
+    "npm run slides:check",
+    "npm run speaker:notes:check",
+    "npm run rubric:check",
+    "npm run exercises:check",
+    "npm run contribution:contract:check",
+    "npm run reproducibility:check",
+    "npm run troubleshooting:tree:check",
+    "npm run patterns:check",
+    "npm run concept:graph:check",
+    "npm run learning:units:check",
+    "npm run learning:outcomes:check",
+    "npm run checkpoints:check",
+    "npm run metrics:check",
+    "npm run paper:blueprint:check",
+    "npm run teaching:pack:check",
+    "npm run research:projects:check",
+    "npm run research:logbook:check",
+    "npm run visual:verification:check",
+    "npm run release:readiness:check",
+    "npm run course:manifest:check",
+    "npm run course:structure:check",
+    "npm run docs:routes:check",
+    "SITEMAP_NO_WRITE=1 npm run build"
+  ],
+  "evidence_boundaries": [
+    {
+      "id": "jiayi-source-status",
+      "topic": "Jiayi Weng 原始思想",
+      "boundary": "不写成已有正式论文结论"
+    },
+    {
+      "id": "x-fieldtheory-status",
+      "topic": "X/FieldTheory 信号",
+      "boundary": "未通过 `ft` 或公开 URL 复核前不写成已复现"
+    },
+    {
+      "id": "feishu-sanitization",
+      "topic": "飞书线索",
+      "boundary": "不公开飞书原文、会议纪要或私有链接"
+    },
+    {
+      "id": "lightweight-replay-boundary",
+      "topic": "轻量 replay",
+      "boundary": "不等同于真实 MuJoCo/Atari/VizDoom 高保真复现"
+    },
+    {
+      "id": "http-route-boundary",
+      "topic": "本地 HTTP 预检",
+      "boundary": "不等同于 GitHub Pages 发布验收"
+    },
+    {
+      "id": "browser-visual-boundary",
+      "topic": "Browser/IAB 视觉验收",
+      "boundary": "未跑官方 Browser/IAB 前不能声明视觉验收通过"
+    }
+  ],
+  "final_checks": [
+    "npm run verify 当前通过",
+    "docs/.vitepress/dist、docs/.vitepress/cache 和 __pycache__ 没有残留",
+    "README、syllabus、course-map、examples、slides、appendix 入口互相可达",
+    "关键 registry 与对应 schema 都能从 dev server 访问",
+    "来源登记没有把 X/飞书线索写成已复现事实",
+    "SECURITY.md 仍然约束凭证、飞书原文、X cookie/API token 和私有日志",
+    "visual-verification.json 仍把未跑过的官方 Browser/IAB 验收标记为 required-before-release，visual-acceptance-log.json 对未完成路径只能标记为 not-run 或 blocked，并写明原因",
+    "npm run release:readiness:check 只有在官方 Browser/IAB 或记录允许的官方浏览器验收路径完成后才能通过；如果仍有 blocked 项，不能声明公开发布就绪",
+    "公开发布前重新验收 GitHub Actions、Pages 真实路由和官方 Browser/IAB 视觉路径"
+  ]
+}

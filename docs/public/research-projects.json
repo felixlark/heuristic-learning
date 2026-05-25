@@ -1,0 +1,204 @@
+{
+  "$schema": "/research-projects.schema.json",
+  "schema_version": 1,
+  "projects": [
+    {
+      "id": "gridworld-new-probe",
+      "category": "intro",
+      "title": "GridWorld 新 probe",
+      "source": "examples/heuristic-gridworld/",
+      "research_question": "一个局部陷阱是否能被显式规则稳定规避？",
+      "failure_mode": "local_greedy_trap",
+      "examples": [
+        "gridworld"
+      ],
+      "deliverables": [
+        "新 probe",
+        "测试",
+        "反馈报告说明"
+      ],
+      "verification": [
+        "npm run examples:test",
+        "npm run examples:gridworld:feedback"
+      ],
+      "course_outputs": [
+        "templates/experiment-record.md",
+        "docs/zh-cn/appendix/exercises.md"
+      ]
+    },
+    {
+      "id": "robot-soccer-lane-check",
+      "category": "intro",
+      "title": "Robot Soccer 通道检查",
+      "source": "examples/robot-soccer/",
+      "research_question": "射门前检查通道是否比直接射门更可维护？",
+      "failure_mode": "blocked_shot",
+      "examples": [
+        "robot-soccer"
+      ],
+      "deliverables": [
+        "case card",
+        "blocked-lane 扩展场景"
+      ],
+      "verification": [
+        "npm run examples:robot-soccer:feedback",
+        "npm run examples:test"
+      ],
+      "course_outputs": [
+        "templates/case-card.md",
+        "docs/zh-cn/cases/robot-soccer/index.md"
+      ]
+    },
+    {
+      "id": "traffic-grid-safety-constraint",
+      "category": "intro",
+      "title": "Traffic Grid 安全约束",
+      "source": "examples/traffic-grid/",
+      "research_question": "下游容量应作为硬约束还是 reward 项？",
+      "failure_mode": "spillback",
+      "examples": [
+        "traffic-grid"
+      ],
+      "deliverables": [
+        "实验记录",
+        "阈值敏感性说明"
+      ],
+      "verification": [
+        "npm run examples:traffic-grid:feedback",
+        "npm run examples:test"
+      ],
+      "course_outputs": [
+        "templates/experiment-record.md",
+        "docs/zh-cn/cases/traffic-simulation/index.md"
+      ]
+    },
+    {
+      "id": "breakout-reflection-prediction",
+      "category": "public-artifact",
+      "title": "Breakout 反射预测",
+      "source": "examples/breakout-replay/",
+      "research_question": "几何预测如何从 Atari artifact 压缩为课程 replay？",
+      "failure_mode": "missed_after_wall_reflection",
+      "examples": [
+        "breakout-replay"
+      ],
+      "deliverables": [
+        "字段映射表",
+        "replay 说明",
+        "测试"
+      ],
+      "verification": [
+        "npm run examples:breakout-replay:feedback",
+        "npm run examples:test"
+      ],
+      "course_outputs": [
+        "docs/zh-cn/cases/breakout/index.md",
+        "templates/case-card.md"
+      ]
+    },
+    {
+      "id": "vizdoom-medikit-staging",
+      "category": "public-artifact",
+      "title": "VizDoom Medikit Staging",
+      "source": "examples/vizdoom-replay/",
+      "research_question": "视觉检测阈值如何转成可审计的等待策略？",
+      "failure_mode": "wasted_pickup",
+      "examples": [
+        "vizdoom-replay"
+      ],
+      "deliverables": [
+        "来源对照",
+        "阈值边界",
+        "report"
+      ],
+      "verification": [
+        "npm run examples:vizdoom-replay:feedback",
+        "npm run examples:test"
+      ],
+      "course_outputs": [
+        "docs/zh-cn/cases/vizdoom/index.md",
+        "templates/experiment-record.md"
+      ]
+    },
+    {
+      "id": "ant-gait-stability",
+      "category": "public-artifact",
+      "title": "Ant Gait 稳定性",
+      "source": "examples/ant-gait-replay/",
+      "research_question": "连续控制里的 heuristic update 是否仍然可 review？",
+      "failure_mode": "yaw_drift",
+      "examples": [
+        "ant-gait-replay"
+      ],
+      "deliverables": [
+        "控制参数说明",
+        "yaw probe",
+        "测试"
+      ],
+      "verification": [
+        "npm run examples:ant-gait-replay:feedback",
+        "npm run examples:test"
+      ],
+      "course_outputs": [
+        "docs/zh-cn/cases/ant-gait/index.md",
+        "templates/case-card.md"
+      ]
+    },
+    {
+      "id": "feedback-format-comparison",
+      "category": "research",
+      "title": "反馈格式比较",
+      "source": "experiments/",
+      "research_question": "JSON report 是否比自然语言日志更适合下一轮智能体维护？",
+      "failure_mode": "cross-example-report-structure",
+      "examples": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "deliverables": [
+        "两种反馈记录",
+        "结构化字段读取脚本或说明"
+      ],
+      "verification": [
+        "npm run examples:reports:check",
+        "npm run claims:registry:check"
+      ],
+      "course_outputs": [
+        "docs/zh-cn/theory/research-propositions.md",
+        "templates/claim-review.md"
+      ]
+    },
+    {
+      "id": "anti-forgetting-test-set",
+      "category": "research",
+      "title": "反遗忘测试集",
+      "source": "tests/",
+      "research_question": "HL 是否会发生工程型遗忘？",
+      "failure_mode": "regression-risk",
+      "examples": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "deliverables": [
+        "新增回归测试",
+        "反遗忘检查表"
+      ],
+      "verification": [
+        "npm run examples:test",
+        "npm run verify"
+      ],
+      "course_outputs": [
+        "templates/anti-forgetting-checklist.md",
+        "docs/zh-cn/slides/lab-2/index.md"
+      ]
+    }
+  ]
+}

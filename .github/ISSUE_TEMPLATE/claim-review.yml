@@ -1,0 +1,41 @@
+name: Claim review
+description: Review a research claim before promoting it in the course.
+title: "[claim] "
+labels:
+  - claim
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim
+      description: One-sentence claim and registry id if available.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence pages
+      description: Pages, runnable examples, reports, or source rows that support the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Boundary
+      description: What the current evidence does not prove.
+    validations:
+      required: true
+  - type: textarea
+    id: falsification_path
+    attributes:
+      label: Falsification path
+      description: Observation, failure mode, or counterexample that would weaken the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      placeholder: "npm run claims:registry:check\nnpm run verify"
+    validations:
+      required: true

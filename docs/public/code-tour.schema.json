@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heuristic Learning Code Tour Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scope",
+    "tours"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "scope": {
+      "type": "string"
+    },
+    "tours": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/tour"
+      }
+    }
+  },
+  "$defs": {
+    "tour": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "example_id",
+        "title",
+        "reading_order",
+        "key_question",
+        "run_commands",
+        "expected_observation",
+        "edit_target",
+        "test_path",
+        "boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "example_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "reading_order": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "string"
+          }
+        },
+        "key_question": {
+          "type": "string"
+        },
+        "run_commands": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_observation": {
+          "type": "string"
+        },
+        "edit_target": {
+          "type": "string"
+        },
+        "test_path": {
+          "type": "string"
+        },
+        "boundary": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

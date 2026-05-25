@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heuristic Learning Checkpoint Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "checkpoints"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "checkpoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/checkpoint"
+      }
+    }
+  },
+  "$defs": {
+    "checkpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "learning_unit_id",
+        "learning_outcome_ids",
+        "prompt",
+        "evidence",
+        "verification_commands",
+        "pass_condition",
+        "common_failure"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^cp-[0-9]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "learning_unit_id": {
+          "type": "string",
+          "pattern": "^u[0-9]-[a-z0-9-]+$"
+        },
+        "learning_outcome_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^lo-[0-9]+$"
+          }
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "verification_commands": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^npm run .+"
+          }
+        },
+        "pass_condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "common_failure": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "$schema": "/claims-registry.schema.json",
+  "schema_version": 1,
+  "claims": [
+    {
+      "id": "software-structure-learning",
+      "title": "学习对象可以是软件结构",
+      "status": "working-hypothesis-with-lightweight-evidence",
+      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "evidence_pages": [
+        "docs/zh-cn/cases/breakout/index.md",
+        "docs/zh-cn/cases/vizdoom/index.md",
+        "docs/zh-cn/cases/ant-gait/index.md"
+      ],
+      "example_ids": [
+        "breakout-replay",
+        "vizdoom-replay",
+        "ant-gait-replay"
+      ],
+      "verification_commands": [
+        "npm run examples:breakout-replay",
+        "npm run examples:vizdoom-replay",
+        "npm run examples:ant-gait-replay",
+        "npm run examples:test"
+      ],
+      "falsification_note": "If the rule, threshold, controller, or test cannot be reviewed and regression-tested, this claim is not supported by that case."
+    },
+    {
+      "id": "feedback-report-as-agent-input",
+      "title": "反馈报告是下一轮智能体的训练样本",
+      "status": "implemented-course-invariant",
+      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "evidence_pages": [
+        "docs/zh-cn/theory/learning-loop.md",
+        "docs/zh-cn/appendix/benchmark-protocol.md",
+        "docs/zh-cn/examples/index.md"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "verification_commands": [
+        "npm run examples:feedback",
+        "npm run examples:reports:check"
+      ],
+      "falsification_note": "If a feedback report cannot identify policies, feedback, candidate_update.target, and candidate_update.verification, it is not valid evidence."
+    },
+    {
+      "id": "failure-modes-over-average-score",
+      "title": "失败类型比平均分更适合课程化",
+      "status": "implemented-course-invariant",
+      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "evidence_pages": [
+        "docs/zh-cn/syllabus/index.md",
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/slides/lecture-3/index.md"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "vizdoom-replay",
+        "traffic-grid",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "verification_commands": [
+        "npm run examples:registry:check",
+        "npm run examples:test"
+      ],
+      "falsification_note": "If a case cannot name a stable failure_mode or connect it to a test/replay, it should not be used as mainline course evidence."
+    },
+    {
+      "id": "hl-rl-dl-division-of-labor",
+      "title": "HL 和 RL/DL 是分工关系",
+      "status": "research-hypothesis",
+      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "evidence_pages": [
+        "docs/zh-cn/stage-3/index.md",
+        "docs/zh-cn/theory/research-framework.md",
+        "docs/zh-cn/appendix/research-roadmap.md"
+      ],
+      "example_ids": [
+        "vizdoom-replay",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "verification_commands": [
+        "npm run examples:feedback",
+        "npm run verify"
+      ],
+      "falsification_note": "This claim remains a research hypothesis until high-fidelity environments test the boundary between perception, exploration, and explicit software maintenance."
+    },
+    {
+      "id": "source-status-is-course-structure",
+      "title": "来源状态必须进入课程结构",
+      "status": "implemented-course-invariant",
+      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "evidence_pages": [
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/citation.md",
+        "docs/zh-cn/appendix/completion-audit.md"
+      ],
+      "example_ids": [
+        "robot-soccer",
+        "traffic-grid",
+        "vizdoom-replay",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
+      "verification_commands": [
+        "npm run source:registry:check",
+        "npm run course:structure:check"
+      ],
+      "falsification_note": "If a source cannot be traced or has sensitive private material that cannot be sanitized, it must stay out of mainline conclusions."
+    }
+  ]
+}

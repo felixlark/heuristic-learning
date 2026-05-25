@@ -1,0 +1,188 @@
+{
+  "$schema": "/rubric.schema.json",
+  "schema_version": 1,
+  "title": "Heuristic Learning Course Rubric",
+  "passing_score": 80,
+  "minimum_mainline_score": 60,
+  "modules": [
+    {
+      "id": "source-and-problem",
+      "title": "来源与问题定义",
+      "weight": 20,
+      "minimum_standard": "有可追溯来源，并能说明它为什么是 HL 问题",
+      "evidence": [
+        "templates/case-card.md",
+        "docs/zh-cn/appendix/source-registry.md",
+        "docs/zh-cn/appendix/citation.md"
+      ],
+      "score_levels": [
+        {
+          "score": 0,
+          "criterion": "没有来源，只是概念判断"
+        },
+        {
+          "score": 5,
+          "criterion": "有来源，但没有区分一手来源、二手转述或内部线索"
+        },
+        {
+          "score": 10,
+          "criterion": "来源清楚，但没有写入来源登记"
+        },
+        {
+          "score": 15,
+          "criterion": "来源、状态和边界清楚，能说明状态、动作、反馈和更新对象"
+        },
+        {
+          "score": 20,
+          "criterion": "还能说明哪些主张已验证，哪些只是研究假设"
+        }
+      ]
+    },
+    {
+      "id": "probe-and-baseline",
+      "title": "Probe 与 baseline",
+      "weight": 20,
+      "minimum_standard": "能稳定复现一个失败模式，而不是只讲平均表现",
+      "evidence": [
+        "docs/zh-cn/appendix/benchmark-protocol.md",
+        "docs/public/benchmark-summary.json",
+        "tests/"
+      ],
+      "score_levels": [
+        {
+          "score": 0,
+          "criterion": "只有最终分数或成功截图"
+        },
+        {
+          "score": 5,
+          "criterion": "有失败描述，但不能稳定复现"
+        },
+        {
+          "score": 10,
+          "criterion": "有最小失败场景，但 baseline 行为不清楚"
+        },
+        {
+          "score": 15,
+          "criterion": "baseline 能稳定触发 probe，失败原因可解释"
+        },
+        {
+          "score": 20,
+          "criterion": "probe 已进入测试或 replay，并能在 feedback report 中被引用"
+        }
+      ]
+    },
+    {
+      "id": "heuristic-patch",
+      "title": "Heuristic patch",
+      "weight": 20,
+      "minimum_standard": "更新对象可审查，且解释了为什么改这个结构",
+      "evidence": [
+        "examples/*/README.md",
+        "templates/anti-forgetting-checklist.md",
+        "docs/public/example-registry.json"
+      ],
+      "score_levels": [
+        {
+          "score": 0,
+          "criterion": "只说改进策略，没有说明改哪里"
+        },
+        {
+          "score": 5,
+          "criterion": "改了策略，但无法解释更新对象"
+        },
+        {
+          "score": 10,
+          "criterion": "更新对象明确，但没有讨论维护风险"
+        },
+        {
+          "score": 15,
+          "criterion": "patch 可审查，并解释了与 baseline failure 的关系"
+        },
+        {
+          "score": 20,
+          "criterion": "patch、测试和报告一起更新，且保留旧 probe"
+        }
+      ]
+    },
+    {
+      "id": "feedback-report",
+      "title": "反馈报告",
+      "weight": 20,
+      "minimum_standard": "产物能被下一轮编码智能体读取",
+      "evidence": [
+        "templates/experiment-record.md",
+        "docs/public/experiment-report.schema.json",
+        "experiments/*/latest.json"
+      ],
+      "score_levels": [
+        {
+          "score": 0,
+          "criterion": "没有记录"
+        },
+        {
+          "score": 5,
+          "criterion": "有自然语言日志，但下一轮智能体难以读取"
+        },
+        {
+          "score": 10,
+          "criterion": "有结构化记录，但缺 baseline/heuristic 对照"
+        },
+        {
+          "score": 15,
+          "criterion": "报告包含 policies、feedback 和 candidate update"
+        },
+        {
+          "score": 20,
+          "criterion": "报告能通过 npm run examples:reports:check"
+        }
+      ]
+    },
+    {
+      "id": "regression-and-course-expression",
+      "title": "回归验证与课程表达",
+      "weight": 20,
+      "minimum_standard": "有测试、命令、文档落点，并通过统一验证",
+      "evidence": [
+        "docs/zh-cn/appendix/rubric.md",
+        "docs/zh-cn/appendix/contribution-protocol.md",
+        "docs/public/course-manifest.json"
+      ],
+      "score_levels": [
+        {
+          "score": 0,
+          "criterion": "没有验证命令"
+        },
+        {
+          "score": 5,
+          "criterion": "只跑了单个脚本，没有测试"
+        },
+        {
+          "score": 10,
+          "criterion": "有测试，但文档和课程矩阵没有同步"
+        },
+        {
+          "score": 15,
+          "criterion": "测试、报告、文档和来源登记同步"
+        },
+        {
+          "score": 20,
+          "criterion": "npm run verify 通过，并且有课程页或讲义落点"
+        }
+      ]
+    }
+  ],
+  "deliverables": [
+    "case card 或 experiment record",
+    "运行命令和测试命令",
+    "baseline failure 的一句话解释",
+    "heuristic patch 的目标文件和维护风险",
+    "feedback report 路径",
+    "verify 结果"
+  ],
+  "verification_commands": [
+    "npm run examples:test",
+    "npm run examples:reports:check",
+    "npm run course:structure:check",
+    "npm run verify"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heuristic Learning Visual Verification Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scope",
+    "tooling",
+    "checks",
+    "evidence_log"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "scope": {
+      "type": "string"
+    },
+    "tooling": {
+      "$ref": "#/$defs/tooling"
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/check"
+      }
+    },
+    "evidence_log": {
+      "$ref": "#/$defs/evidence_log"
+    }
+  },
+  "$defs": {
+    "tooling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary",
+        "authenticated",
+        "forbidden_substitutes"
+      ],
+      "properties": {
+        "primary": {
+          "type": "string"
+        },
+        "authenticated": {
+          "type": "string"
+        },
+        "forbidden_substitutes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "route",
+        "surface",
+        "viewport",
+        "acceptance",
+        "precheck",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "route": {
+          "type": "string",
+          "pattern": "^/heuristic-learning/"
+        },
+        "surface": {
+          "type": "string",
+          "enum": [
+            "in-app browser",
+            "Chrome plugin"
+          ]
+        },
+        "viewport": {
+          "type": "string",
+          "enum": [
+            "desktop",
+            "mobile"
+          ]
+        },
+        "acceptance": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "precheck": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "required-before-release",
+            "passed",
+            "blocked"
+          ]
+        }
+      }
+    },
+    "evidence_log": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "artifact_path",
+        "artifact_schema",
+        "required_fields",
+        "current_run_status"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "artifact_path": {
+          "type": "string"
+        },
+        "artifact_schema": {
+          "type": "string"
+        },
+        "required_fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "current_run_status": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
