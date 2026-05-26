@@ -10,7 +10,7 @@
       "surface": "in-app browser",
       "route": "/heuristic-learning/",
       "viewport": "desktop",
-      "observed_outcome": "Official Browser/IAB opened the local page at 1280x720; the top navigation contained course outline, learning path, theory, runnable examples, case library, and references, with no standalone slides navigation.",
+      "observed_outcome": "Official Browser/IAB opened the live GitHub Pages home page; the top navigation contained course outline, learning path, theory, runnable examples, case library, and references, with no standalone slides navigation.",
       "remaining_issue": "none",
       "status": "passed"
     },
@@ -40,7 +40,7 @@
       "surface": "in-app browser",
       "route": "/heuristic-learning/zh-cn/stage-2/",
       "viewport": "desktop",
-      "observed_outcome": "Official Browser/IAB opened the local HL basics page; the page-level slide button created an 8-slide reveal overlay, and the close control returned to the original document page.",
+      "observed_outcome": "Official Browser/IAB opened the live GitHub Pages HL basics page; the page-level slide button created an 8-slide reveal overlay, and the close control returned to the original document page.",
       "remaining_issue": "none",
       "status": "passed"
     },
