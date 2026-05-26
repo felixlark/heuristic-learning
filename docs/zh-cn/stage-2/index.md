@@ -51,5 +51,5 @@ HL 也会遗忘，只是遗忘形式更像工程事故：
 - [术语表](/zh-cn/appendix/glossary)：统一课程、案例和实验中的工作定义。
 - [学习闭环](/zh-cn/theory/learning-loop)：把来源信号转成 probe、patch、报告和回归验证。
 - [研究框架](/zh-cn/theory/research-framework)：把概念推进到问题定义、度量与实验范式。
-- [研究命题](/zh-cn/theory/research-propositions)：把尚未成论文的思想拆成可讨论、可反驳、可实验化的命题。
+- [研究问题](/zh-cn/theory/research-framework)：把尚未成论文的思想拆成可讨论、可反驳、可实验化的研究问题。
 - [可运行示例](/zh-cn/examples/)：用六个最小实验观察 HL 闭环。

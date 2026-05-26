@@ -16,7 +16,7 @@ Core pages:
 - `/zh-cn/stage-3/`: RL/DL/HL comparison
 - `/zh-cn/theory/learning-loop`: six-step HL workflow
 - `/zh-cn/theory/research-framework`: research framework
-- `/zh-cn/theory/research-propositions`: propositions, evidence status, and falsification paths
+- `/zh-cn/theory/research-framework`: research questions, evidence boundaries, and falsification paths
 - `/zh-cn/examples/`: runnable examples
 - `/zh-cn/cases/`: case library
 - `/zh-cn/cases/ant-gait/`: MuJoCo Ant gait replay case

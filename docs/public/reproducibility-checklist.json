@@ -41,8 +41,8 @@
     },
     {
       "id": "claims-and-sources",
-      "title": "命题与来源",
-      "scope": "确认研究命题、来源状态和引用边界互相一致。",
+      "title": "研究问题与来源",
+      "scope": "确认研究问题、来源状态和引用边界互相一致。",
       "evidence": [
         "docs/public/claims-registry.json",
         "docs/public/x-sources.json",
@@ -54,7 +54,7 @@
         "npm run source:registry:check",
         "npm run x:sources:check"
       ],
-      "pass_condition": "每条命题都有证据页、示例、验证命令和可反驳说明。",
+      "pass_condition": "每条研究问题都有证据页、示例、验证命令和可反驳说明。",
       "known_boundary": "Jiayi Weng 的 HL 思想当前不能写成正式论文结论；X/脱敏应用问题未复核前不能写成已复现事实。"
     },
     {

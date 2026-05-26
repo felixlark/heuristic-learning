@@ -168,7 +168,7 @@
         "npm run claims:registry:check"
       ],
       "course_outputs": [
-        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/theory/research-framework.md",
         "templates/claim-review.md"
       ]
     },

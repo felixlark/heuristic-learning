@@ -30,7 +30,7 @@
         "templates/claim-review.md"
       ],
       "next_action": "继续把文章里的任务类型映射到 case registry，而不是直接写成论文结论。",
-      "boundary": "未在真实环境复验前，只能称为课程化抽象和研究假设。"
+      "boundary": "未在真实环境复验前，只能称为可学习、可验证抽象和研究假设。"
     },
     {
       "id": "breakout-artifact-reading",
@@ -66,7 +66,7 @@
       "status": "needs-source-refresh",
       "source_type": "x-source",
       "source_ref": "docs/public/x-sources.json",
-      "reading_goal": "把 Jiayi Weng 相关 X 来源拆成来源状态、可课程化问题和禁止声明。",
+      "reading_goal": "把 Jiayi Weng 相关 X 来源拆成来源状态、可可学习、可验证问题和禁止声明。",
       "bound_examples": [
         "breakout-replay",
         "ant-gait-replay"

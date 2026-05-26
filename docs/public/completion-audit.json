@@ -28,7 +28,7 @@
       "evidence": [
         "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/theory/research-framework.md",
-        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/theory/research-framework.md",
         "docs/zh-cn/appendix/reading-guide.md",
         "docs/zh-cn/appendix/evaluation-metrics.md",
         "docs/public/evaluation-metrics.json",

@@ -83,8 +83,8 @@ description: HL 课程资料来源、学习规范与研究路线
 - [`/artifact-gap-analysis.schema.json`](/artifact-gap-analysis.schema.json)：约束 Artifact 差距分析字段，供 `npm run artifact:gap:check` 验证。
 - [`/troubleshooting-tree.json`](/troubleshooting-tree.json)：列出失败面、诊断命令、修复动作、复验命令和关联页面。
 - [`/troubleshooting-tree.schema.json`](/troubleshooting-tree.schema.json)：约束排错决策树字段，供 `npm run troubleshooting:tree:check` 验证。
-- [`/claims-registry.json`](/claims-registry.json)：列出研究命题、证据页、示例、验证命令和可反驳边界。
-- [`/claims-registry.schema.json`](/claims-registry.schema.json)：约束命题矩阵字段，供 `npm run claims:registry:check` 验证。
+- [`/claims-registry.json`](/claims-registry.json)：列出研究问题、证据页、示例、验证命令和可反驳边界。
+- [`/claims-registry.schema.json`](/claims-registry.schema.json)：约束研究问题矩阵字段，供 `npm run claims:registry:check` 验证。
 - [`/case-registry.json`](/case-registry.json)：列出案例页、来源状态、绑定示例、failure mode、学习成果和验证命令。
 - [`/case-registry.schema.json`](/case-registry.schema.json)：约束案例矩阵字段，供 `npm run cases:check` 验证。
 - [`/teaching-registry.json`](/teaching-registry.json)：列出讲义与 lab 的阅读材料、命令和验收产物。
@@ -107,21 +107,21 @@ description: HL 课程资料来源、学习规范与研究路线
 - [`/checkpoint-registry.schema.json`](/checkpoint-registry.schema.json)：约束阶段检查点字段，供 `npm run checkpoints:check` 验证。
 - [`/evaluation-metrics.json`](/evaluation-metrics.json)：列出任务结果、失败隔离、更新成本、回归风险和来源边界。
 - [`/evaluation-metrics.schema.json`](/evaluation-metrics.schema.json)：约束评估指标字段，供 `npm run metrics:check` 验证。
-- [`/paper-blueprint.json`](/paper-blueprint.json)：列出研究写作章节、命题、指标、示例、证据路径和边界。
+- [`/paper-blueprint.json`](/paper-blueprint.json)：列出研究写作章节、研究问题、指标、示例、证据路径和边界。
 - [`/paper-blueprint.schema.json`](/paper-blueprint.schema.json)：约束论文蓝图字段，供 `npm run paper:blueprint:check` 验证。
-- [`/concept-graph.json`](/concept-graph.json)：列出核心概念到研究命题、示例、讲义、页面和验证命令的映射。
+- [`/concept-graph.json`](/concept-graph.json)：列出核心概念到研究问题、示例、讲义、页面和验证命令的映射。
 - [`/concept-graph.schema.json`](/concept-graph.schema.json)：约束概念图谱字段，供 `npm run concept:graph:check` 验证。
 - [`/teaching-pack.json`](/teaching-pack.json)：列出授课包的讲义、阅读材料、demo 命令、交付物和验收项。
 - [`/teaching-pack.schema.json`](/teaching-pack.schema.json)：约束授课包字段，供 `npm run teaching:pack:check` 验证。
 - [`/research-projects.json`](/research-projects.json)：列出研究项目的来源、failure mode、示例、交付物、验证命令和课程落点。
 - [`/research-projects.schema.json`](/research-projects.schema.json)：约束研究项目字段，供 `npm run research:projects:check` 验证。
-- [`/research-logbook.json`](/research-logbook.json)：列出阅读来源、绑定示例、研究命题、指标、命令、交付物和边界。
+- [`/research-logbook.json`](/research-logbook.json)：列出阅读来源、绑定示例、研究问题、指标、命令、交付物和边界。
 - [`/research-logbook.schema.json`](/research-logbook.schema.json)：约束研究日志字段，供 `npm run research:logbook:check` 验证。
 - [`/completion-audit.json`](/completion-audit.json)：列出目标拆解、必跑命令、证据边界和完成前检查。
 - [`/completion-audit.schema.json`](/completion-audit.schema.json)：约束完成度审计字段，供 `npm run completion:audit:check` 验证。
 - [`/visual-verification.json`](/visual-verification.json)：列出官方 Browser/IAB 或 Chrome 插件的视觉验收路径、视口和验收重点。
 - [`/visual-verification.schema.json`](/visual-verification.schema.json)：约束视觉验收字段，供 `npm run visual:verification:check` 验证。
-- [`/reproducibility-checklist.json`](/reproducibility-checklist.json)：列出环境、示例、命题、教学、贡献和站点复现检查。
+- [`/reproducibility-checklist.json`](/reproducibility-checklist.json)：列出环境、示例、研究问题、教学、贡献和站点复现检查。
 - [`/reproducibility-checklist.schema.json`](/reproducibility-checklist.schema.json)：约束可复现性清单字段，供 `npm run reproducibility:check` 验证。
 - [`/x-sources.json`](/x-sources.json)：列出 X 来源的证据状态、来源层级、抽取主张、学习落点和边界。
 - [`/x-sources.schema.json`](/x-sources.schema.json)：约束 X 来源矩阵字段，供 `npm run x:sources:check` 验证。

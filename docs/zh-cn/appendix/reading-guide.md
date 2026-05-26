@@ -5,7 +5,7 @@ description: Heuristic Learning 课程的一手来源和背景概念阅读顺序
 
 # 文献阅读指南
 
-本页给读者一条可执行的阅读路径：先读一手来源，再看公开 artifact，最后把背景概念落到课程的命题、示例和验证命令。它不是完整文献综述；所有来源状态仍以 [来源登记](/zh-cn/appendix/source-registry) 为准。
+本页给读者一条可执行的阅读路径：先读一手来源，再看公开 artifact，最后把背景概念落到课程的研究问题、示例和验证命令。它不是完整文献综述；所有来源状态仍以 [来源登记](/zh-cn/appendix/source-registry) 为准。
 
 ## 阅读原则
 
@@ -14,13 +14,13 @@ description: Heuristic Learning 课程的一手来源和背景概念阅读顺序
 | 先一手来源 | 优先读 Jiayi Weng 的文章、公开代码 artifact 和 X 原帖 |
 | 再背景对照 | RL、DL、软件测试和编码智能体只用于界定问题边界 |
 | 不把线索写成结论 | X/脱敏应用问题进入主线前必须有 case card、来源状态和可验证落点 |
-| 每个主张都要落地 | 读完一条主张后，必须能指到命题、示例、报告或路线图任务 |
+| 每个主张都要落地 | 读完一条主张后，必须能指到研究问题、示例、报告或路线图任务 |
 
 ## 第一轮：建立 HL 语境
 
 | 材料 | 读法 | 学习落点 |
 | --- | --- | --- |
-| `Learning Beyond Gradients` | 先抓住“更新对象不是权重，而是可维护系统结构”的主张 | [HL 基础概念](/zh-cn/stage-2/)、[研究命题](/zh-cn/theory/research-propositions) |
+| `Learning Beyond Gradients` | 先抓住“更新对象不是权重，而是可维护系统结构”的主张 | [HL 基础概念](/zh-cn/stage-2/)、[研究问题](/zh-cn/theory/research-framework) |
 | `Trinkle23897/learning-beyond-gradients` | 不急着复现全部环境，先定位哪些 artifact 能被压缩成 replay/probe | [来源登记](/zh-cn/appendix/source-registry)、[案例库](/zh-cn/cases/) |
 | Jiayi Weng X 原帖 | 只当作一手信号，不直接当作已复现实验 | [X 来源案例](/zh-cn/cases/x-signal/) |
 
@@ -74,7 +74,7 @@ npm run examples:registry:check
 | 抽取 failure mode | 把案例压缩成可观察失败 | 不把平均分提升当成唯一证据 |
 | 设计 probe | 让失败可回放、可测试 | 不把不可复现线索写成结论 |
 | 写 feedback report | 指导下一轮策略或测试修改 | 不只写运行日志 |
-| 定义反驳路径 | 说明什么结果会推翻当前命题 | 不把研究假设写成事实 |
+| 定义反驳路径 | 说明什么结果会推翻当前研究问题 | 不把研究假设写成事实 |
 
 对应仓库结构：
 
@@ -93,7 +93,7 @@ npm run examples:registry:check
 | Source row | 只是发现来源，还没有验证 | [来源登记](/zh-cn/appendix/source-registry) |
 | Case card | 能描述环境、policy surface 和 feedback | `templates/case-card.md` |
 | Experiment record | 已能运行示例或 replay | `templates/experiment-record.md` |
-| Claim update | 材料支持或反驳一个命题 | `/claims-registry.json` |
+| Claim update | 材料支持或反驳一个研究问题 | `/claims-registry.json` |
 | Roadmap task | 还需要真实环境或更多证据 | [研究路线图](/zh-cn/appendix/research-roadmap) |
 
 ## 不足与下一步

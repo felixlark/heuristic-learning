@@ -15,7 +15,10 @@
         "breakout-replay",
         "ant-gait-replay"
       ],
-      "claim_ids": ["software-structure-learning", "feedback-report-as-agent-input"],
+      "claim_ids": [
+        "software-structure-learning",
+        "feedback-report-as-agent-input"
+      ],
       "evidence": [
         "docs/zh-cn/appendix/benchmark-results.md",
         "docs/public/benchmark-summary.json",
@@ -41,10 +44,13 @@
         "breakout-replay",
         "ant-gait-replay"
       ],
-      "claim_ids": ["software-structure-learning", "failure-modes-over-average-score"],
+      "claim_ids": [
+        "software-structure-learning",
+        "failure-modes-over-average-score"
+      ],
       "evidence": [
         "docs/public/example-registry.json",
-        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/theory/research-framework.md",
         "docs/zh-cn/appendix/case-registry.md"
       ],
       "verification_commands": [
@@ -52,15 +58,22 @@
         "npm run cases:check"
       ],
       "failure_mode": "把一次失败解释成整体能力不足，无法形成可审查的最小更新。",
-      "course_use": "用于案例卡和研究命题讨论，帮助读者区分错误现象与可更新对象。"
+      "course_use": "用于案例卡和研究问题讨论，帮助读者区分错误现象与可更新对象。"
     },
     {
       "id": "update-cost",
       "title": "更新成本",
       "research_question": "一次 HL patch 需要修改多少知识、代码或控制参数，是否能被读者复现？",
       "definition": "记录修改面、输入证据、实验命令和复盘模板，避免把不可复现经验写成课程结论。",
-      "example_ids": ["gridworld", "traffic-grid", "ant-gait-replay"],
-      "claim_ids": ["feedback-report-as-agent-input", "hl-rl-dl-division-of-labor"],
+      "example_ids": [
+        "gridworld",
+        "traffic-grid",
+        "ant-gait-replay"
+      ],
+      "claim_ids": [
+        "feedback-report-as-agent-input",
+        "hl-rl-dl-division-of-labor"
+      ],
       "evidence": [
         "templates/experiment-record.md",
         "templates/anti-forgetting-checklist.md",
@@ -84,7 +97,10 @@
         "breakout-replay",
         "ant-gait-replay"
       ],
-      "claim_ids": ["failure-modes-over-average-score", "hl-rl-dl-division-of-labor"],
+      "claim_ids": [
+        "failure-modes-over-average-score",
+        "hl-rl-dl-division-of-labor"
+      ],
       "evidence": [
         "tests/",
         "docs/zh-cn/slides/lab-2/index.md",
@@ -102,8 +118,15 @@
       "title": "来源边界",
       "research_question": "一个案例的来源状态是否足以支撑它在课程中的声明强度？",
       "definition": "把公开文章、GitHub artifact、X 来源和脱敏应用问题分层登记，未复核材料只作为研究线索。",
-      "example_ids": ["vizdoom-replay", "breakout-replay", "x-signal"],
-      "claim_ids": ["software-structure-learning", "source-status-is-course-structure"],
+      "example_ids": [
+        "vizdoom-replay",
+        "breakout-replay",
+        "x-signal"
+      ],
+      "claim_ids": [
+        "software-structure-learning",
+        "source-status-is-course-structure"
+      ],
       "evidence": [
         "docs/zh-cn/appendix/source-registry.md",
         "docs/public/case-registry.json",

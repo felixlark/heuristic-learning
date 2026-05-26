@@ -21,7 +21,7 @@
       "evidence": [
         "docs/zh-cn/stage-2/index.md",
         "docs/zh-cn/stage-3/index.md",
-        "docs/zh-cn/theory/research-propositions.md"
+        "docs/zh-cn/theory/research-framework.md"
       ],
       "assessment": "读者能用一个案例说明反馈来源、更新对象、验证方式和未验证边界。",
       "verification_commands": [

@@ -125,7 +125,7 @@
         "npm run research:logbook:check"
       ],
       "course_landing": [
-        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/theory/research-framework.md",
         "docs/zh-cn/appendix/research-projects.md",
         "docs/zh-cn/appendix/research-roadmap.md"
       ],

@@ -39,7 +39,7 @@
           "prompt": "指出 HL 不替代 RL/DL，而是更新不同对象。",
           "input_paths": [
             "docs/zh-cn/stage-3/index.md",
-            "docs/zh-cn/theory/research-propositions.md"
+            "docs/zh-cn/theory/research-framework.md"
           ],
           "example_ids": [],
           "deliverable": "一张对照表",

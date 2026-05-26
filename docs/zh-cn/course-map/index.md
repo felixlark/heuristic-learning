@@ -16,7 +16,7 @@ description: Heuristic Learning 的统一学习主线、实验入口和验证路
 | 3. 对照理论 | 区分 RL、DL 和 HL 的更新机制 | [从 RL/DL 到 HL](/zh-cn/stage-3/)、[研究框架](/zh-cn/theory/research-framework) | 把一个案例映射到 state、action、feedback、patch、regression | 一张闭环图 |
 | 4. 阅读案例 | 学会处理公开 artifact、X 来源和脱敏应用问题 | [案例库](/zh-cn/cases/)、[来源登记](/zh-cn/appendix/source-registry) | 写一张 case card，标注来源状态和边界 | case card |
 | 5. 修改验证 | 只改一个策略点，并确认旧经验没有退化 | [代码导览](/zh-cn/appendix/code-tour)、[Lab 1](/zh-cn/slides/lab-1/) | `npm run examples:test`、`npm run examples:feedback` | 更新后的 report 与测试结果 |
-| 6. 复盘扩展 | 把一次更新写成可反驳的研究问题 | [Lab 2](/zh-cn/slides/lab-2/)、[研究命题](/zh-cn/theory/research-propositions) | `npm run verify`，再写反遗忘复盘 | anti-forgetting checklist |
+| 6. 复盘扩展 | 把一次更新写成可反驳的研究问题 | [Lab 2](/zh-cn/slides/lab-2/)、[研究问题](/zh-cn/theory/research-framework) | `npm run verify`，再写反遗忘复盘 | anti-forgetting checklist |
 
 ## 概念到实验
 
@@ -79,11 +79,11 @@ npm run verify
 - [`/learning-outcomes.json`](/learning-outcomes.json)：能力目标到学习单元、练习、Rubric 和验证命令的映射。
 - [`/checkpoint-registry.json`](/checkpoint-registry.json)：每个学习单元的阶段自测、证据和通过条件。
 - [`/evaluation-metrics.json`](/evaluation-metrics.json)：研究评估维度、证据路径和验证命令。
-- [`/concept-graph.json`](/concept-graph.json)：核心概念到命题、示例、讲义和验证命令的映射。
+- [`/concept-graph.json`](/concept-graph.json)：核心概念到研究问题、示例、讲义和验证命令的映射。
 - [`/rubric.json`](/rubric.json)：评分模块、权重和验收证据。
 - [`/exercise-registry.json`](/exercise-registry.json)：练习题、输入材料、示例、交付物和验收命令。
 - [`/contribution-contract.json`](/contribution-contract.json)：贡献类型、证据字段、必备路径、验证命令和禁止材料。
-- [`/reproducibility-checklist.json`](/reproducibility-checklist.json)：环境、示例、命题、教学、贡献和站点复现检查。
+- [`/reproducibility-checklist.json`](/reproducibility-checklist.json)：环境、示例、研究问题、教学、贡献和站点复现检查。
 - [`/experiment-report.schema.json`](/experiment-report.schema.json)：实验报告字段约束。
 - [`/llms.txt`](/llms.txt)：面向自动化阅读的高信号入口。
 

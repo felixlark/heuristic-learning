@@ -17,7 +17,7 @@ description: Heuristic Learning 学习单元的自测问题、证据、命令和
 | CP1 最小闭环自测 | U1 | 能否跑通 GridWorld feedback 并解释 report？ | `npm run examples:gridworld:feedback` |
 | CP2 公开来源自测 | U2 | 能否区分公开 artifact、X 来源和待采集来源？ | `npm run source:registry:check` |
 | CP3 系统控制自测 | U3 | 能否说明动作前提、安全约束和 regression probe？ | `npm run examples:test` |
-| CP4 研究命题自测 | U4 | 能否把命题写成可反驳的 claim review？ | `npm run claims:registry:check` |
+| CP4 研究问题自测 | U4 | 能否把研究问题写成可反驳的 claim review？ | `npm run claims:registry:check` |
 | CP5 反遗忘项目自测 | U5 | 能否提交包含旧行为、风险更新、回归保护和 verify 证据的项目？ | `npm run verify` |
 
 ## 使用方式

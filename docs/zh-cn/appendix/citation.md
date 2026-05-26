@@ -5,7 +5,7 @@ description: Heuristic Learning 仓库、原始来源和课程材料的引用规
 
 # 引用与署名
 
-课程是一个课程化研究仓库，不是 Jiayi Weng 原始文章或 `learning-beyond-gradients` artifact 的替代版本。使用课程时，需要区分三类引用：原始思想来源、课程仓库、以及具体实验或案例页。
+课程是一个可学习、可验证研究仓库，不是 Jiayi Weng 原始文章或 `learning-beyond-gradients` artifact 的替代版本。使用课程时，需要区分三类引用：原始思想来源、课程仓库、以及具体实验或案例页。
 
 ## 推荐引用
 

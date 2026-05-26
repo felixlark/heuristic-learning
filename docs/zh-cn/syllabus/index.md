@@ -68,7 +68,7 @@ npm run course:structure:check
 | 实验记录 | 命令、环境、baseline failure、结果、候选更新 | [实验记录模板](https://github.com/longbiaochen/heuristic-learning/blob/main/templates/experiment-record.md) |
 | case card | 来源、环境、策略表面、验证路径、课程链接 | [案例矩阵](/zh-cn/appendix/case-registry) |
 | 回归检查 | 旧行为、风险更新、regression guard、审查结果 | [反遗忘清单](https://github.com/longbiaochen/heuristic-learning/blob/main/templates/anti-forgetting-checklist.md) |
-| 研究问题 | 证据、反例、边界、下一步实验 | [研究命题](/zh-cn/theory/research-propositions) |
+| 研究问题 | 证据、反例、边界、下一步实验 | [研究问题](/zh-cn/theory/research-framework) |
 
 ## 通过标准
 

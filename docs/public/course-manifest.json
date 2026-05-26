@@ -33,12 +33,6 @@
       "route": "/zh-cn/theory/research-framework"
     },
     {
-      "id": "research-propositions",
-      "title": "研究命题",
-      "path": "docs/zh-cn/theory/research-propositions.md",
-      "route": "/zh-cn/theory/research-propositions"
-    },
-    {
       "id": "examples",
       "title": "可运行示例",
       "path": "docs/zh-cn/examples/index.md",

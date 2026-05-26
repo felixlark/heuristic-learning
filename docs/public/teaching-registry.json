@@ -49,7 +49,7 @@
       "core_question": "一次 heuristic patch 如何证明没有破坏旧经验？",
       "reading": [
         "docs/zh-cn/theory/research-framework.md",
-        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/theory/research-framework.md",
         "docs/zh-cn/appendix/rubric.md"
       ],
       "commands": [

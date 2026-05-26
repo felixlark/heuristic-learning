@@ -1,13 +1,13 @@
 ---
 title: 论文蓝图
-description: Heuristic Learning 研究写作的章节、证据、命题、指标和边界矩阵
+description: Heuristic Learning 研究写作的章节、证据、研究问题、指标和边界矩阵
 ---
 
 # 论文蓝图
 
 本页把 HL 仓库的理论、案例、示例、指标和课程材料整理成一份可写论文或技术报告的蓝图。它不是正式论文草稿，也不把当前轻量 replay 写成高保真复现实验；它的作用是让读者知道：哪些主张已有证据，哪些只能写成假设，哪些命令能验证当前材料没有漂移。
 
-机器可读蓝图见 [`/paper-blueprint.json`](/paper-blueprint.json)，字段约束见 [`/paper-blueprint.schema.json`](/paper-blueprint.schema.json)。`npm run paper:blueprint:check` 会检查章节、命题、指标、示例、证据路径、验证命令和 manifest 是否一致。
+机器可读蓝图见 [`/paper-blueprint.json`](/paper-blueprint.json)，字段约束见 [`/paper-blueprint.schema.json`](/paper-blueprint.schema.json)。`npm run paper:blueprint:check` 会检查章节、研究问题、指标、示例、证据路径、验证命令和 manifest 是否一致。
 
 ## 章节结构
 
@@ -23,7 +23,7 @@ description: Heuristic Learning 研究写作的章节、证据、命题、指标
 ## 写作纪律
 
 1. 每个章节必须绑定至少一个证据路径。
-2. 涉及研究主张时，先看 `/claims-registry.json` 和 [研究命题](/zh-cn/theory/research-propositions)。
+2. 涉及研究主张时，先看 `/claims-registry.json` 和 [研究问题](/zh-cn/theory/research-framework)。
 3. 涉及实验结果时，先跑 `npm run examples:feedback` 和 `npm run benchmark:summary:check`。
 4. 涉及局限时，必须保留来源状态、轻量 replay 和 Browser/IAB 验收边界。
 5. 涉及教学使用时，只写读者如何学习、复现和扩展；不把未验证来源写成研究结论。

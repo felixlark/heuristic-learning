@@ -18,7 +18,7 @@
       "deliverable": "一页概念图或术语解释",
       "acceptance": [
         "能区分 Heuristic System 与 Heuristic Learning",
-        "能指出至少一个可反驳命题"
+        "能指出至少一个可反驳研究问题"
       ]
     },
     {
@@ -90,11 +90,11 @@
     },
     {
       "id": "u4-research-claims",
-      "title": "U4 研究命题",
-      "core_question": "当前证据支持哪些命题，边界在哪里？",
+      "title": "U4 研究问题",
+      "core_question": "当前证据支持哪些研究问题，边界在哪里？",
       "readings": [
         "docs/zh-cn/theory/research-framework.md",
-        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/theory/research-framework.md",
         "docs/zh-cn/appendix/paper-blueprint.md"
       ],
       "examples": [
@@ -109,9 +109,9 @@
         "npm run claims:registry:check",
         "npm run paper:blueprint:check"
       ],
-      "deliverable": "命题-证据-反驳路径说明",
+      "deliverable": "研究问题-证据-反驳路径说明",
       "acceptance": [
-        "每个命题都能落到证据页或示例",
+        "每个研究问题都能落到证据页或示例",
         "能指出至少一个当前无法证明的边界"
       ]
     },

@@ -52,7 +52,7 @@ description: Heuristic Learning 的课程项目、研究问题和验收产物
 | 更新成本度量 | 编码智能体是否降低 heuristic system 维护成本？ | 修改文件数、测试数、失败复盘时间 | 一个 experiment record 记录成本字段 |
 | 混合系统边界 | DL/RL 与 HL 如何分工？ | 感知、策略、异常处理的边界表 | 理论页或案例页落点 |
 
-研究型项目可以没有新环境，但必须增加可验证的研究 artifact，例如测试、报告 schema、案例卡、度量表或结构检查规则。讨论研究命题时使用 `templates/claim-review.md`，讨论工程型遗忘时使用 `templates/anti-forgetting-checklist.md`，避免只留下不可复查的口头判断。
+研究型项目可以没有新环境，但必须增加可验证的研究 artifact，例如测试、报告 schema、案例卡、度量表或结构检查规则。讨论研究问题时使用 `templates/claim-review.md`，讨论工程型遗忘时使用 `templates/anti-forgetting-checklist.md`，避免只留下不可复查的口头判断。
 
 ## 项目矩阵命令
 

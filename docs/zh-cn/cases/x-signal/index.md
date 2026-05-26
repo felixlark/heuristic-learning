@@ -5,7 +5,7 @@ description: 从 Jiayi Weng 公开讨论中抽取可验证的 Heuristic Learning
 
 # X 来源案例
 
-本页把 Jiayi Weng 相关 X 讨论拆成可学习、可验证的课程入口。它不替代公开文章和代码 artifact；它只回答一个问题：一条公开讨论怎样被转成案例、实验或研究命题，而不越过证据边界。
+本页把 Jiayi Weng 相关 X 讨论拆成可学习、可验证的课程入口。它不替代公开文章和代码 artifact；它只回答一个问题：一条公开讨论怎样被转成案例、实验或研究问题，而不越过证据边界。
 
 来源矩阵见 [`/x-sources.json`](/x-sources.json)。`npm run x:sources:check` 会检查本页和来源登记是否区分“已读到的材料”“已知 URL 但待复核的材料”和“待采集方向”。
 
@@ -30,13 +30,13 @@ description: 从 Jiayi Weng 公开讨论中抽取可验证的 Heuristic Learning
 
 下面三张卡说明公开讨论如何进入学习路径。每张卡都必须保留来源层级、证据状态、学习落点、验证命令和边界。
 
-| ID | 概念 | 课程化主张 | 落点 | 验证 |
+| ID | 概念 | 可学习、可验证主张 | 落点 | 验证 |
 | --- | --- | --- | --- | --- |
 | `breakout-code-as-memory` | 代码作为经验记忆 | Breakout 案例把学习结果保存在球路预测、卡球检测、回归测试和实验日志中，而不是保存在新训练的神经网络权重中。分数变化只来自二手中文转述，不能当作课程复现结果。 | [Breakout 案例](/zh-cn/cases/breakout/)、`examples/breakout-replay/` | `npm run examples:breakout-replay`、`npm run examples:breakout-replay:feedback`、`npm run examples:test` |
 | `ant-controller-as-readable-policy` | 可读控制器作为策略 | Ant 案例把连续控制问题压缩成 CPG、stance duty、speed adaptation 和 yaw feedback 等可维护控制器组件。 | [Ant Gait 案例](/zh-cn/cases/ant-gait/)、`examples/ant-gait-replay/` | `npm run examples:ant-gait-replay`、`npm run examples:ant-gait-replay:feedback`、`npm run examples:test` |
 | `hybrid-perception-boundary` | 感知与规则的混合边界 | 复杂视觉感知不应被硬写成 if-else；更稳妥的 HL 架构应把感知模型、可维护规则、日志审查和周期性数据更新分层。 | [RL/DL/HL 对照](/zh-cn/stage-3/)、[研究路线图](/zh-cn/appendix/research-roadmap) | `npm run x:sources:check`、`npm run claims:registry:check` |
 
-第三张卡没有 runnable example，因此只能作为研究命题和讨论入口。只有当它转成最小环境、实验报告和测试后，才能进入“已复现”层级。
+第三张卡没有 runnable example，因此只能作为研究问题和讨论入口。只有当它转成最小环境、实验报告和测试后，才能进入“已复现”层级。
 
 对应到课程实验：
 

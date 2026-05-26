@@ -6,12 +6,14 @@
       "id": "cp-0",
       "title": "建立语境自测",
       "learning_unit_id": "u0-context",
-      "learning_outcome_ids": ["lo-1"],
+      "learning_outcome_ids": [
+        "lo-1"
+      ],
       "prompt": "用一个案例解释 HL、Heuristic System、RL/DL 的分工，并说明哪些结论仍是研究假设。",
       "evidence": [
         "docs/zh-cn/stage-2/index.md",
         "docs/zh-cn/stage-3/index.md",
-        "docs/zh-cn/theory/research-propositions.md"
+        "docs/zh-cn/theory/research-framework.md"
       ],
       "verification_commands": [
         "npm run claims:registry:check"
@@ -23,7 +25,9 @@
       "id": "cp-1",
       "title": "最小闭环自测",
       "learning_unit_id": "u1-minimal-loop",
-      "learning_outcome_ids": ["lo-2"],
+      "learning_outcome_ids": [
+        "lo-2"
+      ],
       "prompt": "跑通 GridWorld feedback，指出 baseline failure、heuristic outcome 和 candidate_update.target。",
       "evidence": [
         "examples/heuristic-gridworld/README.md",
@@ -41,7 +45,9 @@
       "id": "cp-2",
       "title": "公开来源自测",
       "learning_unit_id": "u2-public-artifacts",
-      "learning_outcome_ids": ["lo-3"],
+      "learning_outcome_ids": [
+        "lo-3"
+      ],
       "prompt": "选择一个公开 artifact 或 X 来源，说明来源状态、案例落点和不能过度声明的边界。",
       "evidence": [
         "docs/zh-cn/appendix/source-registry.md",
@@ -60,7 +66,10 @@
       "id": "cp-3",
       "title": "系统控制自测",
       "learning_unit_id": "u3-control-and-systems",
-      "learning_outcome_ids": ["lo-3", "lo-4"],
+      "learning_outcome_ids": [
+        "lo-3",
+        "lo-4"
+      ],
       "prompt": "对 Robot Soccer 或 Traffic Grid 说明状态、动作前提、安全约束和 regression probe。",
       "evidence": [
         "docs/zh-cn/cases/robot-soccer/index.md",
@@ -77,12 +86,15 @@
     },
     {
       "id": "cp-4",
-      "title": "研究命题自测",
+      "title": "研究问题自测",
       "learning_unit_id": "u4-research-claims",
-      "learning_outcome_ids": ["lo-1", "lo-5"],
-      "prompt": "选择一个研究命题，写出证据、反例路径、对应案例和下一步实验。",
+      "learning_outcome_ids": [
+        "lo-1",
+        "lo-5"
+      ],
+      "prompt": "选择一个研究问题，写出证据、反例路径、对应案例和下一步实验。",
       "evidence": [
-        "docs/zh-cn/theory/research-propositions.md",
+        "docs/zh-cn/theory/research-framework.md",
         "templates/claim-review.md",
         "docs/public/claims-registry.json"
       ],
@@ -90,14 +102,17 @@
         "npm run claims:registry:check",
         "npm run research:projects:check"
       ],
-      "pass_condition": "能把命题写成可反驳、可实验化的 claim review。",
+      "pass_condition": "能把研究问题写成可反驳、可实验化的 claim review。",
       "common_failure": "把观点写成宣传语，没有给出 falsification path。"
     },
     {
       "id": "cp-5",
       "title": "反遗忘项目自测",
       "learning_unit_id": "u5-anti-forgetting-project",
-      "learning_outcome_ids": ["lo-4", "lo-5"],
+      "learning_outcome_ids": [
+        "lo-4",
+        "lo-5"
+      ],
       "prompt": "提交一次项目或 PR 前，说明旧行为、风险更新、回归保护、Rubric 自评和 verify 结果。",
       "evidence": [
         "docs/zh-cn/slides/lab-2/index.md",

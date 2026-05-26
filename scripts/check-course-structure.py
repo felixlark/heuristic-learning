@@ -16,7 +16,6 @@ PAGES = [
     "docs/zh-cn/stage-3/index.md",
     "docs/zh-cn/theory/learning-loop.md",
     "docs/zh-cn/theory/research-framework.md",
-    "docs/zh-cn/theory/research-propositions.md",
     "docs/zh-cn/examples/index.md",
     "docs/zh-cn/cases/index.md",
     "docs/zh-cn/cases/ant-gait/index.md",
@@ -688,7 +687,7 @@ def check_course_schedule() -> None:
         "npm run teaching:registry:check",
         "npm run docs:routes:check",
         "npm run course:structure:check",
-        "研究命题",
+        "研究问题",
         "SECURITY.md",
     ]:
         require(required in schedule, f"course schedule missing {required}")
@@ -948,7 +947,7 @@ def check_checkpoints() -> None:
         "最小闭环自测",
         "公开来源自测",
         "系统控制自测",
-        "研究命题自测",
+        "研究问题自测",
         "反遗忘项目自测",
     ]:
         require(required in page, f"checkpoint page missing {required}")
@@ -983,7 +982,6 @@ def check_evaluation_metrics() -> None:
     registry = json.loads(read_text("docs/public/evaluation-metrics.json"))
     schema = json.loads(read_text("docs/public/evaluation-metrics.schema.json"))
     framework = read_text("docs/zh-cn/theory/research-framework.md")
-    propositions = read_text("docs/zh-cn/theory/research-propositions.md")
     course_map = read_text("docs/zh-cn/course-map/index.md")
     appendix = read_text("docs/zh-cn/appendix/index.md")
     audit = read_text("docs/zh-cn/appendix/completion-audit.md")
@@ -1029,7 +1027,6 @@ def check_evaluation_metrics() -> None:
     ]:
         require(
             required in framework
-            or required in propositions
             or required in course_map
             or required in appendix
             or required in audit
@@ -1043,7 +1040,6 @@ def check_paper_blueprint() -> None:
     registry = json.loads(read_text("docs/public/paper-blueprint.json"))
     schema = json.loads(read_text("docs/public/paper-blueprint.schema.json"))
     reading_guide = read_text("docs/zh-cn/appendix/reading-guide.md")
-    propositions = read_text("docs/zh-cn/theory/research-propositions.md")
     roadmap = read_text("docs/zh-cn/appendix/research-roadmap.md")
     appendix = read_text("docs/zh-cn/appendix/index.md")
     audit = read_text("docs/zh-cn/appendix/completion-audit.md")
@@ -1091,7 +1087,6 @@ def check_paper_blueprint() -> None:
     ]:
         require(
             required in reading_guide
-            or required in propositions
             or required in roadmap
             or required in appendix
             or required in audit
@@ -1351,7 +1346,7 @@ def check_reproducibility() -> None:
         "npm run reproducibility:check",
         "环境与安装",
         "可运行示例",
-        "命题与来源",
+        "研究问题与来源",
         "教学产物",
         "贡献与发布",
         "站点与机器入口",
@@ -2085,7 +2080,6 @@ def check_course_manifest() -> None:
         "docs/zh-cn/course-map/index.md",
         "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/theory/research-framework.md",
-        "docs/zh-cn/theory/research-propositions.md",
         "docs/zh-cn/examples/index.md",
         "docs/zh-cn/appendix/source-registry.md",
         "docs/zh-cn/appendix/source-to-case-playbook.md",

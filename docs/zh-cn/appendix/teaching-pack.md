@@ -16,7 +16,7 @@ description: Heuristic Learning 讲义、演示、课堂问题和验收材料清
 | 原则 | 执行方式 |
 | --- | --- |
 | 先验证环境 | 每次课前先跑 `npm run verify`，不要在坏反馈通道上讲策略更新 |
-| 每课一个核心问题 | 不把所有案例塞进同一节课；围绕一个 failure mode 或研究命题展开 |
+| 每课一个核心问题 | 不把所有案例塞进同一节课；围绕一个 failure mode 或研究问题展开 |
 | 演示必须可复现 | demo 命令必须是 `package.json` 里的脚本 |
 | 课后必须有产物 | exit ticket、实验记录、case card 或 Rubric 自评至少交一种 |
 
@@ -92,7 +92,7 @@ npm run examples:reports:check
 | 环节 | 内容 | 材料 |
 | --- | --- | --- |
 | 读前 | 阅读 Jiayi 文章和课程阅读指南 | [文献阅读指南](/zh-cn/appendix/reading-guide) |
-| 讨论 1 | 命题是否能被示例支撑 | [研究命题](/zh-cn/theory/research-propositions) |
+| 讨论 1 | 研究问题是否能被示例支撑 | [研究问题](/zh-cn/theory/research-framework) |
 | 讨论 2 | 现有 replay 的边界 | [研究路线图](/zh-cn/appendix/research-roadmap) |
 | 讨论 3 | 如何从 X/脱敏应用问题变成 case card | [来源登记](/zh-cn/appendix/source-registry) |
 | 收尾 | 形成一个可反驳实验设计 | [研究课题](/zh-cn/appendix/research-projects) |
@@ -105,7 +105,7 @@ npm run claims:registry:check
 npm run paper:blueprint:check
 ```
 
-交付物：一页 `templates/claim-review.md` 风格的 claim review，说明一个命题的证据、缺口、反驳路径和下一步 probe。
+交付物：一页 `templates/claim-review.md` 风格的 claim review，说明一个研究问题的证据、缺口、反驳路径和下一步 probe。
 
 ## TP3：4-6 周项目课
 

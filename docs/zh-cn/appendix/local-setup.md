@@ -79,7 +79,7 @@ npm run build
 | `source:case:check` | 来源到 case card 的路径、必备 artifact、状态门槛或禁止声明漂移 | 更新 `/source-to-case-playbook.json` 或 [来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook) |
 | `ablation:plan:check` | 消融变量、示例、指标、不变量、证据路径或验证命令漂移 | 更新 `/ablation-plan.json` 或 [消融计划](/zh-cn/appendix/ablation-plan) |
 | `source:registry:check` | 来源状态、X 证据或已复现条目缺失 | 更新 [来源登记](/zh-cn/appendix/source-registry)，不要把线索写成事实 |
-| `claims:registry:check` | 研究命题没有绑定证据页、示例或验证命令 | 更新 `/claims-registry.json` 或 [研究命题](/zh-cn/theory/research-propositions) |
+| `claims:registry:check` | 研究问题没有绑定证据页、示例或验证命令 | 更新 `/claims-registry.json` 或 [研究问题](/zh-cn/theory/research-framework) |
 | `teaching:registry:check` | 讲义、Lab、阅读材料或演示命令漂移 | 更新 `/teaching-registry.json` 或对应讲义页 |
 | `exercises:check` | 练习题、输入材料、示例、验收命令、学习单元或 Rubric 漂移 | 更新 `/exercise-registry.json` 或 [练习集](/zh-cn/appendix/exercises) |
 | `contribution:contract:check` | 贡献类型、证据字段、必备路径、验证命令或禁止材料漂移 | 更新 `/contribution-contract.json`、`CONTRIBUTING.md` 或 PR 模板 |
@@ -87,8 +87,8 @@ npm run build
 | `troubleshooting:tree:check` | 失败面、诊断命令、修复动作、复验命令或关联页面漂移 | 更新 `/troubleshooting-tree.json` 或 [排错决策树](/zh-cn/appendix/troubleshooting-tree) |
 | `learning:outcomes:check` | 学习成果、练习、Rubric、证据路径或验证命令漂移 | 更新 `/learning-outcomes.json` 或 [学习成果矩阵](/zh-cn/appendix/learning-outcomes) |
 | `checkpoints:check` | 阶段自测、证据、命令、通过条件或常见失败漂移 | 更新 `/checkpoint-registry.json` 或 [阶段检查点](/zh-cn/appendix/checkpoints) |
-| `metrics:check` | 评估指标、示例、命题、证据路径或验证命令漂移 | 更新 `/evaluation-metrics.json` 或 [评估指标矩阵](/zh-cn/appendix/evaluation-metrics) |
-| `paper:blueprint:check` | 论文章节、命题、指标、示例、证据路径或边界漂移 | 更新 `/paper-blueprint.json` 或 [论文蓝图](/zh-cn/appendix/paper-blueprint) |
+| `metrics:check` | 评估指标、示例、研究问题、证据路径或验证命令漂移 | 更新 `/evaluation-metrics.json` 或 [评估指标矩阵](/zh-cn/appendix/evaluation-metrics) |
+| `paper:blueprint:check` | 论文章节、研究问题、指标、示例、证据路径或边界漂移 | 更新 `/paper-blueprint.json` 或 [论文蓝图](/zh-cn/appendix/paper-blueprint) |
 | `speaker:notes:check` | 讲者备注、demo 节点、讨论题、常见误解或 exit ticket 漂移 | 更新 `/speaker-notes.json` 或 [讲者备注](/zh-cn/appendix/speaker-notes) |
 | `course:manifest:check` | manifest 字段、路径或 schema 漂移 | 更新 `/course-manifest.json` 和 `/course-manifest.schema.json` |
 | `course:structure:check` | 页面、脚本、示例、报告或 syllabus 不一致 | 按报错补齐对应页面或路径 |

@@ -82,7 +82,7 @@ def check_registry(registry: dict[str, Any], example_registry: dict[str, Any]) -
         if isinstance(example, dict) and isinstance(example.get("id"), str)
     }
 
-    propositions = (ROOT / "docs/zh-cn/theory/research-propositions.md").read_text(encoding="utf-8")
+    framework = (ROOT / "docs/zh-cn/theory/research-framework.md").read_text(encoding="utf-8")
     claims = registry.get("claims")
     require(isinstance(claims, list) and claims, "claims must be a non-empty list")
     ids: set[str] = set()
@@ -112,7 +112,7 @@ def check_registry(registry: dict[str, Any], example_registry: dict[str, Any]) -
         ids.add(claim_id)
         require(claim.get("status") in allowed_statuses, f"{context}: invalid status")
         require(isinstance(claim.get("title"), str) and claim["title"], f"{context}: missing title")
-        require(claim["title"] in propositions, f"{context}: title missing from research propositions")
+        require(claim["title"] in framework, f"{context}: title missing from research framework")
 
         claim_page = claim.get("claim_page")
         require(isinstance(claim_page, str), f"{context}: claim_page must be string")
@@ -120,9 +120,11 @@ def check_registry(registry: dict[str, Any], example_registry: dict[str, Any]) -
 
         evidence_pages = claim.get("evidence_pages")
         require(isinstance(evidence_pages, list) and evidence_pages, f"{context}: evidence_pages must be non-empty")
+        evidence_text = ""
         for page in evidence_pages:
             require(isinstance(page, str), f"{context}: evidence page must be string")
             require((ROOT / page).exists(), f"{context}: evidence page missing: {page}")
+            evidence_text += "\n" + (ROOT / page).read_text(encoding="utf-8")
 
         linked_examples = claim.get("example_ids")
         require(isinstance(linked_examples, list) and linked_examples, f"{context}: example_ids must be non-empty")
@@ -136,7 +138,10 @@ def check_registry(registry: dict[str, Any], example_registry: dict[str, Any]) -
             require(command.startswith("npm run "), f"{context}: command must be npm script: {command}")
             script = command.removeprefix("npm run ").split()[0]
             require(script in scripts, f"{context}: package script missing for command {command}")
-            require(command in propositions or command in json.dumps(example_registry), f"{context}: command not documented: {command}")
+            require(
+                command in framework or command in evidence_text or command in json.dumps(example_registry),
+                f"{context}: command not documented: {command}",
+            )
 
         note = claim.get("falsification_note")
         require(isinstance(note, str) and len(note) >= 20, f"{context}: falsification_note too short")

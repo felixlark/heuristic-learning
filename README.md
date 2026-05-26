@@ -118,16 +118,16 @@ docs/                         # VitePress 中文课程文档
   zh-cn/appendix/checkpoints.md # 每个学习单元的阶段自测和通过条件
   zh-cn/appendix/evaluation-metrics.md # 研究评估指标、证据路径和验证命令
   zh-cn/appendix/paper-blueprint.md # 论文/技术报告的章节、证据和边界蓝图
-  zh-cn/appendix/research-logbook.md # 阅读、示例、命题、指标与下一步实验记录
+  zh-cn/appendix/research-logbook.md # 阅读、示例、研究问题、指标与下一步实验记录
   zh-cn/appendix/public-entrypoints.md # public registries、schemas 和 LLM 入口索引
   zh-cn/appendix/speaker-notes.md # 讲者备注、课堂提示和 exit ticket
-  zh-cn/appendix/concept-graph.md # 概念到命题、示例、讲义和命令的图谱
+  zh-cn/appendix/concept-graph.md # 概念到研究问题、示例、讲义和命令的图谱
   zh-cn/appendix/exercises.md # 可布置、可验收的练习题库
   zh-cn/appendix/ablation-plan.md # 六个示例的变量对照与不变量计划
   zh-cn/appendix/artifact-gap-analysis.md # 轻量 replay 到真实 artifact 的保真度差距
   zh-cn/appendix/benchmark-results.md # 六个示例的 benchmark 摘要
   zh-cn/appendix/visual-verification.md # 官方 Browser/IAB 视觉验收矩阵
-  zh-cn/appendix/reproducibility.md # 环境、示例、命题、教学和站点复现清单
+  zh-cn/appendix/reproducibility.md # 环境、示例、研究问题、教学和站点复现清单
 examples/heuristic-gridworld/ # 纯 Python 最小 HL 示例
 examples/robot-soccer/        # 机器人足球 blocked-lane 示例
 examples/vizdoom-replay/      # VizDoom D1 medikit-staging 回放示例
@@ -161,18 +161,18 @@ npm run verify
 - 检查 `/case-registry.json` 所描述的案例页、来源状态、绑定示例、failure mode、学习成果和验证命令。
 - 检查 `/source-to-case-playbook.json` 所描述的 X、公开 artifact、脱敏应用问题和研究假设进入 case card 的路径。
 - 检查来源登记、`/x-sources.json` 的 X 来源证据状态和“已复现”条目的 runnable example 落点。
-- 检查研究命题、讲义 registry、讲义结构、评分 Rubric、学习单元、授课包和完成度审计。
+- 检查研究问题、讲义 registry、讲义结构、评分 Rubric、学习单元、授课包和完成度审计。
 - 检查 `/speaker-notes.json` 所描述的讲者备注、demo 节点、讨论题、常见误解和 exit ticket。
 - 检查 `/learning-outcomes.json` 所描述的能力目标到学习单元、练习、Rubric、证据和验证命令的映射。
 - 检查 `/checkpoint-registry.json` 所描述的阶段自测问题、证据、命令、通过条件和常见失败。
 - 检查 `/evaluation-metrics.json` 所描述的任务结果、失败隔离、更新成本、回归风险和来源边界。
-- 检查 `/paper-blueprint.json` 所描述的论文章节、命题、指标、示例、证据路径和边界。
-- 检查 `/research-logbook.json` 所描述的阅读记录、绑定示例、研究命题、指标、命令、交付物和边界。
+- 检查 `/paper-blueprint.json` 所描述的论文章节、研究问题、指标、示例、证据路径和边界。
+- 检查 `/research-logbook.json` 所描述的阅读记录、绑定示例、研究问题、指标、命令、交付物和边界。
 - 检查 `/exercise-registry.json` 所描述的练习题、输入材料、示例、交付物和验收命令。
 - 检查 `/contribution-contract.json` 所描述的贡献类型、证据字段、必备路径和禁止材料。
-- 检查 `/reproducibility-checklist.json` 所描述的环境、示例、命题、教学、贡献和站点复现检查。
+- 检查 `/reproducibility-checklist.json` 所描述的环境、示例、研究问题、教学、贡献和站点复现检查。
 - 检查 `/troubleshooting-tree.json` 所描述的失败面、诊断命令、修复动作、复验命令和关联页面。
-- 检查 `/concept-graph.json` 所描述的核心概念到命题、示例、讲义和验证命令的映射。
+- 检查 `/concept-graph.json` 所描述的核心概念到研究问题、示例、讲义和验证命令的映射。
 - 检查 `/research-projects.json` 所描述的研究项目来源、failure mode、示例、交付物和验证命令。
 - 检查 `/completion-audit.json` 所描述的目标拆解、必跑命令、证据边界和完成前检查。
 - 检查 `/visual-verification.json` 和 `/visual-acceptance-log.json` 所描述的官方 Browser/IAB 视觉验收路径、视口、记录和发布前状态。
@@ -189,7 +189,7 @@ GitHub Actions 中的 `Verify course repository` workflow 会在 PR 和 `main` p
 
 需要把仓库用于组会、课程实验或助教验收时，先读 [教师指南](docs/zh-cn/appendix/instructor-guide.md)。它给出 90 分钟导读、2 小时工作坊、3 讲 + 2 Lab 的组织方式，以及课堂 demo 命令、作业设计和常见故障处理。可直接执行的课堂包见 [授课包](docs/zh-cn/appendix/teaching-pack.md)。4-6 周 mini course 使用 [课程进度表](docs/zh-cn/appendix/course-schedule.md) 安排每周阅读、命令和验收产物。作业题库见 [练习集](docs/zh-cn/appendix/exercises.md)；项目制学习入口见 [研究课题](docs/zh-cn/appendix/research-projects.md)，其中把六个 runnable examples 对应到入门项目、公开 artifact 项目和 capstone 交付物；阅读到实验的记录入口见 [研究日志](docs/zh-cn/appendix/research-logbook.md)；实验设计细则见 [实验协议](docs/zh-cn/appendix/benchmark-protocol.md)。
 
-如果要把 HL 当作研究方向讨论，先读 [研究命题](docs/zh-cn/theory/research-propositions.md)：它把当前思想拆成命题、证据状态和可反驳路径，避免把未发表论文的观点写成既成结论。
+如果要把 HL 当作研究方向讨论，先读 [研究问题](docs/zh-cn/theory/research-framework.md)：它把当前思想拆成研究问题、证据状态和可反驳路径，避免把未发表论文的观点写成既成结论。
 X 来源的证据状态和来源层级见 [X 来源案例](docs/zh-cn/cases/x-signal/index.md) 与 [`/x-sources.json`](docs/public/x-sources.json)。
 
 ## 贡献方式

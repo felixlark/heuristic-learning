@@ -14,7 +14,7 @@ description: Heuristic Learning 仓库版本发布、变更记录和发布前验
 | 本次变化属于理论、案例、示例、讲义、工具还是发布结构？ | README、课程大纲、相关页面 |
 | 是否新增或改变来源状态？ | [来源登记](/zh-cn/appendix/source-registry) |
 | 是否改变案例页、案例来源或案例到示例的绑定？ | [案例矩阵](/zh-cn/appendix/case-registry)、`/case-registry.json` |
-| 是否改变来源到 case card 的课程化路径？ | [来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook)、`/source-to-case-playbook.json` |
+| 是否改变来源到 case card 的可学习、可验证路径？ | [来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook)、`/source-to-case-playbook.json` |
 | 是否新增 runnable example 或 report 字段？ | `examples/`、`experiments/`、report schema |
 | 是否改变示例代码阅读顺序、编辑目标或测试路径？ | [代码导览](/zh-cn/appendix/code-tour)、`/code-tour.json` |
 | 是否改变 benchmark 结果或实验解释？ | [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)、`/benchmark-summary.json` |

@@ -4,9 +4,9 @@
   "claims": [
     {
       "id": "software-structure-learning",
-      "title": "学习对象可以是软件结构",
+      "title": "学习对象是否可以是软件结构？",
       "status": "working-hypothesis-with-lightweight-evidence",
-      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "claim_page": "docs/zh-cn/theory/research-framework.md",
       "evidence_pages": [
         "docs/zh-cn/cases/breakout/index.md",
         "docs/zh-cn/cases/vizdoom/index.md",
@@ -27,9 +27,9 @@
     },
     {
       "id": "feedback-report-as-agent-input",
-      "title": "反馈报告是下一轮智能体的训练样本",
+      "title": "反馈报告能否帮助下一轮智能体维护代码？",
       "status": "implemented-course-invariant",
-      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "claim_page": "docs/zh-cn/theory/research-framework.md",
       "evidence_pages": [
         "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/appendix/benchmark-protocol.md",
@@ -51,9 +51,9 @@
     },
     {
       "id": "failure-modes-over-average-score",
-      "title": "失败类型比平均分更适合课程化",
+      "title": "失败类型是否比平均分更适合学习？",
       "status": "implemented-course-invariant",
-      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "claim_page": "docs/zh-cn/theory/research-framework.md",
       "evidence_pages": [
         "docs/zh-cn/syllabus/index.md",
         "docs/zh-cn/examples/index.md",
@@ -75,9 +75,9 @@
     },
     {
       "id": "hl-rl-dl-division-of-labor",
-      "title": "HL 和 RL/DL 是分工关系",
+      "title": "HL 与 RL/DL 如何分工？",
       "status": "research-hypothesis",
-      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "claim_page": "docs/zh-cn/theory/research-framework.md",
       "evidence_pages": [
         "docs/zh-cn/stage-3/index.md",
         "docs/zh-cn/theory/research-framework.md",
@@ -96,9 +96,9 @@
     },
     {
       "id": "source-status-is-course-structure",
-      "title": "来源状态必须进入课程结构",
+      "title": "来源状态如何约束结论强度？",
       "status": "implemented-course-invariant",
-      "claim_page": "docs/zh-cn/theory/research-propositions.md",
+      "claim_page": "docs/zh-cn/theory/research-framework.md",
       "evidence_pages": [
         "docs/zh-cn/appendix/source-registry.md",
         "docs/zh-cn/appendix/citation.md",

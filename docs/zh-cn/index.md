@@ -23,7 +23,7 @@ description: Heuristic Learning 中文研究与动手课程首页
 | 3. 跑通示例 | [可运行示例](/zh-cn/examples/) 与 [Lab 1](/zh-cn/slides/lab-1/) | 运行 GridWorld 和 feedback report | 一份实验记录 |
 | 4. 阅读案例 | [案例库](/zh-cn/cases/) 与 [来源登记](/zh-cn/appendix/source-registry) | 区分已复现、轻量 replay 和待验证线索 | 一张 case card |
 | 5. 修改验证 | [代码导览](/zh-cn/appendix/code-tour) 与 [Lab 2](/zh-cn/slides/lab-2/) | 只改一个策略点，再跑测试和报告 | anti-forgetting checklist |
-| 6. 复盘扩展 | [研究框架](/zh-cn/theory/research-framework) 与 [研究命题](/zh-cn/theory/research-propositions) | 写出证据、反例和下一步实验 | 一个可反驳研究问题 |
+| 6. 复盘扩展 | [研究框架](/zh-cn/theory/research-framework) 与 [研究问题](/zh-cn/theory/research-framework) | 写出证据、反例和下一步实验 | 一个可反驳研究问题 |
 
 ## 推荐路线
 

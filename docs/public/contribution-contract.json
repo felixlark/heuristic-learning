@@ -94,7 +94,7 @@
     {
       "id": "claim-review",
       "title": "Claim review",
-      "description": "研究命题评审必须标注证据状态、反驳路径和验证命令。",
+      "description": "研究问题评审必须标注证据状态、反驳路径和验证命令。",
       "evidence_fields": [
         "claim id",
         "evidence pages",
@@ -104,7 +104,7 @@
       "required_paths": [
         "templates/claim-review.md",
         "docs/public/claims-registry.json",
-        "docs/zh-cn/theory/research-propositions.md"
+        "docs/zh-cn/theory/research-framework.md"
       ],
       "verification_commands": [
         "npm run claims:registry:check",

@@ -121,7 +121,7 @@
         "npm run x:sources:check",
         "npm run claims:registry:check"
       ],
-      "boundary": "该卡只作为研究命题和课程讨论入口；没有对应 runnable example 前不写成实验结论。"
+      "boundary": "该卡只作为研究问题和课程讨论入口；没有对应 runnable example 前不写成实验结论。"
     }
   ]
 }

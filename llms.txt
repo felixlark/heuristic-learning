@@ -19,7 +19,7 @@ Use these entry points:
 - `docs/zh-cn/stage-3/index.md` for RL/DL/HL comparison.
 - `docs/zh-cn/theory/learning-loop.md` for the six-step HL workflow.
 - `docs/zh-cn/theory/research-framework.md` for the research framework and measurement model.
-- `docs/zh-cn/theory/research-propositions.md` for current HL propositions, evidence status, and falsification paths.
+- `docs/zh-cn/theory/research-framework.md` for research questions, evidence boundaries, and falsification paths.
 - `docs/zh-cn/examples/index.md` for runnable examples.
 - `docs/zh-cn/slides/index.md` for lecture material.
 - `docs/zh-cn/slides/lecture-2/index.md` for the source-to-experiment lecture.

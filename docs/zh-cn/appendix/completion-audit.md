@@ -14,7 +14,7 @@ description: Heuristic Learning 仓库目标、证据、验证命令和剩余边
 | 要求 | 当前证据 | 验证方式 |
 | --- | --- | --- |
 | 中文课程入口 | README、[首页](/zh-cn/)、[课程地图](/zh-cn/course-map/)、[课程大纲](/zh-cn/syllabus/)、[学习单元矩阵](/zh-cn/appendix/learning-units)、[学习成果矩阵](/zh-cn/appendix/learning-outcomes)、[阶段检查点](/zh-cn/appendix/checkpoints) | `npm run course:structure:check`、`npm run learning:units:check`、`npm run learning:outcomes:check`、`npm run checkpoints:check` |
-| 理论积累 | [学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework)、[研究命题](/zh-cn/theory/research-propositions)、[文献阅读指南](/zh-cn/appendix/reading-guide)、[评估指标矩阵](/zh-cn/appendix/evaluation-metrics)、[论文蓝图](/zh-cn/appendix/paper-blueprint)、[研究日志](/zh-cn/appendix/research-logbook)、`/evaluation-metrics.json`、`/paper-blueprint.json`、`/research-logbook.json` | `npm run metrics:check`、`npm run paper:blueprint:check`、`npm run research:logbook:check` + 页面 frontmatter + manifest 检查 |
+| 理论积累 | [学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework)、[研究问题](/zh-cn/theory/research-framework)、[文献阅读指南](/zh-cn/appendix/reading-guide)、[评估指标矩阵](/zh-cn/appendix/evaluation-metrics)、[论文蓝图](/zh-cn/appendix/paper-blueprint)、[研究日志](/zh-cn/appendix/research-logbook)、`/evaluation-metrics.json`、`/paper-blueprint.json`、`/research-logbook.json` | `npm run metrics:check`、`npm run paper:blueprint:check`、`npm run research:logbook:check` + 页面 frontmatter + manifest 检查 |
 | 可运行示例 | 6 个 `examples/*`、6 个 `tests/test_*.py`、6 个 `experiments/*/latest.json`、代码导览、Benchmark 结果摘要、消融计划、Artifact 差距分析 | `npm run examples:test`、`npm run examples:feedback`、`npm run code:tour:check`、`npm run benchmark:summary:check`、`npm run ablation:plan:check`、`npm run artifact:gap:check` |
 | 案例库 | Ant、Breakout、VizDoom、Robot Soccer、Traffic、X signal、[案例矩阵](/zh-cn/appendix/case-registry)、[来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook)、`/case-registry.json` | `npm run source:registry:check`、`npm run cases:check`、`npm run source:case:check` |
 | 课程材料 | 3 讲 + 2 Lab、讲者备注、教师指南、课程进度表、授课包、概念图谱、学习成果矩阵、研究课题、研究日志、练习集、Rubric | `npm run teaching:registry:check`、`npm run slides:check`、`npm run speaker:notes:check`、`npm run rubric:check`、`npm run exercises:check`、`npm run concept:graph:check`、`npm run learning:outcomes:check`、`npm run teaching:pack:check`、`npm run research:projects:check`、`npm run research:logbook:check` |
@@ -118,7 +118,7 @@ npm run docs:routes:check
 | `/heuristic-learning/ablation-plan.json` | 消融计划 registry |
 | `/heuristic-learning/artifact-gap-analysis.json` | Artifact 差距分析 registry |
 | `/heuristic-learning/troubleshooting-tree.json` | 排错决策树 registry |
-| `/heuristic-learning/claims-registry.json` | 命题 registry |
+| `/heuristic-learning/claims-registry.json` | 研究问题 registry |
 | `/heuristic-learning/case-registry.json` | 案例矩阵 registry |
 | `/heuristic-learning/teaching-registry.json` | 讲义 registry |
 | `/heuristic-learning/slide-deck.json` | 讲义结构 registry |

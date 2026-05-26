@@ -94,7 +94,7 @@
     },
     {
       "id": "source-or-claim",
-      "failure_surface": "来源与命题",
+      "failure_surface": "来源与研究问题",
       "symptom": "source:registry:check、x:sources:check、cases:check 或 claims:registry:check 失败。",
       "diagnostic_commands": [
         "npm run source:registry:check",
@@ -105,7 +105,7 @@
       "likely_causes": [
         "X 来源被写成已复现事实",
         "脱敏应用问题缺少脱敏边界",
-        "研究命题没有证据页、示例或可反驳路径"
+        "研究问题没有证据页、示例或可反驳路径"
       ],
       "fix_actions": [
         "把来源状态降级为已定位或待采集",
@@ -121,7 +121,7 @@
       "related_pages": [
         "docs/zh-cn/appendix/source-registry.md",
         "docs/zh-cn/appendix/case-registry.md",
-        "docs/zh-cn/theory/research-propositions.md"
+        "docs/zh-cn/theory/research-framework.md"
       ]
     },
     {

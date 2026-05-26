@@ -6,7 +6,10 @@
       "id": "abstract-and-positioning",
       "title": "摘要与定位",
       "purpose": "用一段话说明 HL 的研究对象、当前证据形态和课程仓库边界。",
-      "claim_ids": ["software-structure-learning", "hl-rl-dl-division-of-labor"],
+      "claim_ids": [
+        "software-structure-learning",
+        "hl-rl-dl-division-of-labor"
+      ],
       "metric_ids": [],
       "example_ids": [],
       "evidence": [
@@ -18,15 +21,20 @@
         "npm run claims:registry:check",
         "npm run source:registry:check"
       ],
-      "writing_prompt": "写清楚 HL 暂时是研究假设和课程化框架，不是已有成熟论文结论。",
+      "writing_prompt": "写清楚 HL 暂时是研究假设和可学习、可验证框架，不是已有成熟论文结论。",
       "boundary": "不得把未发表思想写成已被同行评审验证的理论。"
     },
     {
       "id": "problem-and-related-work",
       "title": "问题定义与相关工作",
       "purpose": "把 HL 放在 Jiayi Weng 公开来源、RL/DL、软件测试和编码智能体边界之间，说明为什么需要新框架。",
-      "claim_ids": ["hl-rl-dl-division-of-labor", "source-status-is-course-structure"],
-      "metric_ids": ["source-boundary"],
+      "claim_ids": [
+        "hl-rl-dl-division-of-labor",
+        "source-status-is-course-structure"
+      ],
+      "metric_ids": [
+        "source-boundary"
+      ],
       "example_ids": [],
       "evidence": [
         "docs/zh-cn/appendix/references.md",
@@ -44,9 +52,20 @@
       "id": "method-learning-loop",
       "title": "方法：学习闭环",
       "purpose": "定义 signal、probe、baseline、heuristic patch、feedback report 和 regression gate。",
-      "claim_ids": ["feedback-report-as-agent-input", "failure-modes-over-average-score"],
-      "metric_ids": ["failure-isolation", "update-cost", "regression-risk"],
-      "example_ids": ["gridworld", "robot-soccer", "traffic-grid"],
+      "claim_ids": [
+        "feedback-report-as-agent-input",
+        "failure-modes-over-average-score"
+      ],
+      "metric_ids": [
+        "failure-isolation",
+        "update-cost",
+        "regression-risk"
+      ],
+      "example_ids": [
+        "gridworld",
+        "robot-soccer",
+        "traffic-grid"
+      ],
       "evidence": [
         "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/theory/research-framework.md",
@@ -63,8 +82,15 @@
       "id": "experiments-and-results",
       "title": "实验与结果",
       "purpose": "用六个轻量 replay 展示 baseline failure、heuristic outcome、报告和测试路径。",
-      "claim_ids": ["failure-modes-over-average-score", "feedback-report-as-agent-input"],
-      "metric_ids": ["task-outcome", "failure-isolation", "regression-risk"],
+      "claim_ids": [
+        "failure-modes-over-average-score",
+        "feedback-report-as-agent-input"
+      ],
+      "metric_ids": [
+        "task-outcome",
+        "failure-isolation",
+        "regression-risk"
+      ],
       "example_ids": [
         "gridworld",
         "robot-soccer",
@@ -90,9 +116,19 @@
       "id": "discussion-and-threats",
       "title": "讨论、局限与威胁",
       "purpose": "明确来源、复现、高保真环境、X/脱敏应用问题和视觉验收的剩余边界。",
-      "claim_ids": ["source-status-is-course-structure"],
-      "metric_ids": ["source-boundary", "update-cost", "regression-risk"],
-      "example_ids": ["vizdoom-replay", "breakout-replay", "ant-gait-replay"],
+      "claim_ids": [
+        "source-status-is-course-structure"
+      ],
+      "metric_ids": [
+        "source-boundary",
+        "update-cost",
+        "regression-risk"
+      ],
+      "example_ids": [
+        "vizdoom-replay",
+        "breakout-replay",
+        "ant-gait-replay"
+      ],
       "evidence": [
         "docs/zh-cn/appendix/citation.md",
         "docs/zh-cn/appendix/reproducibility.md",
@@ -110,9 +146,17 @@
       "id": "course-and-reuse",
       "title": "教学使用与复现材料",
       "purpose": "说明读者如何沿同一套证据链学习、复现和扩展 HL。",
-      "claim_ids": ["source-status-is-course-structure", "feedback-report-as-agent-input"],
-      "metric_ids": ["update-cost", "source-boundary"],
-      "example_ids": ["gridworld"],
+      "claim_ids": [
+        "source-status-is-course-structure",
+        "feedback-report-as-agent-input"
+      ],
+      "metric_ids": [
+        "update-cost",
+        "source-boundary"
+      ],
+      "example_ids": [
+        "gridworld"
+      ],
       "evidence": [
         "docs/zh-cn/appendix/learning-units.md",
         "docs/zh-cn/appendix/speaker-notes.md",

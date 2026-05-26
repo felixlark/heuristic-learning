@@ -59,7 +59,7 @@ def check_registry(registry: dict[str, Any]) -> None:
     manifest = load_json(ROOT / "docs/public/course-manifest.json")
     package = load_json(ROOT / "package.json")
     reading_guide = (ROOT / "docs/zh-cn/appendix/reading-guide.md").read_text(encoding="utf-8")
-    propositions = (ROOT / "docs/zh-cn/theory/research-propositions.md").read_text(encoding="utf-8")
+    research_framework = (ROOT / "docs/zh-cn/theory/research-framework.md").read_text(encoding="utf-8")
     roadmap = (ROOT / "docs/zh-cn/appendix/research-roadmap.md").read_text(encoding="utf-8")
     audit = (ROOT / "docs/zh-cn/appendix/completion-audit.md").read_text(encoding="utf-8")
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
@@ -145,7 +145,7 @@ def check_registry(registry: dict[str, Any]) -> None:
     ]:
         require(
             required in reading_guide
-            or required in propositions
+            or required in research_framework
             or required in roadmap
             or required in audit
             or required in llms
