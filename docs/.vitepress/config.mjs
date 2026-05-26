@@ -72,8 +72,7 @@ export default defineConfig({
             { text: 'HL 基础概念', link: '/zh-cn/stage-2/' },
             { text: '从 RL/DL 到 HL', link: '/zh-cn/stage-3/' },
             { text: '学习闭环', link: '/zh-cn/theory/learning-loop' },
-            { text: '研究框架', link: '/zh-cn/theory/research-framework' },
-            { text: '研究命题', link: '/zh-cn/theory/research-propositions' }
+            { text: '研究框架', link: '/zh-cn/theory/research-framework' }
           ]
         },
         {
