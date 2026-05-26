@@ -144,6 +144,39 @@ def check_pages() -> None:
         require(text.startswith("---\n"), f"page missing frontmatter: {page}")
 
 
+def split_markdown_table_row(line: str) -> list[str]:
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def is_markdown_table_separator(line: str) -> bool:
+    cells = split_markdown_table_row(line)
+    return bool(cells) and all(cell and set(cell) <= {"-", ":"} for cell in cells)
+
+
+def check_markdown_tables() -> None:
+    for page in PAGES:
+        lines = (ROOT / page).read_text(encoding="utf-8").splitlines()
+        for index, line in enumerate(lines[:-1]):
+            if not (line.lstrip().startswith("|") and lines[index + 1].lstrip().startswith("|")):
+                continue
+            if not is_markdown_table_separator(lines[index + 1]):
+                continue
+            header_cells = split_markdown_table_row(line)
+            separator_cells = split_markdown_table_row(lines[index + 1])
+            require(
+                len(header_cells) == len(separator_cells),
+                f"{page}:{index + 1}: markdown table header has {len(header_cells)} columns but separator has {len(separator_cells)}",
+            )
+            row_index = index + 2
+            while row_index < len(lines) and lines[row_index].lstrip().startswith("|"):
+                row_cells = split_markdown_table_row(lines[row_index])
+                require(
+                    len(row_cells) == len(header_cells),
+                    f"{page}:{row_index + 1}: markdown table row has {len(row_cells)} columns but header has {len(header_cells)}",
+                )
+                row_index += 1
+
+
 def check_package_scripts() -> None:
     package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
     scripts = package.get("scripts", {})
@@ -2444,6 +2477,7 @@ def check_course_manifest() -> None:
 
 def main() -> None:
     check_pages()
+    check_markdown_tables()
     check_package_scripts()
     check_examples()
     check_syllabus_alignment()

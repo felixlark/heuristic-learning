@@ -17,7 +17,7 @@ description: Heuristic Learning 中文研究与动手课程首页
 ## 学习顺序
 
 | 顺序 | 学什么 | 做什么 | 产出 |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | 1. 建立概念 | [学习路线](/zh-cn/stage-1/) 与 [HL 基础概念](/zh-cn/stage-2/) | 写出 feedback、update target、verification 的含义 | 一页术语笔记 |
 | 2. 理解闭环 | [学习闭环](/zh-cn/theory/learning-loop) 与 [从 RL/DL 到 HL](/zh-cn/stage-3/) | 对照 RL/DL/HL 的更新对象 | 一张闭环图 |
 | 3. 跑通示例 | [可运行示例](/zh-cn/examples/) 与 [Lab 1](/zh-cn/slides/lab-1/) | 运行 GridWorld 和 feedback report | 一份实验记录 |
