@@ -1,40 +1,42 @@
 ---
 title: 课程地图
-description: Heuristic Learning 的读者路径、研究路径、教师路径和验证路径
+description: Heuristic Learning 的统一学习主线、实验入口和验证路径
 ---
 
 # 课程地图
 
-本页是 HL 的导航总图。读者不需要按侧栏从上到下读完；可以根据自己的角色选择路径，但每条路径最终都要回到同一个验证闭环：来源、案例、示例、报告和测试互相对齐。
+本页把 HL 收束成一份连续学习材料。读者不需要按身份分流；从概念开始，跑通最小闭环，阅读案例，再完成一次可验证的 heuristic update。
 
-## 四条路径
+## 一份学习材料
 
-| 角色 | 先读 | 再做 | 验收 |
-| --- | --- | --- | --- |
-| 学生 | [课程大纲](/zh-cn/syllabus/)、[学习路线](/zh-cn/stage-1/)、[学习单元矩阵](/zh-cn/appendix/learning-units) | [Lab 1](/zh-cn/slides/lab-1/)、[练习集](/zh-cn/appendix/exercises) B/C 题 | `npm run verify` + 实验记录 |
-| AI 研究者 | [文献阅读指南](/zh-cn/appendix/reading-guide)、[研究框架](/zh-cn/theory/research-framework)、[研究命题](/zh-cn/theory/research-propositions)、[实验协议](/zh-cn/appendix/benchmark-protocol)、[评估指标矩阵](/zh-cn/appendix/evaluation-metrics) | [研究课题](/zh-cn/appendix/research-projects)、[来源登记](/zh-cn/appendix/source-registry) | case card + runnable example + 反驳路径 |
-| 工程师 | [可运行示例](/zh-cn/examples/)、[代码导览](/zh-cn/appendix/code-tour)、[本地运行与排错](/zh-cn/appendix/local-setup)、[排错决策树](/zh-cn/appendix/troubleshooting-tree) | 修改一个 `examples/*/policies.py` 或 replay 策略，并保留旧 probe | `npm run examples:test` + `npm run verify` |
-| 教师/助教 | [教师指南](/zh-cn/appendix/instructor-guide)、[课程 Rubric](/zh-cn/appendix/rubric)、[课程进度表](/zh-cn/appendix/course-schedule) | 选择 A/B/C/D 题，安排讲义和 Lab | Rubric 评分 + `npm run verify` |
+| 顺序 | 学习目标 | 先读 | 再做 | 验收 |
+| --- | --- | --- | --- | --- |
+| 1. 建立概念 | 理解 HL 的更新对象不是权重，而是软件结构 | [学习路线](/zh-cn/stage-1/)、[HL 基础概念](/zh-cn/stage-2/) | 写出 feedback、update target、verification 的定义 | 一页术语笔记 |
+| 2. 跑通闭环 | 观察 baseline failure 如何变成 feedback report | [学习闭环](/zh-cn/theory/learning-loop)、[可运行示例](/zh-cn/examples/) | `npm run examples:gridworld`、`npm run examples:gridworld:feedback` | GridWorld 实验记录 |
+| 3. 对照理论 | 区分 RL、DL 和 HL 的更新机制 | [从 RL/DL 到 HL](/zh-cn/stage-3/)、[研究框架](/zh-cn/theory/research-framework) | 把一个案例映射到 state、action、feedback、patch、regression | 一张闭环图 |
+| 4. 阅读案例 | 学会处理公开 artifact、X 来源和脱敏应用问题 | [案例库](/zh-cn/cases/)、[来源登记](/zh-cn/appendix/source-registry) | 写一张 case card，标注来源状态和边界 | case card |
+| 5. 修改验证 | 只改一个策略点，并确认旧经验没有退化 | [代码导览](/zh-cn/appendix/code-tour)、[Lab 1](/zh-cn/slides/lab-1/) | `npm run examples:test`、`npm run examples:feedback` | 更新后的 report 与测试结果 |
+| 6. 复盘扩展 | 把一次更新写成可反驳的研究问题 | [Lab 2](/zh-cn/slides/lab-2/)、[研究命题](/zh-cn/theory/research-propositions) | `npm run verify`，再写反遗忘复盘 | anti-forgetting checklist |
 
 ## 概念到实验
 
 ```mermaid
 flowchart TD
   A[HL 基础概念] --> B[学习闭环]
-  B --> C[研究框架]
-  C --> D[实验协议]
-  D --> E[可运行示例]
+  B --> C[RL/DL/HL 对照]
+  C --> D[可运行示例]
+  D --> E[案例来源]
   E --> F[反馈报告]
   F --> G[测试与回归]
-  G --> H[课程表达]
+  G --> H[复盘与研究问题]
   H --> C
 ```
 
-这张图说明课程的核心约束：理论页必须能落到示例或案例，示例必须能生成报告，报告必须能指导下一轮维护，维护必须被测试和课程材料约束。
+这张图说明课程的核心约束：理论页必须能落到示例或案例，示例必须能生成报告，报告必须能指导下一轮维护，维护必须被测试和复盘约束。
 
-## 示例到作业
+## 示例到练习
 
-| 示例 | 适合讲授的概念 | 推荐练习 |
+| 示例 | 适合学习的概念 | 推荐练习 |
 | --- | --- | --- |
 | GridWorld | 最小 HL 闭环、局部贪心失败 | A1、B1、C1 |
 | Robot Soccer | 动作前提、blocked-lane probe | B2、C4、D3 |
@@ -47,7 +49,7 @@ flowchart TD
 
 ## 发布前检查
 
-发布或提交前使用同一条命令：
+学习材料和示例更新后使用同一条命令：
 
 ```bash
 npm run verify
@@ -69,7 +71,7 @@ npm run verify
 
 ## 数据入口
 
-面向研究复查、教学组织和自动化检查的入口：
+面向复查、学习组织和自动化检查的入口：
 
 - [`/course-manifest.json`](/course-manifest.json)：核心页面、示例、public resources 和 CI gate。
 - [`/course-manifest.schema.json`](/course-manifest.schema.json)：manifest 字段约束。

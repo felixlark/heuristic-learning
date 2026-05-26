@@ -5,7 +5,7 @@ description: Heuristic Learning 仓库的环境、示例、命题、教学产物
 
 # 可复现性检查清单
 
-本页把仓库的复现标准拆成一组可以被研究者、学生、助教和编码智能体执行的检查。它关注的不是“页面是否看起来完整”，而是当前理论、示例、报告、贡献协议和文档站是否有可追溯证据与验证命令。
+本页把仓库的复现标准拆成一组可以被读者、助教和编码智能体执行的检查。它关注的不是“页面是否看起来完整”，而是当前理论、示例、报告、贡献协议和文档站是否有可追溯证据与验证命令。
 
 机器可读清单见 [`/reproducibility-checklist.json`](/reproducibility-checklist.json)，字段约束见 [`/reproducibility-checklist.schema.json`](/reproducibility-checklist.schema.json)。`npm run reproducibility:check` 会检查证据路径、命令、通过条件和已知边界是否仍然对齐。
 

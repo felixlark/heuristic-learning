@@ -22,7 +22,7 @@ export default defineConfig({
       'meta',
       {
         property: 'og:description',
-        content: '直觉学习中文研究与动手课程，面向研究者、工程师和学生。'
+        content: '直觉学习中文研究与动手课程：先理解理论，再运行示例，最后完成可验证练习。'
       }
     ],
     ['meta', { property: 'og:url', content: siteUrl }],

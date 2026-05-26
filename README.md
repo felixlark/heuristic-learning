@@ -2,14 +2,14 @@
 
 直觉学习（Heuristic Learning, HL）中文研究与动手课程。
 
-这个仓库把 Jiayi Weng 在 [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/) 中提出的 Heuristic Learning 思路，整理成一个面向研究者、学生和工程实践者的课程型 GitHub 仓库：既有理论地图，也有可以本地运行的最小示例。
+这个仓库把 Jiayi Weng 在 [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/) 中提出的 Heuristic Learning 思路，整理成一份中文学习材料：先建立理论直觉，再运行最小示例，最后完成可验证的 heuristic update。
 
 ## 目标
 
 - 用中文建立 HL 的基础概念、术语和研究问题。
 - 把 Atari、MuJoCo、VizDoom、机器人足球等案例整理成可学习的案例库。
 - 提供不依赖重型框架的 runnable examples，让读者先跑通状态、动作、反馈、代码更新的闭环。
-- 形成清晰的学习路线、章节、案例、附录、讲义和 Lab 入口，便于后续扩展为课程与组会材料。
+- 形成清晰的学习路线、章节、案例、附录、讲义和 Lab 入口，便于读者按同一条主线学习与复盘。
 
 ## 快速开始
 
@@ -22,17 +22,19 @@ npm run dev
 
 打开本地 VitePress 地址后，从 `学习路线` 开始阅读。
 
-按角色进入：
+推荐学习顺序：
 
-- 学生：先读 [课程大纲](docs/zh-cn/syllabus/index.md)，再跑 `npm run examples:gridworld`。
-- AI 研究者：先读 [研究框架](docs/zh-cn/theory/research-framework.md) 和 [研究命题](docs/zh-cn/theory/research-propositions.md)，再看 [实验协议](docs/zh-cn/appendix/benchmark-protocol.md)。
-- 工程师：先看 [可运行示例](docs/zh-cn/examples/index.md) 和 [代码导览](docs/zh-cn/appendix/code-tour.md)，再用 `npm run examples:test` 保护回归。
+1. 读 [课程大纲](docs/zh-cn/syllabus/index.md) 和 [学习路线](docs/zh-cn/stage-1/index.md)，明确 HL 的反馈、更新对象和验证方式。
+2. 跑 `npm run examples:gridworld` 和 `npm run examples:gridworld:feedback`，观察最小闭环。
+3. 读 [从 RL/DL 到 HL](docs/zh-cn/stage-3/index.md)，对照不同学习机制的更新对象。
+4. 从 [案例库](docs/zh-cn/cases/index.md) 选择一个案例，写出来源状态、failure mode、baseline 和 heuristic patch。
+5. 参考 [代码导览](docs/zh-cn/appendix/code-tour.md) 只改一个策略点，再用 `npm run examples:test` 和 `npm run verify` 保护回归。
 
 本地环境、验证顺序和常见失败处理见 [本地运行与排错](docs/zh-cn/appendix/local-setup.md)。
 失败面到诊断命令、修复动作和复验命令的机器可读路径见 [排错决策树](docs/zh-cn/appendix/troubleshooting-tree.md)。
 X、公开 artifact、脱敏应用问题和研究假设如何变成 case card 见 [来源到案例 Playbook](docs/zh-cn/appendix/source-to-case-playbook.md)。
 把公开 artifact、X 来源或脱敏应用问题升级为案例前，先用 [`templates/reproduction-note.md`](templates/reproduction-note.md) 记录来源状态、复现范围、缺失保真度、反驳路径和下一步实验。
-不同角色的推荐路径见 [课程地图](docs/zh-cn/course-map/index.md)。
+统一学习主线见 [课程地图](docs/zh-cn/course-map/index.md)。
 章节级“读、跑、改、复盘”闭环见 [学习单元矩阵](docs/zh-cn/appendix/learning-units.md)。
 六个示例的代码阅读顺序见 [代码导览](docs/zh-cn/appendix/code-tour.md)。
 能力目标到练习、Rubric 和验证命令的映射见 [学习成果矩阵](docs/zh-cn/appendix/learning-outcomes.md)。

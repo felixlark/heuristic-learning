@@ -35,7 +35,7 @@
       "surface": "in-app browser",
       "viewport": "mobile",
       "acceptance": [
-        "角色路径和学习路线可以纵向阅读",
+        "统一学习主线可以纵向阅读",
         "导航抽屉或页面链接可返回核心入口",
         "长中文标题不溢出容器"
       ],

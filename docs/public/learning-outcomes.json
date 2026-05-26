@@ -23,7 +23,7 @@
         "docs/zh-cn/stage-3/index.md",
         "docs/zh-cn/theory/research-propositions.md"
       ],
-      "assessment": "学生能用一个案例说明反馈来源、更新对象、验证方式和未验证边界。",
+      "assessment": "读者能用一个案例说明反馈来源、更新对象、验证方式和未验证边界。",
       "verification_commands": [
         "npm run claims:registry:check"
       ]
@@ -48,7 +48,7 @@
         "examples/heuristic-gridworld/README.md",
         "experiments/gridworld/latest.json"
       ],
-      "assessment": "学生能指出 failure mode、candidate_update.target 和 verification command。",
+      "assessment": "读者能指出 failure mode、candidate_update.target 和 verification command。",
       "verification_commands": [
         "npm run examples:gridworld:feedback",
         "npm run examples:reports:check"
@@ -69,14 +69,14 @@
       ],
       "rubric_module_ids": [
         "source-and-problem",
-        "regression-and-course-expression"
+        "regression-and-learning-review"
       ],
       "evidence": [
         "docs/zh-cn/appendix/source-registry.md",
         "docs/public/x-sources.json",
         "templates/case-card.md"
       ],
-      "assessment": "学生能保留来源层级，不把未复核线索写成已复现事实。",
+      "assessment": "读者能保留来源层级，不把未复核线索写成已复现事实。",
       "verification_commands": [
         "npm run source:registry:check",
         "npm run x:sources:check"
@@ -100,7 +100,7 @@
       ],
       "rubric_module_ids": [
         "heuristic-patch",
-        "regression-and-course-expression"
+        "regression-and-learning-review"
       ],
       "evidence": [
         "docs/zh-cn/slides/lecture-3/index.md",
@@ -108,7 +108,7 @@
         "templates/anti-forgetting-checklist.md",
         "tests/"
       ],
-      "assessment": "学生能说明旧行为、风险更新、回归保护和必须保留的 probe。",
+      "assessment": "读者能说明旧行为、风险更新、回归保护和必须保留的 probe。",
       "verification_commands": [
         "npm run examples:test",
         "npm run examples:feedback"
@@ -131,7 +131,7 @@
       ],
       "rubric_module_ids": [
         "feedback-report",
-        "regression-and-course-expression"
+        "regression-and-learning-review"
       ],
       "evidence": [
         "docs/zh-cn/appendix/rubric.md",
@@ -139,7 +139,7 @@
         "docs/public/reproducibility-checklist.json",
         "docs/public/contribution-contract.json"
       ],
-      "assessment": "学生能用 Rubric 自评，并让仓库级结构、报告、路由和构建一起通过。",
+      "assessment": "读者能用 Rubric 自评，并让仓库级结构、报告、路由和构建一起通过。",
       "verification_commands": [
         "npm run exercises:check",
         "npm run reproducibility:check",

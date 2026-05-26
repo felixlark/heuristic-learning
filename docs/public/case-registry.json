@@ -115,7 +115,7 @@
       "example_id": null,
       "failure_mode": null,
       "learning_outcome_ids": ["lo-1", "lo-3"],
-      "course_use": "来源抽取案例，用于训练学生区分一手原帖、二手转述、公开 artifact 和研究假设。",
+      "course_use": "来源抽取案例，用于训练读者区分一手原帖、二手转述、公开 artifact 和研究假设。",
       "verification_commands": [
         "npm run x:sources:check",
         "npm run source:registry:check"

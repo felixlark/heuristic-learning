@@ -14,7 +14,7 @@ description: Heuristic Learning 课程的概念题、代码题、实验题和 ca
 | 难度 | 适合对象 | 产出 | 验收 |
 | --- | --- | --- | --- |
 | A. 概念题 | 初学者、读书会 | 3-5 行解释或对照表 | 能引用课程页和来源状态 |
-| B. 代码题 | Lab 学生、工程实践者 | 一个小 patch 或测试 | `npm run examples:test` |
+| B. 代码题 | 动手练习 | 一个小 patch 或测试 | `npm run examples:test` |
 | C. 实验题 | 研究训练、课程作业 | experiment record + report | `npm run verify` |
 | D. Capstone | 课程项目、研究 repo 贡献 | case card + runnable example + docs | Rubric 80 分以上 |
 
@@ -63,7 +63,7 @@ npm run examples:reports:check
 | C2. Probe 是否稳定 | 当前六个 probe 任选一个 | 给出测试或 replay 如何稳定触发 failure mode |
 | C3. Report 是否足够给下一轮智能体使用 | 任一 `experiments/*/latest.json` | 指出 `candidate_update.target/rule/verification` |
 | C4. 反遗忘路径 | 任一 heuristic patch | 按 `templates/anti-forgetting-checklist.md` 写一个坏更新，并说明哪个测试会阻止它 |
-| C5. 课程表达一致性 | 任一示例 | 检查 README、课程大纲、案例页和 report 是否一致 |
+| C5. 学习材料一致性 | 任一示例 | 检查 README、课程大纲、案例页和 report 是否一致 |
 
 实验题统一验收：
 
@@ -71,7 +71,7 @@ npm run examples:reports:check
 npm run verify
 ```
 
-验收时还要读记录本身。通过命令只能证明仓库当前一致，不能证明学生已经理解 failure mode。
+验收时还要读记录本身。通过命令只能证明仓库当前一致，不能证明读者已经理解 failure mode。
 
 ## D. Capstone 题
 

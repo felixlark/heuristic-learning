@@ -109,7 +109,7 @@
     {
       "id": "course-and-reuse",
       "title": "教学使用与复现材料",
-      "purpose": "说明学生、AI 研究者和工程师如何从同一套证据链进入 HL 的学习、复现和扩展。",
+      "purpose": "说明读者如何沿同一套证据链学习、复现和扩展 HL。",
       "claim_ids": ["source-status-is-course-structure", "feedback-report-as-agent-input"],
       "metric_ids": ["update-cost", "source-boundary"],
       "example_ids": ["gridworld"],
@@ -123,7 +123,7 @@
         "npm run speaker:notes:check",
         "npm run teaching:pack:check"
       ],
-      "writing_prompt": "说明学生、AI 研究者、工程师、教师和编码智能体如何从同一套 registry 进入课程。",
+      "writing_prompt": "说明读者如何从同一套 registry 进入学习、复现和扩展。",
       "boundary": "教学使用只说明读者如何学习、复现和扩展；未验证来源只能写成研究假设。"
     }
   ]

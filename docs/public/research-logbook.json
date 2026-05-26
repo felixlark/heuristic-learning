@@ -37,7 +37,7 @@
       "status": "active",
       "source_type": "public-code-artifact",
       "source_ref": "https://github.com/Trinkle23897/learning-beyond-gradients/tree/main/atari/breakout",
-      "reading_goal": "把 Breakout artifact 的几何预测思想压缩成学生能读懂和能测试的 replay。",
+      "reading_goal": "把 Breakout artifact 的几何预测思想压缩成读者能读懂和能测试的 replay。",
       "bound_examples": [
         "breakout-replay"
       ],

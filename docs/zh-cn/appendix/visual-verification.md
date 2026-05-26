@@ -24,7 +24,7 @@ description: Heuristic Learning 公开页面在官方 Browser/IAB 或 Chrome 插
 | ID | 路由 | 视口 | 验收重点 | 预检 |
 | --- | --- | --- | --- | --- |
 | `home-course-entry` | `/heuristic-learning/` | desktop | 首屏课程定位、核心导航、无空白主内容 | `npm run docs:routes:check` |
-| `course-map-mobile` | `/heuristic-learning/zh-cn/course-map/` | mobile | 角色路径可读、中文标题不溢出、返回核心入口 | `npm run course:structure:check` |
+| `course-map-mobile` | `/heuristic-learning/zh-cn/course-map/` | mobile | 统一学习主线可读、中文标题不溢出、返回核心入口 | `npm run course:structure:check` |
 | `examples-run-loop` | `/heuristic-learning/zh-cn/examples/` | desktop | 六个示例都有命令、报告、测试和复现边界 | `npm run examples:test` |
 | `slide-deck-scan` | `/heuristic-learning/zh-cn/slides/` | desktop | 3 讲 + 2 Lab 入口、课堂命令、交付物 | `npm run slides:check` |
 | `public-registry-entrypoints` | `/heuristic-learning/zh-cn/appendix/public-entrypoints` | desktop | registry/schema 索引页可读，链接到 course manifest、completion audit、visual verification 和 llms.txt；JSON/TXT 直达由 `npm run docs:routes:check` 验证 | `npm run course:manifest:check` |

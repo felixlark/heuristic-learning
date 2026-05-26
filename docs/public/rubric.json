@@ -138,8 +138,8 @@
       ]
     },
     {
-      "id": "regression-and-course-expression",
-      "title": "回归验证与课程表达",
+      "id": "regression-and-learning-review",
+      "title": "回归验证与学习复盘",
       "weight": 20,
       "minimum_standard": "有测试、命令、文档落点，并通过统一验证",
       "evidence": [

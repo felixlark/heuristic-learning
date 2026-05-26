@@ -12,24 +12,28 @@ description: Heuristic Learning 中文研究与动手课程首页
 - **理论积累**：从 Jiayi Weng 的公开文章出发，提炼 HL、Heuristic System、反馈闭环、遗忘与维护成本等核心概念。
 - **案例学习**：把 Atari、MuJoCo、VizDoom、机器人足球等案例变成学习卡片。
 - **动手实践**：提供最小可运行环境，让读者看到“规则如何根据反馈被维护”。
-- **课程体验**：形成路线图、章节、案例、附录、讲义和 Lab 入口，让不同读者都能从同一套证据链进入。
+- **可验证练习**：每个关键概念都要能落到命令、反馈报告、测试或复盘记录。
 
-## 三类读者怎么用
+## 学习顺序
 
-| 读者 | 最短路径 | 产出 |
+| 顺序 | 学什么 | 做什么 | 产出 |
 | --- | --- | --- |
-| AI 研究者 | [研究框架](/zh-cn/theory/research-framework) -> [研究命题](/zh-cn/theory/research-propositions) -> [实验协议](/zh-cn/appendix/benchmark-protocol) | 一个有来源、反驳路径和最小实验的研究问题 |
-| 工程师 | [可运行示例](/zh-cn/examples/) -> [代码导览](/zh-cn/appendix/code-tour) -> [排错决策树](/zh-cn/appendix/troubleshooting-tree) | 跑通、修改并验证一个策略维护闭环 |
-| 学生 | [课程大纲](/zh-cn/syllabus/) -> [学习路线](/zh-cn/stage-1/) -> [Lab 1](/zh-cn/slides/lab-1/) | 一份包含 baseline、heuristic、报告和测试的实验记录 |
+| 1. 建立概念 | [学习路线](/zh-cn/stage-1/) 与 [HL 基础概念](/zh-cn/stage-2/) | 写出 feedback、update target、verification 的含义 | 一页术语笔记 |
+| 2. 理解闭环 | [学习闭环](/zh-cn/theory/learning-loop) 与 [从 RL/DL 到 HL](/zh-cn/stage-3/) | 对照 RL/DL/HL 的更新对象 | 一张闭环图 |
+| 3. 跑通示例 | [可运行示例](/zh-cn/examples/) 与 [Lab 1](/zh-cn/slides/lab-1/) | 运行 GridWorld 和 feedback report | 一份实验记录 |
+| 4. 阅读案例 | [案例库](/zh-cn/cases/) 与 [来源登记](/zh-cn/appendix/source-registry) | 区分已复现、轻量 replay 和待验证线索 | 一张 case card |
+| 5. 修改验证 | [代码导览](/zh-cn/appendix/code-tour) 与 [Lab 2](/zh-cn/slides/lab-2/) | 只改一个策略点，再跑测试和报告 | anti-forgetting checklist |
+| 6. 复盘扩展 | [研究框架](/zh-cn/theory/research-framework) 与 [研究命题](/zh-cn/theory/research-propositions) | 写出证据、反例和下一步实验 | 一个可反驳研究问题 |
 
-## 推荐路径
+## 推荐路线
 
-1. 先看 [课程地图](/zh-cn/course-map/)：按学生、研究者、教师或工程实践者选择路径。
-2. 再看 [课程大纲](/zh-cn/syllabus/)：理解章节、案例、命令和验证产物如何对应。
+1. 先看 [课程地图](/zh-cn/course-map/)：理解这份材料如何从概念走到练习。
+2. 再看 [课程大纲](/zh-cn/syllabus/)：确认每个单元的阅读、命令和交付物。
 3. 继续读 [学习路线](/zh-cn/stage-1/) 与 [HL 基础概念](/zh-cn/stage-2/)。
-4. 对照 [RL/DL/HL](/zh-cn/stage-3/)：明确它不是反向传播替代品，而是另一类更新对象。
+4. 对照 [RL/DL/HL](/zh-cn/stage-3/)：明确 HL 不是反向传播替代品，而是另一类更新对象。
 5. 跑 [可运行示例](/zh-cn/examples/)：用最小环境看见状态、动作、反馈和规则更新。
 6. 查 [案例库](/zh-cn/cases/)：用公开来源和脱敏应用案例练习 evidence-aware 的案例阅读。
+7. 完成 [Lab 1](/zh-cn/slides/lab-1/) 和 [Lab 2](/zh-cn/slides/lab-2/)：把一次 heuristic update 写成可验证记录。
 
 ## 一句话定义
 

@@ -12,7 +12,7 @@
       ],
       "rubric_module_ids": [
         "source-and-problem",
-        "regression-and-course-expression"
+        "regression-and-learning-review"
       ],
       "exercises": [
         {
@@ -257,7 +257,7 @@
       "rubric_module_ids": [
         "probe-and-baseline",
         "feedback-report",
-        "regression-and-course-expression"
+        "regression-and-learning-review"
       ],
       "exercises": [
         {
@@ -362,7 +362,7 @@
         },
         {
           "id": "C5",
-          "title": "课程表达一致性",
+          "title": "学习材料一致性",
           "prompt": "检查 README、课程大纲、案例页和 report 是否一致。",
           "input_paths": [
             "README.md",
@@ -400,7 +400,7 @@
         "probe-and-baseline",
         "heuristic-patch",
         "feedback-report",
-        "regression-and-course-expression"
+        "regression-and-learning-review"
       ],
       "exercises": [
         {

@@ -15,7 +15,7 @@ EXPECTED_IDS = {
     "probe-and-baseline",
     "heuristic-patch",
     "feedback-report",
-    "regression-and-course-expression",
+    "regression-and-learning-review",
 }
 EXPECTED_SCORES = {0, 5, 10, 15, 20}
 

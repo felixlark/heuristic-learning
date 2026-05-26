@@ -20,7 +20,7 @@
       "surface": "in-app browser",
       "route": "/heuristic-learning/zh-cn/course-map/",
       "viewport": "mobile",
-      "observed_outcome": "Official Browser/IAB opened the route with a 390x844 viewport; the page text contained course map, student, researcher, instructor, and coding-agent paths. The hidden off-canvas sidebar remains outside the viewport as expected, while the main learning path text is readable.",
+      "observed_outcome": "Official Browser/IAB opened the route with a 390x844 viewport; the page showed the course map with readable main learning path text. The hidden off-canvas sidebar remains outside the viewport as expected.",
       "remaining_issue": "none",
       "status": "passed"
     },

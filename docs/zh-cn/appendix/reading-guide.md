@@ -5,7 +5,7 @@ description: Heuristic Learning 课程的一手来源和背景概念阅读顺序
 
 # 文献阅读指南
 
-本页给研究者和学生一条可执行的阅读路径：先读一手来源，再看公开 artifact，最后把背景概念落到课程的命题、示例和验证命令。它不是完整文献综述；所有来源状态仍以 [来源登记](/zh-cn/appendix/source-registry) 为准。
+本页给读者一条可执行的阅读路径：先读一手来源，再看公开 artifact，最后把背景概念落到课程的命题、示例和验证命令。它不是完整文献综述；所有来源状态仍以 [来源登记](/zh-cn/appendix/source-registry) 为准。
 
 ## 阅读原则
 

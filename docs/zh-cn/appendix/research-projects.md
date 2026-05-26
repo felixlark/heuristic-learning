@@ -19,7 +19,7 @@ description: Heuristic Learning 的课程项目、研究问题和验收产物
 | 有失败 | 必须有 baseline failure，不能只展示成功路径 |
 | 有更新对象 | 能明确修改代码、阈值、检测器、配置、测试或实验记录 |
 | 有验证 | 至少能跑一个示例命令、一个测试命令和 `npm run verify`，并符合 [实验协议](/zh-cn/appendix/benchmark-protocol) |
-| 有课程表达 | 最终产物能进入案例页、讲义、Rubric 或来源登记 |
+| 有学习复盘 | 最终产物能进入案例页、讲义、Rubric 或来源登记 |
 
 如果一个想法暂时没有来源或可复现失败，它应该先进入 [来源登记](/zh-cn/appendix/source-registry)，不要直接进入主线项目。
 
@@ -98,7 +98,7 @@ npm run verify
 
 ## 与 Rubric 的关系
 
-[课程 Rubric](/zh-cn/appendix/rubric) 是评分标准，本页是项目菜单，[实验协议](/zh-cn/appendix/benchmark-protocol) 负责规定 baseline、probe、report 和 regression gate，[消融计划](/zh-cn/appendix/ablation-plan) 负责说明下一步变量对照。一个项目是否合格，最终仍按 Rubric 的五个维度验收：来源与问题定义、probe 与 baseline、heuristic patch、反馈报告、回归验证与课程表达。
+[课程 Rubric](/zh-cn/appendix/rubric) 是评分标准，本页是项目菜单，[实验协议](/zh-cn/appendix/benchmark-protocol) 负责规定 baseline、probe、report 和 regression gate，[消融计划](/zh-cn/appendix/ablation-plan) 负责说明下一步变量对照。一个项目是否合格，最终仍按 Rubric 的五个维度验收：来源与问题定义、probe 与 baseline、heuristic patch、反馈报告、回归验证与学习复盘。
 
 项目完成后，如果它没有进入来源登记、案例页、示例、报告、测试或课程页之一，就还只是个人笔记，不是课程的一部分。
 

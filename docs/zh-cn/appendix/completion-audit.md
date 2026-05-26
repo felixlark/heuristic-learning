@@ -5,7 +5,7 @@ description: Heuristic Learning 仓库目标、证据、验证命令和剩余边
 
 # 完成度审计
 
-本页把“面向 AI 研究者、工程师和学生，且可学习、可运行、可验证”的目标拆成证据矩阵。它不是发布宣传页，而是维护者、助教和编码智能体判断仓库是否接近完成的审计入口。
+本页把“统一学习主线、可运行示例、可验证练习”的目标拆成证据矩阵。它不是发布宣传页，而是维护者、助教和编码智能体判断仓库是否接近完成的审计入口。
 
 机器可读审计矩阵见 [`/completion-audit.json`](/completion-audit.json)，字段约束见 [`/completion-audit.schema.json`](/completion-audit.schema.json)。`npm run completion:audit:check` 会检查目标拆解、必跑命令、证据边界和完成前检查是否仍与本页一致。
 

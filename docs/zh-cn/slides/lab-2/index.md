@@ -120,7 +120,7 @@ npm run examples:reports:check
 | Probe 与 baseline | 能说明旧 probe 为什么必须保留 |
 | Heuristic patch | 能指出坏更新会破坏什么 |
 | 反馈报告 | `candidate_update` 能提醒维护边界 |
-| 回归验证与课程表达 | `npm run verify` 通过，且有一段反遗忘记录 |
+| 回归验证与学习复盘 | `npm run verify` 通过，且有一段反遗忘记录 |
 
 ## 提交记录模板
 

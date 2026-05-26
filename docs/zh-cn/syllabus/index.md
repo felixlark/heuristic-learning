@@ -5,17 +5,18 @@ description: Heuristic Learning 课程章节、案例、命令和验证产物总
 
 # 课程大纲
 
-本页把 HL 整理成一张学习与验证地图。学生可以按章节学习，AI 研究者可以按案例扩展，工程师可以按示例和测试改代码。
+本页把 HL 整理成一张学习与验证地图。学习顺序是：先建立概念，再跑通闭环，随后阅读案例、修改策略、检查回归，最后把一次更新复盘成可讨论的研究问题。
 
 ## 总体结构
 
 | 单元 | 核心问题 | 配套材料 | 可验证产物 |
 | --- | --- | --- | --- |
-| 0. 建立直觉 | HL 为什么不是“手写规则”的旧瓶装新酒？ | [课程地图](/zh-cn/course-map/)、[学习路线](/zh-cn/stage-1/)、[HL 基础概念](/zh-cn/stage-2/) | 能解释状态、动作、反馈、更新对象 |
-| 1. 跑通闭环 | 一个规则系统如何从反馈中被维护？ | [可运行示例](/zh-cn/examples/)、[Lab 1](/zh-cn/slides/lab-1/) | `npm run verify` |
-| 2. 形成理论 | HL 如何定义问题、度量与边界？ | [学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework)、[研究命题](/zh-cn/theory/research-propositions)、[从 RL/DL 到 HL](/zh-cn/stage-3/) | 能把案例映射到度量表 |
-| 3. 学习案例 | 公开 artifact、脱敏应用案例和 X 来源如何形成研究问题？ | [案例库](/zh-cn/cases/)、[来源登记](/zh-cn/appendix/source-registry) | case card + source status |
-| 4. 课程表达 | 如何把研究材料讲给学生或组会？ | [第 1 讲](/zh-cn/slides/lecture-1/)、[第 2 讲](/zh-cn/slides/lecture-2/)、[第 3 讲](/zh-cn/slides/lecture-3/)、[Lab 1](/zh-cn/slides/lab-1/)、[Lab 2](/zh-cn/slides/lab-2/)、[教师指南](/zh-cn/appendix/instructor-guide)、[课程进度表](/zh-cn/appendix/course-schedule)、[练习集](/zh-cn/appendix/exercises)、[研究课题](/zh-cn/appendix/research-projects)、[实验协议](/zh-cn/appendix/benchmark-protocol)、[课程 Rubric](/zh-cn/appendix/rubric) | 讲义 + lab 记录 |
+| 0. 建立概念 | HL 为什么不是“手写规则”的旧瓶装新酒？ | [课程地图](/zh-cn/course-map/)、[学习路线](/zh-cn/stage-1/)、[HL 基础概念](/zh-cn/stage-2/) | 能解释状态、动作、反馈、更新对象 |
+| 1. 跑通闭环 | 一个规则系统如何从反馈中被维护？ | [学习闭环](/zh-cn/theory/learning-loop)、[可运行示例](/zh-cn/examples/)、[Lab 1](/zh-cn/slides/lab-1/) | `npm run verify` |
+| 2. 对照理论 | HL 如何区别于 RL 和 DL？ | [从 RL/DL 到 HL](/zh-cn/stage-3/)、[研究框架](/zh-cn/theory/research-framework)、[研究命题](/zh-cn/theory/research-propositions) | 能把案例映射到度量表 |
+| 3. 阅读案例 | 公开 artifact、脱敏应用案例和 X 来源如何形成研究问题？ | [案例库](/zh-cn/cases/)、[来源登记](/zh-cn/appendix/source-registry)、[来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook) | case card + source status |
+| 4. 修改验证 | 如何让 heuristic patch 被测试、报告和回归检查约束？ | [代码导览](/zh-cn/appendix/code-tour)、[第 1 讲](/zh-cn/slides/lecture-1/)、[第 2 讲](/zh-cn/slides/lecture-2/)、[第 3 讲](/zh-cn/slides/lecture-3/)、[Lab 2](/zh-cn/slides/lab-2/) | report + regression test |
+| 5. 复盘扩展 | 如何把一次更新写成可反驳、可复现的学习问题？ | [练习集](/zh-cn/appendix/exercises)、[实验协议](/zh-cn/appendix/benchmark-protocol)、[课程 Rubric](/zh-cn/appendix/rubric)、[研究课题](/zh-cn/appendix/research-projects) | anti-forgetting checklist + 复盘记录 |
 
 ## 可运行实验矩阵
 
@@ -38,31 +39,17 @@ npm run teaching:registry:check
 npm run course:structure:check
 ```
 
-## 学习路径
+## 统一学习路径
 
-### 学生路径
-
-1. 读 [学习路线](/zh-cn/stage-1/)。
-2. 跑 `npm run verify`。
-3. 完成 [Lab 1](/zh-cn/slides/lab-1/)。
-4. 选一个案例页，解释它的 baseline failure 和 heuristic patch。
-5. 写一份 `templates/experiment-record.md` 风格的复盘，并按 [课程 Rubric](/zh-cn/appendix/rubric) 自查。
-
-### 研究者路径
-
-1. 读 [学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework) 与 [研究命题](/zh-cn/theory/research-propositions)。
-2. 查 [来源登记](/zh-cn/appendix/source-registry)，确认哪些来源已复现、哪些只是线索。
-3. 用 `templates/case-card.md` 新增一个案例。
-4. 尽量把案例压缩成 `examples/*` 里的最小可运行环境。
-5. 用 `npm run verify` 证明代码、反馈报告和文档可以一起构建。
-
-### 工程师路径
-
-1. 从 [可运行示例](/zh-cn/examples/) 选一个小环境，不先读完整附录。
-2. 跑对应命令，例如 `npm run examples:breakout-replay`。
-3. 打开 [代码导览](/zh-cn/appendix/code-tour)，只改一个策略更新点。
-4. 运行 `npm run examples:test` 和对应 feedback 命令，确认旧 probe 没有退化。
-5. 最后再跑 `npm run verify`，把代码、报告和文档一起验收。
+1. 读 [学习路线](/zh-cn/stage-1/) 和 [HL 基础概念](/zh-cn/stage-2/)，先写出 HL 的反馈、更新对象和验证方式。
+2. 跑 `npm run examples:gridworld`，观察 baseline 为什么会在 `local_greedy_trap` 失败。
+3. 跑 `npm run examples:gridworld:feedback`，读懂 `experiments/gridworld/latest.json` 如何记录下一轮更新。
+4. 阅读 [从 RL/DL 到 HL](/zh-cn/stage-3/)，确认 HL 不是反向传播替代品，而是软件结构的更新过程。
+5. 从 [案例库](/zh-cn/cases/) 选择一个案例，写出来源状态、failure mode、baseline 和 heuristic patch。
+6. 打开 [代码导览](/zh-cn/appendix/code-tour)，只改一个策略更新点。
+7. 运行 `npm run examples:test` 和对应 feedback 命令，确认旧 probe 没有退化。
+8. 完成 [Lab 2](/zh-cn/slides/lab-2/)，用 [课程 Rubric](/zh-cn/appendix/rubric) 自查证据链。
+9. 最后跑 `npm run verify`，把代码、报告和文档一起验收。
 
 ## 当前覆盖与缺口
 
@@ -71,7 +58,7 @@ npm run course:structure:check
 | 理论 | 基础概念、学习闭环、RL/DL/HL 对照、研究框架 | 扩展泛化、遗忘、维护成本度量 |
 | 实验 | 6 个纯 Python 最小环境 | 增加真实 MuJoCo 高保真验证 |
 | 案例 | Ant、Breakout、VizDoom、机器人足球、交通模拟、X 来源 | 继续补公开来源复核和高保真实验 |
-| 课程 | 第 1 讲、第 2 讲、第 3 讲、Lab 1、Lab 2、教师指南、课程进度表、练习集、研究课题、实验协议与 Rubric | 继续拆成 4-5 讲课程 |
+| 学习材料 | 第 1 讲、第 2 讲、第 3 讲、Lab 1、Lab 2、练习集、研究课题、实验协议与 Rubric | 继续拆成 4-5 讲课程 |
 | 验证 | tests、feedback report、report schema、VitePress build、页面路由和视觉验收 | 持续补充真实环境复验 |
 
 更具体的版本路线见 [研究路线图](/zh-cn/appendix/research-roadmap)。任何新增章节如果不能落到来源、实验或验证产物，就还不应该进入主线课程。

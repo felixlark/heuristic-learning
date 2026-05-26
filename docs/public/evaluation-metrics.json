@@ -52,12 +52,12 @@
         "npm run cases:check"
       ],
       "failure_mode": "把一次失败解释成整体能力不足，无法形成可审查的最小更新。",
-      "course_use": "用于案例卡和研究命题讨论，帮助学生区分错误现象与可更新对象。"
+      "course_use": "用于案例卡和研究命题讨论，帮助读者区分错误现象与可更新对象。"
     },
     {
       "id": "update-cost",
       "title": "更新成本",
-      "research_question": "一次 HL patch 需要修改多少知识、代码或控制参数，是否能被学生复现？",
+      "research_question": "一次 HL patch 需要修改多少知识、代码或控制参数，是否能被读者复现？",
       "definition": "记录修改面、输入证据、实验命令和复盘模板，避免把不可复现经验写成课程结论。",
       "example_ids": ["gridworld", "traffic-grid", "ant-gait-replay"],
       "claim_ids": ["feedback-report-as-agent-input", "hl-rl-dl-division-of-labor"],
@@ -70,7 +70,7 @@
         "npm run research:projects:check",
         "npm run checkpoints:check"
       ],
-      "failure_mode": "只给最终 patch，不记录学生或研究者复跑时需要的证据和命令。",
+      "failure_mode": "只给最终 patch，不记录复跑时需要的证据和命令。",
       "course_use": "用于研究项目和反遗忘项目验收。"
     },
     {

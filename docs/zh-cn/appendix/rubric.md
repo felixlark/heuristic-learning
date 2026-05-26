@@ -19,7 +19,7 @@ description: Heuristic Learning 作业、案例和实验贡献的验收标准
 | Probe 与 baseline | 20 | 能稳定复现一个失败模式，而不是只讲平均表现 |
 | Heuristic patch | 20 | 更新对象可审查，且解释了为什么改这个结构 |
 | 反馈报告 | 20 | 产物能被下一轮编码智能体读取 |
-| 回归验证与课程表达 | 20 | 有测试、命令、文档落点，并通过统一验证 |
+| 回归验证与学习复盘 | 20 | 有测试、命令、文档落点，并通过统一验证 |
 
 建议通过线为 80 分。低于 60 分的材料只能留作线索，不能进入主线课程。
 
@@ -87,7 +87,7 @@ description: Heuristic Learning 作业、案例和实验贡献的验收标准
 - `candidate_update.target` 指向下一轮可维护文件。
 - `candidate_update.verification` 指向统一测试命令。
 
-## 回归验证与课程表达
+## 回归验证与学习复盘
 
 | 分数 | 标准 |
 | --- | --- |
@@ -123,6 +123,6 @@ description: Heuristic Learning 作业、案例和实验贡献的验收标准
 2. 跑示例命令，确认 baseline 和 heuristic 行为可观察。
 3. 读 `experiments/*/latest.json`，确认下一轮智能体能接着维护。
 4. 跑 `npm run verify`。
-5. 检查课程页是否能让学生复述 signal、probe、patch 和 regression。
+5. 检查课程页是否能让读者复述 signal、probe、patch 和 regression。
 
 这套 Rubric 也适用于未来的 PR review：先看证据链，再看实现风格。

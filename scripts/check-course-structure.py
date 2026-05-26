@@ -2215,7 +2215,7 @@ def check_course_manifest() -> None:
             "probe-and-baseline",
             "heuristic-patch",
             "feedback-report",
-            "regression-and-course-expression",
+            "regression-and-learning-review",
         },
         "rubric module ids mismatch",
     )

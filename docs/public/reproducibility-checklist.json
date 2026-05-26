@@ -60,7 +60,7 @@
     {
       "id": "teaching-artifacts",
       "title": "教学产物",
-      "scope": "确认课程、讲义、练习、Rubric 和授课包可以被学生或助教复用。",
+      "scope": "确认课程、讲义、练习、Rubric 和授课包可以被读者或助教复用。",
       "evidence": [
         "docs/public/teaching-registry.json",
         "docs/public/slide-deck.json",
@@ -76,7 +76,7 @@
         "npm run teaching:pack:check"
       ],
       "pass_condition": "每个教学材料都有阅读材料、命令、交付物或验收项。",
-      "known_boundary": "命令通过只能证明材料结构一致，不能代替教师对学生答案质量的评审。"
+      "known_boundary": "命令通过只能证明材料结构一致，不能代替教师对学习答案质量的评审。"
     },
     {
       "id": "contribution-and-release",

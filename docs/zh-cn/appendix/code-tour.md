@@ -5,7 +5,7 @@ description: Heuristic Learning 六个可运行示例的代码阅读顺序、运
 
 # 代码导览
 
-本页把“跑通示例”推进到“读懂闭环”。每个 tour 都告诉读者先读环境、再读策略、再读运行入口、反馈报告和测试；这样学生和研究者可以把 HL 的状态、动作、反馈、更新对象和回归验证对应到具体文件。
+本页把“跑通示例”推进到“读懂闭环”。每个 tour 都告诉读者先读环境、再读策略、再读运行入口、反馈报告和测试；这样可以把 HL 的状态、动作、反馈、更新对象和回归验证对应到具体文件。
 
 机器可读导览见 [`/code-tour.json`](/code-tour.json)，字段约束见 [`/code-tour.schema.json`](/code-tour.schema.json)。`npm run code:tour:check` 会检查每个 tour 是否绑定示例、`reading_order`、运行命令、`edit_target` 和测试文件。
 
