@@ -9,18 +9,15 @@ description: Heuristic Learning 术语、研究问题、示例、讲义和验证
 
 机器可读图谱见 [`/concept-graph.json`](/concept-graph.json)，字段约束见 [`/concept-graph.schema.json`](/concept-graph.schema.json)。`npm run concept:graph:check` 会检查图谱是否仍与术语表、研究问题 registry、示例 registry、讲义 registry 和 package scripts 一致。
 
-## 核心概念
+## 交互式图谱
 
-| 概念 | 连接到的研究问题 | 代表示例 | 讲义 | 验证 |
-| --- | --- | --- | --- | --- |
-| Heuristic Learning | 学习对象可以是软件结构；反馈报告是下一轮智能体的训练样本 | GridWorld、Breakout、Ant Gait | 第 1 讲、第 2 讲 | `npm run claims:registry:check`、`npm run examples:feedback` |
-| Signal | 来源状态必须约束结论强度 | Robot Soccer、Traffic Grid、Breakout | 第 2 讲 | `npm run source:registry:check`、`npm run x:sources:check` |
-| Probe | 失败类型比平均分更适合可学习、可验证 | 六个 runnable examples | 第 2 讲、Lab 1 | `npm run examples:registry:check`、`npm run examples:test` |
-| Baseline | 失败类型比平均分更适合可学习、可验证 | 六个 runnable examples | 第 2 讲、Lab 1 | `npm run benchmark:summary:check`、`npm run examples:reports:check` |
-| Heuristic patch | 学习对象可以是软件结构 | Robot Soccer、Traffic Grid、Breakout、Ant Gait | 第 2 讲、第 3 讲、Lab 2 | `npm run examples:feedback`、`npm run examples:test` |
-| Feedback report | 反馈报告是下一轮智能体的训练样本 | 六个 runnable examples | 第 1 讲、第 2 讲、Lab 1 | `npm run examples:feedback`、`npm run examples:reports:check` |
-| Regression | 失败类型和来源状态的回归约束 | 六个 runnable examples | 第 3 讲、Lab 2 | `npm run examples:test`、`npm run verify` |
-| Source status | 来源状态必须约束结论强度 | Robot Soccer、Traffic Grid、VizDoom、Breakout、Ant Gait | 第 2 讲 | `npm run source:registry:check`、`npm run x:sources:check` |
+点击节点，查看它在学习闭环里的位置、对应示例、阅读页面和验证命令。中心节点说明 HL 的学习对象；外圈节点按来源、验证、更新和复盘组织。
+
+<ClientOnly>
+  <ConceptGraphExplorer />
+</ClientOnly>
+
+图谱覆盖 Heuristic Learning、Signal、Probe、Baseline、Heuristic patch、Feedback report、Regression 和 Source status。每个节点都从 `/concept-graph.json` 读取对应的示例、讲义、页面和验证命令。
 
 ## 使用方式
 

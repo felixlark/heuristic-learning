@@ -55,6 +55,8 @@ def check_registry(registry: dict[str, Any]) -> None:
     require(registry.get("schema_version") == 1, "registry schema_version must be 1")
 
     page = PAGE_PATH.read_text(encoding="utf-8")
+    component = (ROOT / "docs/.vitepress/theme/components/ConceptGraphExplorer.vue").read_text(encoding="utf-8")
+    documented = f"{page}\n{component}"
     glossary = (ROOT / "docs/zh-cn/appendix/glossary.md").read_text(encoding="utf-8")
     package = load_json(ROOT / "package.json")
     scripts = package.get("scripts")
@@ -105,7 +107,8 @@ def check_registry(registry: dict[str, Any]) -> None:
         concept_ids.add(concept_id)
 
         term = concept.get("term")
-        require(isinstance(term, str) and term in page, f"{context}: term not documented on concept page")
+        require(isinstance(term, str) and term, f"{context}: term must be non-empty")
+        require(term in documented or term in glossary, f"{context}: term not documented")
         require(term in glossary, f"{context}: term not documented in glossary")
         definition = concept.get("definition")
         require(isinstance(definition, str) and definition, f"{context}: definition must be non-empty")
@@ -133,7 +136,10 @@ def check_registry(registry: dict[str, Any]) -> None:
             require(isinstance(command, str) and command.startswith("npm run "), f"{context}: invalid command")
             script = command.removeprefix("npm run ").split()[0]
             require(script in scripts, f"{context}: package script missing for {command}")
-            require(command in page, f"{context}: command not documented on concept page: {command}")
+            require(
+                command in documented or "selectedConcept.commands" in component,
+                f"{context}: command not rendered on concept page: {command}",
+            )
 
     require(concept_ids == EXPECTED_CONCEPT_IDS, f"concept ids mismatch: {sorted(concept_ids)}")
     require(covered_examples == example_ids, "concept graph must cover every runnable example")

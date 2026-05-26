@@ -1168,6 +1168,8 @@ def check_ablation_plan() -> None:
 
 def check_concept_graph() -> None:
     page = read_text("docs/zh-cn/appendix/concept-graph.md")
+    component = read_text("docs/.vitepress/theme/components/ConceptGraphExplorer.vue")
+    documented = f"{page}\n{component}"
     registry = json.loads(read_text("docs/public/concept-graph.json"))
     schema = json.loads(read_text("docs/public/concept-graph.schema.json"))
     glossary = read_text("docs/zh-cn/appendix/glossary.md")
@@ -1187,7 +1189,7 @@ def check_concept_graph() -> None:
         "Feedback report",
         "Regression",
     ]:
-        require(required in page, f"concept graph page missing {required}")
+        require(required in documented, f"concept graph page missing {required}")
 
     require(registry.get("$schema") == "/concept-graph.schema.json", "concept graph registry schema pointer mismatch")
     require(registry.get("schema_version") == 1, "concept graph registry schema_version must be 1")
