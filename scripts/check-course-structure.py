@@ -177,6 +177,15 @@ def check_markdown_tables() -> None:
                 row_index += 1
 
 
+def check_no_raw_mermaid_blocks() -> None:
+    for page in PAGES:
+        text = (ROOT / page).read_text(encoding="utf-8")
+        require(
+            "```mermaid" not in text,
+            f"{page}: raw Mermaid block renders as code in the current VitePress setup",
+        )
+
+
 def check_package_scripts() -> None:
     package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
     scripts = package.get("scripts", {})
@@ -2478,6 +2487,7 @@ def check_course_manifest() -> None:
 def main() -> None:
     check_pages()
     check_markdown_tables()
+    check_no_raw_mermaid_blocks()
     check_package_scripts()
     check_examples()
     check_syllabus_alignment()
