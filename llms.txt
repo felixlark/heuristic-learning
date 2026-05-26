@@ -12,8 +12,8 @@ Use these entry points:
 - `templates/claim-review.md` for research proposition review deliverables.
 - `templates/anti-forgetting-checklist.md` for update review and regression-risk deliverables.
 - `docs/zh-cn/index.md` for the course homepage.
-- `docs/zh-cn/course-map/index.md` for role-based learning, research, teaching, and agent paths.
-- `docs/zh-cn/syllabus/index.md` for the course matrix and verification map.
+- `docs/zh-cn/course-map/index.md` for the unified learning route and navigation map.
+- `docs/zh-cn/syllabus/index.md` for unit-level objectives, commands, deliverables, and pass criteria.
 - `docs/zh-cn/stage-1/index.md` for the learning route.
 - `docs/zh-cn/stage-2/index.md` for concepts.
 - `docs/zh-cn/stage-3/index.md` for RL/DL/HL comparison.

@@ -9,8 +9,8 @@ Core pages:
 - `templates/reproduction-note.md`: source status, reproduction scope, missing fidelity, falsification path, and next experiment notes
 - `templates/experiment-record.md`: run command, source status, result summary, feedback, and candidate update notes
 - `/zh-cn/`: course homepage
-- `/zh-cn/course-map/`: role-based learning, research, teaching, and agent paths
-- `/zh-cn/syllabus/`: course matrix and verification map
+- `/zh-cn/course-map/`: unified learning route and navigation map
+- `/zh-cn/syllabus/`: unit-level objectives, commands, deliverables, and pass criteria
 - `/zh-cn/stage-1/`: learning roadmap
 - `/zh-cn/stage-2/`: core concepts
 - `/zh-cn/stage-3/`: RL/DL/HL comparison
