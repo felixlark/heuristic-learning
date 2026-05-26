@@ -18,7 +18,7 @@ description: Heuristic Learning 研究写作的章节、证据、研究问题、
 | 方法：学习闭环 | 定义 signal、probe、baseline、patch、report 和 regression | [学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework)、`/example-registry.json` | `npm run examples:registry:check`、`npm run metrics:check` |
 | 实验与结果 | 用六个示例说明 baseline failure、heuristic outcome 和后续变量对照 | [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)、[消融计划](/zh-cn/appendix/ablation-plan)、`/benchmark-summary.json`、`/ablation-plan.json`、`experiments/*/latest.json` | `npm run examples:feedback`、`npm run examples:reports:check`、`npm run benchmark:summary:check`、`npm run ablation:plan:check` |
 | 讨论、局限与威胁 | 说明来源、复现、高保真环境和视觉验收边界 | [引用与署名](/zh-cn/appendix/citation)、[可复现性检查](/zh-cn/appendix/reproducibility)、[视觉验收](/zh-cn/appendix/visual-verification) | `npm run reproducibility:check`、`npm run visual:verification:check`、`npm run x:sources:check` |
-| 教学使用与复现材料 | 说明读者如何沿同一套证据链学习、复现和扩展 | [学习单元](/zh-cn/appendix/learning-units)、[讲者备注](/zh-cn/appendix/speaker-notes)、[授课包](/zh-cn/appendix/teaching-pack) | `npm run learning:units:check`、`npm run speaker:notes:check`、`npm run teaching:pack:check` |
+| 教学使用与复现材料 | 说明读者如何沿同一套证据链学习、复现和扩展 | [学习单元](/zh-cn/appendix/learning-units)、[授课包](/zh-cn/appendix/teaching-pack)、`/speaker-notes.json` | `npm run learning:units:check`、`npm run speaker:notes:check`、`npm run teaching:pack:check` |
 
 ## 写作纪律
 

@@ -119,7 +119,6 @@ docs/                         # VitePress 中文课程文档
   zh-cn/appendix/paper-blueprint.md # 论文/技术报告的章节、证据和边界蓝图
   zh-cn/appendix/research-logbook.md # 阅读、示例、研究问题、指标与下一步实验记录
   zh-cn/appendix/public-entrypoints.md # public registries、schemas 和 LLM 入口索引
-  zh-cn/appendix/speaker-notes.md # 讲者备注、课堂提示和 exit ticket
   zh-cn/appendix/concept-graph.md # 概念到研究问题、示例、讲义和命令的图谱
   zh-cn/appendix/exercises.md # 可布置、可验收的练习题库
   zh-cn/appendix/ablation-plan.md # 六个示例的变量对照与不变量计划

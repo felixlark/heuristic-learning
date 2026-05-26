@@ -39,7 +39,6 @@ Core pages:
 - `/zh-cn/appendix/checkpoints`: unit-level self-check prompts, evidence, pass conditions, and common failures
 - `/zh-cn/appendix/evaluation-metrics`: research metrics, evidence paths, example bindings, and verification commands
 - `/zh-cn/appendix/paper-blueprint`: manuscript/report sections, claims, metrics, evidence paths, verification commands, and boundaries
-- `/zh-cn/appendix/speaker-notes`: lecture/lab opening questions, demo checkpoints, discussion prompts, common confusions, and exit tickets
 - `/zh-cn/appendix/concept-graph`: concept-to-claim/example/material/command mapping
 - `/zh-cn/appendix/teaching-pack`: ready-to-run teaching packs, classroom demos, exit tickets, and acceptance checks
 - `/zh-cn/appendix/citation`: citation, attribution, and source boundary rules

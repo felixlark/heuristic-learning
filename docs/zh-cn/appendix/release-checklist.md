@@ -22,7 +22,7 @@ description: Heuristic Learning 仓库版本发布、变更记录和发布前验
 | 是否改变轻量 replay 与真实 artifact 的保真度边界？ | [Artifact 差距分析](/zh-cn/appendix/artifact-gap-analysis)、`/artifact-gap-analysis.json` |
 | 是否改变失败诊断、修复动作或复验命令？ | [本地运行与排错](/zh-cn/appendix/local-setup)、`/troubleshooting-tree.json` |
 | 是否改变课程入口或学习路径？ | [课程地图](/zh-cn/course-map/)、[课程大纲](/zh-cn/syllabus/) |
-| 是否改变讲义、讲者备注或课堂交付？ | [Slides](/zh-cn/slides/)、[讲者备注](/zh-cn/appendix/speaker-notes)、`/speaker-notes.json` |
+| 是否改变讲义、课堂提示或课堂交付？ | [页面幻灯片](/zh-cn/slides/)、`/speaker-notes.json`、[授课包](/zh-cn/appendix/teaching-pack) |
 | 是否改变能力目标、练习或 Rubric 映射？ | [学习成果矩阵](/zh-cn/appendix/learning-outcomes)、`/learning-outcomes.json` |
 | 是否改变阶段自测或每周验收口径？ | [阶段检查点](/zh-cn/appendix/checkpoints)、`/checkpoint-registry.json` |
 | 是否改变研究评估维度或证据路径？ | [评估指标矩阵](/zh-cn/appendix/evaluation-metrics)、`/evaluation-metrics.json` |

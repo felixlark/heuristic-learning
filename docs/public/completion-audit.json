@@ -90,7 +90,6 @@
       "title": "课程材料",
       "evidence": [
         "docs/zh-cn/slides/index.md",
-        "docs/zh-cn/appendix/speaker-notes.md",
         "docs/public/speaker-notes.json",
         "docs/zh-cn/appendix/instructor-guide.md",
         "docs/zh-cn/appendix/teaching-pack.md",

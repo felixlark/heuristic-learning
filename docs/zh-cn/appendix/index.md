@@ -40,7 +40,6 @@ description: HL 课程资料来源、学习规范与研究路线
 - [阶段检查点](/zh-cn/appendix/checkpoints)
 - [评估指标矩阵](/zh-cn/appendix/evaluation-metrics)
 - [论文蓝图](/zh-cn/appendix/paper-blueprint)
-- [讲者备注](/zh-cn/appendix/speaker-notes)
 - [概念图谱](/zh-cn/appendix/concept-graph)
 - [授课包](/zh-cn/appendix/teaching-pack)
 - [引用与署名](/zh-cn/appendix/citation)

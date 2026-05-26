@@ -9,7 +9,6 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "docs/public/speaker-notes.json"
 SCHEMA_PATH = ROOT / "docs/public/speaker-notes.schema.json"
-PAGE_PATH = ROOT / "docs/zh-cn/appendix/speaker-notes.md"
 EXPECTED_IDS = {
     "note-lecture-1",
     "note-lecture-2",
@@ -43,7 +42,6 @@ def check_registry(registry: dict[str, Any]) -> None:
     require(registry.get("$schema") == "/speaker-notes.schema.json", "registry schema pointer mismatch")
     require(registry.get("schema_version") == 1, "registry schema_version must be 1")
 
-    page = PAGE_PATH.read_text(encoding="utf-8")
     teaching = load_json(ROOT / "docs/public/teaching-registry.json")
     slide_deck = load_json(ROOT / "docs/public/slide-deck.json")
     manifest = load_json(ROOT / "docs/public/course-manifest.json")
@@ -99,7 +97,7 @@ def check_registry(registry: dict[str, Any]) -> None:
         require(material_id in slide_ids, f"{context}: material missing from slide deck {material_id}")
         material_ids.add(material_id)
         title = note.get("title")
-        require(isinstance(title, str) and title in page, f"{context}: title not documented")
+        require(isinstance(title, str) and title, f"{context}: title missing")
         slide_path = note.get("slide_path")
         require(slide_path == teaching_by_id[material_id]["path"], f"{context}: slide_path does not match teaching registry")
         require((ROOT / slide_path).exists(), f"{context}: slide path missing: {slide_path}")
@@ -116,22 +114,16 @@ def check_registry(registry: dict[str, Any]) -> None:
             require(isinstance(command, str) and command.startswith("npm run "), f"{context}: invalid command")
             script = command.removeprefix("npm run ").split()[0]
             require(script in scripts, f"{context}: package script missing for {command}")
-            require(command in slide_text or command in page or command in audit, f"{context}: command not documented: {command}")
+            require(command in slide_text or command in audit, f"{context}: command not documented: {command}")
 
     require(ids == EXPECTED_IDS, f"speaker note ids mismatch: {sorted(ids)}")
     require(material_ids == set(teaching_by_id), "speaker notes must cover every teaching material")
 
     page_ids = {page.get("id") for page in manifest.get("core_pages", []) if isinstance(page, dict)}
     resource_ids = {resource.get("id") for resource in manifest.get("public_resources", []) if isinstance(resource, dict)}
-    require("speaker-notes" in page_ids, "course manifest missing speaker notes page")
+    require("speaker-notes" not in page_ids, "course manifest should not expose speaker notes as a page")
     require("speaker-notes" in resource_ids, "course manifest missing speaker notes registry")
     require("speaker-notes-schema" in resource_ids, "course manifest missing speaker notes schema")
-    for required in [
-        "/speaker-notes.json",
-        "/speaker-notes.schema.json",
-        "npm run speaker:notes:check",
-    ]:
-        require(required in page, f"speaker notes page missing {required}")
     for required in [
         "讲者备注",
         "speaker-notes.json",

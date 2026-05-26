@@ -48,7 +48,6 @@ routes=(
   "/heuristic-learning/zh-cn/appendix/checkpoints"
   "/heuristic-learning/zh-cn/appendix/evaluation-metrics"
   "/heuristic-learning/zh-cn/appendix/paper-blueprint"
-  "/heuristic-learning/zh-cn/appendix/speaker-notes"
   "/heuristic-learning/zh-cn/appendix/concept-graph"
   "/heuristic-learning/zh-cn/appendix/teaching-pack"
   "/heuristic-learning/zh-cn/appendix/ablation-plan"

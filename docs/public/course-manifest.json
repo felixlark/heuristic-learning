@@ -129,12 +129,6 @@
       "route": "/zh-cn/appendix/paper-blueprint"
     },
     {
-      "id": "speaker-notes",
-      "title": "讲者备注",
-      "path": "docs/zh-cn/appendix/speaker-notes.md",
-      "route": "/zh-cn/appendix/speaker-notes"
-    },
-    {
       "id": "concept-graph",
       "title": "概念图谱",
       "path": "docs/zh-cn/appendix/concept-graph.md",

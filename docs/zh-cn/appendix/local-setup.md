@@ -110,7 +110,7 @@ npm run build
 | `checkpoints:check` | 阶段自测、证据、命令、通过条件或常见失败漂移 | 更新 `/checkpoint-registry.json` 或 [阶段检查点](/zh-cn/appendix/checkpoints) |
 | `metrics:check` | 评估指标、示例、研究问题、证据路径或验证命令漂移 | 更新 `/evaluation-metrics.json` 或 [评估指标矩阵](/zh-cn/appendix/evaluation-metrics) |
 | `paper:blueprint:check` | 论文章节、研究问题、指标、示例、证据路径或边界漂移 | 更新 `/paper-blueprint.json` 或 [论文蓝图](/zh-cn/appendix/paper-blueprint) |
-| `speaker:notes:check` | 讲者备注、demo 节点、讨论题、常见误解或 exit ticket 漂移 | 更新 `/speaker-notes.json` 或 [讲者备注](/zh-cn/appendix/speaker-notes) |
+| `speaker:notes:check` | 讲者备注、demo 节点、讨论题、常见误解或 exit ticket 漂移 | 更新 `/speaker-notes.json` |
 | `course:manifest:check` | manifest 字段、路径或 schema 漂移 | 更新 `/course-manifest.json` 和 `/course-manifest.schema.json` |
 | `course:structure:check` | 页面、脚本、示例、报告或 syllabus 不一致 | 按报错补齐对应页面或路径 |
 | `docs:routes:check` | 本地 dev server 页面或 JSON route 不可达 | 检查 VitePress base、public 文件和站内路由 |

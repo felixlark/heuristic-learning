@@ -38,7 +38,6 @@ Use these entry points:
 - `docs/zh-cn/appendix/checkpoints.md` for unit-level self-check prompts, evidence, pass conditions, and common failures.
 - `docs/zh-cn/appendix/evaluation-metrics.md` for research metrics, evidence paths, example bindings, and verification commands.
 - `docs/zh-cn/appendix/paper-blueprint.md` for manuscript/report sections, claims, metrics, evidence paths, verification commands, and boundaries.
-- `docs/zh-cn/appendix/speaker-notes.md` for lecture/lab opening questions, demo checkpoints, discussion prompts, common confusions, and exit tickets.
 - `docs/zh-cn/appendix/concept-graph.md` for concept-to-claim/example/material/command mapping.
 - `docs/zh-cn/appendix/teaching-pack.md` for ready-to-run teaching packs, classroom demos, exit tickets, and acceptance checks.
 - `docs/zh-cn/appendix/citation.md` for citation, attribution, and source boundary rules.

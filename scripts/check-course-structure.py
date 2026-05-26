@@ -42,7 +42,6 @@ PAGES = [
     "docs/zh-cn/appendix/checkpoints.md",
     "docs/zh-cn/appendix/evaluation-metrics.md",
     "docs/zh-cn/appendix/paper-blueprint.md",
-    "docs/zh-cn/appendix/speaker-notes.md",
     "docs/zh-cn/appendix/concept-graph.md",
     "docs/zh-cn/appendix/teaching-pack.md",
     "docs/zh-cn/appendix/citation.md",

@@ -102,7 +102,6 @@ export default defineConfig({
             { text: '阶段检查点', link: '/zh-cn/appendix/checkpoints' },
             { text: '评估指标矩阵', link: '/zh-cn/appendix/evaluation-metrics' },
             { text: '论文蓝图', link: '/zh-cn/appendix/paper-blueprint' },
-            { text: '讲者备注', link: '/zh-cn/appendix/speaker-notes' },
             { text: '概念图谱', link: '/zh-cn/appendix/concept-graph' },
             { text: '授课包', link: '/zh-cn/appendix/teaching-pack' },
             { text: '引用与署名', link: '/zh-cn/appendix/citation' },

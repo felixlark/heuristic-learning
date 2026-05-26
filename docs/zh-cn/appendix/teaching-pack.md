@@ -9,7 +9,7 @@ description: Heuristic Learning 讲义、演示、课堂问题和验收材料清
 
 机器可读授课包见 [`/teaching-pack.json`](/teaching-pack.json)，字段约束见 [`/teaching-pack.schema.json`](/teaching-pack.schema.json)。`npm run teaching:pack:check` 会检查每个课堂包对应的讲义、阅读材料、命令、交付物和验收项是否仍然存在。
 
-实际授课时配合 [讲者备注](/zh-cn/appendix/speaker-notes) 使用。`/speaker-notes.json` 给出每讲的开场问题、demo 节点、讨论题、常见误解和 exit ticket，`npm run speaker:notes:check` 会检查它们仍然绑定当前讲义。
+实际授课时可以使用 `/speaker-notes.json` 里的开场问题、demo 节点、讨论题、常见误解和 exit ticket；`npm run speaker:notes:check` 会检查它们仍然绑定当前讲义。
 
 ## 使用原则
 

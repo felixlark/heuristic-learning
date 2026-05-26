@@ -159,7 +159,7 @@
       ],
       "evidence": [
         "docs/zh-cn/appendix/learning-units.md",
-        "docs/zh-cn/appendix/speaker-notes.md",
+        "docs/public/speaker-notes.json",
         "docs/zh-cn/appendix/teaching-pack.md"
       ],
       "verification_commands": [
