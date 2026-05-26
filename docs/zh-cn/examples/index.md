@@ -5,14 +5,29 @@ description: Heuristic Learning 的最小动手实验
 
 # 可运行示例
 
-当前 v0.1 提供六个纯 Python 示例，目标是让读者先跑通 HL 的最小闭环，再看到 MuJoCo、Atari、机器人足球、VizDoom 与交通模拟中的规则维护问题。这里的 `VizDoom Replay`、`Breakout Replay` 和 `Ant Gait Replay` 都是轻量 replay：它们保留失败 probe、策略更新对象和测试路径，不把课程入门门槛绑定到真实 MuJoCo、Atari 或 VizDoom 环境。
+可运行示例是动手入口：它们回答“怎么运行、怎么生成反馈报告、怎么验证没有退化”。[案例库](/zh-cn/cases/) 回答另一个问题：这个任务为什么值得学、来源边界是什么、最小实验保留了原问题的哪一部分。
 
-每个示例目录都包含一个 `README.md`，其中固定列出 learning target、运行命令、反馈报告路径和测试路径。读者可以从本页按课程顺序学习，也可以直接从 GitHub 的 `examples/*/README.md` 进入单个实验。
+当前 v0.1 提供六个纯 Python 示例。GridWorld 是入门闭环；另外五个示例分别绑定案例库中的具体案例。这里的 `VizDoom Replay`、`Breakout Replay` 和 `Ant Gait Replay` 都是轻量 replay：它们保留 failure probe、策略更新对象和测试路径，不把学习门槛绑定到真实 MuJoCo、Atari 或 VizDoom 环境。
+
+## 示例和案例怎么配合
+
+| 示例 | 对应案例 | 关系 |
+| --- | --- | --- |
+| GridWorld | 无独立案例页 | 最小闭环，用来先理解 signal -> probe -> patch -> report |
+| Breakout Replay | [Breakout 案例](/zh-cn/cases/breakout/) | 公开 Atari artifact 的轻量 replay |
+| VizDoom Replay | [VizDoom 案例](/zh-cn/cases/vizdoom/) | 公开 VizDoom artifact 的轻量 replay |
+| Ant Gait Replay | [Ant Gait 案例](/zh-cn/cases/ant-gait/) | 公开 MuJoCo Ant artifact 的轻量 replay |
+| Robot Soccer | [机器人足球案例](/zh-cn/cases/robot-soccer/) | 脱敏应用场景的最小 blocked-lane 环境 |
+| Traffic Grid | [交通模拟案例](/zh-cn/cases/traffic-simulation/) | 脱敏应用场景的最小 spillback 环境 |
+
+每个示例目录都包含一个 `README.md`，其中固定列出 learning target、运行命令、反馈报告路径和测试路径。读者可以从本页按顺序跑，也可以先读案例页，再回到对应示例动手。
 
 机器可读示例矩阵见 [`/example-registry.json`](/example-registry.json)，字段约束见 [`/example-registry.schema.json`](/example-registry.schema.json)。`npm run examples:registry:check` 会确认 registry、package scripts、README、报告、测试和课程链接没有漂移。
 六个示例的 baseline/heuristic 当前结果汇总见 [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)，由 `npm run benchmark:summary:check` 检查。
 
-## GridWorld Heuristic System
+## 0. 最小闭环
+
+### GridWorld Heuristic System
 
 位置：
 
@@ -68,7 +83,9 @@ JSON 报告让实验结果可以被学生、研究者和自动化检查脚本稳
 3. 修改 `examples/heuristic-gridworld/run.py` 的地图，观察规则是否仍然有效。
 4. 把实验结果写回案例笔记：规则解决了什么，是否引入了新冲突。
 
-## Robot Soccer Blocked Lane
+## 1. 应用场景最小环境
+
+### Robot Soccer Blocked Lane
 
 位置：
 
@@ -92,33 +109,7 @@ npm run examples:robot-soccer:feedback
 
 它展示了 HL 的一个核心教学点：**平均表现不是唯一反馈**。一个明确的 blocked-lane probe 能把“规则为什么需要维护”暴露出来，并给下一轮修改留下证据。
 
-## VizDoom Replay Medikit Staging
-
-位置：
-
-```text
-examples/vizdoom-replay/
-```
-
-运行：
-
-```bash
-npm run examples:vizdoom-replay
-```
-
-生成反馈报告：
-
-```bash
-npm run examples:vizdoom-replay:feedback
-```
-
-这个示例改写自 Jiayi Weng `learning-beyond-gradients` 仓库中的 `vizdoom/heuristic_vizdoom_d1_cv.py`。原始 artifact 使用 EnvPool 与 OpenCV 在 VizDoom D1 中识别 medikit，并在血量仍然较高时先停在 medikit 附近，等拾取有奖励价值时再前进。
-
-课程版保留同一个策略要点，但移除了重型依赖：`ReplayWorld` 只记录血量、medikit 可见性、面积和偏移量。baseline 会立刻吃掉 medikit，得到 `wasted_pickup`；heuristic policy 会等待血量低于阈值后再拾取，得到 `valued_pickup`。
-
-这个案例适合练习把视觉游戏 artifact 转成课程实验：先保留可解释的 replay/probe，再逐步替换成真实环境。
-
-## Traffic Grid Downstream Spillback
+### Traffic Grid Downstream Spillback
 
 位置：
 
@@ -144,7 +135,9 @@ baseline policy 只看上游队列大小，所以会优先放行主路并造成 
 
 它展示了 HL 在工程系统里的另一个常见对象：学习不是只改变“选择哪个动作”，还要把管制经验、容量阈值和 replay probe 固化成可维护规则。
 
-## Breakout Replay Wall Reflection
+## 2. 公开 Artifact 轻量 Replay
+
+### Breakout Replay Wall Reflection
 
 位置：
 
@@ -168,7 +161,33 @@ npm run examples:breakout-replay:feedback
 
 课程版只保留一个 probe：baseline 追当前球 x，球撞右墙后反弹到左侧，导致 `missed_after_wall_reflection`；heuristic policy 提前预测反射后的截点，得到 `intercepted`。
 
-## Ant Gait Replay Yaw Stabilization
+### VizDoom Replay Medikit Staging
+
+位置：
+
+```text
+examples/vizdoom-replay/
+```
+
+运行：
+
+```bash
+npm run examples:vizdoom-replay
+```
+
+生成反馈报告：
+
+```bash
+npm run examples:vizdoom-replay:feedback
+```
+
+这个示例改写自 Jiayi Weng `learning-beyond-gradients` 仓库中的 `vizdoom/heuristic_vizdoom_d1_cv.py`。原始 artifact 使用 EnvPool 与 OpenCV 在 VizDoom D1 中识别 medikit，并在血量仍然较高时先停在 medikit 附近，等拾取有奖励价值时再前进。
+
+轻量 replay 保留同一个策略要点，但移除了重型依赖：`ReplayWorld` 只记录血量、medikit 可见性、面积和偏移量。baseline 会立刻吃掉 medikit，得到 `wasted_pickup`；heuristic policy 会等待血量低于阈值后再拾取，得到 `valued_pickup`。
+
+这个示例适合练习把视觉游戏 artifact 转成可运行实验：先保留可解释的 replay/probe，再逐步替换成真实环境。
+
+### Ant Gait Replay Yaw Stabilization
 
 位置：
 

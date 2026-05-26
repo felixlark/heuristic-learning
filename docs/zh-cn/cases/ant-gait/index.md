@@ -5,6 +5,15 @@ description: 从 MuJoCo Ant heuristic artifact 抽取 CPG、stance duty 与 yaw 
 
 # Ant Gait 案例
 
+案例定位：
+
+| 维度 | 内容 |
+| --- | --- |
+| 类型 | 公开 artifact 案例 |
+| 对应示例 | `examples/ant-gait-replay/` |
+| Failure mode | `yaw_drift` |
+| 学习重点 | 连续控制中的可审计控制结构如何被维护 |
+
 运行：
 
 ```bash

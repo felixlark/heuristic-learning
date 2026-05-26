@@ -5,6 +5,15 @@ description: 用 VizDoom 理解回放驱动的 Heuristic Learning
 
 # VizDoom 案例
 
+案例定位：
+
+| 维度 | 内容 |
+| --- | --- |
+| 类型 | 公开 artifact 案例 |
+| 对应示例 | `examples/vizdoom-replay/` |
+| Failure mode | `wasted_pickup` |
+| 学习重点 | 感知阈值和时机判断如何变成可测试规则 |
+
 VizDoom 是 `learning-beyond-gradients` 公开仓库中的重要 artifact。它适合用来解释 HL 中的回放反馈：系统不只是拿到一个分数，还能通过视频或轨迹看到失败发生在哪里。
 
 ## 课程可运行版本

@@ -79,13 +79,13 @@ export default defineConfig({
           text: '实践',
           items: [
             { text: '可运行示例', link: '/zh-cn/examples/' },
-            { text: '案例库', link: '/zh-cn/cases/' },
-            { text: 'Ant Gait 案例', link: '/zh-cn/cases/ant-gait/' },
-            { text: 'Breakout 案例', link: '/zh-cn/cases/breakout/' },
-            { text: '机器人足球案例', link: '/zh-cn/cases/robot-soccer/' },
-            { text: 'VizDoom 案例', link: '/zh-cn/cases/vizdoom/' },
-            { text: '交通模拟案例', link: '/zh-cn/cases/traffic-simulation/' },
-            { text: 'X 线索案例', link: '/zh-cn/cases/x-signal/' }
+            { text: '案例库总览', link: '/zh-cn/cases/' },
+            { text: 'Artifact: Breakout', link: '/zh-cn/cases/breakout/' },
+            { text: 'Artifact: VizDoom', link: '/zh-cn/cases/vizdoom/' },
+            { text: 'Artifact: Ant Gait', link: '/zh-cn/cases/ant-gait/' },
+            { text: '应用: 机器人足球', link: '/zh-cn/cases/robot-soccer/' },
+            { text: '应用: 交通模拟', link: '/zh-cn/cases/traffic-simulation/' },
+            { text: '来源: X 线索', link: '/zh-cn/cases/x-signal/' }
           ]
         },
         {

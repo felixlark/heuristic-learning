@@ -5,46 +5,85 @@ description: Heuristic Learning 的案例、实验入口与证据边界
 
 # 案例库
 
-案例库把 Heuristic Learning 放到具体任务里学习。每个案例都按同一个模板阅读：
+案例库不是示例代码列表，也不是来源材料堆叠。它的作用是把一个真实或公开任务整理成可学习的 case card：读者先理解问题场景、来源边界和 failure mode，再决定是否进入对应的可运行示例。
 
-- 环境是什么？
-- 状态如何表示？
-- 策略如何写成代码？
-- 反馈从哪里来？
-- 智能体更新了什么？
-- 如何验证没有退化？
+## 和可运行示例的关系
 
-读案例时重点看三件事：它的来源边界是什么、是否有可运行实验、验证命令能否复现同一个 failure mode。案例到来源、示例、学习成果和验证命令的对照见 [案例矩阵](/zh-cn/appendix/case-registry)。
-
-## 公开主源
-
-Jiayi Weng 的 [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/) 与 [`Trinkle23897/learning-beyond-gradients`](https://github.com/Trinkle23897/learning-beyond-gradients) 是当前最高信号源。该仓库包含文章、Atari、MuJoCo、VizDoom 示例和渲染脚本，因此不仅是概念文章，也有实验 artifact。
-
-## 应用案例：机器人足球
-
-机器人足球适合用来理解“规则系统如何变成可学习系统”。一个典型系统已经有视觉检测、状态估计、动作接口和大量手工规则；难点不是完全没有策略，而是规则维护繁琐、冲突难查、迭代慢。[机器人足球案例](/zh-cn/cases/robot-soccer/) 把这个问题压缩成 blocked-lane 最小实验。
-
-## 应用案例：交通模拟
-
-交通模拟适合讨论规则库、仿真 replay 与人工管制经验如何进入 HL 闭环。[交通模拟案例](/zh-cn/cases/traffic-simulation/) 把真实路网问题先压缩成 downstream spillback：上游放行如果忽略下游容量，就会把拥堵推向更难恢复的位置。
-
-## X 来源案例
-
-X 是 Jiayi Weng 相关讨论的重要公开入口。[X 来源案例](/zh-cn/cases/x-signal/) 只抽取可验证的问题结构：哪些主张有公开文章或代码 artifact 支撑，哪些还只是待复核研究问题。
-
-## v1 案例清单
-
-| 案例 | 学习重点 | 可运行入口 |
+| 页面 | 读者要解决的问题 | 产物 |
 | --- | --- | --- |
-| MuJoCo / Ant Gait | yaw-stabilization 与可读控制器 | `npm run examples:ant-gait-replay` |
-| Atari / Breakout | wall-reflection 与代码化经验记忆 | `npm run examples:breakout-replay` |
-| X / Jiayi 公开讨论 | 来源层级、主张边界与研究问题 | `npm run x:sources:check` |
-| VizDoom | medikit staging 与感知阈值 | `npm run examples:vizdoom-replay` |
-| 机器人足球 | blocked-lane 与动作前提 | `npm run examples:robot-soccer` |
-| 交通模拟 | downstream spillback 与容量约束 | `npm run examples:traffic-grid` |
+| [可运行示例](/zh-cn/examples/) | 这个 HL 闭环怎么跑起来？ | 命令、代码、测试、`experiments/*/latest.json` |
+| 案例库 | 这个例子为什么值得学？证据边界是什么？ | 环境、状态、策略表面、failure mode、来源边界 |
+| 具体案例页 | 一个任务怎样被压缩成最小实验？ | case card + 对应示例入口 |
+
+因此它们不是并列重复关系：**示例负责动手，案例负责理解任务与证据边界**。大多数案例会绑定一个示例；`X 来源案例` 例外，它用于训练来源判断，只有被复核并转成最小环境后，才会进入 runnable example。
+
+## 阅读模板
+
+每个案例都按同一组问题阅读：
+
+1. 环境是什么？
+2. 状态如何表示？
+3. 策略如何写成代码或控制结构？
+4. 失败信号是什么？
+5. 反馈从哪里来？
+6. 更新对象是什么？
+7. 如何验证没有退化？
+
+案例到来源、示例、学习成果和验证命令的完整对照见 [案例矩阵](/zh-cn/appendix/case-registry)。
+
+## 学习顺序
+
+| 顺序 | 案例层级 | 读什么 | 跑什么 | 读完应能回答 |
+| --- | --- | --- | --- | --- |
+| 0 | 最小闭环 | [可运行示例](/zh-cn/examples/) 中的 GridWorld | `npm run examples:gridworld:feedback` | signal、probe、patch、report 是什么 |
+| 1 | 公开 artifact：离散控制 | [Breakout 案例](/zh-cn/cases/breakout/) | `npm run examples:breakout-replay:feedback` | 轨迹预测怎样变成代码化经验 |
+| 2 | 公开 artifact：感知阈值 | [VizDoom 案例](/zh-cn/cases/vizdoom/) | `npm run examples:vizdoom-replay:feedback` | 视觉线索怎样变成可测试阈值 |
+| 3 | 公开 artifact：连续控制 | [Ant Gait 案例](/zh-cn/cases/ant-gait/) | `npm run examples:ant-gait-replay:feedback` | 控制器参数怎样成为学习对象 |
+| 4 | 应用场景：动作前提 | [机器人足球案例](/zh-cn/cases/robot-soccer/) | `npm run examples:robot-soccer:feedback` | 规则系统怎样暴露 blocked-lane failure |
+| 5 | 应用场景：系统约束 | [交通模拟案例](/zh-cn/cases/traffic-simulation/) | `npm run examples:traffic-grid:feedback` | 容量约束怎样进入策略维护 |
+| 6 | 来源线索 | [X 来源案例](/zh-cn/cases/x-signal/) | `npm run x:sources:check` | 一条公开讨论何时只能算线索，何时能变成案例 |
+
+## 三类案例
+
+### 公开 Artifact 案例
+
+这一组来自 Jiayi Weng 的 [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/) 与 [`Trinkle23897/learning-beyond-gradients`](https://github.com/Trinkle23897/learning-beyond-gradients)。它们用于学习“公开代码 artifact 如何被压缩成轻量 replay”。
+
+| 案例 | 对应示例 | 学习重点 |
+| --- | --- | --- |
+| [Breakout](/zh-cn/cases/breakout/) | `examples/breakout-replay/` | side-wall reflection、轨迹预测、代码化经验记忆 |
+| [VizDoom](/zh-cn/cases/vizdoom/) | `examples/vizdoom-replay/` | medikit staging、感知阈值、回放反馈 |
+| [Ant Gait](/zh-cn/cases/ant-gait/) | `examples/ant-gait-replay/` | CPG、stance duty、yaw feedback、连续控制结构 |
+
+### 应用场景案例
+
+这一组来自脱敏后的应用问题。它们用于学习“已有规则系统如何暴露一个可维护 failure mode”。
+
+| 案例 | 对应示例 | 学习重点 |
+| --- | --- | --- |
+| [机器人足球](/zh-cn/cases/robot-soccer/) | `examples/robot-soccer/` | blocked-lane、动作前提、规则冲突检查 |
+| [交通模拟](/zh-cn/cases/traffic-simulation/) | `examples/traffic-grid/` | downstream spillback、容量约束、系统安全边界 |
+
+### 来源线索案例
+
+| 案例 | 对应示例 | 学习重点 |
+| --- | --- | --- |
+| [X 来源案例](/zh-cn/cases/x-signal/) | 暂无直接示例 | 一手来源、二手转述、公开 artifact 和待复核主张的边界 |
+
+X 来源案例不是第六个 runnable case；它是来源训练页。它帮助读者判断一条公开讨论如何进入案例库：先成为线索，再绑定来源状态，最后才可能变成可运行示例。
+
+## 验证
 
 案例矩阵由下面命令检查：
 
 ```bash
 npm run cases:check
+```
+
+如果一个案例已经绑定示例，还应能通过：
+
+```bash
+npm run examples:feedback
+npm run examples:reports:check
+npm run examples:test
 ```

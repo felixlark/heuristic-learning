@@ -827,6 +827,16 @@ def check_case_registry() -> None:
             f"case registry not linked: {required}",
         )
 
+    for required in [
+        "示例负责动手，案例负责理解任务与证据边界",
+        "公开 Artifact 案例",
+        "应用场景案例",
+        "来源线索案例",
+        "GridWorld",
+        "X 来源案例不是第六个 runnable case",
+    ]:
+        require(required in cases_index, f"cases index missing learner-facing organization: {required}")
+
 
 def check_learning_units() -> None:
     page = read_text("docs/zh-cn/appendix/learning-units.md")

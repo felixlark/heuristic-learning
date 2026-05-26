@@ -5,6 +5,15 @@ description: 从 Jiayi Weng 公开讨论中抽取可验证的 Heuristic Learning
 
 # X 来源案例
 
+案例定位：
+
+| 维度 | 内容 |
+| --- | --- |
+| 类型 | 来源线索案例 |
+| 对应示例 | 暂无直接示例 |
+| Failure mode | 待复核后才能定义 |
+| 学习重点 | 公开讨论如何进入来源登记、案例库和研究问题 |
+
 本页把 Jiayi Weng 相关 X 讨论拆成可学习、可验证的课程入口。它不替代公开文章和代码 artifact；它只回答一个问题：一条公开讨论怎样被转成案例、实验或研究问题，而不越过证据边界。
 
 来源矩阵见 [`/x-sources.json`](/x-sources.json)。`npm run x:sources:check` 会检查本页和来源登记是否区分“已读到的材料”“已知 URL 但待复核的材料”和“待采集方向”。

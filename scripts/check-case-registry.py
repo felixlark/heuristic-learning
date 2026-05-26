@@ -173,6 +173,15 @@ def check_registry(registry: dict[str, Any]) -> None:
     ]:
         require(required in page or required in case_index or required in llms or required in public_llms, f"case registry not linked: {required}")
 
+    for required in [
+        "示例负责动手，案例负责理解任务与证据边界",
+        "公开 Artifact 案例",
+        "应用场景案例",
+        "来源线索案例",
+        "X 来源案例不是第六个 runnable case",
+    ]:
+        require(required in case_index, f"case index missing organization cue: {required}")
+
 
 def main() -> None:
     registry = load_json(REGISTRY_PATH)

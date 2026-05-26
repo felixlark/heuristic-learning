@@ -5,6 +5,15 @@ description: 用 Atari Breakout 理解轨迹预测型 Heuristic Learning
 
 # Breakout 案例
 
+案例定位：
+
+| 维度 | 内容 |
+| --- | --- |
+| 类型 | 公开 artifact 案例 |
+| 对应示例 | `examples/breakout-replay/` |
+| Failure mode | `missed_after_wall_reflection` |
+| 学习重点 | 轨迹预测如何变成可测试的策略代码 |
+
 Breakout 是 `learning-beyond-gradients` 公开仓库中的 Atari artifact。课程先把其中最容易教学化的一部分抽成轻量 replay：根据球速预测侧墙反射后的落点，而不是追当前球的 x 坐标。
 
 ## 课程可运行版本
