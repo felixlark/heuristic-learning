@@ -92,7 +92,6 @@ export default defineConfig({
           items: [
             { text: '资料与维护规范', link: '/zh-cn/appendix/' },
             { text: '本地运行与排错', link: '/zh-cn/appendix/local-setup' },
-            { text: '排错决策树', link: '/zh-cn/appendix/troubleshooting-tree' },
             { text: '术语表', link: '/zh-cn/appendix/glossary' },
             { text: '参考文献与仓库', link: '/zh-cn/appendix/references' },
             { text: '文献阅读指南', link: '/zh-cn/appendix/reading-guide' },

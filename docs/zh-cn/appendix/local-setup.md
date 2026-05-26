@@ -5,7 +5,7 @@ description: Heuristic Learning 仓库的安装、运行、验证和常见问题
 
 # 本地运行与排错
 
-本页给读者和贡献者提供一条稳定的本地路径：先跑文档，再跑示例，最后跑统一验证。遇到失败时，先看 [排错决策树](/zh-cn/appendix/troubleshooting-tree)，按失败面定位诊断命令、修复动作和复验命令。
+本页给读者和贡献者提供一条稳定的本地路径：先跑文档，再跑示例，最后跑统一验证。遇到失败时，先按失败面定位诊断命令、修复动作和复验命令，不要直接从 `npm run verify` 的末尾错误跳到随意改文件。
 
 ## 环境要求
 
@@ -68,6 +68,27 @@ npm run build
 
 这条顺序对应 HL 的维护纪律：先确认代码和反馈通道可用，再判断课程结构是否漂移。
 
+## 失败面决策路径
+
+机器可读排错矩阵见 [`/troubleshooting-tree.json`](/troubleshooting-tree.json)，字段约束见 [`/troubleshooting-tree.schema.json`](/troubleshooting-tree.schema.json)。`npm run troubleshooting:tree:check` 会检查每个节点的 `diagnostic_commands`、`fix_actions`、`verification_commands` 和关联页面是否仍然存在。
+
+| 失败面 | 典型症状 | 先跑诊断命令 | 修复方向 | 复验 |
+| --- | --- | --- | --- | --- |
+| 安装或运行环境 | `npm install`、`npm run dev` 或 build 在课程检查前失败 | `node --version`、`npm --version`、`npm run lint` | Node 18+、重装依赖、清理 VitePress cache | `npm run lint`、`npm run build` |
+| 示例行为 | `examples:test` 或某个 feedback 失败 | `npm run examples:test`、`npm run examples:feedback`、`npm run code:tour:check` | 按代码导览读示例，只改对应 `edit_target` | `npm run examples:reports:check` |
+| 报告与 benchmark | report、benchmark、ablation 或 artifact gap 失败 | `npm run benchmark:summary:check`、`npm run ablation:plan:check`、`npm run artifact:gap:check` | 重新生成 report，同步 benchmark、消融和保真度边界 | `npm run examples:feedback` |
+| 来源与研究问题 | source、X、case 或 claims 检查失败 | `npm run source:registry:check`、`npm run x:sources:check`、`npm run claims:registry:check` | 降级来源状态，补 case card，把未发表结论写成 hypothesis | `npm run cases:check` |
+| 课程结构与公开路由 | manifest、structure、routes 或 build 失败 | `npm run course:manifest:check`、`npm run course:structure:check`、`npm run docs:routes:check` | 同步 sidebar、manifest、route check 和 structure checker | `npm run docs:routes:check` |
+| 发布与视觉验收 | `release:readiness:check` 阻塞 | `npm run visual:verification:check`、`npm run release:readiness:check` | 用官方 Browser/IAB 复验页面；JSON/TXT 直达用 `npm run docs:routes:check`；浏览器只验收 [机器可读入口](/zh-cn/appendix/public-entrypoints) 索引页；更新 visual log | `npm run release:readiness:check` |
+
+处理顺序：
+
+1. 先确认失败属于哪一个失败面。
+2. 只跑该节点的诊断命令。
+3. 只执行该节点的修复动作，并保留来源和边界。
+4. 跑复验命令。
+5. 最后再回到 `npm run verify`。
+
 ## 常见失败
 
 | 失败位置 | 常见原因 | 处理方式 |
@@ -84,7 +105,7 @@ npm run build
 | `exercises:check` | 练习题、输入材料、示例、验收命令、学习单元或 Rubric 漂移 | 更新 `/exercise-registry.json` 或 [练习集](/zh-cn/appendix/exercises) |
 | `contribution:contract:check` | 贡献类型、证据字段、必备路径、验证命令或禁止材料漂移 | 更新 `/contribution-contract.json`、`CONTRIBUTING.md` 或 PR 模板 |
 | `reproducibility:check` | 可复现性证据、命令、通过条件或已知边界漂移 | 更新 `/reproducibility-checklist.json` 或 [可复现性检查清单](/zh-cn/appendix/reproducibility) |
-| `troubleshooting:tree:check` | 失败面、诊断命令、修复动作、复验命令或关联页面漂移 | 更新 `/troubleshooting-tree.json` 或 [排错决策树](/zh-cn/appendix/troubleshooting-tree) |
+| `troubleshooting:tree:check` | 失败面、诊断命令、修复动作、复验命令或关联页面漂移 | 更新 `/troubleshooting-tree.json` 和本页的失败面决策路径 |
 | `learning:outcomes:check` | 学习成果、练习、Rubric、证据路径或验证命令漂移 | 更新 `/learning-outcomes.json` 或 [学习成果矩阵](/zh-cn/appendix/learning-outcomes) |
 | `checkpoints:check` | 阶段自测、证据、命令、通过条件或常见失败漂移 | 更新 `/checkpoint-registry.json` 或 [阶段检查点](/zh-cn/appendix/checkpoints) |
 | `metrics:check` | 评估指标、示例、研究问题、证据路径或验证命令漂移 | 更新 `/evaluation-metrics.json` 或 [评估指标矩阵](/zh-cn/appendix/evaluation-metrics) |

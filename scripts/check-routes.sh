@@ -43,7 +43,6 @@ routes=(
   "/heuristic-learning/zh-cn/appendix/reading-guide"
   "/heuristic-learning/zh-cn/appendix/case-registry"
   "/heuristic-learning/zh-cn/appendix/code-tour"
-  "/heuristic-learning/zh-cn/appendix/troubleshooting-tree"
   "/heuristic-learning/zh-cn/appendix/learning-units"
   "/heuristic-learning/zh-cn/appendix/learning-outcomes"
   "/heuristic-learning/zh-cn/appendix/checkpoints"

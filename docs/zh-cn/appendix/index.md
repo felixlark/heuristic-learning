@@ -30,7 +30,6 @@ description: HL 课程资料来源、学习规范与研究路线
 ## 附录入口
 
 - [本地运行与排错](/zh-cn/appendix/local-setup)
-- [排错决策树](/zh-cn/appendix/troubleshooting-tree)
 - [术语表](/zh-cn/appendix/glossary)
 - [来源与背景阅读](/zh-cn/appendix/references)
 - [文献阅读指南](/zh-cn/appendix/reading-guide)

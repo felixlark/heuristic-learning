@@ -69,12 +69,6 @@
       "route": "/zh-cn/appendix/local-setup"
     },
     {
-      "id": "troubleshooting-tree",
-      "title": "排错决策树",
-      "path": "docs/zh-cn/appendix/troubleshooting-tree.md",
-      "route": "/zh-cn/appendix/troubleshooting-tree"
-    },
-    {
       "id": "glossary",
       "title": "术语表",
       "path": "docs/zh-cn/appendix/glossary.md",

@@ -31,7 +31,7 @@ npm run dev
 5. 参考 [代码导览](docs/zh-cn/appendix/code-tour.md) 只改一个策略点，再用 `npm run examples:test` 和 `npm run verify` 保护回归。
 
 本地环境、验证顺序和常见失败处理见 [本地运行与排错](docs/zh-cn/appendix/local-setup.md)。
-失败面到诊断命令、修复动作和复验命令的机器可读路径见 [排错决策树](docs/zh-cn/appendix/troubleshooting-tree.md)。
+失败面到诊断命令、修复动作和复验命令的机器可读路径已经合并到 [本地运行与排错](docs/zh-cn/appendix/local-setup.md)。
 X、公开 artifact、脱敏应用问题和研究假设如何变成 case card 见 [来源到案例 Playbook](docs/zh-cn/appendix/source-to-case-playbook.md)。
 把公开 artifact、X 来源或脱敏应用问题升级为案例前，先用 [`templates/reproduction-note.md`](templates/reproduction-note.md) 记录来源状态、复现范围、缺失保真度、反驳路径和下一步实验。
 统一学习主线见 [课程地图](docs/zh-cn/course-map/index.md)。
@@ -112,7 +112,6 @@ docs/                         # VitePress 中文课程文档
   zh-cn/appendix/case-registry.md # 案例到来源、示例、学习成果和命令的矩阵
   zh-cn/appendix/code-tour.md # 六个示例的代码阅读顺序、编辑目标和测试路径
   zh-cn/appendix/local-setup.md # 本地运行与排错
-  zh-cn/appendix/troubleshooting-tree.md # 失败面、诊断命令、修复动作和复验路径
   zh-cn/appendix/learning-units.md # 章节级读、跑、改、复盘矩阵
   zh-cn/appendix/learning-outcomes.md # 能力目标、练习、Rubric 和验证命令矩阵
   zh-cn/appendix/checkpoints.md # 每个学习单元的阶段自测和通过条件

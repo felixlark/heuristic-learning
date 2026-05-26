@@ -9,7 +9,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "docs/public/troubleshooting-tree.json"
 SCHEMA_PATH = ROOT / "docs/public/troubleshooting-tree.schema.json"
-PAGE_PATH = ROOT / "docs/zh-cn/appendix/troubleshooting-tree.md"
+PAGE_PATH = ROOT / "docs/zh-cn/appendix/local-setup.md"
 
 EXPECTED_IDS = {
     "install-or-runtime",
@@ -96,7 +96,7 @@ def check_registry(registry: dict[str, Any]) -> None:
     require(ids == EXPECTED_IDS, f"troubleshooting ids mismatch: {sorted(ids)}")
     page_ids = {item.get("id") for item in manifest.get("core_pages", []) if isinstance(item, dict)}
     resource_ids = {item.get("id") for item in manifest.get("public_resources", []) if isinstance(item, dict)}
-    require("troubleshooting-tree" in page_ids, "course manifest missing troubleshooting page")
+    require("local-setup" in page_ids, "course manifest missing local setup page")
     require("troubleshooting-tree" in resource_ids, "course manifest missing troubleshooting registry")
     require("troubleshooting-tree-schema" in resource_ids, "course manifest missing troubleshooting schema")
     for required in [

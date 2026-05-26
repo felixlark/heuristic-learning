@@ -20,7 +20,7 @@ description: Heuristic Learning 仓库版本发布、变更记录和发布前验
 | 是否改变 benchmark 结果或实验解释？ | [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)、`/benchmark-summary.json` |
 | 是否改变消融变量或后续对照计划？ | [消融计划](/zh-cn/appendix/ablation-plan)、`/ablation-plan.json` |
 | 是否改变轻量 replay 与真实 artifact 的保真度边界？ | [Artifact 差距分析](/zh-cn/appendix/artifact-gap-analysis)、`/artifact-gap-analysis.json` |
-| 是否改变失败诊断、修复动作或复验命令？ | [排错决策树](/zh-cn/appendix/troubleshooting-tree)、`/troubleshooting-tree.json` |
+| 是否改变失败诊断、修复动作或复验命令？ | [本地运行与排错](/zh-cn/appendix/local-setup)、`/troubleshooting-tree.json` |
 | 是否改变课程入口或学习路径？ | [课程地图](/zh-cn/course-map/)、[课程大纲](/zh-cn/syllabus/) |
 | 是否改变讲义、讲者备注或课堂交付？ | [Slides](/zh-cn/slides/)、[讲者备注](/zh-cn/appendix/speaker-notes)、`/speaker-notes.json` |
 | 是否改变能力目标、练习或 Rubric 映射？ | [学习成果矩阵](/zh-cn/appendix/learning-outcomes)、`/learning-outcomes.json` |

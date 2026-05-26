@@ -29,7 +29,6 @@ Core pages:
 - `/zh-cn/slides/lab-2/`: anti-forgetting review lab
 - `/zh-cn/appendix/`: references and maintenance rules
 - `/zh-cn/appendix/local-setup`: local install, verification order, and troubleshooting
-- `/zh-cn/appendix/troubleshooting-tree`: failure-surface diagnosis, fix actions, and recheck commands
 - `/zh-cn/appendix/source-to-case-playbook`: source-to-case workflows for X, public artifact, internal Feishu, and research hypothesis signals
 - `/zh-cn/appendix/glossary`: HL terms and working definitions
 - `/zh-cn/appendix/references`: public sources and background references
