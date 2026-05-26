@@ -10,7 +10,7 @@
       "surface": "in-app browser",
       "route": "/heuristic-learning/",
       "viewport": "desktop",
-      "observed_outcome": "Official Browser/IAB opened the page at 1280x720; the body text contained Heuristic Learning, course outline, runnable examples, case library, and slides navigation with non-empty main content.",
+      "observed_outcome": "Official Browser/IAB opened the local page at 1280x720; the top navigation contained course outline, learning path, theory, runnable examples, case library, and references, with no standalone slides navigation.",
       "remaining_issue": "none",
       "status": "passed"
     },
@@ -35,12 +35,12 @@
       "status": "passed"
     },
     {
-      "check_id": "slide-deck-scan",
-      "date": "2026-05-25",
+      "check_id": "page-slide-mode",
+      "date": "2026-05-26",
       "surface": "in-app browser",
-      "route": "/heuristic-learning/zh-cn/slides/",
+      "route": "/heuristic-learning/zh-cn/stage-2/",
       "viewport": "desktop",
-      "observed_outcome": "Official Browser/IAB opened the slides page at 1280x720; the page showed the three Chinese lecture entries and two Lab entries with non-empty teaching-material content.",
+      "observed_outcome": "Official Browser/IAB opened the local HL basics page; the page-level slide button created an 8-slide reveal overlay, and the close control returned to the original document page.",
       "remaining_issue": "none",
       "status": "passed"
     },

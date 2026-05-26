@@ -2463,7 +2463,7 @@ def check_course_manifest() -> None:
             "home-course-entry",
             "course-map-mobile",
             "examples-run-loop",
-            "slide-deck-scan",
+            "page-slide-mode",
             "public-registry-entrypoints",
             "completion-audit-page",
         },

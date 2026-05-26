@@ -22,7 +22,8 @@
       "viewport": "desktop",
       "acceptance": [
         "页面首屏显示 Heuristic Learning 课程定位",
-        "导航可进入课程大纲、动手实验、案例库和幻灯片",
+        "导航可进入课程大纲、动手实验、案例库和参考页",
+        "正文页入口提供页面级幻灯片按钮，不再暴露独立幻灯片章节",
         "没有明显文本重叠或空白主内容"
       ],
       "precheck": "npm run docs:routes:check",
@@ -57,17 +58,17 @@
       "status": "required-before-release"
     },
     {
-      "id": "slide-deck-scan",
-      "title": "讲义浏览",
-      "route": "/heuristic-learning/zh-cn/slides/",
+      "id": "page-slide-mode",
+      "title": "页面级幻灯片",
+      "route": "/heuristic-learning/zh-cn/stage-2/",
       "surface": "in-app browser",
       "viewport": "desktop",
       "acceptance": [
-        "3 讲和 2 个 Lab 入口都可见",
-        "每个讲义入口绑定阅读、课堂命令和交付物",
-        "页面不是营销页，而是可直接授课的材料目录"
+        "正文页右上角显示幻灯片按钮",
+        "点击按钮后当前 Markdown 内容转换为可翻页幻灯片",
+        "关闭幻灯片后返回原正文阅读状态"
       ],
-      "precheck": "npm run slides:check",
+      "precheck": "npm run lint",
       "status": "required-before-release"
     },
     {
@@ -112,6 +113,6 @@
       "observed_outcome",
       "remaining_issue"
     ],
-    "current_run_status": "passed-2026-05-25-official-browser-iab"
+    "current_run_status": "passed-2026-05-26-official-browser-iab"
   }
 }

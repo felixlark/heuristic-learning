@@ -61,7 +61,6 @@ def check_registry(registry: dict[str, Any]) -> None:
     require(isinstance(materials, list) and materials, "materials must be a non-empty list")
     ids: set[str] = set()
     allowed = {"id", "type", "title", "path", "route", "core_question", "reading", "commands", "deliverable"}
-    slides_index = (ROOT / "docs/zh-cn/slides/index.md").read_text(encoding="utf-8")
     schedule = (ROOT / "docs/zh-cn/appendix/course-schedule.md").read_text(encoding="utf-8")
 
     for index, material in enumerate(materials):
@@ -82,7 +81,6 @@ def check_registry(registry: dict[str, Any]) -> None:
         text = path.read_text(encoding="utf-8")
         require(text.startswith("---\n"), f"{context}: material page missing frontmatter")
         require(material["title"] in text, f"{context}: material title missing from page")
-        require(material["route"] in slides_index or material["title"] in slides_index, f"{context}: missing from slides index")
 
         reading = material.get("reading")
         require(isinstance(reading, list) and reading, f"{context}: reading must be non-empty")

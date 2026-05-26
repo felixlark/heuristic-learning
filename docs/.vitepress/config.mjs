@@ -52,7 +52,6 @@ export default defineConfig({
       { text: '理论框架', link: '/zh-cn/stage-2/' },
       { text: '动手实验', link: '/zh-cn/examples/' },
       { text: '案例库', link: '/zh-cn/cases/' },
-      { text: '幻灯片', link: '/zh-cn/slides/' },
       { text: '参考', link: '/zh-cn/appendix/' }
     ],
     sidebar: {
@@ -86,17 +85,6 @@ export default defineConfig({
             { text: '应用: 机器人足球', link: '/zh-cn/cases/robot-soccer/' },
             { text: '应用: 交通模拟', link: '/zh-cn/cases/traffic-simulation/' },
             { text: '来源: X 线索', link: '/zh-cn/cases/x-signal/' }
-          ]
-        },
-        {
-          text: '课程材料',
-          items: [
-            { text: 'Slides 目录', link: '/zh-cn/slides/' },
-            { text: '第 1 讲', link: '/zh-cn/slides/lecture-1/' },
-            { text: '第 2 讲', link: '/zh-cn/slides/lecture-2/' },
-            { text: '第 3 讲', link: '/zh-cn/slides/lecture-3/' },
-            { text: 'Lab 1', link: '/zh-cn/slides/lab-1/' },
-            { text: 'Lab 2', link: '/zh-cn/slides/lab-2/' }
           ]
         },
         {

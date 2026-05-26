@@ -16,7 +16,7 @@ EXPECTED_CHECK_IDS = {
     "home-course-entry",
     "course-map-mobile",
     "examples-run-loop",
-    "slide-deck-scan",
+    "page-slide-mode",
     "public-registry-entrypoints",
     "completion-audit-page",
 }
