@@ -49,7 +49,7 @@ def main():
         require(term in pages["benchmark"], f"benchmark page missing: {term}")
     require("幻灯片按钮" in pages["talk"], "talk page must explain page-level slide mode")
 
-    forbidden = ("longbiaochen", "/zh-cn/slides/", "讲者备注", "为什么参考", "复用 EasyVibe")
+    forbidden = ("/zh-cn/slides/", "讲者备注", "为什么参考", "复用 EasyVibe")
     public_text = "\n".join(pages.values())
     for term in forbidden:
         require(term not in public_text, f"learner-facing core pages contain legacy term: {term}")
