@@ -7,8 +7,8 @@ type: software
 authors:
   - name: "Heuristic Learning Contributors"
 abstract: "A Chinese research/course repository for Heuristic Learning, with theory notes, source registry, runnable examples, feedback reports, and VitePress course materials."
-repository-code: "https://github.com/longbiaochen/heuristic-learning"
-url: "https://longbiaochen.github.io/heuristic-learning/"
+repository-code: "https://github.com/felixlark/heuristic-learning"
+url: "https://felixlark.github.io/heuristic-learning/"
 license: "CC-BY-NC-SA-4.0"
 keywords:
   - heuristic-learning

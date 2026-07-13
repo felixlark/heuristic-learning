@@ -1,0 +1,13 @@
+{
+  "date": "2026-07-13",
+  "environment": "CartPole-v1",
+  "policy": "improved",
+  "split": "dev",
+  "seed_start": 0,
+  "seed_stop_exclusive": 20,
+  "episodes": 20,
+  "mean_score": 500.0,
+  "min_score": 500,
+  "max_score": 500,
+  "note": "Local validation of this repository's original transparent policy. Holdout and audit results are intentionally not recorded before the policy is frozen."
+}

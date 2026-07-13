@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://longbiaochen.github.io/heuristic-learning/teaching-pack.schema.json",
+  "$id": "https://felixlark.github.io/heuristic-learning/teaching-pack.schema.json",
   "title": "Heuristic Learning Teaching Pack Registry",
   "type": "object",
   "additionalProperties": false,
@@ -55,7 +55,7 @@
           "minItems": 1,
           "items": {
             "type": "string",
-            "pattern": "^docs/zh-cn/slides/.+\\.md$"
+            "pattern": "^docs/zh-cn/talk/.+\\.md$"
           }
         },
         "readings": {

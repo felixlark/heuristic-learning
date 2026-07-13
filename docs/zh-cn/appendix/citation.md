@@ -12,7 +12,7 @@ description: Heuristic Learning 仓库、原始来源和课程材料的引用规
 如果引用本课程仓库本身，可以使用根目录的 `CITATION.cff`。当前推荐文本：
 
 ```text
-Heuristic Learning Contributors. Heuristic Learning: A Chinese Research and Hands-on Course. Version 0.1.0, 2026. https://github.com/longbiaochen/heuristic-learning
+Heuristic Learning Contributors. Heuristic Learning: A Chinese Research and Hands-on Course. Version 0.1.0, 2026. https://github.com/felixlark/heuristic-learning
 ```
 
 如果引用某个具体示例，还应同时写明：

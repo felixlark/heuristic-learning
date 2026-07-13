@@ -193,8 +193,8 @@
         "lab-2"
       ],
       "pages": [
-        "docs/zh-cn/slides/lecture-3/index.md",
-        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/talk/index.md",
+        "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/appendix/completion-audit.md"
       ],
       "commands": [

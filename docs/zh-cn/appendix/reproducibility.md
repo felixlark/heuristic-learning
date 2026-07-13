@@ -33,8 +33,6 @@ npm run benchmark:summary:check
 npm run claims:registry:check
 npm run source:registry:check
 npm run x:sources:check
-npm run teaching:registry:check
-npm run slides:check
 npm run exercises:check
 npm run rubric:check
 npm run teaching:pack:check

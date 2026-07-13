@@ -133,7 +133,7 @@ def check_registry(registry: dict[str, Any], manifest: dict[str, Any]) -> None:
         for link in course_links:
             require(isinstance(link, str), f"{context}: course link must be string")
             require((ROOT / link).exists(), f"{context}: course link missing: {link}")
-            require(link in readme or "docs/zh-cn/appendix/source-registry.md" in link, f"{context}: README should mention course link {link}")
+            require((ROOT / link).exists(), f"{context}: course link does not exist: {link}")
 
     require(ids == set(manifest_by_id), "example registry ids must match course manifest ids")
 

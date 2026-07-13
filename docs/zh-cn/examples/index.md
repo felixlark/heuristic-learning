@@ -226,4 +226,4 @@ npm run verify
 `examples:feedback` 会重新生成六个 `experiments/*/latest.json`；`examples:reports:check` 会检查每个报告是否保留 baseline/heuristic 对照、feedback 和 candidate update。这样课程内容、实验代码和研究记录不会各自漂移。
 报告字段约束见 [`/experiment-report.schema.json`](/experiment-report.schema.json)，用于说明主线实验报告至少需要保留的结构。
 
-完成一次完整练习可以参考 [Lab 1：跑通 Heuristic Learning 闭环](/zh-cn/slides/lab-1/)。
+完成一次完整练习可以参考 [Lab 1：跑通 Heuristic Learning 闭环](/zh-cn/examples/)。

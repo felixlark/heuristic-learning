@@ -13,7 +13,7 @@
 
 ## 快速开始
 
-线上入口：[https://longbiaochen.github.io/heuristic-learning/](https://longbiaochen.github.io/heuristic-learning/)
+线上入口：[https://felixlark.github.io/heuristic-learning/](https://felixlark.github.io/heuristic-learning/)
 
 ```bash
 npm install
@@ -80,7 +80,6 @@ npm run artifact:gap:check
 npm run cases:check
 npm run source:case:check
 npm run concept:graph:check
-npm run slides:check
 npm run rubric:check
 npm run exercises:check
 npm run contribution:contract:check
@@ -160,7 +159,6 @@ npm run verify
 - 检查 `/source-to-case-playbook.json` 所描述的 X、公开 artifact、脱敏应用问题和研究假设进入 case card 的路径。
 - 检查来源登记、`/x-sources.json` 的 X 来源证据状态和“已复现”条目的 runnable example 落点。
 - 检查研究问题、讲义 registry、讲义结构、评分 Rubric、学习单元、授课包和完成度审计。
-- 检查 `/speaker-notes.json` 所描述的讲者备注、demo 节点、讨论题、常见误解和 exit ticket。
 - 检查 `/learning-outcomes.json` 所描述的能力目标到学习单元、练习、Rubric、证据和验证命令的映射。
 - 检查 `/checkpoint-registry.json` 所描述的阶段自测问题、证据、命令、通过条件和常见失败。
 - 检查 `/evaluation-metrics.json` 所描述的任务结果、失败隔离、更新成本、回归风险和来源边界。

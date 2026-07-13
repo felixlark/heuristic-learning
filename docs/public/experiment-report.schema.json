@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://longbiaochen.github.io/heuristic-learning/experiment-report.schema.json",
+  "$id": "https://felixlark.github.io/heuristic-learning/experiment-report.schema.json",
   "title": "Heuristic Learning Experiment Report",
   "type": "object",
   "required": ["policies", "feedback", "candidate_update"],

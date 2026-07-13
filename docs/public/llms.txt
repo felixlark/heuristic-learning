@@ -22,11 +22,11 @@ Core pages:
 - `/zh-cn/cases/ant-gait/`: MuJoCo Ant gait replay case
 - `/zh-cn/cases/x-signal/`: X and X source cases
 - `/zh-cn/cases/traffic-simulation/`: Feishu-derived traffic simulation case
-- `/zh-cn/slides/`: lecture material
-- `/zh-cn/slides/lecture-2/`: source-to-experiment lecture
-- `/zh-cn/slides/lecture-3/`: failure taxonomy and anti-forgetting lecture
-- `/zh-cn/slides/lab-1/`: first hands-on lab
-- `/zh-cn/slides/lab-2/`: anti-forgetting review lab
+- `/zh-cn/talk/`: lecture material
+- `/zh-cn/talk/`: source-to-experiment lecture
+- `/zh-cn/talk/`: failure taxonomy and anti-forgetting lecture
+- `/zh-cn/examples/`: first hands-on lab
+- `/zh-cn/theory/learning-loop`: anti-forgetting review lab
 - `/zh-cn/appendix/`: references and maintenance rules
 - `/zh-cn/appendix/local-setup`: local install, verification order, and troubleshooting
 - `/zh-cn/appendix/source-to-case-playbook`: source-to-case workflows for X, public artifact, internal Feishu, and research hypothesis signals
@@ -77,12 +77,6 @@ Core pages:
 - `/claims-registry.schema.json`: JSON Schema for the claims registry
 - `/case-registry.json`: machine-readable case pages, source status, example bindings, learning outcomes, and verification commands
 - `/case-registry.schema.json`: JSON Schema for the case registry
-- `/teaching-registry.json`: machine-readable lecture and lab commands, readings, and deliverables
-- `/teaching-registry.schema.json`: JSON Schema for the teaching registry
-- `/slide-deck.json`: machine-readable lecture/lab headings, example bindings, classroom commands, and deliverable templates
-- `/slide-deck.schema.json`: JSON Schema for the slide deck registry
-- `/speaker-notes.json`: machine-readable lecture/lab speaker notes, prompts, common confusions, and exit tickets
-- `/speaker-notes.schema.json`: JSON Schema for the speaker notes registry
 - `/rubric.json`: machine-readable grading modules, weights, score levels, evidence paths, and verification commands
 - `/rubric.schema.json`: JSON Schema for the rubric
 - `/exercise-registry.json`: machine-readable exercises, input materials, example links, deliverables, and verification commands
@@ -149,9 +143,6 @@ Runnable code:
 - `scripts/check-artifact-gap-analysis.py`
 - `scripts/check-troubleshooting-tree.py`
 - `scripts/check-claims-registry.py`
-- `scripts/check-teaching-registry.py`
-- `scripts/check-slide-deck.py`
-- `scripts/check-speaker-notes.py`
 - `scripts/check-rubric.py`
 - `scripts/check-learning-units.py`
 - `scripts/check-learning-outcomes.py`

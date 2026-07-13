@@ -50,8 +50,8 @@ npm run examples:gridworld:feedback
 
 - [学习路线](/zh-cn/stage-1/)
 - [HL 基础概念](/zh-cn/stage-2/)
-- [第 1 讲](/zh-cn/slides/lecture-1/)
-- [Lab 1](/zh-cn/slides/lab-1/)
+- [第 1 讲](/zh-cn/talk/)
+- [Lab 1](/zh-cn/examples/)
 
 课堂演示：
 
@@ -66,7 +66,7 @@ npm run examples:gridworld:feedback
 
 配套材料：
 
-- [第 2 讲](/zh-cn/slides/lecture-2/)
+- [第 2 讲](/zh-cn/talk/)
 - [案例库](/zh-cn/cases/)
 - [来源登记](/zh-cn/appendix/source-registry)
 - `templates/case-card.md`
@@ -84,8 +84,8 @@ npm run examples:breakout-replay:feedback
 
 配套材料：
 
-- [第 3 讲](/zh-cn/slides/lecture-3/)
-- [Lab 2](/zh-cn/slides/lab-2/)
+- [第 3 讲](/zh-cn/talk/)
+- [Lab 2](/zh-cn/theory/learning-loop)
 - [学习闭环](/zh-cn/theory/learning-loop)
 - [研究框架](/zh-cn/theory/research-framework)
 

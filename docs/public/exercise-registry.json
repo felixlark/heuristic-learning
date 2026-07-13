@@ -93,8 +93,8 @@
           "title": "为什么需要反遗忘",
           "prompt": "给出一个修复当前失败但破坏旧经验的例子。",
           "input_paths": [
-            "docs/zh-cn/slides/lecture-3/index.md",
-            "docs/zh-cn/slides/lab-2/index.md"
+            "docs/zh-cn/talk/index.md",
+            "docs/zh-cn/theory/learning-loop.md"
           ],
           "example_ids": [],
           "deliverable": "反遗忘风险说明",
@@ -341,7 +341,7 @@
           "prompt": "写一个坏更新，并说明哪个测试会阻止它。",
           "input_paths": [
             "templates/anti-forgetting-checklist.md",
-            "docs/zh-cn/slides/lab-2/index.md"
+            "docs/zh-cn/theory/learning-loop.md"
           ],
           "example_ids": [
             "gridworld",
@@ -492,15 +492,15 @@
           "title": "课程讲义扩展",
           "prompt": "把一个已验证案例扩展为 lecture 或 lab 页面。",
           "input_paths": [
-            "docs/public/teaching-registry.json",
-            "docs/public/slide-deck.json",
-            "docs/zh-cn/slides/index.md"
+            "docs/public/course-manifest.json",
+            "docs/public/course-manifest.json",
+            "docs/zh-cn/talk/index.md"
           ],
           "example_ids": [],
           "deliverable": "lecture 或 lab 页面 + demo 命令",
           "verification_commands": [
-            "npm run teaching:registry:check",
-            "npm run slides:check",
+            "npm run course:structure:check",
+            "npm run course:structure:check",
             "npm run verify"
           ],
           "acceptance": [

@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://longbiaochen.github.io/heuristic-learning/sitemap.xml
+Sitemap: https://felixlark.github.io/heuristic-learning/sitemap.xml

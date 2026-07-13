@@ -17,7 +17,7 @@ description: Heuristic Learning 仓库目标、证据、验证命令和剩余边
 | 理论积累 | [学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework)、[研究问题](/zh-cn/theory/research-framework)、[文献阅读指南](/zh-cn/appendix/reading-guide)、[评估指标矩阵](/zh-cn/appendix/evaluation-metrics)、[论文蓝图](/zh-cn/appendix/paper-blueprint)、[研究日志](/zh-cn/appendix/research-logbook)、`/evaluation-metrics.json`、`/paper-blueprint.json`、`/research-logbook.json` | `npm run metrics:check`、`npm run paper:blueprint:check`、`npm run research:logbook:check` + 页面 frontmatter + manifest 检查 |
 | 可运行示例 | 6 个 `examples/*`、6 个 `tests/test_*.py`、6 个 `experiments/*/latest.json`、代码导览、Benchmark 结果摘要、消融计划、Artifact 差距分析 | `npm run examples:test`、`npm run examples:feedback`、`npm run code:tour:check`、`npm run benchmark:summary:check`、`npm run ablation:plan:check`、`npm run artifact:gap:check` |
 | 案例库 | Ant、Breakout、VizDoom、Robot Soccer、Traffic、X signal、[案例矩阵](/zh-cn/appendix/case-registry)、[来源到案例 Playbook](/zh-cn/appendix/source-to-case-playbook)、`/case-registry.json` | `npm run source:registry:check`、`npm run cases:check`、`npm run source:case:check` |
-| 课程材料 | 3 讲 + 2 Lab、讲者备注、教师指南、课程进度表、授课包、概念图谱、学习成果矩阵、研究课题、研究日志、练习集、Rubric | `npm run teaching:registry:check`、`npm run slides:check`、`npm run speaker:notes:check`、`npm run rubric:check`、`npm run exercises:check`、`npm run concept:graph:check`、`npm run learning:outcomes:check`、`npm run teaching:pack:check`、`npm run research:projects:check`、`npm run research:logbook:check` |
+| 课程材料 | [一小时导读](/zh-cn/talk/)、页面级幻灯片、教师指南、授课包、概念图谱、练习集与 Rubric | `npm run course:structure:check`、`npm run teaching:pack:check`、`npm run concept:graph:check`、`npm run exercises:check` |
 | 机器可读入口 | `/course-manifest.json` 统一登记核心页面、示例、public resources 和 CI gate；`/troubleshooting-tree.json` 把失败面映射到诊断、修复和复验；各 registry/schema 由对应检查脚本约束 | `npm run course:manifest:check`、`npm run troubleshooting:tree:check`、registry checks |
 | 贡献与发布治理 | CONTRIBUTING、PR/issue templates、contribution contract、[贡献与研究协议](/zh-cn/appendix/contribution-protocol)、release checklist、CHANGELOG、LICENSE、CITATION | `npm run contribution:contract:check`、`npm run course:structure:check` |
 | 来源和安全边界 | 来源登记、X 来源矩阵、引用页、`SECURITY.md`、敏感来源规则 | `npm run source:registry:check`、`npm run x:sources:check`、结构检查 |
@@ -49,9 +49,9 @@ npm run verify
 12. `npm run x:sources:check`
 13. `npm run source:case:check`
 14. `npm run claims:registry:check`
-15. `npm run teaching:registry:check`
-16. `npm run slides:check`
-17. `npm run speaker:notes:check`
+15. `npm run course:structure:check`
+16. `npm run course:structure:check`
+17. `npm run course:structure:check`
 18. `npm run rubric:check`
 19. `npm run exercises:check`
 20. `npm run contribution:contract:check`
@@ -97,7 +97,7 @@ npm run docs:routes:check
 | `/heuristic-learning/` | 首页 |
 | `/heuristic-learning/zh-cn/syllabus/` | 课程大纲 |
 | `/heuristic-learning/zh-cn/examples/` | 示例入口 |
-| `/heuristic-learning/zh-cn/slides/` | 讲义入口 |
+| `/heuristic-learning/zh-cn/talk/` | 讲义入口 |
 | `/heuristic-learning/zh-cn/appendix/reading-guide` | 文献阅读入口 |
 | `/heuristic-learning/zh-cn/appendix/case-registry` | 案例矩阵入口 |
 | `/heuristic-learning/zh-cn/appendix/learning-units` | 学习单元入口 |
@@ -120,9 +120,6 @@ npm run docs:routes:check
 | `/heuristic-learning/troubleshooting-tree.json` | 排错决策树 registry |
 | `/heuristic-learning/claims-registry.json` | 研究问题 registry |
 | `/heuristic-learning/case-registry.json` | 案例矩阵 registry |
-| `/heuristic-learning/teaching-registry.json` | 讲义 registry |
-| `/heuristic-learning/slide-deck.json` | 讲义结构 registry |
-| `/heuristic-learning/speaker-notes.json` | 讲者备注 registry |
 | `/heuristic-learning/rubric.json` | 评分 Rubric registry |
 | `/heuristic-learning/exercise-registry.json` | 练习题 registry |
 | `/heuristic-learning/contribution-contract.json` | 贡献契约 registry |

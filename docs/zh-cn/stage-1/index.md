@@ -44,7 +44,7 @@ npm run examples:test
 
 - 能指出策略代码里哪些规则构成 Heuristic System 的一部分。
 - 能修改一条规则，并用测试确认没有破坏基础路径。
-- 能完成 [Lab 1](/zh-cn/slides/lab-1/) 的实验记录。
+- 能完成 [Lab 1](/zh-cn/examples/) 的实验记录。
 
 ## 阶段 2：学习研究案例
 

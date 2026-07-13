@@ -28,7 +28,7 @@ description: Heuristic Learning 课程的概念题、代码题、实验题和 ca
 | A2. 对比 RL/DL/HL | [从 RL/DL 到 HL](/zh-cn/stage-3/) | 能指出 HL 不替代 RL/DL，而是更新不同对象 |
 | A3. 判断是否属于 HL | [研究框架](/zh-cn/theory/research-framework) | 能用四个最小条件判断一个案例 |
 | A4. 来源状态分级 | [来源登记](/zh-cn/appendix/source-registry) | 能区分已复现、已结构化、已定位、待采集 |
-| A5. 为什么需要反遗忘 | [第 3 讲](/zh-cn/slides/lecture-3/)、[Lab 2](/zh-cn/slides/lab-2/) | 能给出一个“修复当前失败但破坏旧经验”的例子 |
+| A5. 为什么需要反遗忘 | [第 3 讲](/zh-cn/talk/)、[Lab 2](/zh-cn/theory/learning-loop) | 能给出一个“修复当前失败但破坏旧经验”的例子 |
 
 概念题不需要跑代码，但不能只给口号。答案必须引用一个页面、一个示例或一个来源状态。
 

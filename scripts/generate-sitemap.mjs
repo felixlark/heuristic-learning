@@ -9,7 +9,7 @@ const rootDir = path.resolve(__dirname, '..')
 const docsDir = path.join(rootDir, 'docs')
 const publicDir = path.join(docsDir, 'public')
 const siteUrl = (
-  process.env.SITE_URL || 'https://longbiaochen.github.io/heuristic-learning'
+  process.env.SITE_URL || 'https://felixlark.github.io/heuristic-learning'
 ).replace(/\/+$/, '')
 const skipWrite = process.env.SITEMAP_NO_WRITE === '1'
 

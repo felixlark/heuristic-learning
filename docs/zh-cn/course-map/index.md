@@ -15,8 +15,8 @@ description: Heuristic Learning 的统一学习主线、实验入口和验证路
 | 2. 跑通闭环 | 观察 baseline failure 如何变成 feedback report | [学习闭环](/zh-cn/theory/learning-loop)、[可运行示例](/zh-cn/examples/) | `npm run examples:gridworld`、`npm run examples:gridworld:feedback` | GridWorld 实验记录 |
 | 3. 对照理论 | 区分 RL、DL 和 HL 的更新机制 | [从 RL/DL 到 HL](/zh-cn/stage-3/)、[研究框架](/zh-cn/theory/research-framework) | 把一个案例映射到 state、action、feedback、patch、regression | 一张闭环图 |
 | 4. 阅读案例 | 学会处理公开 artifact、X 来源和脱敏应用问题 | [案例库](/zh-cn/cases/)、[来源登记](/zh-cn/appendix/source-registry) | 写一张 case card，标注来源状态和边界 | case card |
-| 5. 修改验证 | 只改一个策略点，并确认旧经验没有退化 | [代码导览](/zh-cn/appendix/code-tour)、[Lab 1](/zh-cn/slides/lab-1/) | `npm run examples:test`、`npm run examples:feedback` | 更新后的 report 与测试结果 |
-| 6. 复盘扩展 | 把一次更新写成可反驳的研究问题 | [Lab 2](/zh-cn/slides/lab-2/)、[研究问题](/zh-cn/theory/research-framework) | `npm run verify`，再写反遗忘复盘 | anti-forgetting checklist |
+| 5. 修改验证 | 只改一个策略点，并确认旧经验没有退化 | [代码导览](/zh-cn/appendix/code-tour)、[Lab 1](/zh-cn/examples/) | `npm run examples:test`、`npm run examples:feedback` | 更新后的 report 与测试结果 |
+| 6. 复盘扩展 | 把一次更新写成可反驳的研究问题 | [Lab 2](/zh-cn/theory/learning-loop)、[研究问题](/zh-cn/theory/research-framework) | `npm run verify`，再写反遗忘复盘 | anti-forgetting checklist |
 
 ## 概念到实验
 

@@ -14,9 +14,7 @@
       "test": "tests/test_gridworld.py",
       "policy_target": "examples/heuristic-gridworld/policies.py",
       "course_links": [
-        "docs/zh-cn/examples/index.md",
-        "docs/zh-cn/slides/lab-1/index.md",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/examples/index.md"
       ]
     },
     {
@@ -31,9 +29,8 @@
       "test": "tests/test_robot_soccer.py",
       "policy_target": "examples/robot-soccer/policies.py",
       "course_links": [
-        "docs/zh-cn/cases/robot-soccer/index.md",
-        "docs/zh-cn/slides/lab-1/index.md",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/cases/robot-soccer/index.md"
       ]
     },
     {
@@ -48,9 +45,8 @@
       "test": "tests/test_vizdoom_replay.py",
       "policy_target": "examples/vizdoom-replay/vizdoom_policies.py",
       "course_links": [
-        "docs/zh-cn/cases/vizdoom/index.md",
-        "docs/zh-cn/appendix/source-registry.md",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/cases/vizdoom/index.md"
       ]
     },
     {
@@ -65,9 +61,8 @@
       "test": "tests/test_traffic_grid.py",
       "policy_target": "examples/traffic-grid/policies.py",
       "course_links": [
-        "docs/zh-cn/cases/traffic-simulation/index.md",
-        "docs/zh-cn/appendix/source-registry.md",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/cases/traffic-simulation/index.md"
       ]
     },
     {
@@ -82,9 +77,8 @@
       "test": "tests/test_breakout_replay.py",
       "policy_target": "examples/breakout-replay/policies.py",
       "course_links": [
-        "docs/zh-cn/cases/breakout/index.md",
-        "docs/zh-cn/appendix/source-registry.md",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/cases/breakout/index.md"
       ]
     },
     {
@@ -99,9 +93,8 @@
       "test": "tests/test_ant_gait_replay.py",
       "policy_target": "examples/ant-gait-replay/policies.py",
       "course_links": [
-        "docs/zh-cn/cases/ant-gait/index.md",
-        "docs/zh-cn/appendix/source-registry.md",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/cases/ant-gait/index.md"
       ]
     }
   ]

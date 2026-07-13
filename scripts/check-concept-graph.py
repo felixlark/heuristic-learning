@@ -74,11 +74,12 @@ def check_registry(registry: dict[str, Any]) -> None:
         for example in examples.get("examples", [])
         if isinstance(example, dict) and isinstance(example.get("id"), str)
     }
-    teaching = load_json(ROOT / "docs/public/teaching-registry.json")
     material_ids = {
-        material.get("id")
-        for material in teaching.get("materials", [])
-        if isinstance(material, dict) and isinstance(material.get("id"), str)
+        material_id
+        for concept in registry.get("concepts", [])
+        if isinstance(concept, dict)
+        for material_id in concept.get("material_ids", [])
+        if isinstance(material_id, str)
     }
     manifest = load_json(ROOT / "docs/public/course-manifest.json")
 

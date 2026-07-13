@@ -50,8 +50,6 @@ npm run cases:check
 npm run source:case:check
 npm run source:registry:check
 npm run claims:registry:check
-npm run teaching:registry:check
-npm run speaker:notes:check
 npm run exercises:check
 npm run contribution:contract:check
 npm run reproducibility:check
@@ -101,7 +99,6 @@ npm run build
 | `ablation:plan:check` | 消融变量、示例、指标、不变量、证据路径或验证命令漂移 | 更新 `/ablation-plan.json` 或 [消融计划](/zh-cn/appendix/ablation-plan) |
 | `source:registry:check` | 来源状态、X 证据或已复现条目缺失 | 更新 [来源登记](/zh-cn/appendix/source-registry)，不要把线索写成事实 |
 | `claims:registry:check` | 研究问题没有绑定证据页、示例或验证命令 | 更新 `/claims-registry.json` 或 [研究问题](/zh-cn/theory/research-framework) |
-| `teaching:registry:check` | 讲义、Lab、阅读材料或演示命令漂移 | 更新 `/teaching-registry.json` 或对应讲义页 |
 | `exercises:check` | 练习题、输入材料、示例、验收命令、学习单元或 Rubric 漂移 | 更新 `/exercise-registry.json` 或 [练习集](/zh-cn/appendix/exercises) |
 | `contribution:contract:check` | 贡献类型、证据字段、必备路径、验证命令或禁止材料漂移 | 更新 `/contribution-contract.json`、`CONTRIBUTING.md` 或 PR 模板 |
 | `reproducibility:check` | 可复现性证据、命令、通过条件或已知边界漂移 | 更新 `/reproducibility-checklist.json` 或 [可复现性检查清单](/zh-cn/appendix/reproducibility) |
@@ -110,7 +107,6 @@ npm run build
 | `checkpoints:check` | 阶段自测、证据、命令、通过条件或常见失败漂移 | 更新 `/checkpoint-registry.json` 或 [阶段检查点](/zh-cn/appendix/checkpoints) |
 | `metrics:check` | 评估指标、示例、研究问题、证据路径或验证命令漂移 | 更新 `/evaluation-metrics.json` 或 [评估指标矩阵](/zh-cn/appendix/evaluation-metrics) |
 | `paper:blueprint:check` | 论文章节、研究问题、指标、示例、证据路径或边界漂移 | 更新 `/paper-blueprint.json` 或 [论文蓝图](/zh-cn/appendix/paper-blueprint) |
-| `speaker:notes:check` | 讲者备注、demo 节点、讨论题、常见误解或 exit ticket 漂移 | 更新 `/speaker-notes.json` |
 | `course:manifest:check` | manifest 字段、路径或 schema 漂移 | 更新 `/course-manifest.json` 和 `/course-manifest.schema.json` |
 | `course:structure:check` | 页面、脚本、示例、报告或 syllabus 不一致 | 按报错补齐对应页面或路径 |
 | `docs:routes:check` | 本地 dev server 页面或 JSON route 不可达 | 检查 VitePress base、public 文件和站内路由 |

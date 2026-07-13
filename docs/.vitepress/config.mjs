@@ -3,11 +3,11 @@ import markdownItKatex from 'markdown-it-katex'
 
 const base = process.env.BASE || '/heuristic-learning/'
 const siteUrl =
-  process.env.SITE_URL || 'https://longbiaochen.github.io/heuristic-learning'
+  process.env.SITE_URL || 'https://felixlark.github.io/heuristic-learning'
 
 export default defineConfig({
   title: 'Heuristic Learning',
-  description: '直觉学习：从思想、案例到可运行系统的中文研究课程',
+  description: '面向开发者和 AI 爱好者的 Heuristic Learning 中文 Web 课程',
   base,
   lang: 'zh-CN',
   cleanUrls: true,
@@ -48,10 +48,11 @@ export default defineConfig({
     logo: '/hl-logo.svg',
     nav: [
       { text: '课程大纲', link: '/zh-cn/syllabus/' },
-      { text: '学习路线', link: '/zh-cn/stage-1/' },
+      { text: '一小时导读', link: '/zh-cn/talk/' },
       { text: '理论框架', link: '/zh-cn/stage-2/' },
       { text: '动手实验', link: '/zh-cn/examples/' },
       { text: '案例库', link: '/zh-cn/cases/' },
+      { text: '研究进阶', link: '/zh-cn/benchmark/' },
       { text: '参考', link: '/zh-cn/appendix/' }
     ],
     sidebar: {
@@ -62,7 +63,8 @@ export default defineConfig({
             { text: '首页', link: '/zh-cn/' },
             { text: '课程地图', link: '/zh-cn/course-map/' },
             { text: '课程大纲', link: '/zh-cn/syllabus/' },
-            { text: '学习路线', link: '/zh-cn/stage-1/' }
+            { text: '学习路线', link: '/zh-cn/stage-1/' },
+            { text: '一小时导读', link: '/zh-cn/talk/' }
           ]
         },
         {
@@ -85,6 +87,14 @@ export default defineConfig({
             { text: '应用: 机器人足球', link: '/zh-cn/cases/robot-soccer/' },
             { text: '应用: 交通模拟', link: '/zh-cn/cases/traffic-simulation/' },
             { text: '来源: X 线索', link: '/zh-cn/cases/x-signal/' }
+          ]
+        },
+        {
+          text: '研究进阶',
+          items: [
+            { text: '真实环境 Benchmark', link: '/zh-cn/benchmark/' },
+            { text: '实验协议', link: '/zh-cn/appendix/benchmark-protocol' },
+            { text: '结果与边界', link: '/zh-cn/appendix/benchmark-results' }
           ]
         },
         {
@@ -131,7 +141,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/longbiaochen/heuristic-learning'
+        link: 'https://github.com/felixlark/heuristic-learning'
       }
     ],
     search: {
@@ -139,7 +149,7 @@ export default defineConfig({
     },
     editLink: {
       pattern:
-        'https://github.com/longbiaochen/heuristic-learning/edit/main/docs/:path',
+        'https://github.com/felixlark/heuristic-learning/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
     footer: {

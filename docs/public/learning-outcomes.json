@@ -103,8 +103,8 @@
         "regression-and-learning-review"
       ],
       "evidence": [
-        "docs/zh-cn/slides/lecture-3/index.md",
-        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/talk/index.md",
+        "docs/zh-cn/theory/learning-loop.md",
         "templates/anti-forgetting-checklist.md",
         "tests/"
       ],

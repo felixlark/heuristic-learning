@@ -27,7 +27,7 @@ description: Heuristic Learning public registries, schemas, and LLM entrypoints
 | [`/benchmark-summary.json`](/benchmark-summary.json) | baseline failure、heuristic outcome 和证据摘要 |
 | [`/case-registry.json`](/case-registry.json) | 案例到来源、示例、学习成果和命令的矩阵 |
 | [`/claims-registry.json`](/claims-registry.json) | 研究问题、证据状态和反驳路径 |
-| [`/teaching-registry.json`](/teaching-registry.json) | 讲义、课堂命令和交付物 |
+| `/course-manifest.json` | 讲义、课堂命令和交付物 |
 | [`/research-projects.json`](/research-projects.json) | 项目制学习与后续研究课题 |
 | [`/research-logbook.json`](/research-logbook.json) | 阅读、示例、研究问题和下一步实验记录 |
 | [`/source-to-case-playbook.json`](/source-to-case-playbook.json) | X、公开 artifact、脱敏应用问题和研究假设进入 case card 的路径 |

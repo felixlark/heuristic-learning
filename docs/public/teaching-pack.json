@@ -8,7 +8,7 @@
       "duration": "90 分钟",
       "audience": "组会/reading group",
       "slides": [
-        "docs/zh-cn/slides/lecture-1/index.md"
+        "docs/zh-cn/talk/index.md"
       ],
       "readings": [
         "docs/zh-cn/examples/index.md",
@@ -31,7 +31,7 @@
       "duration": "2 小时",
       "audience": "工程训练/课程实验",
       "slides": [
-        "docs/zh-cn/slides/lab-1/index.md"
+        "docs/zh-cn/examples/index.md"
       ],
       "readings": [
         "docs/zh-cn/appendix/local-setup.md",
@@ -56,8 +56,8 @@
       "duration": "2-3 周",
       "audience": "研究生专题",
       "slides": [
-        "docs/zh-cn/slides/lecture-2/index.md",
-        "docs/zh-cn/slides/lecture-3/index.md"
+        "docs/zh-cn/talk/index.md",
+        "docs/zh-cn/talk/index.md"
       ],
       "readings": [
         "docs/zh-cn/appendix/reading-guide.md",
@@ -83,7 +83,7 @@
       "duration": "4-6 周",
       "audience": "mini course/capstone",
       "slides": [
-        "docs/zh-cn/slides/index.md"
+        "docs/zh-cn/talk/index.md"
       ],
       "readings": [
         "docs/zh-cn/appendix/course-schedule.md",

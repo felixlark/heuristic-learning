@@ -26,9 +26,6 @@
     "x:sources:check": "python3 scripts/check-x-sources.py",
     "source:case:check": "python3 scripts/check-source-to-case-playbook.py",
     "claims:registry:check": "python3 scripts/check-claims-registry.py",
-    "teaching:registry:check": "python3 scripts/check-teaching-registry.py",
-    "slides:check": "python3 scripts/check-slide-deck.py",
-    "speaker:notes:check": "python3 scripts/check-speaker-notes.py",
     "rubric:check": "python3 scripts/check-rubric.py",
     "exercises:check": "python3 scripts/check-exercise-registry.py",
     "contribution:contract:check": "python3 scripts/check-contribution-contract.py",
@@ -59,7 +56,10 @@
     "examples:breakout-replay": "python3 examples/breakout-replay/run.py",
     "examples:breakout-replay:feedback": "python3 examples/breakout-replay/feedback_loop.py --out experiments/breakout-replay/latest.json",
     "examples:ant-gait-replay": "python3 examples/ant-gait-replay/run.py",
-    "examples:ant-gait-replay:feedback": "python3 examples/ant-gait-replay/feedback_loop.py --out experiments/ant-gait-replay/latest.json"
+    "examples:ant-gait-replay:feedback": "python3 examples/ant-gait-replay/feedback_loop.py --out experiments/ant-gait-replay/latest.json",
+    "examples:cartpole:dev": "python3 examples/cartpole-benchmark/run.py --policy improved --split dev",
+    "examples:cartpole:holdout": "python3 examples/cartpole-benchmark/run.py --policy improved --split holdout",
+    "examples:cartpole:audit": "python3 examples/cartpole-benchmark/run.py --policy improved --split audit"
   },
   "keywords": [
     "heuristic-learning",

@@ -19,7 +19,7 @@ description: Heuristic Learning 课程术语、边界和学习落点
 | Regression | 证明新规则没有破坏旧 probe 的验证过程 | `npm run verify` |
 | Candidate update | 反馈报告中给下一轮维护者的目标文件、规则和验证命令 | `candidate_update` |
 | Source status | 来源在课程中的可信度和处理阶段 | [来源登记](/zh-cn/appendix/source-registry) |
-| Engineering forgetting | 新规则修复一个场景却破坏旧行为、测试或记忆的退化 | [第 3 讲](/zh-cn/slides/lecture-3/) |
+| Engineering forgetting | 新规则修复一个场景却破坏旧行为、测试或记忆的退化 | [第 3 讲](/zh-cn/talk/) |
 | Maintenance cost | 一次更新需要修改和审查的软件结构数量与耦合风险 | [研究框架](/zh-cn/theory/research-framework) |
 
 ## 与相邻领域的边界

@@ -80,7 +80,7 @@ npm run examples:registry:check
 
 - [课程大纲](/zh-cn/syllabus/)
 - [课程进度表](/zh-cn/appendix/course-schedule)
-- [Slides 目录](/zh-cn/slides/)
+- [Slides 目录](/zh-cn/talk/)
 - [练习集](/zh-cn/appendix/exercises)
 - [课程 Rubric](/zh-cn/appendix/rubric)
 

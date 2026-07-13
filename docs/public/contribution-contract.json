@@ -148,7 +148,7 @@
       "required_paths": [
         "templates/anti-forgetting-checklist.md",
         "tests/",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/theory/learning-loop.md"
       ],
       "verification_commands": [
         "npm run examples:test",
@@ -166,13 +166,13 @@
         "course link"
       ],
       "required_paths": [
-        "docs/zh-cn/slides/",
-        "docs/public/teaching-registry.json",
-        "docs/public/slide-deck.json"
+        "docs/zh-cn/talk/",
+        "docs/public/course-manifest.json",
+        "docs/public/course-manifest.json"
       ],
       "verification_commands": [
-        "npm run teaching:registry:check",
-        "npm run slides:check",
+        "npm run course:structure:check",
+        "npm run course:structure:check",
         "npm run course:manifest:check"
       ]
     }

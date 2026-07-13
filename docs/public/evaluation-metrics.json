@@ -103,7 +103,7 @@
       ],
       "evidence": [
         "tests/",
-        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/appendix/reproducibility.md"
       ],
       "verification_commands": [

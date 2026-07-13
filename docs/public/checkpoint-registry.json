@@ -32,7 +32,7 @@
       "evidence": [
         "examples/heuristic-gridworld/README.md",
         "experiments/gridworld/latest.json",
-        "docs/zh-cn/slides/lab-1/index.md"
+        "docs/zh-cn/examples/index.md"
       ],
       "verification_commands": [
         "npm run examples:gridworld:feedback",
@@ -115,7 +115,7 @@
       ],
       "prompt": "提交一次项目或 PR 前，说明旧行为、风险更新、回归保护、Rubric 自评和 verify 结果。",
       "evidence": [
-        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/theory/learning-loop.md",
         "templates/anti-forgetting-checklist.md",
         "docs/zh-cn/appendix/rubric.md"
       ],

@@ -16,7 +16,7 @@ description: Heuristic Learning 研究评估维度、证据路径和验证命令
 | 任务结果 | HL 更新是否让原任务从失败状态进入更可接受的行为区间？ | [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)、`/benchmark-summary.json` | `npm run benchmark:summary:check`、`npm run examples:reports:check` |
 | 失败隔离 | 反馈是否把错误缩小到可更新的 heuristic target？ | `/example-registry.json`、[研究问题](/zh-cn/theory/research-framework)、[案例矩阵](/zh-cn/appendix/case-registry) | `npm run examples:registry:check`、`npm run cases:check` |
 | 更新成本 | 一次 patch 需要修改多少知识、代码或控制参数？ | `templates/experiment-record.md`、`templates/anti-forgetting-checklist.md`、[研究课题](/zh-cn/appendix/research-projects) | `npm run research:projects:check`、`npm run checkpoints:check` |
-| 回归风险 | 新 heuristic 是否保护旧经验？ | `tests/`、[Lab 2](/zh-cn/slides/lab-2/)、[可复现性检查清单](/zh-cn/appendix/reproducibility) | `npm run examples:test`、`npm run verify` |
+| 回归风险 | 新 heuristic 是否保护旧经验？ | `tests/`、[Lab 2](/zh-cn/theory/learning-loop)、[可复现性检查清单](/zh-cn/appendix/reproducibility) | `npm run examples:test`、`npm run verify` |
 | 来源边界 | 案例来源状态是否足以支撑声明强度？ | [来源登记](/zh-cn/appendix/source-registry)、`/case-registry.json`、`/x-sources.json` | `npm run source:registry:check`、`npm run cases:check`、`npm run x:sources:check` |
 
 ## 如何使用

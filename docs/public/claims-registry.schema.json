@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://longbiaochen.github.io/heuristic-learning/claims-registry.schema.json",
+  "$id": "https://felixlark.github.io/heuristic-learning/claims-registry.schema.json",
   "title": "Heuristic Learning Claims Registry",
   "type": "object",
   "additionalProperties": false,

@@ -197,7 +197,7 @@
       ],
       "course_outputs": [
         "templates/anti-forgetting-checklist.md",
-        "docs/zh-cn/slides/lab-2/index.md"
+        "docs/zh-cn/theory/learning-loop.md"
       ]
     }
   ]

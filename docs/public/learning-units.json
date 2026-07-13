@@ -28,7 +28,7 @@
       "readings": [
         "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/examples/index.md",
-        "docs/zh-cn/slides/lab-1/index.md"
+        "docs/zh-cn/examples/index.md"
       ],
       "examples": [
         "gridworld"
@@ -120,7 +120,7 @@
       "title": "U5 反遗忘项目",
       "core_question": "一次 HL 更新如何通过课程验收？",
       "readings": [
-        "docs/zh-cn/slides/lab-2/index.md",
+        "docs/zh-cn/theory/learning-loop.md",
         "docs/zh-cn/appendix/exercises.md",
         "docs/zh-cn/appendix/rubric.md"
       ],

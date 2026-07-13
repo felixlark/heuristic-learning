@@ -29,11 +29,11 @@ npm run verify
 | 周次 | 主题 | 阅读 | 动手命令 | 验收产物 |
 | --- | --- | --- | --- | --- |
 | Week 0 | 环境与课程地图 | [课程地图](/zh-cn/course-map/)、[本地运行与排错](/zh-cn/appendix/local-setup) | `npm install`、`npm run verify` | 本地验证截图或日志摘要 |
-| Week 1 | 从规则到学习闭环 | [学习路线](/zh-cn/stage-1/)、[HL 基础概念](/zh-cn/stage-2/)、[第 1 讲](/zh-cn/slides/lecture-1/) | `npm run examples:gridworld`、`npm run examples:gridworld:feedback` | GridWorld 实验记录 |
-| Week 2 | 来源、case card 与 X/公开 artifact | [第 2 讲](/zh-cn/slides/lecture-2/)、[来源登记](/zh-cn/appendix/source-registry)、[引用与署名](/zh-cn/appendix/citation) | `npm run examples:vizdoom-replay`、`npm run examples:breakout-replay` | 1 张 case card |
-| Week 3 | 失败类型与反遗忘 | [第 3 讲](/zh-cn/slides/lecture-3/)、[学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework) | `npm run examples:ant-gait-replay:feedback`、`npm run examples:traffic-grid:feedback` | failure mode 对照表 |
+| Week 1 | 从规则到学习闭环 | [学习路线](/zh-cn/stage-1/)、[HL 基础概念](/zh-cn/stage-2/)、[第 1 讲](/zh-cn/talk/) | `npm run examples:gridworld`、`npm run examples:gridworld:feedback` | GridWorld 实验记录 |
+| Week 2 | 来源、case card 与 X/公开 artifact | [第 2 讲](/zh-cn/talk/)、[来源登记](/zh-cn/appendix/source-registry)、[引用与署名](/zh-cn/appendix/citation) | `npm run examples:vizdoom-replay`、`npm run examples:breakout-replay` | 1 张 case card |
+| Week 3 | 失败类型与反遗忘 | [第 3 讲](/zh-cn/talk/)、[学习闭环](/zh-cn/theory/learning-loop)、[研究框架](/zh-cn/theory/research-framework) | `npm run examples:ant-gait-replay:feedback`、`npm run examples:traffic-grid:feedback` | failure mode 对照表 |
 | Week 4 | 研究问题与可反驳实验 | [研究问题](/zh-cn/theory/research-framework)、[实验协议](/zh-cn/appendix/benchmark-protocol)、[研究课题](/zh-cn/appendix/research-projects) | `npm run examples:feedback`、`npm run examples:reports:check` | 研究问题 + 最小 probe 设计 |
-| Week 5 | 贡献、发布与最终验收 | [贡献与研究协议](/zh-cn/appendix/contribution-protocol)、[课程 Rubric](/zh-cn/appendix/rubric)、[发布清单](/zh-cn/appendix/release-checklist) | `npm run source:registry:check`、`npm run teaching:registry:check`、`npm run course:structure:check`、`npm run docs:routes:check`、`npm run verify` | 最终 PR 或课程报告 |
+| Week 5 | 贡献、发布与最终验收 | [贡献与研究协议](/zh-cn/appendix/contribution-protocol)、[课程 Rubric](/zh-cn/appendix/rubric)、[发布清单](/zh-cn/appendix/release-checklist) | `npm run source:registry:check`、`npm run course:structure:check`、`npm run docs:routes:check`、`npm run verify` | 最终 PR 或课程报告 |
 
 ## 4 周压缩版
 
@@ -42,7 +42,7 @@ npm run verify
 | Week 1 | Week 0 + Week 1 | `npm run verify`、`npm run examples:gridworld:feedback` | 解释 signal -> probe -> report |
 | Week 2 | Week 2 | `npm run examples:vizdoom-replay`、`npm run examples:breakout-replay:feedback` | 公开 artifact case card |
 | Week 3 | Week 3 + Week 4 | `npm run examples:feedback`、`npm run examples:reports:check` | 一个可反驳研究问题 |
-| Week 4 | Week 5 | `npm run source:registry:check`、`npm run teaching:registry:check`、`npm run course:structure:check`、`npm run docs:routes:check`、`npm run verify` | 最终报告或 PR |
+| Week 4 | Week 5 | `npm run source:registry:check`、`npm run course:structure:check`、`npm run docs:routes:check`、`npm run verify` | 最终报告或 PR |
 
 ## 每周固定检查
 

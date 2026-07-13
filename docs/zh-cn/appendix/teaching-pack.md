@@ -9,7 +9,7 @@ description: Heuristic Learning 讲义、演示、课堂问题和验收材料清
 
 机器可读授课包见 [`/teaching-pack.json`](/teaching-pack.json)，字段约束见 [`/teaching-pack.schema.json`](/teaching-pack.schema.json)。`npm run teaching:pack:check` 会检查每个课堂包对应的讲义、阅读材料、命令、交付物和验收项是否仍然存在。
 
-实际授课时可以使用 `/speaker-notes.json` 里的开场问题、demo 节点、讨论题、常见误解和 exit ticket；`npm run speaker:notes:check` 会检查它们仍然绑定当前讲义。
+实际授课时直接打开目标正文页，并用页面右上角的幻灯片按钮进入演示模式。
 
 ## 使用原则
 
@@ -37,7 +37,7 @@ description: Heuristic Learning 讲义、演示、课堂问题和验收材料清
 
 | 时间 | 内容 | 材料 |
 | --- | --- | --- |
-| 0-10 分钟 | 说明问题背景 | [第 1 讲](/zh-cn/slides/lecture-1/) |
+| 0-10 分钟 | 说明问题背景 | [第 1 讲](/zh-cn/talk/) |
 | 10-30 分钟 | 跑 GridWorld | [可运行示例](/zh-cn/examples/) |
 | 30-55 分钟 | 解释 feedback report | `experiments/gridworld/latest.json` |
 | 55-75 分钟 | 对照 HL / RL / DL | [从 RL/DL 到 HL](/zh-cn/stage-3/) |
@@ -69,7 +69,7 @@ feedback report 写给谁？
 | --- | --- | --- |
 | 0-15 分钟 | 环境验证 | [本地运行与排错](/zh-cn/appendix/local-setup) |
 | 15-35 分钟 | 阅读六个 failure mode | [学习单元矩阵](/zh-cn/appendix/learning-units) |
-| 35-70 分钟 | 分组修改一个策略或测试 | [Lab 1](/zh-cn/slides/lab-1/) |
+| 35-70 分钟 | 分组修改一个策略或测试 | [Lab 1](/zh-cn/examples/) |
 | 70-100 分钟 | 重新生成反馈报告 | [实验协议](/zh-cn/appendix/benchmark-protocol) |
 | 100-120 分钟 | Rubric 自评 | [课程 Rubric](/zh-cn/appendix/rubric) |
 
@@ -133,7 +133,6 @@ npm run verify
 每次授课前至少运行：
 
 ```bash
-npm run teaching:registry:check
 npm run learning:units:check
 npm run teaching:pack:check
 npm run verify

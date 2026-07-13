@@ -57,7 +57,7 @@
       "evidence_pages": [
         "docs/zh-cn/syllabus/index.md",
         "docs/zh-cn/examples/index.md",
-        "docs/zh-cn/slides/lecture-3/index.md"
+        "docs/zh-cn/talk/index.md"
       ],
       "example_ids": [
         "gridworld",

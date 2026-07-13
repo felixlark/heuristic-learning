@@ -22,7 +22,7 @@ description: Heuristic Learning 仓库版本发布、变更记录和发布前验
 | 是否改变轻量 replay 与真实 artifact 的保真度边界？ | [Artifact 差距分析](/zh-cn/appendix/artifact-gap-analysis)、`/artifact-gap-analysis.json` |
 | 是否改变失败诊断、修复动作或复验命令？ | [本地运行与排错](/zh-cn/appendix/local-setup)、`/troubleshooting-tree.json` |
 | 是否改变课程入口或学习路径？ | [课程地图](/zh-cn/course-map/)、[课程大纲](/zh-cn/syllabus/) |
-| 是否改变讲义、课堂提示或课堂交付？ | [页面幻灯片](/zh-cn/slides/)、`/speaker-notes.json`、[授课包](/zh-cn/appendix/teaching-pack) |
+| 是否改变讲义、课堂提示或课堂交付？ | [页面幻灯片](/zh-cn/talk/)、[授课包](/zh-cn/appendix/teaching-pack) |
 | 是否改变能力目标、练习或 Rubric 映射？ | [学习成果矩阵](/zh-cn/appendix/learning-outcomes)、`/learning-outcomes.json` |
 | 是否改变阶段自测或每周验收口径？ | [阶段检查点](/zh-cn/appendix/checkpoints)、`/checkpoint-registry.json` |
 | 是否改变研究评估维度或证据路径？ | [评估指标矩阵](/zh-cn/appendix/evaluation-metrics)、`/evaluation-metrics.json` |
@@ -51,9 +51,6 @@ npm run cases:check
 npm run x:sources:check
 npm run source:case:check
 npm run claims:registry:check
-npm run teaching:registry:check
-npm run slides:check
-npm run speaker:notes:check
 npm run rubric:check
 npm run exercises:check
 npm run contribution:contract:check
@@ -117,7 +114,7 @@ npm run release:readiness:check
 GitHub Pages 发布后，应确认：
 
 - 首页、课程地图、课程大纲、示例页和附录页能访问。
-- `/course-manifest.json`、`/course-manifest.schema.json`、`/example-registry.json`、`/code-tour.json`、`/benchmark-summary.json`、`/ablation-plan.json`、`/artifact-gap-analysis.json`、`/troubleshooting-tree.json`、`/case-registry.json`、`/source-to-case-playbook.json`、`/learning-outcomes.json`、`/checkpoint-registry.json`、`/evaluation-metrics.json`、`/paper-blueprint.json`、`/speaker-notes.json`、`/visual-verification.json`、`/visual-acceptance-log.json`、`/x-sources.json`、`/experiment-report.schema.json` 能访问。
+- `/course-manifest.json`、`/course-manifest.schema.json`、`/example-registry.json`、`/code-tour.json`、`/benchmark-summary.json`、`/ablation-plan.json`、`/artifact-gap-analysis.json`、`/troubleshooting-tree.json`、`/case-registry.json`、`/source-to-case-playbook.json`、`/learning-outcomes.json`、`/checkpoint-registry.json`、`/evaluation-metrics.json`、`/paper-blueprint.json`、`/visual-verification.json`、`/visual-acceptance-log.json`、`/x-sources.json`、`/experiment-report.schema.json` 能访问。
 - README、`CITATION.cff`、`LICENSE` 和 `CHANGELOG.md` 彼此一致。
 - `SECURITY.md`、来源登记和 issue/PR 模板对敏感来源的要求一致。
 - GitHub Actions 的 `Verify course repository` 和 Pages deploy workflow 都通过。

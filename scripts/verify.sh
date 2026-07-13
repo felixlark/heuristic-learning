@@ -41,18 +41,6 @@ echo "==> Checking claims registry"
 npm run claims:registry:check
 
 echo
-echo "==> Checking teaching registry"
-npm run teaching:registry:check
-
-echo
-echo "==> Checking slide deck"
-npm run slides:check
-
-echo
-echo "==> Checking speaker notes"
-npm run speaker:notes:check
-
-echo
 echo "==> Checking rubric"
 npm run rubric:check
 

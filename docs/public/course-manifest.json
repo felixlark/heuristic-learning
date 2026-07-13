@@ -245,14 +245,14 @@
     {
       "id": "lecture-3",
       "title": "第 3 讲：失败类型与反遗忘",
-      "path": "docs/zh-cn/slides/lecture-3/index.md",
-      "route": "/zh-cn/slides/lecture-3/"
+      "path": "docs/zh-cn/talk/index.md",
+      "route": "/zh-cn/talk/"
     },
     {
-      "id": "lab-2",
-      "title": "Lab 2：反遗忘审查",
-      "path": "docs/zh-cn/slides/lab-2/index.md",
-      "route": "/zh-cn/slides/lab-2/"
+      "id": "benchmark",
+      "title": "真实环境 Benchmark",
+      "path": "docs/zh-cn/benchmark/index.md",
+      "route": "/zh-cn/benchmark/"
     }
   ],
   "examples": [
@@ -473,54 +473,6 @@
       "route": "/case-registry.schema.json",
       "type": "schema",
       "check_script": "npm run cases:check"
-    },
-    {
-      "id": "teaching-registry",
-      "title": "Teaching Registry",
-      "path": "docs/public/teaching-registry.json",
-      "route": "/teaching-registry.json",
-      "type": "registry",
-      "check_script": "npm run teaching:registry:check"
-    },
-    {
-      "id": "teaching-registry-schema",
-      "title": "Teaching Registry Schema",
-      "path": "docs/public/teaching-registry.schema.json",
-      "route": "/teaching-registry.schema.json",
-      "type": "schema",
-      "check_script": "npm run teaching:registry:check"
-    },
-    {
-      "id": "slide-deck",
-      "title": "Slide Deck Registry",
-      "path": "docs/public/slide-deck.json",
-      "route": "/slide-deck.json",
-      "type": "registry",
-      "check_script": "npm run slides:check"
-    },
-    {
-      "id": "slide-deck-schema",
-      "title": "Slide Deck Schema",
-      "path": "docs/public/slide-deck.schema.json",
-      "route": "/slide-deck.schema.json",
-      "type": "schema",
-      "check_script": "npm run slides:check"
-    },
-    {
-      "id": "speaker-notes",
-      "title": "Speaker Notes Registry",
-      "path": "docs/public/speaker-notes.json",
-      "route": "/speaker-notes.json",
-      "type": "registry",
-      "check_script": "npm run speaker:notes:check"
-    },
-    {
-      "id": "speaker-notes-schema",
-      "title": "Speaker Notes Schema",
-      "path": "docs/public/speaker-notes.schema.json",
-      "route": "/speaker-notes.schema.json",
-      "type": "schema",
-      "check_script": "npm run speaker:notes:check"
     },
     {
       "id": "rubric",

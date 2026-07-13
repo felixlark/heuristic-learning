@@ -159,12 +159,12 @@
       ],
       "evidence": [
         "docs/zh-cn/appendix/learning-units.md",
-        "docs/public/speaker-notes.json",
+        "docs/public/visual-verification.json",
         "docs/zh-cn/appendix/teaching-pack.md"
       ],
       "verification_commands": [
         "npm run learning:units:check",
-        "npm run speaker:notes:check",
+        "npm run course:structure:check",
         "npm run teaching:pack:check"
       ],
       "writing_prompt": "说明读者如何从同一套 registry 进入学习、复现和扩展。",

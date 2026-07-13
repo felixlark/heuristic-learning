@@ -1,297 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/DEPLOYMENT</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/DEPLOYMENT</loc>
     <lastmod>2026-05-26T03:26:47.207Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning</loc>
-    <lastmod>2026-05-26T03:26:47.208Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/UPSTREAM</loc>
+    <lastmod>2026-07-13T10:43:23.633Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/welcome</loc>
+    <loc>https://felixlark.github.io/heuristic-learning</loc>
+    <lastmod>2026-07-13T10:43:50.739Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://felixlark.github.io/heuristic-learning/welcome</loc>
     <lastmod>2026-05-26T03:26:47.209Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/ablation-plan</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/ablation-plan</loc>
     <lastmod>2026-05-26T03:26:47.209Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/artifact-gap-analysis</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/artifact-gap-analysis</loc>
     <lastmod>2026-05-26T03:26:47.210Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/benchmark-protocol</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/benchmark-protocol</loc>
     <lastmod>2026-05-26T03:26:47.211Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/benchmark-results</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/benchmark-results</loc>
     <lastmod>2026-05-26T03:26:47.211Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/case-registry</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/case-registry</loc>
     <lastmod>2026-05-26T03:26:47.212Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/checkpoints</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/checkpoints</loc>
     <lastmod>2026-05-26T03:26:47.212Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/citation</loc>
-    <lastmod>2026-05-26T03:26:47.212Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/citation</loc>
+    <lastmod>2026-07-13T10:42:27.703Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/code-tour</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/code-tour</loc>
     <lastmod>2026-05-26T03:26:47.213Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/completion-audit</loc>
-    <lastmod>2026-05-26T03:26:47.213Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/completion-audit</loc>
+    <lastmod>2026-07-13T10:49:19.611Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/concept-graph</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/concept-graph</loc>
     <lastmod>2026-05-26T04:23:49.945Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/contribution-protocol</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/contribution-protocol</loc>
     <lastmod>2026-05-26T03:26:47.214Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/course-schedule</loc>
-    <lastmod>2026-05-26T03:26:47.215Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/course-schedule</loc>
+    <lastmod>2026-07-13T10:44:40.944Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/evaluation-metrics</loc>
-    <lastmod>2026-05-26T03:26:47.215Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/evaluation-metrics</loc>
+    <lastmod>2026-07-13T10:44:24.687Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/exercises</loc>
-    <lastmod>2026-05-26T03:26:47.215Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/exercises</loc>
+    <lastmod>2026-07-13T10:44:24.750Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/glossary</loc>
-    <lastmod>2026-05-26T03:26:47.216Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/glossary</loc>
+    <lastmod>2026-07-13T10:44:24.750Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix</loc>
-    <lastmod>2026-05-26T04:15:23.147Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix</loc>
+    <lastmod>2026-07-13T10:48:40.677Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/instructor-guide</loc>
-    <lastmod>2026-05-26T03:26:47.216Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/instructor-guide</loc>
+    <lastmod>2026-07-13T10:44:24.746Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/learning-outcomes</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/learning-outcomes</loc>
     <lastmod>2026-05-26T03:26:47.217Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/learning-units</loc>
-    <lastmod>2026-05-26T03:26:47.217Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/learning-units</loc>
+    <lastmod>2026-07-13T10:44:24.687Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/local-setup</loc>
-    <lastmod>2026-05-26T04:15:23.149Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/local-setup</loc>
+    <lastmod>2026-07-13T10:48:40.677Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/paper-blueprint</loc>
-    <lastmod>2026-05-26T04:15:23.148Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/paper-blueprint</loc>
+    <lastmod>2026-07-13T10:48:40.690Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/public-entrypoints</loc>
-    <lastmod>2026-05-26T03:26:47.218Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/public-entrypoints</loc>
+    <lastmod>2026-07-13T10:48:40.682Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/reading-guide</loc>
-    <lastmod>2026-05-26T03:26:47.218Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/reading-guide</loc>
+    <lastmod>2026-07-13T10:47:15.872Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/references</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/references</loc>
     <lastmod>2026-05-26T03:26:47.219Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/release-checklist</loc>
-    <lastmod>2026-05-26T04:15:23.149Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/release-checklist</loc>
+    <lastmod>2026-07-13T10:48:40.691Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/reproducibility</loc>
-    <lastmod>2026-05-26T03:26:47.219Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/reproducibility</loc>
+    <lastmod>2026-07-13T10:44:40.941Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/research-logbook</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/research-logbook</loc>
     <lastmod>2026-05-26T03:26:47.220Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/research-projects</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/research-projects</loc>
     <lastmod>2026-05-26T03:26:47.220Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/research-roadmap</loc>
-    <lastmod>2026-05-26T03:26:47.220Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/research-roadmap</loc>
+    <lastmod>2026-07-13T10:47:15.873Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/rubric</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/rubric</loc>
     <lastmod>2026-05-26T03:26:47.221Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/source-registry</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/source-registry</loc>
     <lastmod>2026-05-26T03:26:47.221Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/source-to-case-playbook</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/source-to-case-playbook</loc>
     <lastmod>2026-05-26T03:26:47.221Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/teaching-pack</loc>
-    <lastmod>2026-05-26T04:15:23.149Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/teaching-pack</loc>
+    <lastmod>2026-07-13T10:48:40.686Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/appendix/visual-verification</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/appendix/visual-verification</loc>
     <lastmod>2026-05-26T03:50:04.755Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/cases/ant-gait</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/benchmark</loc>
+    <lastmod>2026-07-13T10:43:23.633Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/cases/ant-gait</loc>
     <lastmod>2026-05-26T03:38:38.493Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/cases/breakout</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/cases/breakout</loc>
     <lastmod>2026-05-26T03:38:38.492Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/cases</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/cases</loc>
     <lastmod>2026-05-26T03:37:06.093Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/cases/robot-soccer</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/cases/robot-soccer</loc>
     <lastmod>2026-05-26T03:38:38.493Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/cases/traffic-simulation</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/cases/traffic-simulation</loc>
     <lastmod>2026-05-26T03:38:38.493Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/cases/vizdoom</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/cases/vizdoom</loc>
     <lastmod>2026-05-26T03:38:38.493Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/cases/x-signal</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/cases/x-signal</loc>
     <lastmod>2026-05-26T03:38:38.494Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/course-map</loc>
-    <lastmod>2026-05-26T03:26:47.226Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/course-map</loc>
+    <lastmod>2026-07-13T10:44:24.686Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/examples</loc>
-    <lastmod>2026-05-26T03:41:15.305Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/examples</loc>
+    <lastmod>2026-07-13T10:44:24.619Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn</loc>
-    <lastmod>2026-05-26T03:26:47.227Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn</loc>
+    <lastmod>2026-07-13T10:44:24.685Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/slides</loc>
-    <lastmod>2026-05-26T03:51:44.070Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/stage-1</loc>
+    <lastmod>2026-07-13T10:44:24.618Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/slides/lab-1</loc>
-    <lastmod>2026-05-26T03:26:47.228Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/slides/lab-2</loc>
-    <lastmod>2026-05-26T03:26:47.229Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/slides/lecture-1</loc>
-    <lastmod>2026-05-26T03:26:47.229Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/slides/lecture-2</loc>
-    <lastmod>2026-05-26T03:26:47.229Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/slides/lecture-3</loc>
-    <lastmod>2026-05-26T03:26:47.230Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/stage-1</loc>
-    <lastmod>2026-05-26T03:26:47.230Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/stage-2</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/stage-2</loc>
     <lastmod>2026-05-26T03:26:47.231Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/stage-3</loc>
-    <lastmod>2026-05-26T03:27:58.510Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/stage-3</loc>
+    <lastmod>2026-07-13T10:44:24.624Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/syllabus</loc>
-    <lastmod>2026-05-26T03:26:47.231Z</lastmod>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/syllabus</loc>
+    <lastmod>2026-07-13T10:48:40.682Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/theory/learning-loop</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/talk</loc>
+    <lastmod>2026-07-13T10:43:23.633Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/theory/learning-loop</loc>
     <lastmod>2026-05-26T03:26:47.232Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://longbiaochen.github.io/heuristic-learning/zh-cn/theory/research-framework</loc>
+    <loc>https://felixlark.github.io/heuristic-learning/zh-cn/theory/research-framework</loc>
     <lastmod>2026-05-26T03:26:47.232Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>

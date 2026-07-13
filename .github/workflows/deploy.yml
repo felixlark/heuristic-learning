@@ -22,7 +22,6 @@ env:
 
 jobs:
   build:
-    if: github.repository_owner == 'longbiaochen' || vars.ENABLE_PAGES_DEPLOY == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -62,7 +61,6 @@ jobs:
           path: docs/.vitepress/dist
 
   deploy:
-    if: github.repository_owner == 'longbiaochen' || vars.ENABLE_PAGES_DEPLOY == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
