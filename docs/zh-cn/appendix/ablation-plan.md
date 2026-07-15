@@ -1,19 +1,20 @@
 ---
 title: 消融计划
-description: Heuristic Learning 六个主线示例的变量对照、证据路径和验证命令
+description: Heuristic Learning 七个主线示例的变量对照、证据路径和验证命令
 ---
 
 # 消融计划
 
-本页把六个 runnable examples 的后续研究对照写成可检查计划。它补充 [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)：benchmark 当前回答“现在跑出了什么”，消融计划回答“下一步应该改变哪个变量，保留哪个旧行为，如何避免把轻量 replay 写成过强结论”。
+本页把七个 runnable examples 的后续研究对照写成可检查计划。它补充 [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)：benchmark 当前回答“现在跑出了什么”，消融计划回答“下一步应该改变哪个变量，保留哪个旧行为，如何避免把轻量 replay 写成过强结论”。
 
 机器可读计划见 [`/ablation-plan.json`](/ablation-plan.json)，字段约束见 [`/ablation-plan.schema.json`](/ablation-plan.schema.json)。`npm run ablation:plan:check` 会检查每个消融是否绑定示例、评估指标、证据路径和验证命令。
 
-## 六个对照
+## 七个对照
 
 | 示例 | 变量 | 必须保留的不变量 | 验证命令 |
 | --- | --- | --- | --- |
 | GridWorld 陷阱规避消融 | trap avoidance 与 tie-break 规则 | 避开 `local_greedy_trap` 后仍能到达目标 | `npm run examples:gridworld:feedback`、`npm run examples:test` |
+| Constraint Audit 证据升级消融 | 是否区分目录未知与已知约束冲突 | 不把未知主张伪装为已验证事实，同时阻断已知矛盾 | `npm run examples:constraint-audit:feedback`、`npm run examples:test` |
 | Robot Soccer 射门通道消融 | 射门前是否检查 blocked lane | blocked shot 变成 goal，安全通道不被过度延迟 | `npm run examples:robot-soccer:feedback`、`npm run examples:test` |
 | VizDoom Medikit 阈值消融 | `pickup_health` 与 `stage_area` 阈值 | 避免 `wasted_pickup`，低血量仍拾取 | `npm run examples:vizdoom-replay:feedback`、`npm run examples:reports:check` |
 | Traffic Grid 下游容量消融 | downstream capacity 是否作为硬约束 | 避免 `spillback`，不永久 hold | `npm run examples:traffic-grid:feedback`、`npm run examples:test` |

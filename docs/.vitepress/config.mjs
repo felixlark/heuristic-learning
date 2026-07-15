@@ -86,6 +86,7 @@ export default defineConfig({
             { text: 'Artifact: Ant Gait', link: '/zh-cn/cases/ant-gait/' },
             { text: '应用: 机器人足球', link: '/zh-cn/cases/robot-soccer/' },
             { text: '应用: 交通模拟', link: '/zh-cn/cases/traffic-simulation/' },
+            { text: '研究: 事实约束审计', link: '/zh-cn/cases/constraint-audit/' },
             { text: '来源: X 线索', link: '/zh-cn/cases/x-signal/' }
           ]
         },
@@ -127,6 +128,7 @@ export default defineConfig({
             { text: '可复现性检查', link: '/zh-cn/appendix/reproducibility' },
             { text: '练习集', link: '/zh-cn/appendix/exercises' },
             { text: '研究课题', link: '/zh-cn/appendix/research-projects' },
+            { text: '事实约束审计研究', link: '/zh-cn/appendix/constraint-audit' },
             { text: '研究日志', link: '/zh-cn/appendix/research-logbook' },
             { text: '消融计划', link: '/zh-cn/appendix/ablation-plan' },
             { text: 'Artifact 差距分析', link: '/zh-cn/appendix/artifact-gap-analysis' },

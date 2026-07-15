@@ -17,6 +17,7 @@ EXPECTED_IDS = {
     "traffic-downstream-capacity",
     "breakout-reflection-prediction",
     "ant-gait-yaw-feedback",
+    "constraint-audit-evidence-escalation",
 }
 
 

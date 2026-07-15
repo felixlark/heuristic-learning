@@ -29,6 +29,7 @@ Use these entry points:
 - `docs/zh-cn/appendix/source-registry.md` for source traceability and ingestion status.
 - `docs/zh-cn/appendix/local-setup.md` for local install, verification order, and troubleshooting.
 - `docs/zh-cn/appendix/source-to-case-playbook.md` for converting X, public artifact, internal Feishu, and research hypothesis signals into bounded case cards.
+- `docs/zh-cn/appendix/constraint-audit.md` for the evidence boundary of self-check and hallucination research.
 - `docs/zh-cn/appendix/glossary.md` for HL terms and working definitions.
 - `docs/zh-cn/appendix/references.md` for public sources and background references.
 - `docs/zh-cn/appendix/reading-guide.md` for a research-oriented reading order across Jiayi Weng sources, RL/DL context, and runnable examples.
@@ -122,6 +123,7 @@ Use these entry points:
 - `docs/public/experiment-report.schema.json` for common experiment report fields.
 - `docs/zh-cn/cases/x-signal/index.md` for X source cases.
 - `docs/zh-cn/cases/traffic-simulation/index.md` for the sanitized traffic simulation case card.
+- `docs/zh-cn/cases/constraint-audit/index.md` for the closed-world constraint-audit research fixture.
 - `scripts/check-course-structure.py` for course/docs/examples alignment checks.
 - `scripts/check-source-registry.py` for source status and X source evidence checks.
 - `scripts/check-case-registry.py` for case-to-source/example/outcome checks.

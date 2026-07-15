@@ -1,11 +1,11 @@
 ---
 title: Benchmark 结果摘要
-description: Heuristic Learning 六个主线示例的 baseline、heuristic、报告和验证入口
+description: Heuristic Learning 七个主线示例的 baseline、heuristic、报告和验证入口
 ---
 
 # Benchmark 结果摘要
 
-本页把六个主线示例压成一张研究结果表。它不是通用分数榜，也不声称轻量 replay 等同于真实 MuJoCo、Atari 或 VizDoom 复现；它的作用是让读者快速看到每个实验的 baseline failure、heuristic outcome、反馈报告、测试和课程落点。
+本页把七个主线示例压成一张研究结果表。它不是通用分数榜，也不声称轻量 replay 等同于真实 MuJoCo、Atari 或 VizDoom 复现；它的作用是让读者快速看到每个实验的 baseline failure、heuristic outcome、反馈报告、测试和课程落点。
 
 机器可读摘要见 [`/benchmark-summary.json`](/benchmark-summary.json)，字段约束见 [`/benchmark-summary.schema.json`](/benchmark-summary.schema.json)。`npm run benchmark:summary:check` 会从 `docs/public/example-registry.json` 和 `experiments/*/latest.json` 交叉验证每一行，避免表格和实验报告漂移。
 
@@ -21,6 +21,7 @@ description: Heuristic Learning 六个主线示例的 baseline、heuristic、报
 | Traffic Grid | `spillback` | `stable_flow` | `experiments/traffic-grid/latest.json` | `tests/test_traffic_grid.py` |
 | Breakout Replay | `missed_after_wall_reflection` | `intercepted` | `experiments/breakout-replay/latest.json` | `tests/test_breakout_replay.py` |
 | Ant Gait Replay | `yaw_drift` | `stable_stride` | `experiments/ant-gait-replay/latest.json` | `tests/test_ant_gait_replay.py` |
+| Constraint Audit | `accepted_constraint_violation` | `blocked_constraint_violation` | `experiments/constraint-audit/latest.json` | `tests/test_constraint_audit.py` |
 
 ## 怎么读这张表
 
@@ -57,4 +58,5 @@ npm run verify
 - GridWorld 是教学最小环境，不代表真实游戏或机器人任务。
 - Breakout、VizDoom、Ant 是轻量 replay，用来隔离策略对象和 failure mode，不等同于完整高保真复现。
 - Robot Soccer 和 Traffic Grid 来自脱敏应用问题抽象，不公开私有原文。
+- Constraint Audit 是闭世界研究夹具，不评估通用事实性或纳什均衡收敛。
 - 如果未来接入真实环境，本页应保留轻量 replay 行，并新增高保真验证行，而不是覆盖已有教学结果。

@@ -26,6 +26,28 @@
       "boundary": "这个示例用于理解最小 HL 闭环，不用于证明地图泛化能力。"
     },
     {
+      "id": "constraint-audit-code-tour",
+      "example_id": "constraint-audit",
+      "title": "Constraint Audit 代码导览",
+      "reading_order": [
+        "examples/constraint-audit/env.py",
+        "examples/constraint-audit/policies.py",
+        "examples/constraint-audit/run.py",
+        "examples/constraint-audit/feedback_loop.py",
+        "tests/test_constraint_audit.py"
+      ],
+      "key_question": "为什么目录未知必须升级为外部证据，而不能被自洽性检查当作事实？",
+      "run_commands": [
+        "npm run examples:constraint-audit",
+        "npm run examples:constraint-audit:feedback",
+        "npm run examples:test"
+      ],
+      "expected_observation": "baseline 接受已知矛盾，heuristic 阻断矛盾并将未知主张转为证据请求。",
+      "edit_target": "examples/constraint-audit/policies.py",
+      "test_path": "tests/test_constraint_audit.py",
+      "boundary": "这是闭世界约束夹具，不是通用事实核查或自博弈均衡实验。"
+    },
+    {
       "id": "robot-soccer-code-tour",
       "example_id": "robot-soccer",
       "title": "Robot Soccer 代码导览",

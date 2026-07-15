@@ -125,7 +125,7 @@
       "status": "active",
       "source_type": "cross-example-analysis",
       "source_ref": "experiments/",
-      "reading_goal": "比较六个 latest.json 是否足以定位 failure mode 和 update target。",
+      "reading_goal": "比较七个 latest.json 是否足以定位 failure mode 和 update target。",
       "bound_examples": [
         "gridworld",
         "robot-soccer",
@@ -154,6 +154,35 @@
       ],
       "next_action": "为每个报告补一个人工可读的 edit hint，并检查是否降低改动定位成本。",
       "boundary": "报告结构只能证明课程轻量任务的维护性，不能外推到所有 RL 环境。"
+    },
+    {
+      "id": "constraint-audit-related-work",
+      "status": "active",
+      "source_type": "public-essay",
+      "source_ref": "docs/zh-cn/appendix/constraint-audit.md",
+      "reading_goal": "把自检与核验相关工作转成闭世界约束冲突和证据升级的可反驳研究夹具。",
+      "bound_examples": [
+        "constraint-audit"
+      ],
+      "bound_claims": [
+        "constraint-audit-is-not-general-fact-checking"
+      ],
+      "metrics": [
+        "task-outcome",
+        "failure-isolation",
+        "source-boundary"
+      ],
+      "commands": [
+        "npm run examples:constraint-audit:feedback",
+        "npm run claims:registry:check"
+      ],
+      "deliverables": [
+        "docs/zh-cn/appendix/constraint-audit.md",
+        "experiments/constraint-audit/latest.json",
+        "templates/claim-review.md"
+      ],
+      "next_action": "用带时间戳来源的原子事实和独立生成/核验模型，检验误报、漏报、拒答与答案效用。",
+      "boundary": "闭世界夹具不验证通用事实性、自博弈训练或纳什均衡；未知主张必须保留为待外部证据状态。"
     }
   ]
 }

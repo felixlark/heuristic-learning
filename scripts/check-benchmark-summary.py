@@ -16,6 +16,7 @@ EXPECTED_IDS = {
     "traffic-grid",
     "breakout-replay",
     "ant-gait-replay",
+    "constraint-audit",
 }
 
 

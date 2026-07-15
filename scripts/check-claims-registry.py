@@ -18,6 +18,7 @@ EXPECTED_IDS = {
     "failure-modes-over-average-score",
     "hl-rl-dl-division-of-labor",
     "source-status-is-course-structure",
+    "constraint-audit-is-not-general-fact-checking",
 }
 
 

@@ -1,6 +1,6 @@
 ---
 title: 代码导览
-description: Heuristic Learning 六个可运行示例的代码阅读顺序、运行命令、编辑目标和测试路径
+description: Heuristic Learning 七个可运行示例的代码阅读顺序、运行命令、编辑目标和测试路径
 ---
 
 # 代码导览
@@ -9,7 +9,7 @@ description: Heuristic Learning 六个可运行示例的代码阅读顺序、运
 
 机器可读导览见 [`/code-tour.json`](/code-tour.json)，字段约束见 [`/code-tour.schema.json`](/code-tour.schema.json)。`npm run code:tour:check` 会检查每个 tour 是否绑定示例、`reading_order`、运行命令、`edit_target` 和测试文件。
 
-## 六个示例的阅读顺序
+## 七个示例的阅读顺序
 
 | Tour | 阅读顺序 | 关键问题 | 运行命令 |
 | --- | --- | --- | --- |
@@ -19,6 +19,7 @@ description: Heuristic Learning 六个可运行示例的代码阅读顺序、运
 | Traffic Grid 代码导览 | `env.py` -> `policies.py` -> `run.py` -> `feedback_loop.py` -> `tests/test_traffic_grid.py` | downstream capacity 为什么是安全不变量？ | `npm run examples:traffic-grid`、`npm run examples:traffic-grid:feedback` |
 | Breakout Replay 代码导览 | `replay_env.py` -> `policies.py` -> `run.py` -> `feedback_loop.py` -> `tests/test_breakout_replay.py` | 侧墙反射预测如何变成课程 replay？ | `npm run examples:breakout-replay`、`npm run examples:breakout-replay:feedback` |
 | Ant Gait Replay 代码导览 | `replay_env.py` -> `policies.py` -> `run.py` -> `feedback_loop.py` -> `tests/test_ant_gait_replay.py` | 连续控制 heuristic 如何保持可 review？ | `npm run examples:ant-gait-replay`、`npm run examples:ant-gait-replay:feedback` |
+| Constraint Audit 代码导览 | `env.py` -> `policies.py` -> `run.py` -> `feedback_loop.py` -> `tests/test_constraint_audit.py` | 为什么目录未知必须升级为外部证据？ | `npm run examples:constraint-audit`、`npm run examples:constraint-audit:feedback` |
 
 ## 读代码的固定动作
 

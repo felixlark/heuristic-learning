@@ -24,6 +24,27 @@
       "boundary": "当前不是随机地图泛化实验，只覆盖确定性教学环境。"
     },
     {
+      "id": "constraint-audit-evidence-escalation",
+      "title": "Constraint Audit 证据升级消融",
+      "example_id": "constraint-audit",
+      "metric_ids": ["failure-isolation", "source-boundary", "regression-risk"],
+      "variable_under_test": "是否将目录未知的主张与已知约束冲突分开处理。",
+      "baseline_condition": "baseline 无条件接受所有主张。",
+      "heuristic_condition": "heuristic 阻断目录冲突，并将目录未知升级为外部证据请求。",
+      "expected_invariant": "不把目录未知的主张伪装为已验证事实，同时阻断已知矛盾。",
+      "evidence": [
+        "examples/constraint-audit/README.md",
+        "tests/test_constraint_audit.py",
+        "experiments/constraint-audit/latest.json"
+      ],
+      "verification_commands": [
+        "npm run examples:constraint-audit:feedback",
+        "npm run examples:test"
+      ],
+      "research_use": "用于把自检/自博弈直觉改写为可观察的证据升级和错误隔离问题。",
+      "boundary": "此夹具没有语言模型、开放世界知识或均衡求解，不能用于声称通用去幻觉。"
+    },
+    {
       "id": "robot-soccer-shot-lane",
       "title": "Robot Soccer 射门通道消融",
       "example_id": "robot-soccer",

@@ -1,0 +1,105 @@
+{
+  "case": "closed_world_constraint_audit",
+  "source": {
+    "kind": "research_hypothesis",
+    "note": "A bounded fixture for studying independent constraint checks; it is not a general hallucination detector."
+  },
+  "policies": [
+    {
+      "policy": "baseline",
+      "reason": "accepted_constraint_violation",
+      "reward": -2,
+      "rows": [
+        {
+          "claim": {
+            "subject": "Halley_comet",
+            "relation": "next_perihelion",
+            "value": "2024"
+          },
+          "audit_result": "constraint_violation",
+          "decision": "accept"
+        },
+        {
+          "claim": {
+            "subject": "water_at_standard_pressure",
+            "relation": "freezing_point_celsius",
+            "value": "100"
+          },
+          "audit_result": "constraint_violation",
+          "decision": "accept"
+        },
+        {
+          "claim": {
+            "subject": "Earth",
+            "relation": "natural_moon_count",
+            "value": "1"
+          },
+          "audit_result": "supported_by_catalog",
+          "decision": "accept"
+        },
+        {
+          "claim": {
+            "subject": "unlisted_object",
+            "relation": "launch_year",
+            "value": "2027"
+          },
+          "audit_result": "needs_external_evidence",
+          "decision": "accept"
+        }
+      ]
+    },
+    {
+      "policy": "heuristic",
+      "reason": "blocked_constraint_violation",
+      "reward": 2,
+      "rows": [
+        {
+          "claim": {
+            "subject": "Halley_comet",
+            "relation": "next_perihelion",
+            "value": "2024"
+          },
+          "audit_result": "constraint_violation",
+          "decision": "block_and_request_revision"
+        },
+        {
+          "claim": {
+            "subject": "water_at_standard_pressure",
+            "relation": "freezing_point_celsius",
+            "value": "100"
+          },
+          "audit_result": "constraint_violation",
+          "decision": "block_and_request_revision"
+        },
+        {
+          "claim": {
+            "subject": "Earth",
+            "relation": "natural_moon_count",
+            "value": "1"
+          },
+          "audit_result": "supported_by_catalog",
+          "decision": "accept"
+        },
+        {
+          "claim": {
+            "subject": "unlisted_object",
+            "relation": "launch_year",
+            "value": "2027"
+          },
+          "audit_result": "needs_external_evidence",
+          "decision": "request_external_evidence"
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    "A baseline that accepts every claim passes known constraint violations through unchanged.",
+    "The audit policy blocks contradictions with the supplied catalog and routes unknown claims to external evidence.",
+    "This fixture does not establish factuality outside its closed catalog or show that self-play reaches a Nash equilibrium."
+  ],
+  "candidate_update": {
+    "target": "examples/constraint-audit/policies.py",
+    "rule": "Keep supplied constraints, unknown-claim escalation, and contradiction blocking separate.",
+    "verification": "python3 -m unittest discover -s tests"
+  }
+}

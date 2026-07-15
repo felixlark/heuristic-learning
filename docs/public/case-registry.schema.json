@@ -57,7 +57,7 @@
         },
         "source_kind": {
           "type": "string",
-          "enum": ["public-artifact", "internal-signal", "x-signal"]
+          "enum": ["public-artifact", "internal-signal", "x-signal", "research-hypothesis"]
         },
         "source_refs": {
           "type": "array",

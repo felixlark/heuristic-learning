@@ -18,6 +18,23 @@
       ]
     },
     {
+      "id": "constraint-audit",
+      "title": "Constraint Audit",
+      "failure_mode": "accepted_constraint_violation",
+      "source_status": "teaching-minimal",
+      "example_dir": "examples/constraint-audit",
+      "run_script": "examples:constraint-audit",
+      "feedback_script": "examples:constraint-audit:feedback",
+      "report": "experiments/constraint-audit/latest.json",
+      "test": "tests/test_constraint_audit.py",
+      "policy_target": "examples/constraint-audit/policies.py",
+      "course_links": [
+        "docs/zh-cn/examples/index.md",
+        "docs/zh-cn/cases/constraint-audit/index.md",
+        "docs/zh-cn/appendix/constraint-audit.md"
+      ]
+    },
+    {
       "id": "robot-soccer",
       "title": "Robot Soccer",
       "failure_mode": "blocked_shot",

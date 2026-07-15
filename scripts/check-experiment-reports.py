@@ -50,6 +50,13 @@ REPORTS = {
         "failure_mode": "yaw_drift",
         "feedback_script": "npm run examples:ant-gait-replay:feedback",
     },
+    "constraint-audit": {
+        "path": ROOT / "experiments" / "constraint-audit" / "latest.json",
+        "readme": ROOT / "experiments" / "constraint-audit" / "README.md",
+        "target": "examples/constraint-audit/policies.py",
+        "failure_mode": "accepted_constraint_violation",
+        "feedback_script": "npm run examples:constraint-audit:feedback",
+    },
 }
 
 

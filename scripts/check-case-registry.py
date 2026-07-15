@@ -17,6 +17,7 @@ EXPECTED_CASE_IDS = {
     "vizdoom",
     "robot-soccer",
     "traffic-simulation",
+    "constraint-audit",
     "x-signal",
 }
 
@@ -110,7 +111,7 @@ def check_registry(registry: dict[str, Any]) -> None:
         require(isinstance(status, str) and status in source_registry, f"{context}: source status not documented")
         statuses.add(status)
         source_kind = case.get("source_kind")
-        require(source_kind in {"public-artifact", "internal-signal", "x-signal"}, f"{context}: invalid source_kind")
+        require(source_kind in {"public-artifact", "internal-signal", "x-signal", "research-hypothesis"}, f"{context}: invalid source_kind")
         source_kinds.add(source_kind)
         refs = case.get("source_refs")
         require(isinstance(refs, list) and refs, f"{context}: source_refs must be non-empty")
@@ -150,8 +151,8 @@ def check_registry(registry: dict[str, Any]) -> None:
         require(isinstance(boundary, str) and boundary in page or isinstance(boundary, str) and boundary in case_text, f"{context}: boundary not documented")
 
     require(ids == EXPECTED_CASE_IDS, f"case ids mismatch: {sorted(ids)}")
-    require(runnable_count == 5, "case registry must bind five runnable domain cases")
-    require({"public-artifact", "internal-signal", "x-signal"} == source_kinds, "case registry must cover all source kinds")
+    require(runnable_count == 6, "case registry must bind six runnable domain cases")
+    require({"public-artifact", "internal-signal", "x-signal", "research-hypothesis"} == source_kinds, "case registry must cover all source kinds")
     require("已结构化" in statuses, "case registry must preserve structured non-runnable case")
 
     resource_ids = {

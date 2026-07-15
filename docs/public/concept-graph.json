@@ -60,7 +60,8 @@
       "term": "Probe",
       "definition": "能稳定暴露失败的最小场景。",
       "claim_ids": [
-        "failure-modes-over-average-score"
+        "failure-modes-over-average-score",
+        "constraint-audit-is-not-general-fact-checking"
       ],
       "example_ids": [
         "gridworld",
@@ -68,7 +69,8 @@
         "vizdoom-replay",
         "traffic-grid",
         "breakout-replay",
-        "ant-gait-replay"
+        "ant-gait-replay",
+        "constraint-audit"
       ],
       "material_ids": [
         "lecture-2",
@@ -77,11 +79,13 @@
       "pages": [
         "docs/zh-cn/examples/index.md",
         "docs/zh-cn/appendix/benchmark-protocol.md",
-        "docs/zh-cn/appendix/research-projects.md"
+        "docs/zh-cn/appendix/research-projects.md",
+        "docs/zh-cn/appendix/constraint-audit.md"
       ],
       "commands": [
         "npm run examples:registry:check",
-        "npm run examples:test"
+        "npm run examples:test",
+        "npm run examples:constraint-audit:feedback"
       ]
     },
     {

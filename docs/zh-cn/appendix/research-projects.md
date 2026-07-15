@@ -30,6 +30,7 @@ description: Heuristic Learning 的课程项目、研究问题和验收产物
 | GridWorld 新 probe | `examples/heuristic-gridworld/` | 一个局部陷阱是否能被显式规则稳定规避？ | 新 probe、测试、反馈报告说明 | `npm run examples:test` |
 | Robot Soccer 通道检查 | `examples/robot-soccer/` | 射门前检查通道是否比直接射门更可维护？ | case card、blocked-lane 扩展场景 | `npm run examples:robot-soccer:feedback` |
 | Traffic Grid 安全约束 | `examples/traffic-grid/` | 下游容量应作为硬约束还是 reward 项？ | 实验记录、阈值敏感性说明 | `npm run examples:traffic-grid:feedback` |
+| Constraint Audit 证据边界 | `examples/constraint-audit/` | 事实约束审计能否成为可维护反馈通道？ | 原子主张夹具、证据升级规则、反例说明 | `npm run examples:constraint-audit:feedback` |
 
 入门项目适合 90 分钟导读或 2 小时工作坊。评分重点是是否能复述 signal、probe、patch、report 和 regression，而不是策略是否复杂。
 
@@ -62,6 +63,7 @@ description: Heuristic Learning 的课程项目、研究问题和验收产物
 npm run examples:gridworld:feedback
 npm run examples:robot-soccer:feedback
 npm run examples:traffic-grid:feedback
+npm run examples:constraint-audit:feedback
 npm run examples:breakout-replay:feedback
 npm run examples:vizdoom-replay:feedback
 npm run examples:ant-gait-replay:feedback

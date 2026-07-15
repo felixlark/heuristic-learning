@@ -7,7 +7,7 @@ description: Heuristic Learning 的最小动手实验
 
 可运行示例是动手入口：它们回答“怎么运行、怎么生成反馈报告、怎么验证没有退化”。[案例库](/zh-cn/cases/) 回答另一个问题：这个任务为什么值得学、来源边界是什么、最小实验保留了原问题的哪一部分。
 
-当前 v0.1 提供六个纯 Python 示例。GridWorld 是入门闭环；另外五个示例分别绑定案例库中的具体案例。这里的 `VizDoom Replay`、`Breakout Replay` 和 `Ant Gait Replay` 都是轻量 replay：它们保留 failure probe、策略更新对象和测试路径，不把学习门槛绑定到真实 MuJoCo、Atari 或 VizDoom 环境。
+当前 v0.1 提供七个纯 Python 示例。GridWorld 是入门闭环；其余示例分别绑定案例库中的具体案例或研究夹具。这里的 `VizDoom Replay`、`Breakout Replay` 和 `Ant Gait Replay` 都是轻量 replay：它们保留 failure probe、策略更新对象和测试路径，不把学习门槛绑定到真实 MuJoCo、Atari 或 VizDoom 环境。
 
 ## 示例和案例怎么配合
 
@@ -19,11 +19,12 @@ description: Heuristic Learning 的最小动手实验
 | Ant Gait Replay | [Ant Gait 案例](/zh-cn/cases/ant-gait/) | 公开 MuJoCo Ant artifact 的轻量 replay |
 | Robot Soccer | [机器人足球案例](/zh-cn/cases/robot-soccer/) | 脱敏应用场景的最小 blocked-lane 环境 |
 | Traffic Grid | [交通模拟案例](/zh-cn/cases/traffic-simulation/) | 脱敏应用场景的最小 spillback 环境 |
+| Constraint Audit | [事实约束审计案例](/zh-cn/cases/constraint-audit/) | 研究假设的闭世界约束审计夹具 |
 
 每个示例目录都包含一个 `README.md`，其中固定列出 learning target、运行命令、反馈报告路径和测试路径。读者可以从本页按顺序跑，也可以先读案例页，再回到对应示例动手。
 
 机器可读示例矩阵见 [`/example-registry.json`](/example-registry.json)，字段约束见 [`/example-registry.schema.json`](/example-registry.schema.json)。`npm run examples:registry:check` 会确认 registry、package scripts、README、报告、测试和课程链接没有漂移。
-六个示例的 baseline/heuristic 当前结果汇总见 [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)，由 `npm run benchmark:summary:check` 检查。
+七个示例的 baseline/heuristic 当前结果汇总见 [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)，由 `npm run benchmark:summary:check` 检查。
 
 ## 0. 最小闭环
 
@@ -135,6 +136,23 @@ baseline policy 只看上游队列大小，所以会优先放行主路并造成 
 
 它展示了 HL 在工程系统里的另一个常见对象：学习不是只改变“选择哪个动作”，还要把管制经验、容量阈值和 replay probe 固化成可维护规则。
 
+### Constraint Audit
+
+位置：
+
+```text
+examples/constraint-audit/
+```
+
+运行：
+
+```bash
+npm run examples:constraint-audit
+npm run examples:constraint-audit:feedback
+```
+
+这个研究夹具不评估通用事实性。它只检查：面对一个给定事实目录时，策略能否阻断目录中已知矛盾，并把目录未知的主张路由为外部证据请求。详情见 [事实约束审计研究](/zh-cn/appendix/constraint-audit)。
+
 ## 2. 公开 Artifact 轻量 Replay
 
 ### Breakout Replay Wall Reflection
@@ -223,7 +241,7 @@ npm run course:structure:check
 npm run verify
 ```
 
-`examples:feedback` 会重新生成六个 `experiments/*/latest.json`；`examples:reports:check` 会检查每个报告是否保留 baseline/heuristic 对照、feedback 和 candidate update。这样课程内容、实验代码和研究记录不会各自漂移。
+`examples:feedback` 会重新生成七个 `experiments/*/latest.json`；`examples:reports:check` 会检查每个报告是否保留 baseline/heuristic 对照、feedback 和 candidate update。这样课程内容、实验代码和研究记录不会各自漂移。
 报告字段约束见 [`/experiment-report.schema.json`](/experiment-report.schema.json)，用于说明主线实验报告至少需要保留的结构。
 
 完成一次完整练习可以参考 [Lab 1：跑通 Heuristic Learning 闭环](/zh-cn/examples/)。

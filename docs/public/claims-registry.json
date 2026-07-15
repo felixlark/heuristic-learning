@@ -116,6 +116,24 @@
         "npm run course:structure:check"
       ],
       "falsification_note": "If a source cannot be traced or has sensitive private material that cannot be sanitized, it must stay out of mainline conclusions."
+    },
+    {
+      "id": "constraint-audit-is-not-general-fact-checking",
+      "title": "事实约束审计能否成为可维护反馈通道？",
+      "status": "implemented-course-invariant",
+      "claim_page": "docs/zh-cn/theory/research-framework.md",
+      "evidence_pages": [
+        "docs/zh-cn/appendix/constraint-audit.md",
+        "docs/zh-cn/cases/constraint-audit/index.md"
+      ],
+      "example_ids": [
+        "constraint-audit"
+      ],
+      "verification_commands": [
+        "npm run examples:constraint-audit:feedback",
+        "npm run examples:test"
+      ],
+      "falsification_note": "If unknown claims are accepted as catalog-supported facts, or the fixture is presented as open-world factuality evidence, this invariant is violated."
     }
   ]
 }

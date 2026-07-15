@@ -30,6 +30,9 @@ description: Heuristic Learning 课程的来源层级、证据状态与声明边
 | `https://x.com/Trinkle23897/status/2052596837547495549` | Jiayi Weng X 原帖 | 已定位 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | `https://x.com/0xLogicrw/status/2052701677615218717` | X 中文转述，引用 Jiayi 原帖 | 已结构化 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | Jiayi Weng 后续 X thread 与评论 | X 后续讨论 | 待采集 | [研究路线图](/zh-cn/appendix/research-roadmap) |
+| [SelfCheckGPT](https://aclanthology.org/2023.emnlp-main.557/) | 公开论文 | 已定位 | [事实约束审计研究](/zh-cn/appendix/constraint-audit) |
+| [Chain-of-Verification](https://aclanthology.org/2024.findings-acl.212/) | 公开论文 | 已定位 | [事实约束审计研究](/zh-cn/appendix/constraint-audit) |
+| [FActScore](https://aclanthology.org/2023.emnlp-main.741/) | 公开论文 | 已定位 | [事实约束审计研究](/zh-cn/appendix/constraint-audit) |
 
 ## 脱敏应用案例
 

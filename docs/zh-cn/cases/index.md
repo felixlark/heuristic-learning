@@ -41,7 +41,8 @@ description: Heuristic Learning 的案例、实验入口与证据边界
 | 3 | 公开 artifact：连续控制 | [Ant Gait 案例](/zh-cn/cases/ant-gait/) | `npm run examples:ant-gait-replay:feedback` | 控制器参数怎样成为学习对象 |
 | 4 | 应用场景：动作前提 | [机器人足球案例](/zh-cn/cases/robot-soccer/) | `npm run examples:robot-soccer:feedback` | 规则系统怎样暴露 blocked-lane failure |
 | 5 | 应用场景：系统约束 | [交通模拟案例](/zh-cn/cases/traffic-simulation/) | `npm run examples:traffic-grid:feedback` | 容量约束怎样进入策略维护 |
-| 6 | 来源线索 | [X 来源案例](/zh-cn/cases/x-signal/) | `npm run x:sources:check` | 一条公开讨论何时只能算线索，何时能变成案例 |
+| 6 | 研究假设：事实审计 | [事实约束审计案例](/zh-cn/cases/constraint-audit/) | `npm run examples:constraint-audit:feedback` | 约束冲突与未知主张为何必须分开处理 |
+| 7 | 来源线索 | [X 来源案例](/zh-cn/cases/x-signal/) | `npm run x:sources:check` | 一条公开讨论何时只能算线索，何时能变成案例 |
 
 ## 三类案例
 
@@ -63,6 +64,7 @@ description: Heuristic Learning 的案例、实验入口与证据边界
 | --- | --- | --- |
 | [机器人足球](/zh-cn/cases/robot-soccer/) | `examples/robot-soccer/` | blocked-lane、动作前提、规则冲突检查 |
 | [交通模拟](/zh-cn/cases/traffic-simulation/) | `examples/traffic-grid/` | downstream spillback、容量约束、系统安全边界 |
+| [事实约束审计](/zh-cn/cases/constraint-audit/) | `examples/constraint-audit/` | 已知约束冲突、未知主张、外部证据升级 |
 
 ### 来源线索案例
 

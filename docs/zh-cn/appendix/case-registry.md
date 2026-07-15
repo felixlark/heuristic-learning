@@ -23,6 +23,7 @@ description: Heuristic Learning 案例到来源、示例、学习成果和验证
 | VizDoom Medikit Staging | 已复现为轻量 replay | `vizdoom-replay` | 感知阈值、medikit staging、轻量 replay | `npm run examples:vizdoom-replay:feedback` |
 | Robot Soccer | 已复现为最小环境 | `robot-soccer` | 视觉规则库、blocked-lane probe、动作前提 | `npm run examples:robot-soccer:feedback` |
 | Traffic Simulation | 已复现为最小环境 | `traffic-grid` | downstream capacity、系统安全约束、仿真 replay | `npm run examples:traffic-grid:feedback` |
+| Constraint Audit | 已结构化 | `constraint-audit` | 已知约束冲突、未知主张、外部证据升级 | `npm run examples:constraint-audit:feedback` |
 | X Public Discussion | 已结构化 | 无直接示例 | 一手原帖、二手转述、公开 artifact 和研究假设分层 | `npm run x:sources:check` |
 
 ## 使用方式
@@ -49,6 +50,7 @@ npm run examples:breakout-replay:feedback
 npm run examples:vizdoom-replay:feedback
 npm run examples:robot-soccer:feedback
 npm run examples:traffic-grid:feedback
+npm run examples:constraint-audit:feedback
 npm run source:registry:check
 npm run x:sources:check
 npm run verify
@@ -67,4 +69,5 @@ npm run verify
 - 当前移除了 EnvPool/OpenCV，只保留可讲授的检测字段和时机策略。
 - 公开材料只保留脱敏最小环境，不公开私有原文或真实机器人日志。
 - 当前不是真实交通仿真接口，只是脱敏后的容量约束最小环境。
+- 这是闭世界约束夹具，不是通用事实核查或自博弈均衡实验。
 - 未通过公开 URL 或一手材料复核的内容不能写成已复现事实。

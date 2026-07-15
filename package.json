@@ -14,7 +14,7 @@
     "sitemap": "bash scripts/with-local-node.sh node scripts/generate-sitemap.mjs",
     "docs:routes:check": "bash scripts/check-routes.sh",
     "examples:test": "python3 -m unittest discover -s tests",
-    "examples:feedback": "npm run examples:gridworld:feedback && npm run examples:robot-soccer:feedback && npm run examples:vizdoom-replay:feedback && npm run examples:traffic-grid:feedback && npm run examples:breakout-replay:feedback && npm run examples:ant-gait-replay:feedback",
+    "examples:feedback": "npm run examples:gridworld:feedback && npm run examples:robot-soccer:feedback && npm run examples:vizdoom-replay:feedback && npm run examples:traffic-grid:feedback && npm run examples:breakout-replay:feedback && npm run examples:ant-gait-replay:feedback && npm run examples:constraint-audit:feedback",
     "examples:reports:check": "python3 scripts/check-experiment-reports.py",
     "examples:registry:check": "python3 scripts/check-example-registry.py",
     "code:tour:check": "python3 scripts/check-code-tour.py",
@@ -57,6 +57,8 @@
     "examples:breakout-replay:feedback": "python3 examples/breakout-replay/feedback_loop.py --out experiments/breakout-replay/latest.json",
     "examples:ant-gait-replay": "python3 examples/ant-gait-replay/run.py",
     "examples:ant-gait-replay:feedback": "python3 examples/ant-gait-replay/feedback_loop.py --out experiments/ant-gait-replay/latest.json",
+    "examples:constraint-audit": "python3 examples/constraint-audit/run.py",
+    "examples:constraint-audit:feedback": "python3 examples/constraint-audit/feedback_loop.py --out experiments/constraint-audit/latest.json",
     "examples:cartpole:dev": "python3 examples/cartpole-benchmark/run.py --policy improved --split dev",
     "examples:cartpole:holdout": "python3 examples/cartpole-benchmark/run.py --policy improved --split holdout",
     "examples:cartpole:audit": "python3 examples/cartpole-benchmark/run.py --policy improved --split audit"

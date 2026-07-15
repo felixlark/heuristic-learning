@@ -18,6 +18,7 @@ EXPECTED_IDS = {
     "robot-soccer-artifact-gap",
     "traffic-grid-artifact-gap",
     "gridworld-teaching-gap",
+    "constraint-audit-research-gap",
 }
 
 

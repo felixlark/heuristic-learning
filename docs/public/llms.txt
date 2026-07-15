@@ -22,6 +22,7 @@ Core pages:
 - `/zh-cn/cases/ant-gait/`: MuJoCo Ant gait replay case
 - `/zh-cn/cases/x-signal/`: X and X source cases
 - `/zh-cn/cases/traffic-simulation/`: sanitized traffic simulation case
+- `/zh-cn/cases/constraint-audit/`: closed-world constraint-audit research fixture
 - `/zh-cn/talk/`: lecture material
 - `/zh-cn/talk/`: source-to-experiment lecture
 - `/zh-cn/talk/`: failure taxonomy and anti-forgetting lecture
@@ -30,6 +31,7 @@ Core pages:
 - `/zh-cn/appendix/`: references and maintenance rules
 - `/zh-cn/appendix/local-setup`: local install, verification order, and troubleshooting
 - `/zh-cn/appendix/source-to-case-playbook`: source-to-case workflows for X, public artifact, internal Feishu, and research hypothesis signals
+- `/zh-cn/appendix/constraint-audit`: evidence boundary for self-check and hallucination research
 - `/zh-cn/appendix/glossary`: HL terms and working definitions
 - `/zh-cn/appendix/references`: public sources and background references
 - `/zh-cn/appendix/reading-guide`: research-oriented reading order across Jiayi Weng sources, RL/DL context, and runnable examples

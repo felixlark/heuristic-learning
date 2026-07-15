@@ -122,6 +122,26 @@
         "npm run ablation:plan:check"
       ],
       "boundary": "GridWorld is a pedagogical anchor; it should not be cited as evidence for real-world HL performance."
+    },
+    {
+      "id": "constraint-audit-research-gap",
+      "title": "Constraint Audit research gap",
+      "source_status": "teaching-minimal",
+      "source_reference": "SelfCheckGPT",
+      "example_id": "constraint-audit",
+      "current_replay": "examples/constraint-audit isolates supplied-catalog contradictions and evidence escalation for unknown claims.",
+      "missing_fidelity": [
+        "Open-world retrieval and source provenance",
+        "Ambiguous or time-varying claims",
+        "Independent generator and verifier models"
+      ],
+      "next_experiment": "Evaluate atomic claims with timestamped evidence and separate generation from verification before studying any game-theoretic objective.",
+      "verification_commands": [
+        "npm run examples:constraint-audit:feedback",
+        "npm run examples:test",
+        "npm run claims:registry:check"
+      ],
+      "boundary": "The fixture does not measure general hallucination detection, answer quality, or Nash-equilibrium convergence."
     }
   ]
 }

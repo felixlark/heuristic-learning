@@ -17,7 +17,7 @@ description: Heuristic Learning 术语、研究问题、示例、讲义和验证
   <ConceptGraphExplorer />
 </ClientOnly>
 
-图谱覆盖 Heuristic Learning、Signal、Probe、Baseline、Heuristic patch、Feedback report、Regression 和 Source status。每个节点都从 `/concept-graph.json` 读取对应的示例、讲义、页面和验证命令。
+图谱覆盖 Heuristic Learning、Signal、Probe、Baseline、Heuristic patch、Feedback report、Regression 和 Source status。`Probe` 节点还包含 Constraint Audit：它用闭世界反例区分已知约束冲突和目录未知主张。每个节点都从 `/concept-graph.json` 读取对应的示例、讲义、页面和验证命令。
 
 ## 使用方式
 

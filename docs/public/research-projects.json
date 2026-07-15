@@ -73,6 +73,30 @@
       ]
     },
     {
+      "id": "constraint-audit-evidence-boundary",
+      "category": "research",
+      "title": "Constraint Audit 证据边界",
+      "source": "examples/constraint-audit/",
+      "research_question": "事实约束审计能否成为可维护反馈通道？",
+      "failure_mode": "accepted_constraint_violation",
+      "examples": [
+        "constraint-audit"
+      ],
+      "deliverables": [
+        "原子主张夹具",
+        "证据升级规则",
+        "反例说明"
+      ],
+      "verification": [
+        "npm run examples:constraint-audit:feedback",
+        "npm run examples:test"
+      ],
+      "course_outputs": [
+        "docs/zh-cn/appendix/constraint-audit.md",
+        "docs/zh-cn/cases/constraint-audit/index.md"
+      ]
+    },
+    {
       "id": "breakout-reflection-prediction",
       "category": "public-artifact",
       "title": "Breakout 反射预测",

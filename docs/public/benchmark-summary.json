@@ -17,6 +17,20 @@
       "boundary": "Teaching-minimal probe; not a general navigation benchmark."
     },
     {
+      "id": "constraint-audit",
+      "title": "Constraint Audit",
+      "source_status": "teaching-minimal",
+      "failure_mode": "accepted_constraint_violation",
+      "baseline_outcome": "accepted_constraint_violation",
+      "heuristic_outcome": "blocked_constraint_violation",
+      "primary_metric": "reason_and_reward",
+      "report": "experiments/constraint-audit/latest.json",
+      "test": "tests/test_constraint_audit.py",
+      "policy_target": "examples/constraint-audit/policies.py",
+      "course_page": "docs/zh-cn/appendix/constraint-audit.md",
+      "boundary": "Closed-world research fixture; not a general hallucination benchmark or factuality claim."
+    },
+    {
       "id": "robot-soccer",
       "title": "Robot Soccer",
       "source_status": "reproduced-minimal-internal-signal",

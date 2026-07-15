@@ -18,6 +18,7 @@ EXPECTED_IDS = {
     "traffic-grid-code-tour",
     "breakout-code-tour",
     "ant-gait-code-tour",
+    "constraint-audit-code-tour",
 }
 
 

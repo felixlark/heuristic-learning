@@ -16,6 +16,7 @@ EXPECTED_IDS = {
     "x-signal-case-reading",
     "robot-soccer-signal-reading",
     "cross-example-report-reading",
+    "constraint-audit-related-work",
 }
 
 

@@ -33,6 +33,12 @@
       "route": "/zh-cn/theory/research-framework"
     },
     {
+      "id": "constraint-audit",
+      "title": "事实约束审计研究",
+      "path": "docs/zh-cn/appendix/constraint-audit.md",
+      "route": "/zh-cn/appendix/constraint-audit"
+    },
+    {
       "id": "examples",
       "title": "可运行示例",
       "path": "docs/zh-cn/examples/index.md",
@@ -267,6 +273,18 @@
       "report": "experiments/gridworld/latest.json",
       "test": "tests/test_gridworld.py",
       "readme": "examples/heuristic-gridworld/README.md"
+    },
+    {
+      "id": "constraint-audit",
+      "title": "Constraint Audit",
+      "source_status": "teaching-minimal",
+      "failure_mode": "accepted_constraint_violation",
+      "example_dir": "examples/constraint-audit",
+      "run_script": "examples:constraint-audit",
+      "feedback_script": "examples:constraint-audit:feedback",
+      "report": "experiments/constraint-audit/latest.json",
+      "test": "tests/test_constraint_audit.py",
+      "readme": "examples/constraint-audit/README.md"
     },
     {
       "id": "ant-gait-replay",

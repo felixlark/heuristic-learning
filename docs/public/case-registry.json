@@ -103,6 +103,26 @@
       "boundary": "当前不是真实交通仿真接口，只是脱敏后的容量约束最小环境。"
     },
     {
+      "id": "constraint-audit",
+      "title": "Constraint Audit",
+      "case_page": "docs/zh-cn/cases/constraint-audit/index.md",
+      "source_status": "已结构化",
+      "source_kind": "research-hypothesis",
+      "source_refs": [
+        "SelfCheckGPT",
+        "docs/zh-cn/appendix/constraint-audit.md"
+      ],
+      "example_id": "constraint-audit",
+      "failure_mode": "accepted_constraint_violation",
+      "learning_outcome_ids": ["lo-1", "lo-3", "lo-4"],
+      "course_use": "研究假设夹具，用于讲解已知约束冲突、未知主张和外部证据升级。",
+      "verification_commands": [
+        "npm run examples:constraint-audit:feedback",
+        "npm run examples:test"
+      ],
+      "boundary": "这是闭世界约束夹具，不是通用事实核查或自博弈均衡实验。"
+    },
+    {
       "id": "x-signal",
       "title": "X Public Discussion",
       "case_page": "docs/zh-cn/cases/x-signal/index.md",

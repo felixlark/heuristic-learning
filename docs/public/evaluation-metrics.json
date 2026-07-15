@@ -13,11 +13,13 @@
         "vizdoom-replay",
         "traffic-grid",
         "breakout-replay",
-        "ant-gait-replay"
+        "ant-gait-replay",
+        "constraint-audit"
       ],
       "claim_ids": [
         "software-structure-learning",
-        "feedback-report-as-agent-input"
+        "feedback-report-as-agent-input",
+        "constraint-audit-is-not-general-fact-checking"
       ],
       "evidence": [
         "docs/zh-cn/appendix/benchmark-results.md",
@@ -42,11 +44,13 @@
         "vizdoom-replay",
         "traffic-grid",
         "breakout-replay",
-        "ant-gait-replay"
+        "ant-gait-replay",
+        "constraint-audit"
       ],
       "claim_ids": [
         "software-structure-learning",
-        "failure-modes-over-average-score"
+        "failure-modes-over-average-score",
+        "constraint-audit-is-not-general-fact-checking"
       ],
       "evidence": [
         "docs/public/example-registry.json",
@@ -68,11 +72,13 @@
       "example_ids": [
         "gridworld",
         "traffic-grid",
-        "ant-gait-replay"
+        "ant-gait-replay",
+        "constraint-audit"
       ],
       "claim_ids": [
         "feedback-report-as-agent-input",
-        "hl-rl-dl-division-of-labor"
+        "hl-rl-dl-division-of-labor",
+        "constraint-audit-is-not-general-fact-checking"
       ],
       "evidence": [
         "templates/experiment-record.md",
@@ -95,11 +101,13 @@
         "robot-soccer",
         "traffic-grid",
         "breakout-replay",
-        "ant-gait-replay"
+        "ant-gait-replay",
+        "constraint-audit"
       ],
       "claim_ids": [
         "failure-modes-over-average-score",
-        "hl-rl-dl-division-of-labor"
+        "hl-rl-dl-division-of-labor",
+        "constraint-audit-is-not-general-fact-checking"
       ],
       "evidence": [
         "tests/",
@@ -121,11 +129,13 @@
       "example_ids": [
         "vizdoom-replay",
         "breakout-replay",
-        "x-signal"
+        "x-signal",
+        "constraint-audit"
       ],
       "claim_ids": [
         "software-structure-learning",
-        "source-status-is-course-structure"
+        "source-status-is-course-structure",
+        "constraint-audit-is-not-general-fact-checking"
       ],
       "evidence": [
         "docs/zh-cn/appendix/source-registry.md",

@@ -14,6 +14,7 @@ EXPECTED_PROJECT_IDS = {
     "gridworld-new-probe",
     "robot-soccer-lane-check",
     "traffic-grid-safety-constraint",
+    "constraint-audit-evidence-boundary",
     "breakout-reflection-prediction",
     "vizdoom-medikit-staging",
     "ant-gait-stability",
@@ -27,6 +28,7 @@ EXPECTED_EXAMPLE_IDS = {
     "traffic-grid",
     "breakout-replay",
     "ant-gait-replay",
+    "constraint-audit",
 }
 
 

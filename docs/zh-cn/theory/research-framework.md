@@ -63,6 +63,7 @@ HL 不问“规则是否一定比神经网络强”。更合适的问题是：
 | 失败类型是否比平均分更适合学习？ | `local_greedy_trap`、`blocked_shot`、`spillback` 等 probe 能解释具体错误 | 检查 probe 是否能跨随机种子或扩展场景稳定复现 |
 | HL 与 RL/DL 如何分工？ | 当前材料显示 HL 更适合固化已知失败、测试和工程记忆 | 接入高保真环境，比较参数学习与软件结构更新的边界 |
 | 来源状态如何约束结论强度？ | 来源登记区分公开 artifact、轻量 replay、X 线索和脱敏应用问题 | 对 X 来源做一手复核，未复核前不写成实验结论 |
+| 事实约束审计能否成为可维护反馈通道？ | 闭世界夹具能稳定阻断已知矛盾，并将目录未知主张升级给外部证据 | 在带来源的原子事实数据集上评估精度、召回、拒答率和答案效用 |
 
 机器可读的研究问题矩阵保留在 [`/claims-registry.json`](/claims-registry.json)。它供脚本检查证据页、示例、验证命令和反驳说明；读者不需要先读 registry，先读本页和案例页即可。
 
@@ -70,6 +71,7 @@ HL 不问“规则是否一定比神经网络强”。更合适的问题是：
 npm run examples:breakout-replay
 npm run examples:vizdoom-replay
 npm run examples:ant-gait-replay
+npm run examples:constraint-audit
 npm run examples:feedback
 npm run examples:reports:check
 npm run examples:registry:check
