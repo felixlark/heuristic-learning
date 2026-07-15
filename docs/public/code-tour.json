@@ -89,7 +89,7 @@
       "expected_observation": "baseline 触发 spillback，heuristic 保持 stable_flow。",
       "edit_target": "examples/traffic-grid/policies.py",
       "test_path": "tests/test_traffic_grid.py",
-      "boundary": "这个示例是脱敏交通抽象，不是东湖真实仿真器。"
+      "boundary": "这个示例是脱敏交通抽象，不是真实交通仿真器。"
     },
     {
       "id": "breakout-code-tour",

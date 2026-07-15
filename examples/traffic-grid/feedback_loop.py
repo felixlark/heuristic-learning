@@ -37,8 +37,8 @@ def build_feedback_report() -> dict[str, object]:
     return {
         "case": "traffic_grid_downstream_spillback",
         "source": {
-            "kind": "feishu_task_signal",
-            "note": "Derived from an internal task direction about applying Heuristic Learning to an East Lake traffic simulator.",
+            "kind": "sanitized_application_direction",
+            "note": "Derived from a sanitized application direction about heuristic traffic control.",
         },
         "environment": {
             "downstream_capacity": world.downstream_capacity,

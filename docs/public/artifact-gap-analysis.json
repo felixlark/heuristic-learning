@@ -67,7 +67,7 @@
       "id": "robot-soccer-artifact-gap",
       "title": "Robot Soccer internal gap",
       "source_status": "reproduced-minimal-internal-signal",
-      "source_reference": "Feishu message signal: robot soccer strategy learning",
+      "source_reference": "脱敏应用方向：机器人足球策略学习",
       "example_id": "robot-soccer",
       "current_replay": "examples/robot-soccer isolates blocked_shot with a minimal grid, ball ownership and opponent lane check.",
       "missing_fidelity": [
@@ -87,7 +87,7 @@
       "id": "traffic-grid-artifact-gap",
       "title": "Traffic Grid internal gap",
       "source_status": "reproduced-minimal-internal-signal",
-      "source_reference": "Feishu task signal: East Lake traffic simulator direction",
+      "source_reference": "脱敏应用方向：交通控制",
       "example_id": "traffic-grid",
       "current_replay": "examples/traffic-grid isolates spillback with downstream capacity and queue release decisions.",
       "missing_fidelity": [

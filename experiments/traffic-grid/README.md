@@ -8,4 +8,4 @@ Generate the latest report:
 npm run examples:traffic-grid:feedback
 ```
 
-The example is derived from a Feishu task signal about applying Heuristic Learning to traffic simulation. It keeps the course artifact intentionally small: a single downstream spillback probe, one baseline signal policy, and one heuristic policy with downstream capacity protection.
+The example is derived from a sanitized private application direction about heuristic traffic control. It keeps the course artifact intentionally small: a single downstream spillback probe, one baseline signal policy, and one heuristic policy with downstream capacity protection.

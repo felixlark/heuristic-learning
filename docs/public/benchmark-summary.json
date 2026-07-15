@@ -56,7 +56,7 @@
       "test": "tests/test_traffic_grid.py",
       "policy_target": "examples/traffic-grid/policies.py",
       "course_page": "docs/zh-cn/cases/traffic-simulation/index.md",
-      "boundary": "Minimal traffic abstraction; not a real East Lake simulator reproduction."
+      "boundary": "Minimal traffic abstraction; not a real traffic-simulator reproduction."
     },
     {
       "id": "breakout-replay",

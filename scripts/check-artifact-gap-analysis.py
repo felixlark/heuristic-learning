@@ -99,7 +99,7 @@ def check_registry(registry: dict[str, Any]) -> None:
         source_reference = artifact.get("source_reference")
         require(isinstance(source_reference, str) and source_reference, f"{context}: source_reference missing")
         source_refs.add(source_reference)
-        if "Feishu" not in source_reference and "Repository-local" not in source_reference:
+        if "Repository-local" not in source_reference:
             require(source_reference in source_registry or source_reference in roadmap, f"{context}: source reference not traceable")
         for field in ["source_status", "current_replay", "next_experiment", "boundary"]:
             require(isinstance(artifact.get(field), str) and artifact[field], f"{context}: {field} missing")

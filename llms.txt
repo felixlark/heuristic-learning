@@ -121,7 +121,7 @@ Use these entry points:
 - `docs/public/source-to-case-playbook.schema.json` for the source-to-case playbook JSON Schema.
 - `docs/public/experiment-report.schema.json` for common experiment report fields.
 - `docs/zh-cn/cases/x-signal/index.md` for X source cases.
-- `docs/zh-cn/cases/traffic-simulation/index.md` for the Feishu-derived traffic simulation case card.
+- `docs/zh-cn/cases/traffic-simulation/index.md` for the sanitized traffic simulation case card.
 - `scripts/check-course-structure.py` for course/docs/examples alignment checks.
 - `scripts/check-source-registry.py` for source status and X source evidence checks.
 - `scripts/check-case-registry.py` for case-to-source/example/outcome checks.

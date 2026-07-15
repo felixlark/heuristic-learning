@@ -1,6 +1,6 @@
 # Traffic Grid Downstream Spillback
 
-This minimal traffic-grid replay is derived from an internal Feishu signal about East Lake traffic simulation. It keeps the learning object small: a signal policy must protect downstream capacity before releasing upstream queues.
+This minimal traffic-grid replay is derived from a sanitized private application direction. It keeps the learning object small: a signal policy must protect downstream capacity before releasing upstream queues.
 
 ## Learning Target
 

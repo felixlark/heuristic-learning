@@ -69,7 +69,7 @@
       "source_status": "已复现为最小环境",
       "source_kind": "internal-signal",
     "source_refs": [
-        "脱敏应用需求，2026-05-17",
+        "脱敏应用方向：机器人足球策略学习",
         "docs/zh-cn/appendix/source-registry.md"
       ],
       "example_id": "robot-soccer",
@@ -89,7 +89,7 @@
       "source_status": "已复现为最小环境",
       "source_kind": "internal-signal",
     "source_refs": [
-        "脱敏应用需求，2026-05-13",
+        "脱敏应用方向：交通控制",
         "docs/zh-cn/appendix/source-registry.md"
       ],
       "example_id": "traffic-grid",
@@ -100,7 +100,7 @@
         "npm run examples:traffic-grid:feedback",
         "npm run examples:test"
       ],
-      "boundary": "当前不是东湖真实仿真接口，只是脱敏后的容量约束最小环境。"
+      "boundary": "当前不是真实交通仿真接口，只是脱敏后的容量约束最小环境。"
     },
     {
       "id": "x-signal",

@@ -35,8 +35,8 @@ description: Heuristic Learning 课程的来源层级、证据状态与声明边
 
 | 来源 | 问题形态 | 当前状态 | 学习落点 |
 | --- | --- | --- | --- |
-| 脱敏应用需求，2026-05-17 | 机器人足球策略需要在射门前检查通道是否被挡住 | 已复现为最小环境 | [机器人足球案例](/zh-cn/cases/robot-soccer/)、`examples/robot-soccer/` |
-| 脱敏应用需求，2026-05-13 | 交通控制策略需要先保护下游容量，再决定放行 | 已复现为最小环境 | [交通模拟案例](/zh-cn/cases/traffic-simulation/)、`examples/traffic-grid/` |
+| 脱敏应用方向：机器人足球策略学习 | 机器人足球策略需要在射门前检查通道是否被挡住 | 已复现为最小环境 | [机器人足球案例](/zh-cn/cases/robot-soccer/)、`examples/robot-soccer/` |
+| 脱敏应用方向：交通控制 | 交通控制策略需要先保护下游容量，再决定放行 | 已复现为最小环境 | [交通模拟案例](/zh-cn/cases/traffic-simulation/)、`examples/traffic-grid/` |
 
 脱敏应用案例只公开任务形态、状态字段、失败模式和验证命令；不公开原始消息、会议纪要、私有链接、个人数据或真实系统日志。公开协作的安全边界见根目录 `SECURITY.md`。
 
