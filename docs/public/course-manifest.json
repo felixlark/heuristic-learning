@@ -57,6 +57,12 @@
       "route": "/zh-cn/cases/visual-prior/"
     },
     {
+      "id": "technology-society",
+      "title": "技术与社会：四条 X 线索的证据审计",
+      "path": "docs/zh-cn/cases/technology-society/index.md",
+      "route": "/zh-cn/cases/technology-society/"
+    },
+    {
       "id": "source-registry",
       "title": "来源登记",
       "path": "docs/zh-cn/appendix/source-registry.md",

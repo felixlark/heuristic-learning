@@ -44,6 +44,7 @@ description: Heuristic Learning 的案例、实验入口与证据边界
 | 6 | 研究假设：事实审计 | [事实约束审计案例](/zh-cn/cases/constraint-audit/) | `npm run examples:constraint-audit:feedback` | 约束冲突与未知主张为何必须分开处理 |
 | 7 | 来源线索 | [X 来源案例](/zh-cn/cases/x-signal/) | `npm run x:sources:check` | 一条公开讨论何时只能算线索，何时能变成案例 |
 | 8 | 来源转研究探针 | [视觉先验案例](/zh-cn/cases/visual-prior/) | `npm run examples:shape-from-shading` | 如何把“默认设定影响解释”写成可检查 heuristic |
+| 9 | 技术与社会证据审计 | [技术与社会研究卡](/zh-cn/cases/technology-society/) | `npm run x:sources:check` | 如何阻止技术摘要跨越预测、临床、田野和因果边界 |
 
 ## 三类案例
 
@@ -73,6 +74,7 @@ description: Heuristic Learning 的案例、实验入口与证据边界
 | --- | --- | --- |
 | [X 来源案例](/zh-cn/cases/x-signal/) | 部分线索已转成研究探针 | 一手来源、二手转述、公开 artifact 和待复核主张的边界 |
 | [视觉先验案例](/zh-cn/cases/visual-prior/) | `examples/shape-from-shading/` | 欠定输入、光照先验、场景线索与可证伪边界 |
+| [技术与社会研究卡](/zh-cn/cases/technology-society/) | 暂无直接示例 | 众包传感、脑机接口外部有效性、自动化组织后果与经济连接度因果边界 |
 
 X 来源案例不是第六个 runnable case；它是来源训练页。它帮助读者判断一条公开讨论如何进入案例库：先成为线索，再绑定来源状态，最后才可能变成可运行示例。视觉先验探针是其中一条线索完成独立文献核验后的研究性产物，不计入 v0.1 的七个核心示例。
 

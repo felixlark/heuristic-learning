@@ -88,6 +88,7 @@ export default defineConfig({
             { text: '应用: 交通模拟', link: '/zh-cn/cases/traffic-simulation/' },
             { text: '研究: 事实约束审计', link: '/zh-cn/cases/constraint-audit/' },
             { text: '研究: 视觉先验', link: '/zh-cn/cases/visual-prior/' },
+            { text: '研究: 技术与社会', link: '/zh-cn/cases/technology-society/' },
             { text: '来源: X 线索', link: '/zh-cn/cases/x-signal/' }
           ]
         },

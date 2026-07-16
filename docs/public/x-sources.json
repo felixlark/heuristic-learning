@@ -8,6 +8,83 @@
   },
   "sources": [
     {
+      "id": "safaricheung-android-earthquake-2026-06-26",
+      "url": "https://x.com/safaricheung/status/2070326496296903133",
+      "author": "@safaricheung",
+      "date": "2026-06-26",
+      "source_level": "secondary-summary",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "Android phones can contribute accelerometer signals to a crowdsourced earthquake early-warning network.",
+        "The June 24 Venezuela M7.2 and M7.5 earthquakes and Android alert mechanism require independent official verification.",
+        "Early warning must not be described as earthquake prediction or as a replacement for professional seismology."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "The X post is a secondary technology summary; event facts and system behavior are constrained by USGS, Google, and peer-reviewed sources."
+    },
+    {
+      "id": "dotey-brain2qwerty-v2-2026-06-29",
+      "url": "https://x.com/dotey/status/2071658817214116106",
+      "author": "@dotey",
+      "date": "2026-06-29",
+      "source_level": "secondary-summary",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "Brain2Qwerty v1 is peer reviewed while v2 is currently a Meta preprint.",
+        "The reported 61 percent mean and 78 percent best-participant word accuracy apply to healthy volunteers actively typing under MEG.",
+        "Clinical communication, cross-participant generalization, and practical MEG deployment remain unvalidated."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "Do not translate a healthy-participant typing decoder into mind reading, patient efficacy, or proof that only engineering problems remain."
+    },
+    {
+      "id": "yatingzhao-machine-age-2026-06-29",
+      "url": "https://x.com/yatingzhao_ux/status/2071675271942652167",
+      "author": "@yatingzhao_ux",
+      "date": "2026-06-29",
+      "source_level": "secondary-summary",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "Xu Yi's 2025 book The Machine Age is grounded in sociological fieldwork on automation and labor.",
+        "Automation outcomes should be disaggregated by factory, role, wages, workload, skill, and worker trajectory.",
+        "Specific book findings require chapter-level extraction before they can be quoted as evidence."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "The X post is a reader summary; this course verifies bibliographic and research context but does not invent chapter-level findings without the book."
+    },
+    {
+      "id": "phoenixyin-economic-connectedness-2026-07-01",
+      "url": "https://x.com/Phoenixyin13/status/2072213638752940531",
+      "author": "@Phoenixyin13",
+      "date": "2026-07-01",
+      "source_level": "secondary-summary",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "The 2022 Nature studies use 72.2 million Facebook users and about 21 billion friendships to measure social capital.",
+        "County-level economic connectedness is correlated with upward mobility at 0.65, with additional quasi-experimental analyses of place and exposure.",
+        "The papers do not test personal networking tactics such as visiting affluent gyms or offering emotional value to wealthy people."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md",
+        "docs/zh-cn/appendix/constraint-audit.md"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "Keep county and school estimates separate from individual self-help advice, and distinguish association, place effects, and tested interventions."
+    },
+    {
       "id": "deusyu-shape-from-shading-2025-11-07",
       "url": "https://x.com/0xdeusyu/status/1986696571006951603",
       "author": "@0xdeusyu",
@@ -87,6 +164,78 @@
     }
   ],
   "extraction_cards": [
+    {
+      "id": "android-crowdsourced-earthquake-alerts",
+      "source_id": "safaricheung-android-earthquake-2026-06-26",
+      "concept": "众包传感与公共基础设施",
+      "course_claim": "大量低精度手机传感器可以通过时空聚合形成地震提前预警，但系统必须审计延迟、震级误差、覆盖、误报漏报和平台问责。",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run source:registry:check"
+      ],
+      "boundary": "This is earthquake early warning after an event begins, not earthquake prediction, and it does not eliminate the need for professional seismic networks."
+    },
+    {
+      "id": "brain2qwerty-external-validity",
+      "source_id": "dotey-brain2qwerty-v2-2026-06-29",
+      "concept": "非侵入式脑机接口的外部有效性",
+      "course_claim": "Brain2Qwerty v2 improves sentence decoding for healthy volunteers actively typing under MEG, while clinical transfer, patient efficacy, device practicality, and cross-task comparability remain open.",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run source:registry:check"
+      ],
+      "boundary": "Do not label active typing reconstruction as free-thought decoding or patient communication, and do not compare accuracy across incompatible BCI tasks."
+    },
+    {
+      "id": "automation-organizational-consequences",
+      "source_id": "yatingzhao-machine-age-2026-06-29",
+      "concept": "自动化的组织后果",
+      "course_claim": "工厂自动化的影响需要按组织、岗位、工资、劳动强度、技能与退出路径分解，不能用裁员或不裁员的二元标签概括。",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run source:registry:check"
+      ],
+      "boundary": "Bibliographic and research context are verified, but detailed claims from the book remain pending direct chapter-level reading."
+    },
+    {
+      "id": "economic-connectedness-causal-boundary",
+      "source_id": "phoenixyin-economic-connectedness-2026-07-01",
+      "concept": "经济连接度与因果边界",
+      "course_claim": "Economic Connectedness is strongly associated with upward mobility and supported by place and exposure analyses, but area-level evidence does not validate individual rich-networking tactics.",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/technology-society/index.md",
+        "docs/zh-cn/appendix/constraint-audit.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run source:registry:check"
+      ],
+      "boundary": "Keep county and school statistics separate from individual outcomes, and separate measured exposure from untested self-help interventions."
+    },
     {
       "id": "shape-from-shading-prior",
       "source_id": "deusyu-shape-from-shading-2025-11-07",

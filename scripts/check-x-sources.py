@@ -12,11 +12,19 @@ REGISTRY_PATH = ROOT / "docs/public/x-sources.json"
 SCHEMA_PATH = ROOT / "docs/public/x-sources.schema.json"
 EXPECTED_IDS = {
     "deusyu-shape-from-shading-2025-11-07",
+    "dotey-brain2qwerty-v2-2026-06-29",
     "logicrw-jiayi-hl-summary-2026-05-08",
     "jiayi-original-hl-post-2026-05-08",
     "logicrw-fluid-control-lead-2026-05-19",
+    "phoenixyin-economic-connectedness-2026-07-01",
+    "safaricheung-android-earthquake-2026-06-26",
+    "yatingzhao-machine-age-2026-06-29",
 }
 EXPECTED_EXTRACTION_IDS = {
+    "android-crowdsourced-earthquake-alerts",
+    "automation-organizational-consequences",
+    "brain2qwerty-external-validity",
+    "economic-connectedness-causal-boundary",
     "shape-from-shading-prior",
     "breakout-code-as-memory",
     "ant-controller-as-readable-policy",

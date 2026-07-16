@@ -30,6 +30,10 @@ description: Heuristic Learning 课程的来源层级、证据状态与声明边
 | [`@0xdeusyu` shape-from-shading 帖](https://x.com/0xdeusyu/status/1986696571006951603) | X 科普线索 | 已结构化 | [视觉先验案例](/zh-cn/cases/visual-prior/)、`examples/shape-from-shading/` |
 | [Ramachandran 1988, Nature](https://doi.org/10.1038/331163a0) | shape-from-shading 一手论文 | 已定位 | [视觉先验案例](/zh-cn/cases/visual-prior/) |
 | [Adams, Graf & Ernst 2004](https://doi.org/10.1038/nn1312) | 可适应光照先验实验 | 已定位 | [视觉先验案例](/zh-cn/cases/visual-prior/) |
+| [`@safaricheung` Android 地震预警帖](https://x.com/safaricheung/status/2070326496296903133) | X 技术转述 | 已结构化 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| [`@dotey` Brain2Qwerty v2 帖](https://x.com/dotey/status/2071658817214116106) | X 论文转述 | 已结构化 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| [`@yatingzhao_ux`《机器时代》读书帖](https://x.com/yatingzhao_ux/status/2071675271942652167) | X 读者摘要 | 已定位 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| [`@Phoenixyin13` Economic Connectedness 帖](https://x.com/Phoenixyin13/status/2072213638752940531) | X 论文转述 | 已结构化 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
 | `https://x.com/Trinkle23897/status/2052596837547495549` | Jiayi Weng X 原帖 | 已定位 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | `https://x.com/0xLogicrw/status/2052701677615218717` | X 中文转述，引用 Jiayi 原帖 | 已结构化 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | Jiayi Weng 后续 X thread 与评论 | X 后续讨论 | 待采集 | [研究路线图](/zh-cn/appendix/research-roadmap) |
@@ -51,6 +55,7 @@ description: Heuristic Learning 课程的来源层级、证据状态与声明边
 X 是 Jiayi Weng 相关讨论的重要公开入口。课程只区分来源层级，不要求读者了解采集工具：
 
 - `@0xdeusyu` 的 shape-from-shading 帖已转成视觉先验研究案例；帖文本身只作为线索，事实主张由独立论文约束，运行命令为 `npm run examples:shape-from-shading` 与 `npm run examples:test`。
+- 2026-06-26 至 07-01 的技术与社会批次已拆成 Android 地震预警、Brain2Qwerty、《机器时代》和 Economic Connectedness 四张研究卡；统一落点是 [技术与社会证据审计](/zh-cn/cases/technology-society/)，目前不声称已复现实验。
 - Jiayi Weng / `@Trinkle23897` 原帖 URL 已知：`https://x.com/Trinkle23897/status/2052596837547495549`。在直接复核前，它只作为待复核一手来源。
 - `@0xLogicrw` 在 2026-05-08 的中文转述引用了该原帖：`https://x.com/0xLogicrw/status/2052701677615218717`。这可以帮助定位问题结构，但不能替代原帖。
 - `@0xLogicrw` 在 2026-05-19 转述的流体控制方向目前只作为待结构化研究方向。

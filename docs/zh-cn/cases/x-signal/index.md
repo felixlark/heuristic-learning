@@ -25,6 +25,10 @@ description: 从公开讨论中抽取可验证的 Heuristic Learning 问题
 | 2025-11-07 | `@0xdeusyu` 关于 shape from shading 的中文科普帖 | X 原帖 URL + 独立同行评议文献 | [视觉先验案例](/zh-cn/cases/visual-prior/)、`examples/shape-from-shading/` |
 | 2026-05-08 | Jiayi Weng / `@Trinkle23897` 原帖，被 `@0xLogicrw` 中文转述引用 | 一手原帖 + 二手中文摘要 | [Breakout 案例](/zh-cn/cases/breakout/)、[Ant Gait 案例](/zh-cn/cases/ant-gait/) |
 | 2026-05-19 | `@0xLogicrw` 转述 Paul Garnier 受 Jiayi 文章启发的流体控制实验 | 二手中文摘要 + 被引用原帖 | 后续可扩展为流体控制案例 |
+| 2026-06-26 | `@safaricheung` 转述 Android 地震预警 | X 二手摘要 + USGS、Google 与 Science 论文 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| 2026-06-29 | `@dotey` 转述 Brain2Qwerty v1/v2 | X 二手摘要 + Nature Neuroscience、Meta 预印本与项目页 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| 2026-06-29 | `@yatingzhao_ux` 阅读许怡《机器时代》 | 读书摘要 + 书目、作者档案与相关论文 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| 2026-07-01 | `@Phoenixyin13` 转述 Economic Connectedness | X 二手摘要 + 两篇 Nature 论文 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
 
 ## 2025-11-07：视觉先验与欠定输入
 
@@ -43,6 +47,17 @@ npm run examples:test
 ```
 
 `examples/shape-from-shading/` 只显式展示 observation、assumed light 和 inferred shape 的关系，不模拟人脑，也不把单个观察者的知觉反应推广成普遍定律。
+
+## 2026-06-26 至 07-01：技术与社会研究批次
+
+四条收藏已整理到 [技术与社会：四条 X 线索的证据审计](/zh-cn/cases/technology-society/)。对应的课程概念是：
+
+- **众包传感与公共基础设施**：Android 地震预警是事件开始后的 early warning，不是 earthquake prediction。
+- **非侵入式脑机接口的外部有效性**：Brain2Qwerty v2 的实验指标不能直接外推到无法打字的患者。
+- **自动化的组织后果**：《机器时代》的田野材料需要按工厂、岗位和章节抽取，不能压成“机器是否裁员”。
+- **经济连接度与因果边界**：县级和学校级结果不能直接变成个人“蹭富人圈子”的致富建议。
+
+这四张卡都保留为非 runnable 研究入口；它们完成了来源和主张核验，但还没有定义数据夹具、failure probe 和实验报告。
 
 ## 2026-05-08：Jiayi 原帖
 
