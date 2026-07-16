@@ -11,11 +11,13 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "docs/public/x-sources.json"
 SCHEMA_PATH = ROOT / "docs/public/x-sources.schema.json"
 EXPECTED_IDS = {
+    "deusyu-shape-from-shading-2025-11-07",
     "logicrw-jiayi-hl-summary-2026-05-08",
     "jiayi-original-hl-post-2026-05-08",
     "logicrw-fluid-control-lead-2026-05-19",
 }
 EXPECTED_EXTRACTION_IDS = {
+    "shape-from-shading-prior",
     "breakout-code-as-memory",
     "ant-controller-as-readable-policy",
     "hybrid-perception-boundary",
@@ -146,7 +148,15 @@ def check_registry(registry: dict[str, Any]) -> None:
         require(isinstance(concept, str) and concept in page, f"{context}: concept not documented on X page")
         claim = card.get("course_claim")
         require(isinstance(claim, str) and claim, f"{context}: course_claim must be non-empty")
-        require(card.get("evidence_status") in {"secondary-source-plus-public-artifact", "secondary-source-summary"}, f"{context}: invalid evidence_status")
+        require(
+            card.get("evidence_status")
+            in {
+                "secondary-source-plus-public-artifact",
+                "secondary-source-summary",
+                "x-lead-plus-primary-literature",
+            },
+            f"{context}: invalid evidence_status",
+        )
         landing_pages = card.get("landing_pages")
         require(isinstance(landing_pages, list) and landing_pages, f"{context}: landing_pages must be non-empty")
         for landing_page in landing_pages:

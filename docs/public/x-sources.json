@@ -2,11 +2,31 @@
   "$schema": "/x-sources.schema.json",
   "schema_version": 1,
   "source_policy": {
-    "last_reviewed": "2026-05-25",
+    "last_reviewed": "2026-07-16",
     "reader_rule": "Public X material is used only after separating primary posts, secondary summaries, and uncollected leads.",
     "boundary": "Tooling, browser state, cookies, API tokens, and private collection logs are not part of the public course material."
   },
   "sources": [
+    {
+      "id": "deusyu-shape-from-shading-2025-11-07",
+      "url": "https://x.com/0xdeusyu/status/1986696571006951603",
+      "author": "@0xdeusyu",
+      "date": "2025-11-07",
+      "source_level": "primary-url-referenced",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "Opposite luminance gradients can support opposite convex and concave interpretations under an assumed light direction.",
+        "The 1988 Nature and Scientific American publications can be verified independently of the X post.",
+        "The 1744 historical attribution and the claim that the prior is fixed require qualifications from the scholarly literature."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/visual-prior/index.md",
+        "examples/shape-from-shading/"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "The bookmark payload is an intake lead, not evidence by itself; course claims are limited to independently checked publications and an explicit toy probe."
+    },
     {
       "id": "logicrw-jiayi-hl-summary-2026-05-08",
       "url": "https://x.com/0xLogicrw/status/2052701677615218717",
@@ -67,6 +87,25 @@
     }
   ],
   "extraction_cards": [
+    {
+      "id": "shape-from-shading-prior",
+      "source_id": "deusyu-shape-from-shading-2025-11-07",
+      "concept": "视觉先验与欠定输入",
+      "course_claim": "单幅明暗图像不能唯一确定形状与光源；可适应的光照先验会影响凹凸解释，但更强的场景线索和经验能够改变判断。",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/visual-prior/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": "examples/shape-from-shading/",
+      "verification": [
+        "npm run examples:shape-from-shading",
+        "npm run examples:test",
+        "npm run x:sources:check"
+      ],
+      "boundary": "The runnable probe exposes one heuristic assumption; it is not a model of the visual cortex or evidence that perception universally follows one fixed light direction."
+    },
     {
       "id": "breakout-code-as-memory",
       "source_id": "logicrw-jiayi-hl-summary-2026-05-08",

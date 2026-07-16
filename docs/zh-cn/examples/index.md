@@ -26,6 +26,17 @@ description: Heuristic Learning 的最小动手实验
 机器可读示例矩阵见 [`/example-registry.json`](/example-registry.json)，字段约束见 [`/example-registry.schema.json`](/example-registry.schema.json)。`npm run examples:registry:check` 会确认 registry、package scripts、README、报告、测试和课程链接没有漂移。
 七个示例的 baseline/heuristic 当前结果汇总见 [Benchmark 结果摘要](/zh-cn/appendix/benchmark-results)，由 `npm run benchmark:summary:check` 检查。
 
+## 研究探针：Shape from Shading
+
+视觉先验案例另带一个不计入七个核心示例的零依赖研究探针。它把“哪一边更亮”“当前假设光来自哪里”和“推断为凸还是凹”分成独立字段，用于演示默认 heuristic 怎样影响欠定输入的解释。
+
+```bash
+npm run examples:shape-from-shading
+python3 -m unittest tests/test_shape_from_shading.py
+```
+
+案例、史料核验与模型边界见 [明暗如何变成凹凸：视觉先验案例](/zh-cn/cases/visual-prior/)。
+
 ## 0. 最小闭环
 
 ### GridWorld Heuristic System

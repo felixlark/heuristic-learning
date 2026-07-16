@@ -51,6 +51,12 @@
       "route": "/zh-cn/cases/x-signal/"
     },
     {
+      "id": "visual-prior",
+      "title": "明暗如何变成凹凸：视觉先验案例",
+      "path": "docs/zh-cn/cases/visual-prior/index.md",
+      "route": "/zh-cn/cases/visual-prior/"
+    },
+    {
       "id": "source-registry",
       "title": "来源登记",
       "path": "docs/zh-cn/appendix/source-registry.md",

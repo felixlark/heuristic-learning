@@ -1,6 +1,6 @@
 ---
 title: X 来源案例
-description: 从 Jiayi Weng 公开讨论中抽取可验证的 Heuristic Learning 问题
+description: 从公开讨论中抽取可验证的 Heuristic Learning 问题
 ---
 
 # X 来源案例
@@ -10,11 +10,11 @@ description: 从 Jiayi Weng 公开讨论中抽取可验证的 Heuristic Learning
 | 维度 | 内容 |
 | --- | --- |
 | 类型 | 来源线索案例 |
-| 对应示例 | 暂无直接示例 |
-| Failure mode | 待复核后才能定义 |
+| 对应示例 | `examples/shape-from-shading/`；其余线索待转化 |
+| Failure mode | 明暗塑形探针已显式化默认光照假设；其余线索待复核 |
 | 学习重点 | 公开讨论如何进入来源登记、案例库和研究问题 |
 
-本页把 Jiayi Weng 相关 X 讨论拆成可学习、可验证的课程入口。它不替代公开文章和代码 artifact；它只回答一个问题：一条公开讨论怎样被转成案例、实验或研究问题，而不越过证据边界。
+本页把 X 公开讨论拆成可学习、可验证的课程入口。它不替代论文和代码 artifact；它只回答一个问题：一条公开讨论怎样被转成案例、实验或研究问题，而不越过证据边界。Jiayi Weng 相关讨论仍是 HL 主线来源；其他帖子只有在能落到独立文献与明确课程问题时才进入本页。
 
 来源矩阵见 [`/x-sources.json`](/x-sources.json)。`npm run x:sources:check` 会检查本页和来源登记是否区分“已读到的材料”“已知 URL 但待复核的材料”和“待采集方向”。
 
@@ -22,8 +22,27 @@ description: 从 Jiayi Weng 公开讨论中抽取可验证的 Heuristic Learning
 
 | 日期 | 来源 | 证据层级 | 学习落点 |
 | --- | --- | --- | --- |
+| 2025-11-07 | `@0xdeusyu` 关于 shape from shading 的中文科普帖 | X 原帖 URL + 独立同行评议文献 | [视觉先验案例](/zh-cn/cases/visual-prior/)、`examples/shape-from-shading/` |
 | 2026-05-08 | Jiayi Weng / `@Trinkle23897` 原帖，被 `@0xLogicrw` 中文转述引用 | 一手原帖 + 二手中文摘要 | [Breakout 案例](/zh-cn/cases/breakout/)、[Ant Gait 案例](/zh-cn/cases/ant-gait/) |
 | 2026-05-19 | `@0xLogicrw` 转述 Paul Garnier 受 Jiayi 文章启发的流体控制实验 | 二手中文摘要 + 被引用原帖 | 后续可扩展为流体控制案例 |
+
+## 2025-11-07：视觉先验与欠定输入
+
+[`@0xdeusyu` 原帖](https://x.com/0xdeusyu/status/1986696571006951603)用上下明暗相反的圆点解释凹凸错觉。课程没有直接采用“大脑篡改证据”的结论，而是把帖子拆成四个可以分别核验的问题：
+
+- 1744 年的历史归因由后世同行评议文献支持，但本轮没有直接读到 Gmelin 的原始记录。
+- Ramachandran 1988 年的 Nature 论文和同年 Scientific American 文章都已确认。
+- “单一光源假设”与“光从上方的先验”不是同一个主张，不能都笼统归给一篇论文。
+- 光照先验会受主动经验与场景光源影响，因此不应写成不可改变的硬编码常量。
+
+课程把它转成“视觉先验与欠定输入”抽取卡，落到 [视觉先验案例](/zh-cn/cases/visual-prior/) 和零依赖探针：
+
+```bash
+npm run examples:shape-from-shading
+npm run examples:test
+```
+
+`examples/shape-from-shading/` 只显式展示 observation、assumed light 和 inferred shape 的关系，不模拟人脑，也不把单个观察者的知觉反应推广成普遍定律。
 
 ## 2026-05-08：Jiayi 原帖
 

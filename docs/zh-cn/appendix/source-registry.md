@@ -27,6 +27,9 @@ description: Heuristic Learning 课程的来源层级、证据状态与声明边
 | `atari/breakout/heuristic_breakout.py` | Atari Breakout artifact | 已复现为轻量 replay | [Breakout 案例](/zh-cn/cases/breakout/)、`examples/breakout-replay/` |
 | Other Atari artifacts | 游戏控制 artifact | 已定位 | 待转成课程实验 |
 | MuJoCo HalfCheetah artifacts | 连续控制 artifact | 已定位 | 待转成课程实验 |
+| [`@0xdeusyu` shape-from-shading 帖](https://x.com/0xdeusyu/status/1986696571006951603) | X 科普线索 | 已结构化 | [视觉先验案例](/zh-cn/cases/visual-prior/)、`examples/shape-from-shading/` |
+| [Ramachandran 1988, Nature](https://doi.org/10.1038/331163a0) | shape-from-shading 一手论文 | 已定位 | [视觉先验案例](/zh-cn/cases/visual-prior/) |
+| [Adams, Graf & Ernst 2004](https://doi.org/10.1038/nn1312) | 可适应光照先验实验 | 已定位 | [视觉先验案例](/zh-cn/cases/visual-prior/) |
 | `https://x.com/Trinkle23897/status/2052596837547495549` | Jiayi Weng X 原帖 | 已定位 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | `https://x.com/0xLogicrw/status/2052701677615218717` | X 中文转述，引用 Jiayi 原帖 | 已结构化 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | Jiayi Weng 后续 X thread 与评论 | X 后续讨论 | 待采集 | [研究路线图](/zh-cn/appendix/research-roadmap) |
@@ -47,6 +50,7 @@ description: Heuristic Learning 课程的来源层级、证据状态与声明边
 
 X 是 Jiayi Weng 相关讨论的重要公开入口。课程只区分来源层级，不要求读者了解采集工具：
 
+- `@0xdeusyu` 的 shape-from-shading 帖已转成视觉先验研究案例；帖文本身只作为线索，事实主张由独立论文约束，运行命令为 `npm run examples:shape-from-shading` 与 `npm run examples:test`。
 - Jiayi Weng / `@Trinkle23897` 原帖 URL 已知：`https://x.com/Trinkle23897/status/2052596837547495549`。在直接复核前，它只作为待复核一手来源。
 - `@0xLogicrw` 在 2026-05-08 的中文转述引用了该原帖：`https://x.com/0xLogicrw/status/2052701677615218717`。这可以帮助定位问题结构，但不能替代原帖。
 - `@0xLogicrw` 在 2026-05-19 转述的流体控制方向目前只作为待结构化研究方向。

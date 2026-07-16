@@ -150,7 +150,8 @@
           "type": "string",
           "enum": [
             "secondary-source-plus-public-artifact",
-            "secondary-source-summary"
+            "secondary-source-summary",
+            "x-lead-plus-primary-literature"
           ]
         },
         "landing_pages": {
