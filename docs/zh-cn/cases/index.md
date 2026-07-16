@@ -45,6 +45,7 @@ description: Heuristic Learning 的案例、实验入口与证据边界
 | 7 | 来源线索 | [X 来源案例](/zh-cn/cases/x-signal/) | `npm run x:sources:check` | 一条公开讨论何时只能算线索，何时能变成案例 |
 | 8 | 来源转研究探针 | [视觉先验案例](/zh-cn/cases/visual-prior/) | `npm run examples:shape-from-shading` | 如何把“默认设定影响解释”写成可检查 heuristic |
 | 9 | 技术与社会证据审计 | [技术与社会研究卡](/zh-cn/cases/technology-society/) | `npm run x:sources:check` | 如何阻止技术摘要跨越预测、临床、田野和因果边界 |
+| 10 | AI 治理与医疗证据审计 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) | `npm run x:sources:check` | 如何区分政策提案、持续学习实验与医疗部署资格 |
 
 ## 三类案例
 
@@ -75,6 +76,7 @@ description: Heuristic Learning 的案例、实验入口与证据边界
 | [X 来源案例](/zh-cn/cases/x-signal/) | 部分线索已转成研究探针 | 一手来源、二手转述、公开 artifact 和待复核主张的边界 |
 | [视觉先验案例](/zh-cn/cases/visual-prior/) | `examples/shape-from-shading/` | 欠定输入、光照先验、场景线索与可证伪边界 |
 | [技术与社会研究卡](/zh-cn/cases/technology-society/) | 暂无直接示例 | 众包传感、脑机接口外部有效性、自动化组织后果与经济连接度因果边界 |
+| [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) | 暂无直接示例 | 前沿 AI 标准机构、持续学习证据边界与医疗模型部署资格 |
 
 X 来源案例不是第六个 runnable case；它是来源训练页。它帮助读者判断一条公开讨论如何进入案例库：先成为线索，再绑定来源状态，最后才可能变成可运行示例。视觉先验探针是其中一条线索完成独立文献核验后的研究性产物，不计入 v0.1 的七个核心示例。
 

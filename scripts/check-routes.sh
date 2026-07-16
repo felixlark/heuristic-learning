@@ -41,6 +41,7 @@ routes=(
   "/heuristic-learning/zh-cn/examples/"
   "/heuristic-learning/zh-cn/cases/visual-prior/"
   "/heuristic-learning/zh-cn/cases/technology-society/"
+  "/heuristic-learning/zh-cn/cases/ai-governance-medical/"
   "/heuristic-learning/zh-cn/talk/"
   "/heuristic-learning/zh-cn/benchmark/"
   "/heuristic-learning/zh-cn/appendix/reading-guide"

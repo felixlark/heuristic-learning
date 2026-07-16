@@ -11,12 +11,15 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "docs/public/x-sources.json"
 SCHEMA_PATH = ROOT / "docs/public/x-sources.schema.json"
 EXPECTED_IDS = {
+    "aigclink-medgemma-1-5-2026-01-13",
+    "ayinotes-hassabis-frontier-ai-2026-07-14",
     "deusyu-shape-from-shading-2025-11-07",
     "dotey-brain2qwerty-v2-2026-06-29",
     "logicrw-jiayi-hl-summary-2026-05-08",
     "jiayi-original-hl-post-2026-05-08",
     "logicrw-fluid-control-lead-2026-05-19",
     "phoenixyin-economic-connectedness-2026-07-01",
+    "phoenixyin-language-models-need-sleep-2026-07-14",
     "safaricheung-android-earthquake-2026-06-26",
     "yatingzhao-machine-age-2026-06-29",
 }
@@ -25,7 +28,10 @@ EXPECTED_EXTRACTION_IDS = {
     "automation-organizational-consequences",
     "brain2qwerty-external-validity",
     "economic-connectedness-causal-boundary",
+    "frontier-ai-standards-governance",
+    "medgemma-clinical-deployment-boundary",
     "shape-from-shading-prior",
+    "sleep-inspired-continual-learning",
     "breakout-code-as-memory",
     "ant-controller-as-readable-policy",
     "hybrid-perception-boundary",

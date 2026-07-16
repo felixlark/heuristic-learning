@@ -89,6 +89,7 @@ export default defineConfig({
             { text: '研究: 事实约束审计', link: '/zh-cn/cases/constraint-audit/' },
             { text: '研究: 视觉先验', link: '/zh-cn/cases/visual-prior/' },
             { text: '研究: 技术与社会', link: '/zh-cn/cases/technology-society/' },
+            { text: '研究: AI 治理与医疗', link: '/zh-cn/cases/ai-governance-medical/' },
             { text: '来源: X 线索', link: '/zh-cn/cases/x-signal/' }
           ]
         },

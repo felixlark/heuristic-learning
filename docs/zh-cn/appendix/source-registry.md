@@ -34,6 +34,12 @@ description: Heuristic Learning 课程的来源层级、证据状态与声明边
 | [`@dotey` Brain2Qwerty v2 帖](https://x.com/dotey/status/2071658817214116106) | X 论文转述 | 已结构化 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
 | [`@yatingzhao_ux`《机器时代》读书帖](https://x.com/yatingzhao_ux/status/2071675271942652167) | X 读者摘要 | 已定位 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
 | [`@Phoenixyin13` Economic Connectedness 帖](https://x.com/Phoenixyin13/status/2072213638752940531) | X 论文转述 | 已结构化 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| [`@AYi_AInotes` 前沿 AI 治理帖](https://x.com/AYi_AInotes/status/2077107924514533582) | X 政策文章转述 | 已结构化 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
+| [Demis Hassabis 前沿 AI 治理原文](https://demishassabis.substack.com/p/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age) | 作者政策文章 | 已定位 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
+| [`@Phoenixyin13` Language Models Need Sleep 帖](https://x.com/Phoenixyin13/status/2077157132303061183) | X 预印本转述 | 已结构化 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
+| [Language Models Need Sleep](https://arxiv.org/abs/2606.03979) | arXiv v2 预印本 | 已定位 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
+| [`@aigclink` MedGemma 1.5 / MedASR 帖](https://x.com/aigclink/status/2011215944530739253) | X 产品发布转述 | 已结构化 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
+| [Google MedGemma 1.5 / MedASR 发布说明](https://research.google/blog/next-generation-medical-image-interpretation-with-medgemma-15-and-medical-speech-to-text-with-medasr/) | 官方发布与指标说明 | 已定位 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
 | `https://x.com/Trinkle23897/status/2052596837547495549` | Jiayi Weng X 原帖 | 已定位 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | `https://x.com/0xLogicrw/status/2052701677615218717` | X 中文转述，引用 Jiayi 原帖 | 已结构化 | [X 来源案例](/zh-cn/cases/x-signal/) |
 | Jiayi Weng 后续 X thread 与评论 | X 后续讨论 | 待采集 | [研究路线图](/zh-cn/appendix/research-roadmap) |
@@ -56,6 +62,7 @@ X 是 Jiayi Weng 相关讨论的重要公开入口。课程只区分来源层级
 
 - `@0xdeusyu` 的 shape-from-shading 帖已转成视觉先验研究案例；帖文本身只作为线索，事实主张由独立论文约束，运行命令为 `npm run examples:shape-from-shading` 与 `npm run examples:test`。
 - 2026-06-26 至 07-01 的技术与社会批次已拆成 Android 地震预警、Brain2Qwerty、《机器时代》和 Economic Connectedness 四张研究卡；统一落点是 [技术与社会证据审计](/zh-cn/cases/technology-society/)，目前不声称已复现实验。
+- 2026-01-13 与 07-14 的 AI 治理、持续学习与医疗批次已拆成前沿 AI 标准机构、Sleep 持续学习和 MedGemma / MedASR 部署边界三张研究卡；统一落点是 [AI 治理与医疗证据审计](/zh-cn/cases/ai-governance-medical/)，目前不声称已复现实验或临床能力。
 - Jiayi Weng / `@Trinkle23897` 原帖 URL 已知：`https://x.com/Trinkle23897/status/2052596837547495549`。在直接复核前，它只作为待复核一手来源。
 - `@0xLogicrw` 在 2026-05-08 的中文转述引用了该原帖：`https://x.com/0xLogicrw/status/2052701677615218717`。这可以帮助定位问题结构，但不能替代原帖。
 - `@0xLogicrw` 在 2026-05-19 转述的流体控制方向目前只作为待结构化研究方向。

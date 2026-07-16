@@ -63,6 +63,12 @@
       "route": "/zh-cn/cases/technology-society/"
     },
     {
+      "id": "ai-governance-medical",
+      "title": "AI 治理、持续学习与医疗模型：三条 X 线索的证据审计",
+      "path": "docs/zh-cn/cases/ai-governance-medical/index.md",
+      "route": "/zh-cn/cases/ai-governance-medical/"
+    },
+    {
       "id": "source-registry",
       "title": "来源登记",
       "path": "docs/zh-cn/appendix/source-registry.md",

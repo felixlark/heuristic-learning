@@ -8,6 +8,64 @@
   },
   "sources": [
     {
+      "id": "ayinotes-hassabis-frontier-ai-2026-07-14",
+      "url": "https://x.com/AYi_AInotes/status/2077107924514533582",
+      "author": "@AYi_AInotes",
+      "date": "2026-07-14",
+      "source_level": "secondary-summary",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "Demis Hassabis proposed a US-initiated, federally overseen and industry-funded Frontier AI Standards Body modeled partly on FINRA.",
+        "The proposal includes voluntary review up to 30 days before release, capability and agentic-risk tests, and regularly updated benchmarks.",
+        "The AGI timeline, effectiveness of readable reasoning outputs, and institutional incentives are forecasts or design claims rather than established facts."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/ai-governance-medical/index.md"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "The X post is a secondary interpretation; the course checks the original policy essay and keeps proposals, forecasts, enacted rules, and validated tests distinct."
+    },
+    {
+      "id": "phoenixyin-language-models-need-sleep-2026-07-14",
+      "url": "https://x.com/Phoenixyin13/status/2077157132303061183",
+      "author": "@Phoenixyin13",
+      "date": "2026-07-14",
+      "source_level": "secondary-summary",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "The Sleep preprint combines parameter expansion and knowledge seeding with RL-generated synthetic rehearsal.",
+        "Its experiments report gains on selected continual-learning, long-context, knowledge-incorporation, reasoning, and few-shot tasks.",
+        "A proof of concept does not establish that catastrophic forgetting is solved for arbitrary deployed language models or real conversations."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/ai-governance-medical/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "Keep the computational sleep metaphor separate from biological claims, and require regression, contamination, privacy, and rollback tests before durable deployment updates."
+    },
+    {
+      "id": "aigclink-medgemma-1-5-2026-01-13",
+      "url": "https://x.com/aigclink/status/2011215944530739253",
+      "author": "@aigclink",
+      "date": "2026-01-13",
+      "source_level": "secondary-summary",
+      "evidence_status": "known-url-needs-direct-review",
+      "claims_to_extract": [
+        "MedGemma 1.5 4B supports multi-slice CT and MRI, multi-patch histopathology, longitudinal chest X-rays, anatomy localization, and lab-report extraction.",
+        "MedASR plus a 6-gram language model reported 5.2 percent WER on a specific chest-X-ray dictation benchmark versus 12.5 percent for Whisper large-v3.",
+        "Downloadable weights and offline inference do not constitute clinical validation, regulatory authorization, or universal privacy compliance."
+      ],
+      "repo_targets": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/ai-governance-medical/index.md"
+      ],
+      "verification_status": "needs-direct-primary-review",
+      "boundary": "Use Google release notes and model cards for task scope and limitations; do not turn benchmark metrics into direct clinical-use claims."
+    },
+    {
       "id": "safaricheung-android-earthquake-2026-06-26",
       "url": "https://x.com/safaricheung/status/2070326496296903133",
       "author": "@safaricheung",
@@ -164,6 +222,60 @@
     }
   ],
   "extraction_cards": [
+    {
+      "id": "frontier-ai-standards-governance",
+      "source_id": "ayinotes-hassabis-frontier-ai-2026-07-14",
+      "concept": "前沿 AI 标准机构与可执行治理",
+      "course_claim": "A FINRA-like frontier AI standards body is a policy proposal whose effectiveness depends on independent held-out tests, enforceable authority, conflict-of-interest controls, post-release response, and international coordination.",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/ai-governance-medical/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run source:registry:check"
+      ],
+      "boundary": "Keep the author's AGI forecast and governance proposal separate from enacted regulation, validated evaluation methods, or proof that readable outputs faithfully reveal internal reasoning."
+    },
+    {
+      "id": "sleep-inspired-continual-learning",
+      "source_id": "phoenixyin-language-models-need-sleep-2026-07-14",
+      "concept": "持续学习的证据边界",
+      "course_claim": "The Sleep preprint provides evidence for a particular consolidation and synthetic-rehearsal design on selected tasks, not a universal solution to catastrophic forgetting or safe autonomous self-improvement.",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/ai-governance-medical/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run source:registry:check"
+      ],
+      "boundary": "Production use still requires write thresholds, provenance, old-capability regression, adversarial-memory tests, privacy controls, compute accounting, checkpoints, and rollback."
+    },
+    {
+      "id": "medgemma-clinical-deployment-boundary",
+      "source_id": "aigclink-medgemma-1-5-2026-01-13",
+      "concept": "医疗基础模型的部署边界",
+      "course_claim": "MedGemma and MedASR are downloadable developer foundations with task-specific benchmark results; local execution does not by itself establish clinical effectiveness, safety, privacy compliance, or regulatory authorization.",
+      "evidence_status": "x-lead-plus-primary-literature",
+      "landing_pages": [
+        "docs/zh-cn/cases/x-signal/index.md",
+        "docs/zh-cn/cases/ai-governance-medical/index.md",
+        "docs/zh-cn/theory/research-framework.md"
+      ],
+      "runnable_example": null,
+      "verification": [
+        "npm run x:sources:check",
+        "npm run source:registry:check"
+      ],
+      "boundary": "Keep model-card benchmark scope, decoding setup, language and hardware assumptions, institution-level validation, and direct clinical use separate."
+    },
     {
       "id": "android-crowdsourced-earthquake-alerts",
       "source_id": "safaricheung-android-earthquake-2026-06-26",

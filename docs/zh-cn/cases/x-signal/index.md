@@ -29,6 +29,9 @@ description: 从公开讨论中抽取可验证的 Heuristic Learning 问题
 | 2026-06-29 | `@dotey` 转述 Brain2Qwerty v1/v2 | X 二手摘要 + Nature Neuroscience、Meta 预印本与项目页 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
 | 2026-06-29 | `@yatingzhao_ux` 阅读许怡《机器时代》 | 读书摘要 + 书目、作者档案与相关论文 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
 | 2026-07-01 | `@Phoenixyin13` 转述 Economic Connectedness | X 二手摘要 + 两篇 Nature 论文 | [技术与社会研究卡](/zh-cn/cases/technology-society/) |
+| 2026-07-14 | `@AYi_AInotes` 转述 Demis Hassabis 的前沿 AI 治理文章 | X 二手摘要 + 作者原文 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
+| 2026-07-14 | `@Phoenixyin13` 转述 *Language Models Need Sleep* | X 二手摘要 + arXiv v2 预印本 | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
+| 2026-01-13 | `@aigclink` 介绍 MedGemma 1.5 与 MedASR | X 二手摘要 + Google 发布说明与 model cards | [AI 治理与医疗研究卡](/zh-cn/cases/ai-governance-medical/) |
 
 ## 2025-11-07：视觉先验与欠定输入
 
@@ -58,6 +61,16 @@ npm run examples:test
 - **经济连接度与因果边界**：县级和学校级结果不能直接变成个人“蹭富人圈子”的致富建议。
 
 这四张卡都保留为非 runnable 研究入口；它们完成了来源和主张核验，但还没有定义数据夹具、failure probe 和实验报告。
+
+## 2026-01-13 与 07-14：AI 治理、持续学习与医疗模型批次
+
+三条收藏已整理到 [AI 治理、持续学习与医疗模型的证据审计](/zh-cn/cases/ai-governance-medical/)。对应的课程概念是：
+
+- **前沿 AI 标准机构与可执行治理**：Demis Hassabis 的 FINRA 式机构、30 天预审和季度 benchmark 是政策提案，不是已经生效的规则；“可读输出 token”也需要单独验证忠实性。
+- **持续学习的证据边界**：Sleep 预印本验证了特定 consolidation 与 synthetic rehearsal 设计，不能写成已经普遍、彻底解决 catastrophic forgetting。
+- **医疗基础模型的部署边界**：MedGemma 与 MedASR 的开放权重、本地运行和 benchmark 成绩，不等同于临床有效、合规或获准直接诊疗。
+
+这三张卡同样没有 runnable example。后续如果进入实验，应分别补治理阈值模拟、持续学习回归套件与医疗场景分层验证，不能只复述文章或 model card 的成功数字。
 
 ## 2026-05-08：Jiayi 原帖
 
