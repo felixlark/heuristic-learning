@@ -14,3 +14,11 @@
 - Follow the global `~/.codex/AGENTS.md` official browser/GUI automation policy: Chrome plugin for signed-in browser state, Browser plugin for unauthenticated rendering, and Computer Use for native desktop boundaries. Do not bypass it with AppleScript or `osascript` unless the global exception rules are met.
 - Preserve existing dirty checkouts. Inspect `git status --short` before editing, and do not stash, commit, remove, or migrate user changes unless explicitly asked.
 - When a worktree is genuinely needed, use `codex/<repo>-<short-task>` branch names, isolate dependencies/ports/databases/device state inside that checkout, and clean up with `git worktree remove <path>` after merge or abandonment.
+
+## 合并前评审
+
+合并前须等待 Codex 自动评审完成，且评审意见已全部处理清零（无未解决的阻塞性评论）之后，方可合并。不得在评审结果出来之前合并。
+
+### Pre-merge review (English translation)
+
+Before merging, wait for Codex automatic review to finish and address all review feedback, leaving no unresolved blocking comments. Do not merge before the review results are available.
