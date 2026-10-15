@@ -22,3 +22,8 @@
 ### Pre-merge review (English translation)
 
 Before merging, wait for Codex automatic review to finish and address all review feedback, leaving no unresolved blocking comments. Do not merge before the review results are available.
+
+## 限制类改动规则
+
+1. 新增或调小任何上限、槽位、名额、闸门、门槛、退避（包括并发数、负载准入、超时退避等）时，PR 正文须单列「新增限制」一节，写明位置、默认值和依据，经仓库负责人定稿后才可合并。此类改动不得绕过 PR 直接进入 main。
+2. 资源类参数默认不限、只观测；确需限制时须通过显式配置开启，不得在代码中写死最大值。外部硬限制（如外部接口限流、部署锁）须在注释中写明来源。
