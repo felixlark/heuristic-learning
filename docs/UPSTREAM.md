@@ -21,7 +21,7 @@ The upstream repository did not declare a license when reviewed on 2026-07-13. I
 
 ## Refresh procedure
 
-1. Pull the sibling checkout at `/Users/longbiao/Projects/learning-beyond-gradients`.
+1. Pull the sibling checkout at `~/Projects/learning-beyond-gradients`.
 2. Review changes under `heuristic_learning/`, especially its README, result reports, environment registry, and tests.
 3. Update learner-facing claims only when an upstream report or runnable artifact supports them.
 4. Run `npm run verify`, deploy Pages, and verify the live course before publishing the comparison.
