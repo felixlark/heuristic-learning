@@ -8,20 +8,26 @@
 - X/Twitter cases should be integrated into the main learning flow once retrieved through `ft` or supported X API tooling.
 - Do not commit generated VitePress build output under `docs/.vitepress/dist`.
 
-## Main-first Policy
+## 当前执行基线
 
-- Follow the global `~/.codex/AGENTS.md` main-first development rule: work in the current Local checkout by default and use a worktree only when the global exception list applies.
-- Follow the global `~/.codex/AGENTS.md` official browser/GUI automation policy: Chrome plugin for signed-in browser state, Browser plugin for unauthenticated rendering, and Computer Use for native desktop boundaries. Do not bypass it with AppleScript or `osascript` unless the global exception rules are met.
-- Preserve existing dirty checkouts. Inspect `git status --short` before editing, and do not stash, commit, remove, or migrate user changes unless explicitly asked.
-- When a worktree is genuinely needed, use `codex/<repo>-<short-task>` branch names, isolate dependencies/ports/databases/device state inside that checkout, and clean up with `git worktree remove <path>` after merge or abandonment.
+- 全团队所有 Codex 任务统一使用 DeepSeek V4.1 Flash 路由组 `auto/deepseek-v4.1-flash`。经理 High；专员、全局新任务及无专用角色档位 Max；sub-agent 继承父档，不配置其他模型 fallback。
+- 模型路由不扩大数据授权。私有 GitHub、设备、客户和个人敏感数据只在入口实际解析到获准 DeepSeek 上游时使用。
+- 需要用户补充信息时优先使用 Ask 模式。当前 Codex Desktop 对应 `request_user_input_async`，提出一次清晰问题并保持可答，同时继续执行不依赖答案的已授权工作；收到实际答复后再处理依赖分支。
+- 只有不可逆动作、外部授权、本人认证或答案决定整个后续路径时，才暂停受影响部分。不得自答、假定选项或因等待立即结束任务。
+- 设置、配置保存、自然运行和业务验收分别取证。未读回实际 `model`、`provider` 和 `effort` 时，以 unknown 记录，不凭规则文本宣称配置已生效。
+- 保留现有 dirty checkout。编辑前检查 `git status`，不新建 worktree，不清理历史资源；在规范 checkout 串行写入并使用唯一 writer。
+- 开发交付由原结果负责人连续完成相称检查、commit、push、PR、必要评审、合并和既定部署验收。普通 Codex 自动评审不是默认等待门，任务或仓库负责人明确要求的评审条件继续执行。
+- 第三方署名、许可和真实引用保持原样。公开内容及元数据按当前公开身份核验规则检查。
 
-## 合并前评审
+## 项目合同
 
-合并前须等待 Codex 自动评审完成，且评审意见已全部处理清零（无未解决的阻塞性评论）之后，方可合并。不得在评审结果出来之前合并。
-
-### Pre-merge review (English translation)
-
-Before merging, wait for Codex automatic review to finish and address all review feedback, leaving no unresolved blocking comments. Do not merge before the review results are available.
+- **项目目标**：建立 Heuristic Learning 的可验证研究表述、案例与方法，并将可运行课程工程保留在独立规范仓。科研事实以 [Research #11](https://github.com/smart-shadow/Research/issues/11) 为准。
+- **项目经理与专员**：独立项目经理或项目群经理尚待任命；任命前由 Research 过渡经理负责接收。具体任务开始时按唯一 Issue 指定实际结果负责人，不按标题或目录赋权。
+- **项目 Issue 入口**：研究种子、选题和交付验收使用 Research #11；工程缺陷和产品改动由该原案分流到规范仓 Issue 或 PR。
+- **验收门**：理论页须连接可运行例子、案例或来源；例子有命令和测试路径；未验证主张标为假设。科研文稿须区分来源、结论与未知，并经 PR 和结果负责人核验。
+- **发布与运行责任**：课程站点和技术发布由项目结果负责人执行既定构建、检查、部署与真实入口验收。不得提交生成目录。
+- **暂停与恢复**：恢复工作前读取原 Issue、最新制度和当前 writer；未知副作用先对账。本规则不启动后台调度、不恢复已停例程。
+- **用户升级边界**：费用、外部发表、生产发布、权限扩大、非授权数据、不可逆动作或需要本人取舍的事项回原 Issue 说明事实、选项和影响。
 
 ## 限制类改动规则
 
