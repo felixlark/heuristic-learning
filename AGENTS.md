@@ -1,5 +1,12 @@
 # Heuristic Learning Repo Guidance
 
+
+## 团队职位与制度源
+
+- 本项目以**经理**负责技术方案、专员分工和交付闭环，**专员**负责具体实现、测试与成果证据。实际线程、工作根、权限、模型和已绑定主 Issue 依正式运行入口与原事项核实。
+- 用户与 **ChatGPT 办公室**的秘书长（Bot）／秘书讨论目标、取舍和跨组织事项；GitHub Issue／PR 承载正式公文，本项目内部按已授权范围使用 A2A。
+- 团队共用制度：[Cabinet/GOVERNANCE.md](https://github.com/smart-shadow/Cabinet/blob/main/GOVERNANCE.md)；版本采用：[同步规范](https://github.com/smart-shadow/Cabinet/blob/main/organization/source-sync.md)。本项目根 `AGENTS.md` 是专业规则正本。
+
 - This repository is a Chinese research/course repo for Heuristic Learning, not an EasyVibe fork with unchanged content.
 - Reuse EasyVibe's VitePress/course structure, but keep public copy, metadata, examples, and README focused on Heuristic Learning.
 - Every theory page should point to a runnable example, case study, or source reference.
@@ -22,7 +29,7 @@
 ## 项目合同
 
 - **项目目标**：建立 Heuristic Learning 的可验证研究表述、案例与方法，并将可运行课程工程保留在独立规范仓。科研事实以 [Research #11](https://github.com/smart-shadow/Research/issues/11) 为准。
-- **项目经理与专员**：独立项目经理或项目群经理尚待任命；任命前由 Research 过渡经理负责接收。具体任务开始时按唯一 Issue 指定实际结果负责人，不按标题或目录赋权。
+- **经理与专员**：经理依据真实项目主 Issue 统筹研究与工程交付，专员承办具体成果；当前指派和来源以正式组织登记与原 Issue 核实。
 - **项目 Issue 入口**：研究种子、选题和交付验收使用 Research #11；工程缺陷和产品改动由该原案分流到规范仓 Issue 或 PR。
 - **验收门**：理论页须连接可运行例子、案例或来源；例子有命令和测试路径；未验证主张标为假设。科研文稿须区分来源、结论与未知，并经 PR 和结果负责人核验。
 - **发布与运行责任**：课程站点和技术发布由项目结果负责人执行既定构建、检查、部署与真实入口验收。不得提交生成目录。
